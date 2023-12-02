@@ -5,17 +5,16 @@ namespace NS_composants {
 	public:
 		CL_Com_mapping(System::Void);
 		System::String^ SELECT(System::Void);
+		System::String^ INSERT(System::Void);
 		//System::String^ UPDATE(System::Void);
 		//System::String^ DELETE(System::Void);
 		//System::Void RESETREQUEST(System::Void);
 
 	protected:
-		System::String^ whatToSelect;
-		System::String^ whatTableToSelect;
 		System::String^ whatOrder;
-		System::String^ whatColumnsToInsert;
-		System::String^ whatValuesToInsert;
-		System::Collections::Generic::List<System::String^>^ whatTablesToJoin;
+		System::Collections::Generic::List<System::String^>^ whatValuesToInsert;
+		System::Collections::Generic::List<System::String^>^ whatColumns;
+		System::Collections::Generic::List<System::String^>^ whatTables;
 		System::Collections::Generic::List<System::String^>^ whatConditions;
 	};
 }
