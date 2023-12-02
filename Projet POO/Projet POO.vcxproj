@@ -81,7 +81,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
@@ -121,10 +121,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CL_CAD.cpp" />
+    <ClCompile Include="CL_Com_mapping.cpp" />
     <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CL_CAD.h" />
+    <ClInclude Include="CL_Com_mapping.h" />
     <ClInclude Include="headerLink.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>

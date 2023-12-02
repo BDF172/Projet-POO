@@ -27,6 +27,9 @@
     <ClCompile Include="CL_CAD.cpp">
       <Filter>Fichiers sources\Composants</Filter>
     </ClCompile>
+    <ClCompile Include="CL_Com_mapping.cpp">
+      <Filter>Fichiers sources\Composants</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -36,6 +39,9 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="CL_CAD.h">
+      <Filter>Fichiers d%27en-tête\Composants</Filter>
+    </ClInclude>
+    <ClInclude Include="CL_Com_mapping.h">
       <Filter>Fichiers d%27en-tête\Composants</Filter>
     </ClInclude>
   </ItemGroup>
