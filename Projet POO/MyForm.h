@@ -1,5 +1,7 @@
 #pragma once
 
+#include "headerLink.h"
+
 namespace ProjetPOO {
 
 	using namespace System;

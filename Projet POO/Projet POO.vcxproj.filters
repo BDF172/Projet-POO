@@ -13,21 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Composants">
+      <UniqueIdentifier>{5287d365-e0bd-4013-bbfa-447eb49733b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Composants">
+      <UniqueIdentifier>{54b75cec-f75c-4e91-a70b-e599d91fad4e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="CL_CAD.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Composants</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="CL_CAD.h">
+    <ClInclude Include="headerLink.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CL_CAD.h">
+      <Filter>Fichiers d%27en-tête\Composants</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

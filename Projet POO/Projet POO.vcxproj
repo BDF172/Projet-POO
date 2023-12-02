@@ -125,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CL_CAD.h" />
+    <ClInclude Include="headerLink.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
