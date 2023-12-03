@@ -5,12 +5,14 @@ namespace NS_composants {
 	public:
 		CL_Com_mapping(System::Void);
 		System::String^ SELECT(System::Void);
+		System::String^ SEARCH(System::Void);
 		System::String^ INSERT(System::Void);
 		System::String^ UPDATE(System::Void);
 		System::String^ DELETE(System::Void);
 		System::Void RESETREQUEST(System::Void);
 
 	protected:
+		System::String^ mainID;
 		System::String^ whatOrder;
 		System::Collections::Generic::List<System::String^>^ whatValues;
 		System::Collections::Generic::List<System::String^>^ whatColumns;

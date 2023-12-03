@@ -122,11 +122,13 @@
   <ItemGroup>
     <ClCompile Include="CL_CAD.cpp" />
     <ClCompile Include="CL_Com_mapping.cpp" />
+    <ClCompile Include="CL_Com_mapping_personnel.cpp" />
     <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CL_CAD.h" />
     <ClInclude Include="CL_Com_mapping.h" />
+    <ClInclude Include="CL_Com_mapping_personnel.h" />
     <ClInclude Include="headerLink.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
