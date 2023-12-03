@@ -8,11 +8,7 @@ using namespace NS_composants;
 using namespace std;
 
 CL_Com_mapping::CL_Com_mapping(Void) {
-	this->whatOrder = "";
-	this->whatTables = gcnew List<String^>;
-	this->whatConditions = gcnew List<String^>;
-	this->whatValuesToInsert = gcnew List<String^>;
-	this->whatColumns = gcnew List<String^>;
+	this->RESETREQUEST();
 
 	/////////////////////////////
 	////////////TEST/////////////
@@ -24,9 +20,8 @@ CL_Com_mapping::CL_Com_mapping(Void) {
 	//this->whatColumns->Add("colonne2");
 	//this->whatConditions->Add("colonne1 < colonne2");
 	//this->whatOrder = "colonne2 DESC";
-	//this->whatValuesToInsert->Add("Value1");
-	//this->whatValuesToInsert->Add("Value2");
-
+	//this->whatValues->Add("Value1");
+	//this->whatValues->Add("Value2");
 
 	/////////////////////////////
 	////////////TEST/////////////
@@ -65,7 +60,7 @@ String^ CL_Com_mapping::SELECT(Void) {
 
 String^ CL_Com_mapping::INSERT(Void){
 	// Il faut une table pour insérer les données
-	if (whatTables->Count != 1 || this->whatColumns->Count == 0 || this->whatColumns->Count != this->whatValuesToInsert->Count) 
+	if (whatTables->Count != 1 || this->whatColumns->Count == 0 || this->whatColumns->Count != this->whatValues->Count) 
 		throw gcnew Exception("Requête invalide");
 	String^ toReturn = "INSERT INTO " + whatTables[0];
 
@@ -78,10 +73,59 @@ String^ CL_Com_mapping::INSERT(Void){
 
 	// Ajout des valeurs à insérer
 	toReturn += " VALUES (";
-	toReturn += this->whatValuesToInsert[0];
-	for (int i = 1; i < this->whatValuesToInsert->Count; i++) {
-		toReturn += ", " + this->whatValuesToInsert[i];
+	toReturn += this->whatValues[0];
+	for (int i = 1; i < this->whatValues->Count; i++) {
+		toReturn += ", " + this->whatValues[i];
 	}
-	toReturn += ")";
+	toReturn += ");";
+	return toReturn;
+}
+
+String^ CL_Com_mapping::DELETE(Void) {
+	// Il faut une table pour insérer les données
+	if (whatTables->Count != 1 || this->whatColumns->Count != 0 
+		|| this->whatOrder != "" || this->whatValues->Count != 0
+		|| this->whatConditions->Count == 0)
+		throw gcnew Exception("Requête invalide");
+	String^ toReturn = "DELETE FROM " + whatTables[0];
+
+	// Ajout des conditions
+	toReturn += " WHERE ";
+	toReturn += this->whatConditions[0];
+	for (int i = 1; i < this->whatConditions->Count; i++) {
+		toReturn += " AND " + this->whatConditions[i];
+	}
+	toReturn += ";";
+	return toReturn;
+}
+
+Void CL_Com_mapping::RESETREQUEST(Void) {
+	// Toutes les valeurs sont réinitialisées
+	this->whatOrder = "";
+	this->whatTables = gcnew List<String^>;
+	this->whatConditions = gcnew List<String^>;
+	this->whatValues = gcnew List<String^>;
+	this->whatColumns = gcnew List<String^>;
+}
+
+String^ CL_Com_mapping::UPDATE(Void) {
+	// Il faut une table pour insérer les données
+	if (whatTables->Count != 1 || this->whatColumns->Count == 0 || this->whatColumns->Count != this->whatValues->Count)
+		throw gcnew Exception("Requête invalide");
+	String^ toReturn = "UPDATE " + whatTables[0];
+
+	// Ajout des modifications
+	toReturn += " SET " + this->whatColumns[0] + " = " + this->whatValues[0];
+	for (int i = 1; i < this->whatColumns->Count; i++) {
+		toReturn += ", " + this->whatColumns[i] + " = " + this->whatValues[i];
+	}
+	
+	// Ajout des conditions
+	toReturn += " WHERE ";
+	toReturn += this->whatConditions[0];
+	for (int i = 1; i < this->whatConditions->Count; i++) {
+		toReturn += " AND " + this->whatConditions[i];
+	}
+	toReturn += ";";
 	return toReturn;
 }
