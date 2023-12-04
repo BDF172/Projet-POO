@@ -34,7 +34,9 @@ namespace ProjetPOO {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button_retour_personnel;
+	protected:
+
 	protected:
 
 	private:
@@ -50,31 +52,37 @@ namespace ProjetPOO {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button_retour_personnel = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// button1
+			// button_retour_personnel
 			// 
-			this->button1->BackColor = System::Drawing::SystemColors::ControlDark;
-			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
-			this->button1->Location = System::Drawing::Point(12, 12);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(49, 49);
-			this->button1->TabIndex = 0;
-			this->button1->UseVisualStyleBackColor = false;
+			this->button_retour_personnel->BackColor = System::Drawing::SystemColors::ControlDark;
+			this->button_retour_personnel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button_retour_personnel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16));
+			this->button_retour_personnel->Location = System::Drawing::Point(12, 12);
+			this->button_retour_personnel->Name = L"button_retour_personnel";
+			this->button_retour_personnel->Size = System::Drawing::Size(50, 50);
+			this->button_retour_personnel->TabIndex = 0;
+			this->button_retour_personnel->Text = L"<";
+			this->button_retour_personnel->UseVisualStyleBackColor = false;
+			this->button_retour_personnel->Click += gcnew System::EventHandler(this, &gestionP::button_retour_personnel_Click);
 			// 
-			// MyForm
+			// gestionP
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1238, 738);
-			this->Controls->Add(this->button1);
-			this->Name = L"MyForm";
+			this->ClientSize = System::Drawing::Size(1857, 1135);
+			this->Controls->Add(this->button_retour_personnel);
+			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->Name = L"gestionP";
 			this->Text = L"gestion_personnel";
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+	private: System::Void button_retour_personnel_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	}
 	};
 }
