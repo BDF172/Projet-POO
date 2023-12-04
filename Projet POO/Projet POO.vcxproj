@@ -81,8 +81,8 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
-      <SubSystem>Console</SubSystem>
-      <EntryPointSymbol>main</EntryPointSymbol>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>PageMain</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -125,16 +125,29 @@
     <ClCompile Include="CL_Com_mapping_client.cpp" />
     <ClCompile Include="CL_Com_mapping_client.h" />
     <ClCompile Include="CL_Com_mapping_personnel.cpp" />
-    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="gestion_personnel.cpp" />
+    <ClCompile Include="principal.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CL_CAD.h" />
     <ClInclude Include="CL_Com_mapping.h" />
     <ClInclude Include="CL_Com_mapping_personnel.h" />
     <ClInclude Include="headerLink.h" />
-    <ClInclude Include="MyForm.h">
+    <ClInclude Include="gestion_personnel.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="principal.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gestion_personnel.resx">
+      <DependentUpon>gestion_personnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="principal.resx">
+      <DependentUpon>principal.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
