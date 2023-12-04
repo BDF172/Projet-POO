@@ -34,12 +34,15 @@
     <Filter Include="Forms\Gestion Personnel">
       <UniqueIdentifier>{eb27007e-4d9d-4013-a366-28c9fa5b6417}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\Composants\stats">
+      <UniqueIdentifier>{99af9e97-0fea-4f1e-a84b-8f4d1decce6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Composants\stats">
+      <UniqueIdentifier>{b16845dc-73c2-42c4-8d41-a425f366ecd6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CL_CAD.cpp">
-      <Filter>Fichiers sources\Composants</Filter>
-    </ClCompile>
-    <ClCompile Include="CL_Com_mapping.cpp">
       <Filter>Fichiers sources\Composants</Filter>
     </ClCompile>
     <ClCompile Include="CL_Com_mapping_personnel.cpp">
@@ -59,6 +62,21 @@
     </ClCompile>
     <ClCompile Include="CL_Com_mapping_client.cpp">
       <Filter>Fichiers sources\Composants\heritage_mapping</Filter>
+    </ClCompile>
+    <ClCompile Include="CL_Com_mapping_adresses.cpp">
+      <Filter>Fichiers sources\Composants\heritage_mapping</Filter>
+    </ClCompile>
+    <ClCompile Include="CL_Com_mapping_articles.cpp">
+      <Filter>Fichiers sources\Composants\heritage_mapping</Filter>
+    </ClCompile>
+    <ClCompile Include="CL_Com_mapping.cpp">
+      <Filter>Fichiers sources\Composants</Filter>
+    </ClCompile>
+    <ClCompile Include="CL_Com_mapping_commandes.cpp">
+      <Filter>Fichiers sources\Composants\heritage_mapping</Filter>
+    </ClCompile>
+    <ClCompile Include="statsMapping.cpp">
+      <Filter>Fichiers sources\Composants\stats</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,8 +104,17 @@
     <ClInclude Include="headerLink.h" />
     <ClInclude Include="gestion_personnel.h" />
     <ClInclude Include="principal.h" />
-    <ClInclude Include="CL_Com_mapping_adresses.h" />
-    <ClInclude Include="CL_Com_mapping_commandes.h" />
-    <ClInclude Include="CL_Com_mapping_articles.h" />
+    <ClInclude Include="statsMapping.h">
+      <Filter>Fichiers d%27en-tête\Composants\stats</Filter>
+    </ClInclude>
+    <ClInclude Include="CL_Com_mapping_adresses.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage_mapping</Filter>
+    </ClInclude>
+    <ClInclude Include="CL_Com_mapping_articles.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage_mapping</Filter>
+    </ClInclude>
+    <ClInclude Include="CL_Com_mapping_commandes.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage_mapping</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
