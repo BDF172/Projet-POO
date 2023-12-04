@@ -1,5 +1,5 @@
 #pragma once
-namespace NS_Composants {
+namespace NS_composants {
 	ref class CL_Com_mapping_commandes : public CL_Com_mapping{
 	public:
 		// A faire : compléter les types de paramètres des méthodes
