@@ -128,6 +128,7 @@
     <ClCompile Include="gestion_personnel.cpp" />
     <ClCompile Include="principal.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="statsMapping.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CL_CAD.h" />
@@ -140,6 +141,7 @@
     <ClInclude Include="principal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="statsMapping.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gestion_personnel.resx">
