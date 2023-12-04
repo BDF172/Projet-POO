@@ -1,5 +1,7 @@
 #pragma once
 
+#include "gestion_personnel.h"
+
 namespace ProjetPOO {
 
 	using namespace System;
@@ -142,9 +144,9 @@ namespace ProjetPOO {
 		}
 #pragma endregion
 private: System::Void button_personnel_Click(System::Object^ sender, System::EventArgs^ e) {
-	ProjetPOO::gestionP^ pageGestionPersonnel = gcnew ProjetPOO::gestionP;
+	ProjetPOO::gestionP pageGestionPersonnel;
 	Application::EnableVisualStyles();
-	Application::Run(pageGestionPersonnel);
+	pageGestionPersonnel.ShowDialog();
 }
 private: System::Void button_commande_Click(System::Object^ sender, System::EventArgs^ e) {
 }
