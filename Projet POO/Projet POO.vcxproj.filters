@@ -34,12 +34,17 @@
     <Filter Include="Forms\Gestion Personnel">
       <UniqueIdentifier>{eb27007e-4d9d-4013-a366-28c9fa5b6417}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers sources\Composants\stats">
-      <UniqueIdentifier>{a71c59c6-696a-4d48-977e-df9300882807}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête\Composants\stats">
-      <UniqueIdentifier>{f7d3e774-3566-4385-b304-4d82680b4917}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="CL_CAD.cpp" />
+    <ClCompile Include="CL_Com_mapping.cpp" />
+    <ClCompile Include="CL_Com_mapping_client.cpp" />
+    <ClCompile Include="CL_Com_mapping_client.h" />
+    <ClCompile Include="CL_Com_mapping_personnel.cpp" />
+    <ClCompile Include="gestion_personnel.cpp" />
+    <ClCompile Include="principal.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="CL_Com_mapping_adresses.cpp" />
+    <ClCompile Include="CL_Com_mapping_commandes.cpp" />
+    <ClCompile Include="CL_Com_mapping_articles.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CL_CAD.cpp">
@@ -66,9 +71,6 @@
     <ClCompile Include="CL_Com_mapping_client.cpp">
       <Filter>Fichiers sources\Composants\heritage_mapping</Filter>
     </ClCompile>
-    <ClCompile Include="statsMapping.cpp">
-      <Filter>Fichiers sources\Composants\stats</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headerLink.h">
@@ -89,8 +91,14 @@
     <ClInclude Include="gestion_personnel.h">
       <Filter>Forms\Gestion Personnel</Filter>
     </ClInclude>
-    <ClInclude Include="statsMapping.h">
-      <Filter>Fichiers d%27en-tête\Composants\stats</Filter>
-    </ClInclude>
+    <ClInclude Include="CL_CAD.h" />
+    <ClInclude Include="CL_Com_mapping.h" />
+    <ClInclude Include="CL_Com_mapping_personnel.h" />
+    <ClInclude Include="headerLink.h" />
+    <ClInclude Include="gestion_personnel.h" />
+    <ClInclude Include="principal.h" />
+    <ClInclude Include="CL_Com_mapping_adresses.h" />
+    <ClInclude Include="CL_Com_mapping_commandes.h" />
+    <ClInclude Include="CL_Com_mapping_articles.h" />
   </ItemGroup>
 </Project>

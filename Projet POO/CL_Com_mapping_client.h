@@ -1,4 +1,5 @@
 #pragma once
+#include "headerLink.h"
 
 namespace NS_composants {
 	ref class CL_Com_mapping_client : public CL_Com_mapping {
