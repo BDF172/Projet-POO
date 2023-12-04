@@ -124,12 +124,16 @@
   <ItemGroup>
     <ClCompile Include="CL_CAD.cpp" />
     <ClCompile Include="gestionClient.cpp" />
+    <ClCompile Include="principal.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CL_CAD.h" />
     <ClInclude Include="gestionClient.h" />
     <ClInclude Include="headerLink.h" />
+    <ClInclude Include="principal.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="statsMapping.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

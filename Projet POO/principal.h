@@ -88,7 +88,7 @@ namespace ProjetPOO {
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -213,7 +213,7 @@ namespace ProjetPOO {
 			this->splitContainer1->Panel1->Controls->Add(this->label4);
 			this->splitContainer1->Panel1->Controls->Add(this->textBox4);
 			this->splitContainer1->Panel1->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->splitContainer1->Panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &principal::splitContainer1_Panel1_Paint_1);
+
 			// 
 			// splitContainer1.Panel2
 			// 
@@ -468,6 +468,8 @@ namespace ProjetPOO {
 			this->gestion_client->TabIndex = 1;
 			this->gestion_client->Text = L"Gestion Client";
 			this->gestion_client->Click += gcnew System::EventHandler(this, &principal::gestion_client_Click);
+
+
 			// 
 			// gestion_commande
 			// 
@@ -585,44 +587,46 @@ namespace ProjetPOO {
 
 		}
 #pragma endregion
-private: System::Void button_personnel_Click(System::Object^ sender, System::EventArgs^ e) {
-	ProjetPOO::gestionP pageGestionPersonnel;
-	Application::EnableVisualStyles();
-	pageGestionPersonnel.ShowDialog();
-}
-private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label1_Click_1(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox2_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label2_Click_1(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void dateTimePicker_personnel_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-};
+	private: System::Void button_personnel_Click(System::Object^ sender, System::EventArgs^ e) {
+		ProjetPOO::gestionP pageGestionPersonnel;
+		Application::EnableVisualStyles();
+		pageGestionPersonnel.ShowDialog();
+	}
+	private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void label1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void textBox2_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void label2_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void dateTimePicker_personnel_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void gestion_client_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	};
 }

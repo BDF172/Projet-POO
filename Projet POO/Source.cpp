@@ -4,6 +4,6 @@ using namespace System::Windows::Forms;
 using namespace NS_composants;
 
 System::Void PageMain(System::Void) {
-	gestion_client gestion;
-	gestion.modifierClient("2",  "Ilias", "TRAGHA", "2004-02-10");
+	ProjetPOO::principal page;
+	Application::Run(% page);
 }
