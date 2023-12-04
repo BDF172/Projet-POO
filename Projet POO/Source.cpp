@@ -5,5 +5,5 @@ using namespace NS_composants;
 
 System::Void PageMain(System::Void) {
 	gestion_client gestion;
-	gestion.createClient("Ilias", "TRAGHA", "2004-02-10");
+	gestion.modifierClient("2",  "Ilias", "TRAGHA", "2004-02-10");
 }
