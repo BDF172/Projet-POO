@@ -1,7 +1,7 @@
 #pragma once
 
 namespace NS_Composants {
-	ref class CL_Com_mapping_adresses : public CL_Com_mapping {
+	ref class CL_Com_mapping_adresses : public NS_composants::CL_Com_mapping {
 	public:
 		CL_Com_mapping_adresses();
 		System::Void setPays(System::String^ toSet);
