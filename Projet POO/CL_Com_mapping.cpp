@@ -149,7 +149,9 @@ Void CL_Com_mapping::RESETREQUEST(Void) {
 
 String^ CL_Com_mapping::UPDATE(Void) {
 	// Il faut une table pour insérer les données
-	if (whatTables->Count != 1 || this->whatColumns->Count == 0 || this->whatColumns->Count != this->whatValues->Count)
+	if (whatTables->Count != 1 || this->whatColumns->Count == 0 || 
+		this->whatColumns->Count != this->whatValues->Count ||
+		this->whatConditions->Count == 0)
 		throw gcnew Exception("Requête invalide");
 	String^ toReturn = "UPDATE " + whatTables[0];
 

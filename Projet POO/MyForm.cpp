@@ -7,9 +7,9 @@ int main(array<System::String^>^ args) {
 	test->setNom("TRAGHA");
 	test->setPrenom("Ilias");
 	test->setSuperieurID("1");
-	//test->setDateEmbauche("12-03-2023");
+	test->setDateEmbauche("12-03-2023");
 	test->setAdresseID("0");
-	test->setID("0");
-	System::Console::WriteLine(test->UPDATE());
+	//test->setID("0");
+	System::Console::WriteLine(test->INSERT());
 	return 0;
 }
