@@ -39,6 +39,12 @@
     <ClCompile Include="CL_Com_mapping_personnel.cpp">
       <Filter>Fichiers sources\Composants\heritage_mapping</Filter>
     </ClCompile>
+    <ClCompile Include="CL_Com_mapping_client.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage_mapping</Filter>
+    </ClCompile>
+    <ClCompile Include="CL_Com_mapping_client.cpp">
+      <Filter>Fichiers sources\Composants\heritage_mapping</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
