@@ -19,12 +19,6 @@
     <Filter Include="Fichiers sources\Composants">
       <UniqueIdentifier>{54b75cec-f75c-4e91-a70b-e599d91fad4e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Forms">
-      <UniqueIdentifier>{eefe52e0-cdfd-4aa2-a2d6-0f70215f2cb3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Forms\principal">
-      <UniqueIdentifier>{7bb184da-889c-475d-93da-abf67b015fdd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Fichiers d%27en-tête\Composants\stats">
       <UniqueIdentifier>{b16845dc-73c2-42c4-8d41-a425f366ecd6}</UniqueIdentifier>
     </Filter>
@@ -55,7 +49,6 @@
     </ClInclude>
     <ClInclude Include="CL_CAD.h" />
     <ClInclude Include="headerLink.h" />
-    <ClInclude Include="principal.h" />
     <ClInclude Include="statsMapping.h">
       <Filter>Fichiers d%27en-tête\Composants\stats</Filter>
     </ClInclude>
