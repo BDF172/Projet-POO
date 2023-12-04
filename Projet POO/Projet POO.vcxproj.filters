@@ -5,7 +5,7 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête">
+    <Filter Include="Fichiers d'en-tête">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
@@ -13,13 +13,13 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\Composants">
+    <Filter Include="Fichiers d'en-tête\Composants">
       <UniqueIdentifier>{5287d365-e0bd-4013-bbfa-447eb49733b1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Fichiers sources\Composants">
       <UniqueIdentifier>{54b75cec-f75c-4e91-a70b-e599d91fad4e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\Composants\heritage_mapping">
+    <Filter Include="Fichiers d'en-tête\Composants\heritage_mapping">
       <UniqueIdentifier>{1ec2f81e-e0fa-4676-8ce0-cce6837e72db}</UniqueIdentifier>
     </Filter>
     <Filter Include="Fichiers sources\Composants\heritage_mapping">
@@ -34,17 +34,6 @@
     <Filter Include="Forms\Gestion Personnel">
       <UniqueIdentifier>{eb27007e-4d9d-4013-a366-28c9fa5b6417}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="CL_CAD.cpp" />
-    <ClCompile Include="CL_Com_mapping.cpp" />
-    <ClCompile Include="CL_Com_mapping_client.cpp" />
-    <ClCompile Include="CL_Com_mapping_client.h" />
-    <ClCompile Include="CL_Com_mapping_personnel.cpp" />
-    <ClCompile Include="gestion_personnel.cpp" />
-    <ClCompile Include="principal.cpp" />
-    <ClCompile Include="Source.cpp" />
-    <ClCompile Include="CL_Com_mapping_adresses.cpp" />
-    <ClCompile Include="CL_Com_mapping_commandes.cpp" />
-    <ClCompile Include="CL_Com_mapping_articles.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CL_CAD.cpp">
@@ -66,7 +55,7 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="CL_Com_mapping_client.h">
-      <Filter>Fichiers d%27en-tête\Composants\heritage_mapping</Filter>
+      <Filter>Fichiers d'en-tête\Composants\heritage_mapping</Filter>
     </ClCompile>
     <ClCompile Include="CL_Com_mapping_client.cpp">
       <Filter>Fichiers sources\Composants\heritage_mapping</Filter>
@@ -74,16 +63,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headerLink.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d'en-tête</Filter>
     </ClInclude>
     <ClInclude Include="CL_CAD.h">
-      <Filter>Fichiers d%27en-tête\Composants</Filter>
+      <Filter>Fichiers d'en-tête\Composants</Filter>
     </ClInclude>
     <ClInclude Include="CL_Com_mapping.h">
-      <Filter>Fichiers d%27en-tête\Composants</Filter>
+      <Filter>Fichiers d'en-tête\Composants</Filter>
     </ClInclude>
     <ClInclude Include="CL_Com_mapping_personnel.h">
-      <Filter>Fichiers d%27en-tête\Composants\heritage_mapping</Filter>
+      <Filter>Fichiers d'en-tête\Composants\heritage_mapping</Filter>
     </ClInclude>
     <ClInclude Include="principal.h">
       <Filter>Forms\principal</Filter>
