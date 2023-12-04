@@ -27,9 +27,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MyForm.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="CL_CAD.cpp">
       <Filter>Fichiers sources\Composants</Filter>
     </ClCompile>
@@ -41,9 +38,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyForm.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="headerLink.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
