@@ -33,7 +33,7 @@ String^ CL_Com_mapping::SELECT(Void) {
 	if (whatTables->Count == 0) throw gcnew Exception("Requête invalide");
 	String^ toReturn = "SELECT ";
 	
-	// Ajout de la selction des colonnes, si aucune n'est sélectionnée, on les choisit toutes
+	// Ajout de la selection des colonnes, si aucune n'est sélectionnée, on les choisit toutes
 	if (this->whatColumns->Count == 0) {
 		toReturn += "*";
 	}
