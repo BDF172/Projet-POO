@@ -25,25 +25,25 @@
     <Filter Include="Forms\principal">
       <UniqueIdentifier>{7bb184da-889c-475d-93da-abf67b015fdd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers sources\Composants\stats">
-      <UniqueIdentifier>{99af9e97-0fea-4f1e-a84b-8f4d1decce6a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Fichiers d%27en-tête\Composants\stats">
       <UniqueIdentifier>{b16845dc-73c2-42c4-8d41-a425f366ecd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Composants\clients">
+      <UniqueIdentifier>{d812eda0-dcac-4854-b61c-1eee54a54e00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Composants\clients">
+      <UniqueIdentifier>{420edfe1-328f-42b1-a2c2-60112b6a71e7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CL_CAD.cpp">
       <Filter>Fichiers sources\Composants</Filter>
     </ClCompile>
-    <ClCompile Include="principal.cpp">
-      <Filter>Forms\principal</Filter>
-    </ClCompile>
     <ClCompile Include="Source.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="statsMapping.cpp">
-      <Filter>Fichiers sources\Composants\stats</Filter>
+    <ClCompile Include="gestionClient.cpp">
+      <Filter>Fichiers sources\Composants\clients</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -53,17 +53,14 @@
     <ClInclude Include="CL_CAD.h">
       <Filter>Fichiers d'en-tête\Composants</Filter>
     </ClInclude>
-    <ClInclude Include="principal.h">
-      <Filter>Forms\principal</Filter>
-    </ClInclude>
     <ClInclude Include="CL_CAD.h" />
-    <ClInclude Include="CL_Com_mapping.h" />
-    <ClInclude Include="CL_Com_mapping_personnel.h" />
     <ClInclude Include="headerLink.h" />
-    <ClInclude Include="gestion_personnel.h" />
     <ClInclude Include="principal.h" />
     <ClInclude Include="statsMapping.h">
       <Filter>Fichiers d%27en-tête\Composants\stats</Filter>
+    </ClInclude>
+    <ClInclude Include="gestionClient.h">
+      <Filter>Fichiers d%27en-tête\Composants\clients</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

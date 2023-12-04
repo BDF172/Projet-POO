@@ -121,23 +121,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CL_CAD.cpp" />
-    <ClCompile Include="gestion_personnel.cpp" />
-    <ClCompile Include="principal.cpp" />
+    <ClCompile Include="gestionClient.cpp" />
     <ClCompile Include="Source.cpp" />
-    <ClCompile Include="statsMapping.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CL_CAD.h" />
+    <ClInclude Include="gestionClient.h" />
     <ClInclude Include="headerLink.h" />
-    <ClInclude Include="principal.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="statsMapping.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="principal.resx">
-      <DependentUpon>principal.h</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
