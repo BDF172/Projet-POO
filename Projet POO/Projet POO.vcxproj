@@ -122,8 +122,11 @@
   <ItemGroup>
     <ClCompile Include="CL_CAD.cpp" />
     <ClCompile Include="CL_Com_mapping.cpp" />
+    <ClCompile Include="CL_Com_mapping_adresses.cpp" />
+    <ClCompile Include="CL_Com_mapping_articles.cpp" />
     <ClCompile Include="CL_Com_mapping_client.cpp" />
     <ClCompile Include="CL_Com_mapping_client.h" />
+    <ClCompile Include="CL_Com_mapping_commandes.cpp" />
     <ClCompile Include="CL_Com_mapping_personnel.cpp" />
     <ClCompile Include="gestion_personnel.cpp" />
     <ClCompile Include="principal.cpp" />
@@ -132,6 +135,9 @@
   <ItemGroup>
     <ClInclude Include="CL_CAD.h" />
     <ClInclude Include="CL_Com_mapping.h" />
+    <ClInclude Include="CL_Com_mapping_adresses.h" />
+    <ClInclude Include="CL_Com_mapping_articles.h" />
+    <ClInclude Include="CL_Com_mapping_commandes.h" />
     <ClInclude Include="CL_Com_mapping_personnel.h" />
     <ClInclude Include="headerLink.h" />
     <ClInclude Include="gestion_personnel.h">
