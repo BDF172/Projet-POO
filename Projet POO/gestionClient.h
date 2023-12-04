@@ -7,5 +7,7 @@ namespace NS_composants {
 
 	public:
 		System::Int64 createClient(System::String^ nom, System::String^ prenom, System::String^ naissance);
+		System::Int64 createClient(System::String^, System::String^, System::String^, System::String^);
+		System::Void modifierClient(System::String^, System::String^, System::String^, System::String^);
 	};
 }

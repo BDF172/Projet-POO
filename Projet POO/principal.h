@@ -74,6 +74,12 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TextBox^ textBox4;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::SplitContainer^ splitContainer2;
+	private: System::Windows::Forms::Button^ button5;
+	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Button^ button2;
+
 
 
 	protected:
@@ -93,6 +99,7 @@ namespace ProjetPOO {
 		{
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->gestion_personnel = (gcnew System::Windows::Forms::TabPage());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->splitContainer1 = (gcnew System::Windows::Forms::SplitContainer());
 			this->button_valider = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -119,7 +126,11 @@ namespace ProjetPOO {
 			this->gestion_commande = (gcnew System::Windows::Forms::TabPage());
 			this->gestion_stock = (gcnew System::Windows::Forms::TabPage());
 			this->gestion_statistique = (gcnew System::Windows::Forms::TabPage());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->splitContainer2 = (gcnew System::Windows::Forms::SplitContainer());
 			this->tabControl1->SuspendLayout();
 			this->gestion_personnel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->BeginInit();
@@ -127,6 +138,9 @@ namespace ProjetPOO {
 			this->splitContainer1->Panel2->SuspendLayout();
 			this->splitContainer1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			this->gestion_client->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer2))->BeginInit();
+			this->splitContainer2->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// tabControl1
@@ -159,6 +173,19 @@ namespace ProjetPOO {
 			this->gestion_personnel->Size = System::Drawing::Size(1872, 1099);
 			this->gestion_personnel->TabIndex = 0;
 			this->gestion_personnel->Text = L"Gestion Personnel";
+			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18));
+			this->button1->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->button1->Location = System::Drawing::Point(17, 12);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(319, 249);
+			this->button1->TabIndex = 27;
+			this->button1->Text = L"Créer Personnel";
+			this->button1->UseVisualStyleBackColor = false;
 			// 
 			// splitContainer1
 			// 
@@ -419,7 +446,7 @@ namespace ProjetPOO {
 			this->button_modifier_personnel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button_modifier_personnel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18));
 			this->button_modifier_personnel->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->button_modifier_personnel->Location = System::Drawing::Point(17, 280);
+			this->button_modifier_personnel->Location = System::Drawing::Point(17, 278);
 			this->button_modifier_personnel->Name = L"button_modifier_personnel";
 			this->button_modifier_personnel->Size = System::Drawing::Size(319, 255);
 			this->button_modifier_personnel->TabIndex = 21;
@@ -428,13 +455,18 @@ namespace ProjetPOO {
 			// 
 			// gestion_client
 			// 
+			this->gestion_client->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
+			this->gestion_client->Controls->Add(this->splitContainer2);
+			this->gestion_client->Controls->Add(this->button5);
+			this->gestion_client->Controls->Add(this->button4);
+			this->gestion_client->Controls->Add(this->button3);
+			this->gestion_client->Controls->Add(this->button2);
 			this->gestion_client->Location = System::Drawing::Point(4, 29);
 			this->gestion_client->Name = L"gestion_client";
 			this->gestion_client->Padding = System::Windows::Forms::Padding(3);
 			this->gestion_client->Size = System::Drawing::Size(1872, 1099);
 			this->gestion_client->TabIndex = 1;
 			this->gestion_client->Text = L"Gestion Client";
-			this->gestion_client->UseVisualStyleBackColor = true;
 			this->gestion_client->Click += gcnew System::EventHandler(this, &principal::gestion_client_Click);
 			// 
 			// gestion_commande
@@ -465,18 +497,69 @@ namespace ProjetPOO {
 			this->gestion_statistique->Text = L"Gestion Statistique";
 			this->gestion_statistique->UseVisualStyleBackColor = true;
 			// 
-			// button1
+			// button2
 			// 
-			this->button1->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18));
-			this->button1->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->button1->Location = System::Drawing::Point(17, 12);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(319, 249);
-			this->button1->TabIndex = 27;
-			this->button1->Text = L"Créer Personnel";
-			this->button1->UseVisualStyleBackColor = false;
+			this->button2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18));
+			this->button2->Location = System::Drawing::Point(20, 24);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(319, 249);
+			this->button2->TabIndex = 0;
+			this->button2->Text = L"Créer Client";
+			this->button2->UseVisualStyleBackColor = false;
+			// 
+			// button3
+			// 
+			this->button3->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18));
+			this->button3->Location = System::Drawing::Point(20, 296);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(319, 249);
+			this->button3->TabIndex = 1;
+			this->button3->Text = L"Modifier Client";
+			this->button3->UseVisualStyleBackColor = false;
+			// 
+			// button4
+			// 
+			this->button4->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18));
+			this->button4->Location = System::Drawing::Point(20, 567);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(319, 249);
+			this->button4->TabIndex = 2;
+			this->button4->Text = L"Supprimer Client";
+			this->button4->UseVisualStyleBackColor = false;
+			// 
+			// button5
+			// 
+			this->button5->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18));
+			this->button5->Location = System::Drawing::Point(20, 836);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(319, 249);
+			this->button5->TabIndex = 3;
+			this->button5->Text = L"Afficher Client";
+			this->button5->UseVisualStyleBackColor = false;
+			// 
+			// splitContainer2
+			// 
+			this->splitContainer2->Location = System::Drawing::Point(373, 24);
+			this->splitContainer2->Name = L"splitContainer2";
+			// 
+			// splitContainer2.Panel1
+			// 
+			this->splitContainer2->Panel1->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			// 
+			// splitContainer2.Panel2
+			// 
+			this->splitContainer2->Panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->splitContainer2->Size = System::Drawing::Size(1486, 1060);
+			this->splitContainer2->SplitterDistance = 495;
+			this->splitContainer2->TabIndex = 4;
 			// 
 			// principal
 			// 
@@ -495,6 +578,9 @@ namespace ProjetPOO {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->EndInit();
 			this->splitContainer1->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			this->gestion_client->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer2))->EndInit();
+			this->splitContainer2->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -504,15 +590,39 @@ private: System::Void button_personnel_Click(System::Object^ sender, System::Eve
 	Application::EnableVisualStyles();
 	pageGestionPersonnel.ShowDialog();
 }
-private: System::Void button_afficher_personnel_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void button_supprimer_personnel_Click_1(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void button_modifier_personnel_Click_1(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void label1_Click_1(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void button_creer_personnel_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void button_creer_personnel_Click_1(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox2_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label2_Click_1(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void dateTimePicker_personnel_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
