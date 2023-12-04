@@ -129,18 +129,12 @@
   <ItemGroup>
     <ClInclude Include="CL_CAD.h" />
     <ClInclude Include="headerLink.h" />
-    <ClInclude Include="gestion_personnel.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="principal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="statsMapping.h" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="gestion_personnel.resx">
-      <DependentUpon>gestion_personnel.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="principal.resx">
       <DependentUpon>principal.h</DependentUpon>
     </EmbeddedResource>

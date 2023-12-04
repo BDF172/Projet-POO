@@ -25,9 +25,6 @@
     <Filter Include="Forms\principal">
       <UniqueIdentifier>{7bb184da-889c-475d-93da-abf67b015fdd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Forms\Gestion Personnel">
-      <UniqueIdentifier>{eb27007e-4d9d-4013-a366-28c9fa5b6417}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Fichiers sources\Composants\stats">
       <UniqueIdentifier>{99af9e97-0fea-4f1e-a84b-8f4d1decce6a}</UniqueIdentifier>
     </Filter>
@@ -41,9 +38,6 @@
     </ClCompile>
     <ClCompile Include="principal.cpp">
       <Filter>Forms\principal</Filter>
-    </ClCompile>
-    <ClCompile Include="gestion_personnel.cpp">
-      <Filter>Forms\Gestion Personnel</Filter>
     </ClCompile>
     <ClCompile Include="Source.cpp">
       <Filter>Fichiers sources</Filter>
@@ -61,9 +55,6 @@
     </ClInclude>
     <ClInclude Include="principal.h">
       <Filter>Forms\principal</Filter>
-    </ClInclude>
-    <ClInclude Include="gestion_personnel.h">
-      <Filter>Forms\Gestion Personnel</Filter>
     </ClInclude>
     <ClInclude Include="CL_CAD.h" />
     <ClInclude Include="CL_Com_mapping.h" />
