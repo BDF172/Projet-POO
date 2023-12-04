@@ -121,34 +121,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CL_CAD.cpp" />
-    <ClCompile Include="CL_Com_mapping.cpp" />
-    <ClCompile Include="CL_Com_mapping_adresses.cpp" />
-    <ClCompile Include="CL_Com_mapping_articles.cpp" />
-    <ClCompile Include="CL_Com_mapping_client.cpp" />
-    <ClCompile Include="CL_Com_mapping_client.h" />
-    <ClCompile Include="CL_Com_mapping_commandes.cpp" />
-    <ClCompile Include="CL_Com_mapping_personnel.cpp" />
-    <ClCompile Include="principal.cpp" />
+    <ClCompile Include="gestionClient.cpp" />
     <ClCompile Include="Source.cpp" />
-    <ClCompile Include="statsMapping.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CL_CAD.h" />
-    <ClInclude Include="CL_Com_mapping.h" />
-    <ClInclude Include="CL_Com_mapping_adresses.h" />
-    <ClInclude Include="CL_Com_mapping_articles.h" />
-    <ClInclude Include="CL_Com_mapping_commandes.h" />
-    <ClInclude Include="CL_Com_mapping_personnel.h" />
+    <ClInclude Include="gestionClient.h" />
     <ClInclude Include="headerLink.h" />
-    <ClInclude Include="principal.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="statsMapping.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="principal.resx">
-      <DependentUpon>principal.h</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

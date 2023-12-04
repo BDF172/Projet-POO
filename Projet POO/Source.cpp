@@ -1,10 +1,9 @@
 #include "headerLink.h"
 
 using namespace System::Windows::Forms;
+using namespace NS_composants;
 
 System::Void PageMain(System::Void) {
-	//ProjetPOO::principal^ pageAccueil = gcnew ProjetPOO::principal;
-	//Application::EnableVisualStyles();
-	//Application::Run(pageAccueil);
-	NS_Composants::
+	gestion_client gestion;
+	gestion.createClient("Ilias", "TRAGHA", "2004-02-10");
 }
