@@ -1,8 +1,11 @@
-ALTER PROCEDURE ModifierClient
-	@IdClient int,
+USE POO;
+GO
+
+CREATE PROCEDURE ModifierPersonnel
+	@IdPersonnel int,
     @Nom varchar(50),
     @Prenom varchar(50),
-    @DateNaissance datetime
+    @IdSuperieur int
 AS
 BEGIN
     -- Déclarez une variable pour stocker l'ID du nouveau client
@@ -15,20 +18,20 @@ BEGIN
         -- Insérez le nouveau client dans la table Clients
         IF @Nom != ''
 		BEGIN
-		UPDATE POO.dbo.Clients
-        SET nom = @Nom WHERE id_client = @IdClient;;
+		UPDATE Personnel
+        SET nom = @Nom WHERE id_personnel = @IdPersonnel;
 		END
 		
 		IF @Prenom != ''
 		BEGIN
-		UPDATE POO.dbo.Clients 
-        SET prenom = @Prenom WHERE id_client = @IdClient;
+		UPDATE Personnel 
+        SET prenom = @Prenom WHERE id_personnel = @IdPersonnel;
 		END
 		
-		IF @DateNaissance != ''
+		IF @IdSuperieur != ''
 		BEGIN
-		UPDATE POO.dbo.Clients 
-        SET date_naissance = @DateNaissance WHERE id_client = @IdClient;
+		UPDATE Personnel
+        SET superieur = @IdSuperieur WHERE id_personnel = @IdPersonnel;
 		END
         -- Valider la transaction
         COMMIT;

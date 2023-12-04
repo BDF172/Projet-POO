@@ -1,7 +1,11 @@
-ALTER PROCEDURE ModifierAdresse
+USE POO;
+GO
+
+CREATE PROCEDURE AjouterAdresseClient
 	@IdClient int,
-	@IdAdresse int,
-    @Adresse varchar(50)
+    @Adresse varchar(50),
+	@Facturation bit
+
 AS
 BEGIN
 
@@ -10,7 +14,8 @@ BEGIN
 
     BEGIN TRY
         -- Insérez le nouveau client dans la table Clients
-        UPDATE POO.dbo.AdressesC SET adresse = @Adresse WHERE clientID = @IdClient AND clientID = @IdAdresse;
+		INSERT INTO POO.dbo.AdressesC(f_ou_l, villeID, adresse, clientID) VALUES (@Facturation, 1, @Adresse, @IdClient);
+        -- Valider la transaction
         COMMIT;
     END TRY
     BEGIN CATCH

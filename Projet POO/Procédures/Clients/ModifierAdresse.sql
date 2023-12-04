@@ -1,3 +1,6 @@
+USE POO;
+GO
+
 ALTER PROCEDURE ModifierAdresse
 	@IdClient int,
 	@IdAdresse int,

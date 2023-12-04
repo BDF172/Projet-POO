@@ -1,12 +1,15 @@
-ALTER PROCEDURE InsererNouveauClientAvecAdresse
+USE POO;
+GO
+
+CREATE PROCEDURE InsererNouveauPersonnel
     @Nom varchar(50),
     @Prenom varchar(50),
-    @DateNaissance datetime,
+    @IdSuperieur int,
 	@Adresse varchar(100)
 AS
 BEGIN
     -- Déclarez une variable pour stocker l'ID du nouveau client
-    DECLARE @NouveauClientID INT;
+    DECLARE @NouveauPersonnelID INT;
 
     -- Début de la transaction avec l'option SERIALIZABLE
     SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
@@ -14,25 +17,24 @@ BEGIN
 
     BEGIN TRY
         -- Insérez le nouveau client dans la table Clients
-        INSERT INTO POO.dbo.Clients (nom, prenom, date_naissance)
-        VALUES (@Nom, @Prenom, @DateNaissance);
+        INSERT INTO POO.dbo.Personnel(nom, prenom, superieur)
+        VALUES (@Nom, @Prenom, @IdSuperieur);
 		
 		-- Récupérez l'ID du nouveau client après la validation de la transaction
-        SET @NouveauClientID = SCOPE_IDENTITY();
+        SET @NouveauPersonnelID = SCOPE_IDENTITY();
 
-		INSERT INTO POO.dbo.AdressesC (adresse,	clientID, f_ou_l, villeID)
-		VALUES(@Adresse, @NouveauClientID, 0, 1);
+		INSERT INTO AdressesP(adresse, Villeid_ville)
+		VALUES(@Adresse, 1);
 
         -- Valider la transaction
         COMMIT;
 
 		-- Sélectionnez le nouvel ID du client
-		SELECT @NouveauClientID AS 'ID du nouveau client';        
+		SELECT @NouveauPersonnelID AS 'ID du nouveau personnel';        
     END TRY
     BEGIN CATCH
         -- En cas d'erreur, annuler la transaction
         ROLLBACK;
-        -- Vous pouvez gérer l'erreur ici selon vos besoins
     END CATCH;
 
     -- Rétablir le niveau d'isolation par défaut

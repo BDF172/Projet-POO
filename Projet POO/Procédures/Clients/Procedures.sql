@@ -1,3 +1,6 @@
+USE POO;
+GO
+
 CREATE PROCEDURE InsereNouveauClient
     @Nom varchar(50),
     @Prenom varchar(50),
