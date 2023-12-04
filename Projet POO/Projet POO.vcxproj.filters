@@ -19,12 +19,6 @@
     <Filter Include="Fichiers sources\Composants">
       <UniqueIdentifier>{54b75cec-f75c-4e91-a70b-e599d91fad4e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers d'en-tête\Composants\heritage_mapping">
-      <UniqueIdentifier>{1ec2f81e-e0fa-4676-8ce0-cce6837e72db}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers sources\Composants\heritage_mapping">
-      <UniqueIdentifier>{099012ea-84e0-4477-89cd-50ec9b661a5e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Forms">
       <UniqueIdentifier>{eefe52e0-cdfd-4aa2-a2d6-0f70215f2cb3}</UniqueIdentifier>
     </Filter>
@@ -45,9 +39,6 @@
     <ClCompile Include="CL_CAD.cpp">
       <Filter>Fichiers sources\Composants</Filter>
     </ClCompile>
-    <ClCompile Include="CL_Com_mapping_personnel.cpp">
-      <Filter>Fichiers sources\Composants\heritage_mapping</Filter>
-    </ClCompile>
     <ClCompile Include="principal.cpp">
       <Filter>Forms\principal</Filter>
     </ClCompile>
@@ -56,24 +47,6 @@
     </ClCompile>
     <ClCompile Include="Source.cpp">
       <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="CL_Com_mapping_client.h">
-      <Filter>Fichiers d'en-tête\Composants\heritage_mapping</Filter>
-    </ClCompile>
-    <ClCompile Include="CL_Com_mapping_client.cpp">
-      <Filter>Fichiers sources\Composants\heritage_mapping</Filter>
-    </ClCompile>
-    <ClCompile Include="CL_Com_mapping_adresses.cpp">
-      <Filter>Fichiers sources\Composants\heritage_mapping</Filter>
-    </ClCompile>
-    <ClCompile Include="CL_Com_mapping_articles.cpp">
-      <Filter>Fichiers sources\Composants\heritage_mapping</Filter>
-    </ClCompile>
-    <ClCompile Include="CL_Com_mapping.cpp">
-      <Filter>Fichiers sources\Composants</Filter>
-    </ClCompile>
-    <ClCompile Include="CL_Com_mapping_commandes.cpp">
-      <Filter>Fichiers sources\Composants\heritage_mapping</Filter>
     </ClCompile>
     <ClCompile Include="statsMapping.cpp">
       <Filter>Fichiers sources\Composants\stats</Filter>
@@ -85,12 +58,6 @@
     </ClInclude>
     <ClInclude Include="CL_CAD.h">
       <Filter>Fichiers d'en-tête\Composants</Filter>
-    </ClInclude>
-    <ClInclude Include="CL_Com_mapping.h">
-      <Filter>Fichiers d'en-tête\Composants</Filter>
-    </ClInclude>
-    <ClInclude Include="CL_Com_mapping_personnel.h">
-      <Filter>Fichiers d'en-tête\Composants\heritage_mapping</Filter>
     </ClInclude>
     <ClInclude Include="principal.h">
       <Filter>Forms\principal</Filter>
@@ -106,15 +73,6 @@
     <ClInclude Include="principal.h" />
     <ClInclude Include="statsMapping.h">
       <Filter>Fichiers d%27en-tête\Composants\stats</Filter>
-    </ClInclude>
-    <ClInclude Include="CL_Com_mapping_adresses.h">
-      <Filter>Fichiers d%27en-tête\Composants\heritage_mapping</Filter>
-    </ClInclude>
-    <ClInclude Include="CL_Com_mapping_articles.h">
-      <Filter>Fichiers d%27en-tête\Composants\heritage_mapping</Filter>
-    </ClInclude>
-    <ClInclude Include="CL_Com_mapping_commandes.h">
-      <Filter>Fichiers d%27en-tête\Composants\heritage_mapping</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
