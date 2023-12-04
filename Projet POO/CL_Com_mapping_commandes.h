@@ -4,12 +4,12 @@ namespace NS_composants {
 	public:
 		// A faire : compléter les types de paramètres des méthodes
 		CL_Com_mapping_commandes();
-		System::Void addArticle();
-		System::Void setClient();
-		System::Void setDate();
-		System::Void addPaiement();
-		System::Void operation();
-		System::Void setAdresseF();
-		System::Void setAdresseL();
+		System::Void addArticle(System::String^ toSet);
+		System::Void setClient(System::String^ toSet);
+		System::Void setDate(System::String^ toSet);
+		System::Void addPaiement(System::String^ toSet);
+		System::Void operation(System::String^ toSet);
+		System::Void setAdresseF(System::String^ toSet);
+		System::Void setAdresseL(System::String^ toSet);
 	};
  }
