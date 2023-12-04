@@ -25,11 +25,17 @@
     <Filter Include="Fichiers sources\Composants\heritage_mapping">
       <UniqueIdentifier>{099012ea-84e0-4477-89cd-50ec9b661a5e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Forms">
+      <UniqueIdentifier>{eefe52e0-cdfd-4aa2-a2d6-0f70215f2cb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Forms\principal">
+      <UniqueIdentifier>{7bb184da-889c-475d-93da-abf67b015fdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Forms\Gestion Personnel">
+      <UniqueIdentifier>{eb27007e-4d9d-4013-a366-28c9fa5b6417}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MyForm.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="CL_CAD.cpp">
       <Filter>Fichiers sources\Composants</Filter>
     </ClCompile>
@@ -39,11 +45,17 @@
     <ClCompile Include="CL_Com_mapping_personnel.cpp">
       <Filter>Fichiers sources\Composants\heritage_mapping</Filter>
     </ClCompile>
+    <ClCompile Include="principal.cpp">
+      <Filter>Forms\principal</Filter>
+    </ClCompile>
+    <ClCompile Include="gestion_personnel.cpp">
+      <Filter>Forms\Gestion Personnel</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyForm.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="headerLink.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -55,6 +67,12 @@
     </ClInclude>
     <ClInclude Include="CL_Com_mapping_personnel.h">
       <Filter>Fichiers d%27en-tête\Composants\heritage_mapping</Filter>
+    </ClInclude>
+    <ClInclude Include="principal.h">
+      <Filter>Forms\principal</Filter>
+    </ClInclude>
+    <ClInclude Include="gestion_personnel.h">
+      <Filter>Forms\Gestion Personnel</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
