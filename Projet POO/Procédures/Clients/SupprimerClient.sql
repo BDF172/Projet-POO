@@ -17,6 +17,7 @@ BEGIN
     BEGIN CATCH
         -- En cas d'erreur, annuler la transaction
         ROLLBACK;
+		SELECT -1;
     END CATCH;
 
 END;

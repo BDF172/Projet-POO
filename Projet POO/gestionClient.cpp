@@ -1,40 +1,22 @@
 #include "headerLink.h"
 
 using namespace System;
+using namespace System::Data;
+using namespace System::Data::SqlClient;
 using namespace NS_composants;
+using namespace NS_services;
 
-Int64 gestion_client::creerClient(String^ nom, String^ prenom, String^ naissance) {
-	if (nom->Length == 0 || prenom->Length == 0 || naissance->Length == 0) throw gcnew Exception("Entree incorrecte");
-	String^ request = "EXEC InsereNouveauClient @Nom = '" + nom + "', @Prenom = '" + prenom + "', @DateNaissance = '" + naissance + "'; ";
-	Console::WriteLine(request);
-	return 1;
+gestionClient::gestionClient(Void){
+	this->clientTableMap = gcnew mappingClient;
 }
 
-Int64 gestion_client::creerClient(String^ nom, String^ prenom, String^ naissance, String^ adresse) {
-	if (nom->Length == 0 || prenom->Length == 0 || naissance->Length == 0 || adresse->Length == 0) 
-		throw gcnew Exception("Entree incorrecte");
-	String^ request = "EXEC InsererNouveauClientAvecAdresse @Nom = '" + nom
-		+ "', @Prenom = '" + prenom + "', @DateNaissance = '" + naissance
-		+ "', @Adresse = '" + adresse + "'";
-	Console::WriteLine(request);
-	return 1;
-}
-
-Void gestion_client::modifierClient(String^ clientID, String^ nom, String^ prenom, String^ dateNaissance) {
-	String^ request = "EXEC ModifierClient @IdClient = " + clientID
-		+ ", @Nom = '" + nom + "', @Prenom = '" + prenom + "', @DateNaissance = '" + dateNaissance + "';";
-	Console::WriteLine(request);
-}
-
-Void gestion_client::ajouterAdresse(String^ clientID, String^ adresse, String^ f_ou_l) {
-	String^ request = "EXEC AjouterAdresseClient @IdClient = " 
-		+ clientID + ", @Adresse = '" + adresse + "', @Facturation = "
-		+ f_ou_l + ";";
-	Console::WriteLine(request);
-}
-
-Void gestion_client::supprimerAdresse(String^ clientID, String^ adresseID){
-	String^ request = "EXEC SupprimerAdresseClient @IdClient = "
-		+ clientID + ", @IdAdresse = " + adresseID +";";
-	Console::WriteLine(request);
+Int64 gestionClient::createClient(String^ nom, String^ prenom, String^ naissance) {
+	this->clientTableMap->creerClient(nom, prenom, naissance);
+	DataSet^ result = this->clientTableMap->executeRequest();
+	if (!this->verifyErrorCode(result)) {
+		return -1;
+	}
+	else {
+		return Convert::ToInt64((result->Tables[1]->Rows[0])[0]);
+	}
 }

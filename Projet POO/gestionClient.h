@@ -1,15 +1,12 @@
 #pragma once
 
-namespace NS_composants {
-	ref class gestion_client {
-	private:
-		CL_CAD^ accesBDD;
-
+namespace NS_services {
+	ref class gestionClient : public NS_services::CL_Svc_gestion {
 	public:
-		System::Int64 creerClient(System::String^ nom, System::String^ prenom, System::String^ naissance);
-		System::Int64 creerClient(System::String^, System::String^, System::String^, System::String^);
-		System::Void modifierClient(System::String^, System::String^, System::String^, System::String^);
-		System::Void ajouterAdresse(System::String^ clientID, System::String^ adresse, System::String^ f_ou_l);
-		System::Void supprimerAdresse(System::String^ clientID, System::String^ adresse);
+		gestionClient();
+		System::Int64 createClient(System::String^ nom, System::String^ prenom, System::String^ naissance);
+	
+	private:
+		NS_composants::mappingClient^ clientTableMap;
 	};
 }
