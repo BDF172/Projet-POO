@@ -39,6 +39,9 @@
     <ClCompile Include="gestionClient.cpp">
       <Filter>Fichiers sources\Composants\clients</Filter>
     </ClCompile>
+    <ClCompile Include="principal.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headerLink.h">
@@ -54,6 +57,9 @@
     </ClInclude>
     <ClInclude Include="gestionClient.h">
       <Filter>Fichiers d%27en-tête\Composants\clients</Filter>
+    </ClInclude>
+    <ClInclude Include="principal.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
