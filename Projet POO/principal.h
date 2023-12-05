@@ -213,7 +213,7 @@ namespace ProjetPOO {
 			this->splitContainer1->Panel1->Controls->Add(this->label4);
 			this->splitContainer1->Panel1->Controls->Add(this->textBox4);
 			this->splitContainer1->Panel1->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->splitContainer1->Panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &principal::splitContainer1_Panel1_Paint_1);
+			
 			// 
 			// splitContainer1.Panel2
 			// 
@@ -468,6 +468,8 @@ namespace ProjetPOO {
 			this->gestion_client->TabIndex = 1;
 			this->gestion_client->Text = L"Gestion Client";
 			this->gestion_client->Click += gcnew System::EventHandler(this, &principal::gestion_client_Click);
+
+			
 			// 
 			// gestion_commande
 			// 
@@ -623,6 +625,8 @@ private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e)
 private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void gestion_client_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
