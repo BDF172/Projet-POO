@@ -123,14 +123,24 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CL_CAD.cpp" />
+    <ClCompile Include="CL_Com_mapping.cpp" />
+    <ClCompile Include="CL_Svc_gestion.cpp" />
     <ClCompile Include="gestionClient.cpp" />
+    <ClCompile Include="gestionPersonnel.cpp" />
+    <ClCompile Include="mappingClient.cpp" />
+    <ClCompile Include="mappingPersonnel.cpp" />
     <ClCompile Include="principal.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CL_CAD.h" />
+    <ClInclude Include="CL_Com_mapping.h" />
+    <ClInclude Include="CL_Svc_gestion.h" />
     <ClInclude Include="gestionClient.h" />
+    <ClInclude Include="gestionPersonnel.h" />
+    <ClInclude Include="mappingClient.h" />
     <ClInclude Include="headerLink.h" />
+    <ClInclude Include="mappingPersonnel.h" />
     <ClInclude Include="principal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
