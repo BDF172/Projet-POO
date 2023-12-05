@@ -1,13 +1,17 @@
 USE POO;
 GO
 
-ALTER PROCEDURE CreerCommande
-    @IdClientToDeliver int,
-	@IdAdresseL int
+CREATE PROCEDURE CreerArticle
+    @NomArticle VARCHAR(255),
+	@PrixArticle INT, 
+	@PrctTVA FLOAT, 
+	@SeuilReappro INT, 
+	@Cout FLOAT
+
 AS
 BEGIN
     -- Déclarez une variable pour stocker l'ID de la nouvelle commande
-    DECLARE @NouvelleCommande INT;
+    DECLARE @NouvelArticle INT;
 
     -- Début de la transaction avec l'option SERIALIZABLE
     SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
@@ -15,23 +19,18 @@ BEGIN
 
     BEGIN TRY
         -- Insérez le nouveau client dans la table Clients
-        INSERT INTO Commandes(reference, date_emission_commande, date_livraison, Adressesid_adresse, Clientsid_client)
-        VALUES ('', GETDATE(), DATEADD(DAY, 7, GETDATE()), @IdAdresseL, @IdClientToDeliver);
+        INSERT INTO Articles(reference, nom, stock, prixHT, prctTVA, montantTTC, seuil_reappro, cout, nb_vendus)
+        VALUES (0, @NomArticle, 0, @PrixArticle, @PrctTVA, @PrixArticle * @PrctTVA, @SeuilReappro, @Cout, 0);
 		
 		-- Récupérez l'ID du nouveau client après la validation de la transaction
-        SET @NouvelleCommande = SCOPE_IDENTITY();
-
-		DECLARE @Reference VARCHAR(20);
-		EXEC GenererReferenceCommande @CodeConcatene = @Reference OUTPUT, @IdClient = @IdClientToDeliver, @Increment = @NouvelleCommande;
-
-		UPDATE Commandes SET reference = @Reference WHERE id_commande = @NouvelleCommande;
+        SET @NouvelArticle = SCOPE_IDENTITY();
 
         -- Valider la transaction
         COMMIT;
 
 		-- Sélectionnez le nouvel ID du client
 		SELECT 0;
-		SELECT @NouvelleCommande AS 'ID de la nouvelle commande';        
+		SELECT @NouvelArticle AS 'ID de la nouvelle commande';        
     END TRY
     BEGIN CATCH
         -- En cas d'erreur, annuler la transaction

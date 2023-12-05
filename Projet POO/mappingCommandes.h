@@ -9,7 +9,6 @@ namespace NS_composants {
 
 	ref class mappingCommandes : public CL_Com_mapping {
 	public:
-		mappingClient(System::Void);
-		System::Void creerCommande(System::String^ idClient, articles articlesChoisis, )
+		System::Void creerCommande(System::String^ idClient, articles articlesChoisis, System::String^ adresseL);
 	};
 }

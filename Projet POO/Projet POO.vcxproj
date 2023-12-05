@@ -125,9 +125,13 @@
     <ClCompile Include="CL_CAD.cpp" />
     <ClCompile Include="CL_Com_mapping.cpp" />
     <ClCompile Include="CL_Svc_gestion.cpp" />
+    <ClCompile Include="gestionArticles.cpp" />
     <ClCompile Include="gestionClient.cpp" />
+    <ClCompile Include="gestionCommandes.cpp" />
     <ClCompile Include="gestionPersonnel.cpp" />
+    <ClCompile Include="mappingArticles.cpp" />
     <ClCompile Include="mappingClient.cpp" />
+    <ClCompile Include="mappingCommandes.cpp" />
     <ClCompile Include="mappingPersonnel.cpp" />
     <ClCompile Include="principal.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -136,8 +140,11 @@
     <ClInclude Include="CL_CAD.h" />
     <ClInclude Include="CL_Com_mapping.h" />
     <ClInclude Include="CL_Svc_gestion.h" />
+    <ClInclude Include="gestionArticles.h" />
     <ClInclude Include="gestionClient.h" />
+    <ClInclude Include="gestionCommandes.h" />
     <ClInclude Include="gestionPersonnel.h" />
+    <ClInclude Include="mappingArticles.h" />
     <ClInclude Include="mappingClient.h" />
     <ClInclude Include="headerLink.h" />
     <ClInclude Include="mappingCommandes.h" />
