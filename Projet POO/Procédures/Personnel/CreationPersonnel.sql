@@ -16,7 +16,7 @@ BEGIN
     SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
     BEGIN TRANSACTION;
 
-    --BEGIN TRY
+    BEGIN TRY
         -- Insérez le nouveau client dans la table Clients
         INSERT INTO Personnel(nom, prenom, date_embauche,superieur)
         VALUES (@Nom, @Prenom, @DateEmbauche, @IdSuperieur);
@@ -33,12 +33,12 @@ BEGIN
 		-- Sélectionnez le nouvel ID du client
 		SELECT 0;
 		SELECT @NouveauPersonnelID AS 'ID du nouveau personnel';        
-    --END TRY
-    --BEGIN CATCH
-    --    -- En cas d'erreur, annuler la transaction
-	--	SELECT 1;
-    --    ROLLBACK;
-    --END CATCH;
+    END TRY
+    BEGIN CATCH
+        -- En cas d'erreur, annuler la transaction
+		SELECT 1;
+        ROLLBACK;
+    END CATCH;
 
     -- Rétablir le niveau d'isolation par défaut
     SET TRANSACTION ISOLATION LEVEL READ COMMITTED;

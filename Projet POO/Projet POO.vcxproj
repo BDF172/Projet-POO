@@ -140,6 +140,7 @@
     <ClInclude Include="gestionPersonnel.h" />
     <ClInclude Include="mappingClient.h" />
     <ClInclude Include="headerLink.h" />
+    <ClInclude Include="mappingCommandes.h" />
     <ClInclude Include="mappingPersonnel.h" />
     <ClInclude Include="principal.h">
       <FileType>CppForm</FileType>

@@ -9,4 +9,6 @@
 #include "gestionClient.h"
 #include "mappingPersonnel.h"
 #include "gestionPersonnel.h"
+#include "mappingCommandes.h"
+#include "gestionCommandes.h"
 #include "principal.h"

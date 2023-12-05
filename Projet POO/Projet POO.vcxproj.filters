@@ -103,5 +103,8 @@
     <ClInclude Include="gestionPersonnel.h">
       <Filter>Fichiers d%27en-tête\Services\héritage gestion</Filter>
     </ClInclude>
+    <ClInclude Include="mappingCommandes.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage mapping</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
