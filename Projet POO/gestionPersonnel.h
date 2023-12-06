@@ -14,6 +14,8 @@ namespace NS_services {
 		System::Boolean modifierAdressePersonnel(System::String^ idPersonnel, System::String^ Adresse);
 		System::Boolean supprimerPersonnel(System::String^ idPersonnel);
 
+		NS_composants::Personnel^ obtenirPersonnel(System::String^ idPersonnel);
+
 	private:
 		NS_composants::mappingPersonnel^ personnelTableMap;
 	};

@@ -6,12 +6,7 @@ using namespace System::Data;
 using namespace NS_composants;
 using namespace NS_services;
 
-System::Void PageMain(Void) {
-	//Application::SetCompatibleTextRenderingDefault(false);
-	//Application::EnableVisualStyles();
-	//ProjetPOO::principal page;
-	//Application::Run(% page);
-
+System::Void TestRecherche(Void) {
 	gestionClient gestion;
 	System::Collections::Generic::List<Client^ >^ mesClients = gestion.chercherClients("", "");
 	if (mesClients != nullptr) {
@@ -23,4 +18,13 @@ System::Void PageMain(Void) {
 	else
 		Console::WriteLine("Client introuvable");
 
+}
+
+System::Void PageMain(Void) {
+	gestionPersonnel gestion;
+	Personnel^ personnel = gestion.obtenirPersonnel("1");
+	Console::WriteLine("Personnel : " + personnel->getNom() + " " 
+		+ personnel->getPrenom() + ", habite au " + personnel->getNumeroRue() 
+		+ " " + personnel->getNomRue() + ", "+ personnel->getNomVille() + ", " 
+		+ personnel->getNomPays());
 }

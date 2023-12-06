@@ -1,7 +1,7 @@
 USE POO;
 GO
 
-ALTER PROCEDURE ObtenirClient
+CREATE PROCEDURE ObtenirClient
 	@IdClient INT
 AS
 BEGIN
