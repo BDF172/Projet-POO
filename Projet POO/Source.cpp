@@ -17,10 +17,10 @@ System::Void test(System::Void) {
 }
 
 System::Void PageMain(Void) {
-	Application::SetCompatibleTextRenderingDefault(false);
-	Application::EnableVisualStyles();
-	ProjetPOO::principal page;
-	Application::Run(% page);
-	gestionPersonnel gestion;
-	Console::WriteLine(gestion.modifierAdressePersonnel("29", "CESI ROUEN"));
+	//Application::SetCompatibleTextRenderingDefault(false);
+	//Application::EnableVisualStyles();
+	//ProjetPOO::principal page;
+	//Application::Run(% page);
+	gestionArticles gestion;
+	Console::WriteLine(gestion.ajouterArticle("Article 1", "13.99", "0.2", "100", "3.46"));
 }

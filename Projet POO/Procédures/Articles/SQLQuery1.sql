@@ -1,16 +1,17 @@
 USE POO;
 GO
 
-ALTER PROCEDURE InsererNouveauPersonnel
-    @Nom varchar(50),
-    @Prenom varchar(50),
-    @IdSuperieur int,
-	@DateEmbauche varchar(50),
-	@Adresse varchar(100)
+CREATE PROCEDURE CreerArticle
+    @NomArticle VARCHAR(255),
+	@PrixArticle INT, 
+	@PrctTVA FLOAT, 
+	@SeuilReappro INT, 
+	@Cout FLOAT
+
 AS
 BEGIN
-    -- Déclarez une variable pour stocker l'ID du nouveau client
-    DECLARE @NouveauPersonnelID INT;
+    -- Déclarez une variable pour stocker l'ID de la nouvelle commande
+    DECLARE @NouvelArticle INT;
 
     -- Début de la transaction avec l'option SERIALIZABLE
     SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
@@ -18,21 +19,18 @@ BEGIN
 
     BEGIN TRY
         -- Insérez le nouveau client dans la table Clients
-        INSERT INTO Personnel(nom, prenom, date_embauche,superieur)
-        VALUES (@Nom, @Prenom, @DateEmbauche, @IdSuperieur);
+        INSERT INTO Articles(reference, nom, stock, prixHT, prctTVA, montantTTC, seuil_reappro, cout, nb_vendus)
+        VALUES (0, @NomArticle, 0, @PrixArticle, @PrctTVA, @PrixArticle * @PrctTVA, @SeuilReappro, @Cout, 0);
 		
 		-- Récupérez l'ID du nouveau client après la validation de la transaction
-        SET @NouveauPersonnelID = SCOPE_IDENTITY();
-
-		INSERT INTO AdressesP(adresse, Villeid_ville, Personnelid_personnel)
-		VALUES(@Adresse, 1, @NouveauPersonnelID);
+        SET @NouvelArticle = SCOPE_IDENTITY();
 
         -- Valider la transaction
         COMMIT;
 
 		-- Sélectionnez le nouvel ID du client
 		SELECT 0;
-		SELECT @NouveauPersonnelID AS 'ID du nouveau personnel';        
+		SELECT @NouvelArticle AS 'ID de la nouvelle commande';        
     END TRY
     BEGIN CATCH
         -- En cas d'erreur, annuler la transaction

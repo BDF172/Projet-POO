@@ -34,11 +34,11 @@
     <Filter Include="Fichiers sources\Composants\héritage mapping">
       <UniqueIdentifier>{420edfe1-328f-42b1-a2c2-60112b6a71e7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers sources\Services\héritage mapping">
-      <UniqueIdentifier>{34e45d1c-ac51-4dcb-9241-db7fd6c52e5e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Fichiers d%27en-tête\Services\héritage gestion">
       <UniqueIdentifier>{6a927f44-2e5d-44b3-94d3-f3122052681b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Services\héritage gestion">
+      <UniqueIdentifier>{34e45d1c-ac51-4dcb-9241-db7fd6c52e5e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -57,17 +57,29 @@
     <ClCompile Include="CL_Com_mapping.cpp">
       <Filter>Fichiers sources\Composants</Filter>
     </ClCompile>
-    <ClCompile Include="gestionClient.cpp">
-      <Filter>Fichiers sources\Services</Filter>
-    </ClCompile>
-    <ClCompile Include="CL_Svc_gestion.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="mappingPersonnel.cpp">
       <Filter>Fichiers sources\Composants\héritage mapping</Filter>
     </ClCompile>
     <ClCompile Include="gestionPersonnel.cpp">
-      <Filter>Fichiers sources\Services\héritage mapping</Filter>
+      <Filter>Fichiers sources\Services\héritage gestion</Filter>
+    </ClCompile>
+    <ClCompile Include="gestionClient.cpp">
+      <Filter>Fichiers sources\Services\héritage gestion</Filter>
+    </ClCompile>
+    <ClCompile Include="CL_Svc_gestion.cpp">
+      <Filter>Fichiers sources\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="mappingCommandes.cpp">
+      <Filter>Fichiers sources\Composants\héritage mapping</Filter>
+    </ClCompile>
+    <ClCompile Include="gestionCommandes.cpp">
+      <Filter>Fichiers sources\Services\héritage gestion</Filter>
+    </ClCompile>
+    <ClCompile Include="gestionArticles.cpp">
+      <Filter>Fichiers sources\Services\héritage gestion</Filter>
+    </ClCompile>
+    <ClCompile Include="mappingArticles.cpp">
+      <Filter>Fichiers sources\Composants\héritage mapping</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +113,18 @@
       <Filter>Fichiers d%27en-tête\Services\héritage gestion</Filter>
     </ClInclude>
     <ClInclude Include="gestionPersonnel.h">
+      <Filter>Fichiers d%27en-tête\Services\héritage gestion</Filter>
+    </ClInclude>
+    <ClInclude Include="mappingCommandes.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage mapping</Filter>
+    </ClInclude>
+    <ClInclude Include="gestionCommandes.h">
+      <Filter>Fichiers d%27en-tête\Services\héritage gestion</Filter>
+    </ClInclude>
+    <ClInclude Include="mappingArticles.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage mapping</Filter>
+    </ClInclude>
+    <ClInclude Include="gestionArticles.h">
       <Filter>Fichiers d%27en-tête\Services\héritage gestion</Filter>
     </ClInclude>
   </ItemGroup>
