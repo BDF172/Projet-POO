@@ -72,7 +72,7 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
+
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::SplitContainer^ splitContainer2;
 	private: System::Windows::Forms::Button^ button5;
@@ -96,7 +96,7 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 	private: System::Windows::Forms::Label^ label15;
-	private: System::Windows::Forms::DataGridView^ dataGridView2;
+
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Button^ button7;
 	private: System::Windows::Forms::SplitContainer^ splitContainer3;
@@ -108,7 +108,7 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TextBox^ textBox14;
 	private: System::Windows::Forms::TextBox^ textBox15;
 	private: System::Windows::Forms::Label^ label20;
-	private: System::Windows::Forms::DataGridView^ dataGridView3;
+
 	private: System::Windows::Forms::Button^ button9;
 	private: System::Windows::Forms::Button^ button8;
 	private: System::Windows::Forms::TextBox^ textBox16;
@@ -155,10 +155,10 @@ private: System::Windows::Forms::Label^ label27;
 private: System::Windows::Forms::TextBox^ textBox20;
 private: System::Windows::Forms::Label^ label26;
 private: System::Windows::Forms::TextBox^ textBox19;
-private: System::Windows::Forms::DataGridView^ dataGridView4;
+
 private: System::Windows::Forms::Button^ button17;
 private: System::Windows::Forms::SplitContainer^ splitContainer5;
-private: System::Windows::Forms::DataGridView^ dataGridView5;
+
 private: System::Windows::Forms::Button^ button25;
 private: System::Windows::Forms::Button^ button24;
 private: System::Windows::Forms::Button^ button23;
@@ -183,7 +183,14 @@ private: System::Windows::Forms::CheckBox^ checkBox9;
 private: System::Windows::Forms::CheckBox^ checkBox10;
 private: System::Windows::Forms::CheckBox^ checkBox11;
 private: System::Windows::Forms::Label^ label41;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
+private: System::Windows::Forms::RichTextBox^ richTextBox1;
+private: System::Windows::Forms::RichTextBox^ richTextBox2;
+private: System::Windows::Forms::RichTextBox^ richTextBox3;
+private: System::Windows::Forms::RichTextBox^ richTextBox4;
+private: System::Windows::Forms::RichTextBox^ richTextBox5;
+private: System::Windows::Forms::ContextMenuStrip^ contextMenuStrip1;
+private: System::ComponentModel::IContainer^ components;
+
 
 
 
@@ -193,7 +200,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container^ components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -202,6 +209,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->gestion_personnel = (gcnew System::Windows::Forms::TabPage());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -225,7 +233,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->button_afficher_personnel = (gcnew System::Windows::Forms::Button());
 			this->button_supprimer_personnel = (gcnew System::Windows::Forms::Button());
 			this->button_modifier_personnel = (gcnew System::Windows::Forms::Button());
@@ -248,7 +256,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
 			this->label12 = (gcnew System::Windows::Forms::Label());
-			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->richTextBox2 = (gcnew System::Windows::Forms::RichTextBox());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -274,7 +282,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox15 = (gcnew System::Windows::Forms::TextBox());
 			this->label20 = (gcnew System::Windows::Forms::Label());
-			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
+			this->richTextBox3 = (gcnew System::Windows::Forms::RichTextBox());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
@@ -304,7 +312,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->textBox20 = (gcnew System::Windows::Forms::TextBox());
 			this->label26 = (gcnew System::Windows::Forms::Label());
 			this->textBox19 = (gcnew System::Windows::Forms::TextBox());
-			this->dataGridView4 = (gcnew System::Windows::Forms::DataGridView());
+			this->richTextBox4 = (gcnew System::Windows::Forms::RichTextBox());
 			this->button15 = (gcnew System::Windows::Forms::Button());
 			this->button14 = (gcnew System::Windows::Forms::Button());
 			this->button13 = (gcnew System::Windows::Forms::Button());
@@ -327,7 +335,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->checkBox2 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
 			this->label38 = (gcnew System::Windows::Forms::Label());
-			this->dataGridView5 = (gcnew System::Windows::Forms::DataGridView());
+			this->richTextBox5 = (gcnew System::Windows::Forms::RichTextBox());
 			this->button25 = (gcnew System::Windows::Forms::Button());
 			this->button24 = (gcnew System::Windows::Forms::Button());
 			this->button23 = (gcnew System::Windows::Forms::Button());
@@ -337,38 +345,33 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button19 = (gcnew System::Windows::Forms::Button());
 			this->button18 = (gcnew System::Windows::Forms::Button());
 			this->button17 = (gcnew System::Windows::Forms::Button());
-			this->Test = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->tabControl1->SuspendLayout();
 			this->gestion_personnel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->BeginInit();
 			this->splitContainer1->Panel1->SuspendLayout();
 			this->splitContainer1->Panel2->SuspendLayout();
 			this->splitContainer1->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->gestion_client->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer2))->BeginInit();
 			this->splitContainer2->Panel1->SuspendLayout();
 			this->splitContainer2->Panel2->SuspendLayout();
 			this->splitContainer2->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->gestion_commande->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer3))->BeginInit();
 			this->splitContainer3->Panel1->SuspendLayout();
 			this->splitContainer3->Panel2->SuspendLayout();
 			this->splitContainer3->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
 			this->gestion_stock->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer4))->BeginInit();
 			this->splitContainer4->Panel1->SuspendLayout();
 			this->splitContainer4->Panel2->SuspendLayout();
 			this->splitContainer4->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView4))->BeginInit();
 			this->gestion_statistique->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer5))->BeginInit();
 			this->splitContainer5->Panel1->SuspendLayout();
 			this->splitContainer5->Panel2->SuspendLayout();
 			this->splitContainer5->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView5))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// tabControl1
@@ -378,6 +381,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->tabControl1->Controls->Add(this->gestion_commande);
 			this->tabControl1->Controls->Add(this->gestion_stock);
 			this->tabControl1->Controls->Add(this->gestion_statistique);
+			this->tabControl1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
 			this->tabControl1->ImeMode = System::Windows::Forms::ImeMode::Off;
 			this->tabControl1->Location = System::Drawing::Point(12, 12);
 			this->tabControl1->Name = L"tabControl1";
@@ -395,11 +399,11 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->gestion_personnel->Controls->Add(this->button_supprimer_personnel);
 			this->gestion_personnel->Controls->Add(this->button_modifier_personnel);
 			this->gestion_personnel->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->gestion_personnel->Location = System::Drawing::Point(4, 29);
+			this->gestion_personnel->Location = System::Drawing::Point(4, 38);
 			this->gestion_personnel->Name = L"gestion_personnel";
 			this->gestion_personnel->Padding = System::Windows::Forms::Padding(3);
 			this->gestion_personnel->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->gestion_personnel->Size = System::Drawing::Size(1872, 1099);
+			this->gestion_personnel->Size = System::Drawing::Size(1872, 1090);
 			this->gestion_personnel->TabIndex = 0;
 			this->gestion_personnel->Text = L"Gestion Personnel";
 			// 
@@ -449,8 +453,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			// splitContainer1.Panel2
 			// 
-			this->splitContainer1->Panel2->BackColor = System::Drawing::SystemColors::ControlDark;
-			this->splitContainer1->Panel2->Controls->Add(this->dataGridView1);
+			this->splitContainer1->Panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->splitContainer1->Panel2->Controls->Add(this->richTextBox1);
 			this->splitContainer1->Panel2->ForeColor = System::Drawing::SystemColors::ControlDark;
 			this->splitContainer1->Size = System::Drawing::Size(1499, 1065);
 			this->splitContainer1->SplitterDistance = 499;
@@ -472,7 +476,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox7->Location = System::Drawing::Point(13, 67);
 			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(460, 26);
+			this->textBox7->Size = System::Drawing::Size(460, 35);
 			this->textBox7->TabIndex = 44;
 			this->textBox7->TextChanged += gcnew System::EventHandler(this, &principal::textBox7_TextChanged);
 			// 
@@ -518,7 +522,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox1->Location = System::Drawing::Point(15, 147);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(460, 26);
+			this->textBox1->Size = System::Drawing::Size(460, 35);
 			this->textBox1->TabIndex = 27;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &principal::textBox1_TextChanged);
 			// 
@@ -529,7 +533,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"France", L"Belgique", L"Canada" });
 			this->comboBox1->Location = System::Drawing::Point(18, 801);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(457, 28);
+			this->comboBox1->Size = System::Drawing::Size(457, 37);
 			this->comboBox1->TabIndex = 41;
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &principal::comboBox1_SelectedIndexChanged);
 			// 
@@ -537,7 +541,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox2->Location = System::Drawing::Point(15, 235);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(460, 26);
+			this->textBox2->Size = System::Drawing::Size(460, 35);
 			this->textBox2->TabIndex = 29;
 			this->textBox2->TextChanged += gcnew System::EventHandler(this, &principal::textBox2_TextChanged_1);
 			// 
@@ -569,7 +573,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox6->Location = System::Drawing::Point(15, 708);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(460, 26);
+			this->textBox6->Size = System::Drawing::Size(460, 35);
 			this->textBox6->TabIndex = 39;
 			this->textBox6->TextChanged += gcnew System::EventHandler(this, &principal::textBox6_TextChanged);
 			// 
@@ -610,7 +614,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox5->Location = System::Drawing::Point(15, 617);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(460, 26);
+			this->textBox5->Size = System::Drawing::Size(460, 35);
 			this->textBox5->TabIndex = 37;
 			this->textBox5->TextChanged += gcnew System::EventHandler(this, &principal::textBox5_TextChanged);
 			// 
@@ -618,7 +622,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox3->Location = System::Drawing::Point(15, 434);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(460, 26);
+			this->textBox3->Size = System::Drawing::Size(460, 35);
 			this->textBox3->TabIndex = 33;
 			this->textBox3->TextChanged += gcnew System::EventHandler(this, &principal::textBox3_TextChanged);
 			// 
@@ -650,22 +654,18 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox4->Location = System::Drawing::Point(15, 516);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(460, 26);
+			this->textBox4->Size = System::Drawing::Size(460, 35);
 			this->textBox4->TabIndex = 35;
 			this->textBox4->TextChanged += gcnew System::EventHandler(this, &principal::textBox4_TextChanged);
 			// 
-			// dataGridView1
+			// richTextBox1
 			// 
-			this->dataGridView1->AccessibleRole = System::Windows::Forms::AccessibleRole::Sound;
-			this->dataGridView1->BackgroundColor = System::Drawing::Color::White;
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(1) { this->Test });
-			this->dataGridView1->Location = System::Drawing::Point(3, 3);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->RowHeadersWidth = 62;
-			this->dataGridView1->RowTemplate->Height = 28;
-			this->dataGridView1->Size = System::Drawing::Size(990, 1059);
-			this->dataGridView1->TabIndex = 1;
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+			this->richTextBox1->Location = System::Drawing::Point(13, 15);
+			this->richTextBox1->Name = L"richTextBox1";
+			this->richTextBox1->Size = System::Drawing::Size(964, 1034);
+			this->richTextBox1->TabIndex = 0;
+			this->richTextBox1->Text = L"";
 			// 
 			// button_afficher_personnel
 			// 
@@ -679,6 +679,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button_afficher_personnel->TabIndex = 25;
 			this->button_afficher_personnel->Text = L"Afficher Personnel";
 			this->button_afficher_personnel->UseVisualStyleBackColor = false;
+			this->button_afficher_personnel->Click += gcnew System::EventHandler(this, &principal::button_afficher_personnel_Click);
 			// 
 			// button_supprimer_personnel
 			// 
@@ -692,6 +693,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button_supprimer_personnel->TabIndex = 23;
 			this->button_supprimer_personnel->Text = L"Supprimer Personnel";
 			this->button_supprimer_personnel->UseVisualStyleBackColor = false;
+			this->button_supprimer_personnel->Click += gcnew System::EventHandler(this, &principal::button_supprimer_personnel_Click);
 			// 
 			// button_modifier_personnel
 			// 
@@ -705,6 +707,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button_modifier_personnel->TabIndex = 21;
 			this->button_modifier_personnel->Text = L"Modifier Personnel";
 			this->button_modifier_personnel->UseVisualStyleBackColor = false;
+			this->button_modifier_personnel->Click += gcnew System::EventHandler(this, &principal::button_modifier_personnel_Click);
 			// 
 			// gestion_client
 			// 
@@ -714,10 +717,10 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->gestion_client->Controls->Add(this->button4);
 			this->gestion_client->Controls->Add(this->button3);
 			this->gestion_client->Controls->Add(this->button2);
-			this->gestion_client->Location = System::Drawing::Point(4, 29);
+			this->gestion_client->Location = System::Drawing::Point(4, 38);
 			this->gestion_client->Name = L"gestion_client";
 			this->gestion_client->Padding = System::Windows::Forms::Padding(3);
-			this->gestion_client->Size = System::Drawing::Size(1872, 1099);
+			this->gestion_client->Size = System::Drawing::Size(1872, 1090);
 			this->gestion_client->TabIndex = 1;
 			this->gestion_client->Text = L"Gestion Client";
 			this->gestion_client->Click += gcnew System::EventHandler(this, &principal::gestion_client_Click);
@@ -753,7 +756,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// splitContainer2.Panel2
 			// 
 			this->splitContainer2->Panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->splitContainer2->Panel2->Controls->Add(this->dataGridView2);
+			this->splitContainer2->Panel2->Controls->Add(this->richTextBox2);
 			this->splitContainer2->Panel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &principal::splitContainer2_Panel2_Paint);
 			this->splitContainer2->Size = System::Drawing::Size(1486, 1060);
 			this->splitContainer2->SplitterDistance = 495;
@@ -774,7 +777,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox30->Location = System::Drawing::Point(12, 717);
 			this->textBox30->Name = L"textBox30";
-			this->textBox30->Size = System::Drawing::Size(460, 26);
+			this->textBox30->Size = System::Drawing::Size(460, 35);
 			this->textBox30->TabIndex = 68;
 			// 
 			// button10
@@ -794,7 +797,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->dateTimePicker1->Location = System::Drawing::Point(12, 627);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(457, 26);
+			this->dateTimePicker1->Size = System::Drawing::Size(457, 35);
 			this->dateTimePicker1->TabIndex = 66;
 			this->dateTimePicker1->ValueChanged += gcnew System::EventHandler(this, &principal::dateTimePicker1_ValueChanged);
 			// 
@@ -827,7 +830,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"France", L"Belgique", L"Canada" });
 			this->comboBox2->Location = System::Drawing::Point(12, 513);
 			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(457, 28);
+			this->comboBox2->Size = System::Drawing::Size(457, 37);
 			this->comboBox2->TabIndex = 62;
 			// 
 			// label14
@@ -845,7 +848,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox11->Location = System::Drawing::Point(9, 420);
 			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(460, 26);
+			this->textBox11->Size = System::Drawing::Size(460, 35);
 			this->textBox11->TabIndex = 60;
 			// 
 			// label16
@@ -863,7 +866,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox12->Location = System::Drawing::Point(9, 329);
 			this->textBox12->Name = L"textBox12";
-			this->textBox12->Size = System::Drawing::Size(460, 26);
+			this->textBox12->Size = System::Drawing::Size(460, 35);
 			this->textBox12->TabIndex = 58;
 			// 
 			// label10
@@ -881,7 +884,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox8->Location = System::Drawing::Point(7, 65);
 			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(460, 26);
+			this->textBox8->Size = System::Drawing::Size(460, 35);
 			this->textBox8->TabIndex = 50;
 			// 
 			// label11
@@ -899,14 +902,14 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox9->Location = System::Drawing::Point(9, 145);
 			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(460, 26);
+			this->textBox9->Size = System::Drawing::Size(460, 35);
 			this->textBox9->TabIndex = 46;
 			// 
 			// textBox10
 			// 
 			this->textBox10->Location = System::Drawing::Point(9, 233);
 			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(460, 26);
+			this->textBox10->Size = System::Drawing::Size(460, 35);
 			this->textBox10->TabIndex = 48;
 			// 
 			// label12
@@ -920,16 +923,14 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->label12->TabIndex = 49;
 			this->label12->Text = L"Prénom";
 			// 
-			// dataGridView2
+			// richTextBox2
 			// 
-			this->dataGridView2->BackgroundColor = System::Drawing::Color::White;
-			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView2->Location = System::Drawing::Point(3, 7);
-			this->dataGridView2->Name = L"dataGridView2";
-			this->dataGridView2->RowHeadersWidth = 62;
-			this->dataGridView2->RowTemplate->Height = 28;
-			this->dataGridView2->Size = System::Drawing::Size(977, 1050);
-			this->dataGridView2->TabIndex = 0;
+			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+			this->richTextBox2->Location = System::Drawing::Point(10, 12);
+			this->richTextBox2->Name = L"richTextBox2";
+			this->richTextBox2->Size = System::Drawing::Size(964, 1034);
+			this->richTextBox2->TabIndex = 1;
+			this->richTextBox2->Text = L"";
 			// 
 			// button5
 			// 
@@ -942,6 +943,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button5->TabIndex = 3;
 			this->button5->Text = L"Afficher Client";
 			this->button5->UseVisualStyleBackColor = false;
+			this->button5->Click += gcnew System::EventHandler(this, &principal::button5_Click);
 			// 
 			// button4
 			// 
@@ -954,6 +956,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button4->TabIndex = 2;
 			this->button4->Text = L"Supprimer Client";
 			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &principal::button4_Click_1);
 			// 
 			// button3
 			// 
@@ -966,6 +969,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button3->TabIndex = 1;
 			this->button3->Text = L"Modifier Client";
 			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &principal::button3_Click_1);
 			// 
 			// button2
 			// 
@@ -978,6 +982,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button2->TabIndex = 0;
 			this->button2->Text = L"Créer Client";
 			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &principal::button2_Click);
 			// 
 			// gestion_commande
 			// 
@@ -988,9 +993,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->gestion_commande->Controls->Add(this->button7);
 			this->gestion_commande->Controls->Add(this->button6);
 			this->gestion_commande->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14));
-			this->gestion_commande->Location = System::Drawing::Point(4, 29);
+			this->gestion_commande->Location = System::Drawing::Point(4, 38);
 			this->gestion_commande->Name = L"gestion_commande";
-			this->gestion_commande->Size = System::Drawing::Size(1872, 1099);
+			this->gestion_commande->Size = System::Drawing::Size(1872, 1090);
 			this->gestion_commande->TabIndex = 2;
 			this->gestion_commande->Text = L"Gestion Commande";
 			this->gestion_commande->Click += gcnew System::EventHandler(this, &principal::gestion_commande_Click);
@@ -1026,7 +1031,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			// splitContainer3.Panel2
 			// 
-			this->splitContainer3->Panel2->Controls->Add(this->dataGridView3);
+			this->splitContainer3->Panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->splitContainer3->Panel2->Controls->Add(this->richTextBox3);
 			this->splitContainer3->Size = System::Drawing::Size(1502, 1065);
 			this->splitContainer3->SplitterDistance = 500;
 			this->splitContainer3->TabIndex = 4;
@@ -1214,16 +1220,14 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->label20->TabIndex = 70;
 			this->label20->Text = L"Prénom client";
 			// 
-			// dataGridView3
+			// richTextBox3
 			// 
-			this->dataGridView3->BackgroundColor = System::Drawing::Color::White;
-			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView3->Location = System::Drawing::Point(5, 6);
-			this->dataGridView3->Name = L"dataGridView3";
-			this->dataGridView3->RowHeadersWidth = 62;
-			this->dataGridView3->RowTemplate->Height = 28;
-			this->dataGridView3->Size = System::Drawing::Size(988, 1054);
-			this->dataGridView3->TabIndex = 0;
+			this->richTextBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+			this->richTextBox3->Location = System::Drawing::Point(16, 14);
+			this->richTextBox3->Name = L"richTextBox3";
+			this->richTextBox3->Size = System::Drawing::Size(964, 1034);
+			this->richTextBox3->TabIndex = 1;
+			this->richTextBox3->Text = L"";
 			// 
 			// button9
 			// 
@@ -1236,6 +1240,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button9->TabIndex = 3;
 			this->button9->Text = L"Afficher Commande";
 			this->button9->UseVisualStyleBackColor = false;
+			this->button9->Click += gcnew System::EventHandler(this, &principal::button9_Click);
 			// 
 			// button8
 			// 
@@ -1248,6 +1253,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button8->TabIndex = 2;
 			this->button8->Text = L"Supprimer Commande";
 			this->button8->UseVisualStyleBackColor = false;
+			this->button8->Click += gcnew System::EventHandler(this, &principal::button8_Click);
 			// 
 			// button7
 			// 
@@ -1273,6 +1279,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button6->TabIndex = 0;
 			this->button6->Text = L"Créer Commande";
 			this->button6->UseVisualStyleBackColor = false;
+			this->button6->Click += gcnew System::EventHandler(this, &principal::button6_Click);
 			// 
 			// gestion_stock
 			// 
@@ -1282,9 +1289,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->gestion_stock->Controls->Add(this->button14);
 			this->gestion_stock->Controls->Add(this->button13);
 			this->gestion_stock->Controls->Add(this->button12);
-			this->gestion_stock->Location = System::Drawing::Point(4, 29);
+			this->gestion_stock->Location = System::Drawing::Point(4, 38);
 			this->gestion_stock->Name = L"gestion_stock";
-			this->gestion_stock->Size = System::Drawing::Size(1872, 1099);
+			this->gestion_stock->Size = System::Drawing::Size(1872, 1090);
 			this->gestion_stock->TabIndex = 3;
 			this->gestion_stock->Text = L"Gestion Stock";
 			// 
@@ -1322,7 +1329,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			// splitContainer4.Panel2
 			// 
-			this->splitContainer4->Panel2->Controls->Add(this->dataGridView4);
+			this->splitContainer4->Panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->splitContainer4->Panel2->Controls->Add(this->richTextBox4);
 			this->splitContainer4->Size = System::Drawing::Size(1494, 1055);
 			this->splitContainer4->SplitterDistance = 498;
 			this->splitContainer4->TabIndex = 4;
@@ -1335,7 +1343,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"France", L"Belgique", L"Canada" });
 			this->comboBox4->Location = System::Drawing::Point(14, 399);
 			this->comboBox4->Name = L"comboBox4";
-			this->comboBox4->Size = System::Drawing::Size(457, 28);
+			this->comboBox4->Size = System::Drawing::Size(457, 37);
 			this->comboBox4->TabIndex = 96;
 			// 
 			// button16
@@ -1366,7 +1374,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox29->Location = System::Drawing::Point(14, 925);
 			this->textBox29->Name = L"textBox29";
-			this->textBox29->Size = System::Drawing::Size(460, 26);
+			this->textBox29->Size = System::Drawing::Size(460, 35);
 			this->textBox29->TabIndex = 93;
 			// 
 			// label34
@@ -1384,7 +1392,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox27->Location = System::Drawing::Point(14, 836);
 			this->textBox27->Name = L"textBox27";
-			this->textBox27->Size = System::Drawing::Size(460, 26);
+			this->textBox27->Size = System::Drawing::Size(460, 35);
 			this->textBox27->TabIndex = 91;
 			// 
 			// label35
@@ -1402,7 +1410,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox28->Location = System::Drawing::Point(14, 749);
 			this->textBox28->Name = L"textBox28";
-			this->textBox28->Size = System::Drawing::Size(460, 26);
+			this->textBox28->Size = System::Drawing::Size(460, 35);
 			this->textBox28->TabIndex = 89;
 			// 
 			// label30
@@ -1420,7 +1428,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox23->Location = System::Drawing::Point(14, 658);
 			this->textBox23->Name = L"textBox23";
-			this->textBox23->Size = System::Drawing::Size(460, 26);
+			this->textBox23->Size = System::Drawing::Size(460, 35);
 			this->textBox23->TabIndex = 87;
 			// 
 			// label31
@@ -1438,7 +1446,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox24->Location = System::Drawing::Point(14, 571);
 			this->textBox24->Name = L"textBox24";
-			this->textBox24->Size = System::Drawing::Size(460, 26);
+			this->textBox24->Size = System::Drawing::Size(460, 35);
 			this->textBox24->TabIndex = 85;
 			// 
 			// label32
@@ -1456,7 +1464,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox25->Location = System::Drawing::Point(14, 483);
 			this->textBox25->Name = L"textBox25";
-			this->textBox25->Size = System::Drawing::Size(460, 26);
+			this->textBox25->Size = System::Drawing::Size(460, 35);
 			this->textBox25->TabIndex = 83;
 			// 
 			// label33
@@ -1485,7 +1493,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox21->Location = System::Drawing::Point(14, 314);
 			this->textBox21->Name = L"textBox21";
-			this->textBox21->Size = System::Drawing::Size(460, 26);
+			this->textBox21->Size = System::Drawing::Size(460, 35);
 			this->textBox21->TabIndex = 79;
 			// 
 			// label29
@@ -1503,7 +1511,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox22->Location = System::Drawing::Point(14, 227);
 			this->textBox22->Name = L"textBox22";
-			this->textBox22->Size = System::Drawing::Size(460, 26);
+			this->textBox22->Size = System::Drawing::Size(460, 35);
 			this->textBox22->TabIndex = 77;
 			// 
 			// label27
@@ -1521,7 +1529,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox20->Location = System::Drawing::Point(14, 139);
 			this->textBox20->Name = L"textBox20";
-			this->textBox20->Size = System::Drawing::Size(460, 26);
+			this->textBox20->Size = System::Drawing::Size(460, 35);
 			this->textBox20->TabIndex = 75;
 			// 
 			// label26
@@ -1539,19 +1547,17 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			this->textBox19->Location = System::Drawing::Point(14, 52);
 			this->textBox19->Name = L"textBox19";
-			this->textBox19->Size = System::Drawing::Size(460, 26);
+			this->textBox19->Size = System::Drawing::Size(460, 35);
 			this->textBox19->TabIndex = 73;
 			// 
-			// dataGridView4
+			// richTextBox4
 			// 
-			this->dataGridView4->BackgroundColor = System::Drawing::Color::White;
-			this->dataGridView4->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView4->Location = System::Drawing::Point(3, 3);
-			this->dataGridView4->Name = L"dataGridView4";
-			this->dataGridView4->RowHeadersWidth = 62;
-			this->dataGridView4->RowTemplate->Height = 28;
-			this->dataGridView4->Size = System::Drawing::Size(986, 1049);
-			this->dataGridView4->TabIndex = 0;
+			this->richTextBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+			this->richTextBox4->Location = System::Drawing::Point(14, 10);
+			this->richTextBox4->Name = L"richTextBox4";
+			this->richTextBox4->Size = System::Drawing::Size(964, 1034);
+			this->richTextBox4->TabIndex = 1;
+			this->richTextBox4->Text = L"";
 			// 
 			// button15
 			// 
@@ -1564,6 +1570,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button15->TabIndex = 3;
 			this->button15->Text = L"Afficher Article";
 			this->button15->UseVisualStyleBackColor = false;
+			this->button15->Click += gcnew System::EventHandler(this, &principal::button15_Click);
 			// 
 			// button14
 			// 
@@ -1576,6 +1583,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button14->TabIndex = 2;
 			this->button14->Text = L"Supprimer Article";
 			this->button14->UseVisualStyleBackColor = false;
+			this->button14->Click += gcnew System::EventHandler(this, &principal::button14_Click);
 			// 
 			// button13
 			// 
@@ -1588,6 +1596,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button13->TabIndex = 1;
 			this->button13->Text = L"Modifier Article";
 			this->button13->UseVisualStyleBackColor = false;
+			this->button13->Click += gcnew System::EventHandler(this, &principal::button13_Click);
 			// 
 			// button12
 			// 
@@ -1615,9 +1624,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->gestion_statistique->Controls->Add(this->button19);
 			this->gestion_statistique->Controls->Add(this->button18);
 			this->gestion_statistique->Controls->Add(this->button17);
-			this->gestion_statistique->Location = System::Drawing::Point(4, 29);
+			this->gestion_statistique->Location = System::Drawing::Point(4, 38);
 			this->gestion_statistique->Name = L"gestion_statistique";
-			this->gestion_statistique->Size = System::Drawing::Size(1872, 1099);
+			this->gestion_statistique->Size = System::Drawing::Size(1872, 1090);
 			this->gestion_statistique->TabIndex = 4;
 			this->gestion_statistique->Text = L"Gestion Statistique";
 			// 
@@ -1648,7 +1657,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			// 
 			// splitContainer5.Panel2
 			// 
-			this->splitContainer5->Panel2->Controls->Add(this->dataGridView5);
+			this->splitContainer5->Panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->splitContainer5->Panel2->Controls->Add(this->richTextBox5);
 			this->splitContainer5->Size = System::Drawing::Size(1498, 1053);
 			this->splitContainer5->SplitterDistance = 499;
 			this->splitContainer5->TabIndex = 9;
@@ -1843,17 +1853,13 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->label38->Text = L"TVA";
 			this->label38->Click += gcnew System::EventHandler(this, &principal::label38_Click);
 			// 
-			// dataGridView5
+			// richTextBox5
 			// 
-			this->dataGridView5->BackgroundColor = System::Drawing::Color::White;
-			this->dataGridView5->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView5->Location = System::Drawing::Point(3, 3);
-			this->dataGridView5->Name = L"dataGridView5";
-			this->dataGridView5->RowHeadersWidth = 62;
-			this->dataGridView5->RowTemplate->Height = 28;
-			this->dataGridView5->Size = System::Drawing::Size(989, 1047);
-			this->dataGridView5->TabIndex = 0;
-			this->dataGridView5->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &principal::dataGridView5_CellContentClick);
+			this->richTextBox5->Location = System::Drawing::Point(15, 9);
+			this->richTextBox5->Name = L"richTextBox5";
+			this->richTextBox5->Size = System::Drawing::Size(964, 1034);
+			this->richTextBox5->TabIndex = 1;
+			this->richTextBox5->Text = L"";
 			// 
 			// button25
 			// 
@@ -1879,6 +1885,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button24->TabIndex = 7;
 			this->button24->Text = L"Montant valeur d\'achat du stock";
 			this->button24->UseVisualStyleBackColor = false;
+			this->button24->Click += gcnew System::EventHandler(this, &principal::button24_Click);
 			// 
 			// button23
 			// 
@@ -1891,6 +1898,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button23->TabIndex = 6;
 			this->button23->Text = L"Montant valeur commerciale stock";
 			this->button23->UseVisualStyleBackColor = false;
+			this->button23->Click += gcnew System::EventHandler(this, &principal::button23_Click);
 			// 
 			// button22
 			// 
@@ -1903,6 +1911,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button22->TabIndex = 5;
 			this->button22->Text = L"10 articles les moins vendus";
 			this->button22->UseVisualStyleBackColor = false;
+			this->button22->Click += gcnew System::EventHandler(this, &principal::button22_Click);
 			// 
 			// button21
 			// 
@@ -1915,6 +1924,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button21->TabIndex = 4;
 			this->button21->Text = L"10 articles les plus vendus";
 			this->button21->UseVisualStyleBackColor = false;
+			this->button21->Click += gcnew System::EventHandler(this, &principal::button21_Click);
 			// 
 			// button20
 			// 
@@ -1927,6 +1937,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button20->TabIndex = 3;
 			this->button20->Text = L"Montant total achat d\'un client";
 			this->button20->UseVisualStyleBackColor = false;
+			this->button20->Click += gcnew System::EventHandler(this, &principal::button20_Click);
 			// 
 			// button19
 			// 
@@ -1939,6 +1950,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button19->TabIndex = 2;
 			this->button19->Text = L"Produits sous seuil réaprisionnement";
 			this->button19->UseVisualStyleBackColor = false;
+			this->button19->Click += gcnew System::EventHandler(this, &principal::button19_Click);
 			// 
 			// button18
 			// 
@@ -1951,6 +1963,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button18->TabIndex = 1;
 			this->button18->Text = L"Montant chiffre d\'affaire";
 			this->button18->UseVisualStyleBackColor = false;
+			this->button18->Click += gcnew System::EventHandler(this, &principal::button18_Click);
 			// 
 			// button17
 			// 
@@ -1965,12 +1978,11 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->button17->UseVisualStyleBackColor = false;
 			this->button17->Click += gcnew System::EventHandler(this, &principal::button17_Click);
 			// 
-			// Test
+			// contextMenuStrip1
 			// 
-			this->Test->HeaderText = L"Test";
-			this->Test->MinimumWidth = 8;
-			this->Test->Name = L"Test";
-			this->Test->Width = 150;
+			this->contextMenuStrip1->ImageScalingSize = System::Drawing::Size(24, 24);
+			this->contextMenuStrip1->Name = L"contextMenuStrip1";
+			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
 			// 
 			// principal
 			// 
@@ -1988,35 +2000,30 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Test;
 			this->splitContainer1->Panel2->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->EndInit();
 			this->splitContainer1->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->gestion_client->ResumeLayout(false);
 			this->splitContainer2->Panel1->ResumeLayout(false);
 			this->splitContainer2->Panel1->PerformLayout();
 			this->splitContainer2->Panel2->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer2))->EndInit();
 			this->splitContainer2->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->gestion_commande->ResumeLayout(false);
 			this->splitContainer3->Panel1->ResumeLayout(false);
 			this->splitContainer3->Panel1->PerformLayout();
 			this->splitContainer3->Panel2->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer3))->EndInit();
 			this->splitContainer3->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
 			this->gestion_stock->ResumeLayout(false);
 			this->splitContainer4->Panel1->ResumeLayout(false);
 			this->splitContainer4->Panel1->PerformLayout();
 			this->splitContainer4->Panel2->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer4))->EndInit();
 			this->splitContainer4->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView4))->EndInit();
 			this->gestion_statistique->ResumeLayout(false);
 			this->splitContainer5->Panel1->ResumeLayout(false);
 			this->splitContainer5->Panel1->PerformLayout();
 			this->splitContainer5->Panel2->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer5))->EndInit();
 			this->splitContainer5->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView5))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -2079,6 +2086,7 @@ private: System::Void splitContainer2_Panel2_Paint(System::Object^ sender, Syste
 private: System::Void gestion_commande_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox3->Text = this->button7->Text;
 }
 private: System::Void label21_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2092,10 +2100,13 @@ private: System::Void comboBox3_SelectedIndexChanged(System::Object^ sender, Sys
 }
 
 private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox4->Text = this->button12->Text;
 }
 private: System::Void button17_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox5->Text = this->button17->Text;
 }
 private: System::Void button25_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox5->Text = this->button25->Text;
 }
 private: System::Void label38_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -2180,10 +2191,74 @@ private: System::Void checkBox9_CheckedChanged(System::Object^ sender, System::E
 		this->checkBox10->Checked = false;
 	}
 }
-private: System::Void dataGridView5_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-}
+	   
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	dataGridView1->Rows->Add("Création Personnel");
+	this->richTextBox1->Text = this->button1->Text;
+}
+
+private: System::Void button_modifier_personnel_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox1->Text = this->button_modifier_personnel->Text;
+
+}
+private: System::Void button_supprimer_personnel_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox1->Text = this->button_supprimer_personnel->Text;
+}
+
+private: System::Void button_afficher_personnel_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox1->Text = this->button_afficher_personnel->Text;
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox2->Text = this->button2->Text;
+}
+private: System::Void button3_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox2->Text = this->button3->Text;
+}
+private: System::Void button4_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox2->Text = this->button4->Text;
+}
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox2->Text = this->button5->Text;
+}
+
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox3->Text = this->button6->Text;
+}
+private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox3->Text = this->button8->Text;
+}
+private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox3->Text = this->button9->Text;
+}
+private: System::Void button13_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox4->Text = this->button13->Text;
+}
+private: System::Void button14_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox4->Text = this->button14->Text;
+}
+private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox4->Text = this->button15->Text;
+}
+private: System::Void button18_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox5->Text = this->button18->Text;
+}
+private: System::Void button19_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox5->Text = this->button19->Text;
+}
+private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox5->Text = this->button20->Text;
+}
+private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox5->Text = this->button21->Text;
+}
+
+private: System::Void button22_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox5->Text = this->button22->Text;
+}
+private: System::Void button23_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox5->Text = this->button23->Text;
+}
+private: System::Void button24_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox5->Text = this->button24->Text;
 }
 };
 }

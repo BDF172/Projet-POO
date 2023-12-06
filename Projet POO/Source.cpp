@@ -17,10 +17,10 @@ System::Void test(System::Void) {
 }
 
 System::Void PageMain(Void) {
-	//Application::SetCompatibleTextRenderingDefault(false);
-	//Application::EnableVisualStyles();
-	//ProjetPOO::principal page;
-	//Application::Run(% page);
+	Application::SetCompatibleTextRenderingDefault(false);
+	Application::EnableVisualStyles();
+	ProjetPOO::principal page;
+	Application::Run(% page);
 	gestionPersonnel gestion;
 	Console::WriteLine(gestion.modifierAdressePersonnel("29", "CESI ROUEN"));
 }
