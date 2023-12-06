@@ -1987,8 +1987,8 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// principal
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleDimensions = System::Drawing::SizeF(144, 144);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Dpi;
 			this->AutoScroll = true;
 			this->AutoSize = true;
 			this->ClientSize = System::Drawing::Size(1908, 1189);
@@ -1996,6 +1996,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->Name = L"principal";
 			this->Text = L"principal";
+			this->Load += gcnew System::EventHandler(this, &principal::principal_Load);
 			this->tabControl1->ResumeLayout(false);
 			this->gestion_personnel->ResumeLayout(false);
 			this->splitContainer1->Panel1->ResumeLayout(false);
@@ -2262,6 +2263,8 @@ private: System::Void button23_Click(System::Object^ sender, System::EventArgs^ 
 }
 private: System::Void button24_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->richTextBox5->Text = this->button24->Text;
+}
+private: System::Void principal_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
