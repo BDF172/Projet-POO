@@ -1,7 +1,7 @@
 USE POO;
 GO
 
-ALTER PROCEDURE ModifierClient
+CREATE PROCEDURE ModifierClient
 	@IdClient int,
     @Nom varchar(50),
     @Prenom varchar(50),
@@ -18,14 +18,14 @@ BEGIN
         -- Insérez le nouveau client dans la table Clients
         IF @Nom != ''
 		BEGIN
-		UPDATE POO.dbo.Clients
-        SET nom = @Nom WHERE id_client = @IdClient;;
+		UPDATE Clients
+        SET nom_client = @Nom WHERE id_client = @IdClient;;
 		END
 		
 		IF @Prenom != ''
 		BEGIN
 		UPDATE POO.dbo.Clients 
-        SET prenom = @Prenom WHERE id_client = @IdClient;
+        SET prenom_client = @Prenom WHERE id_client = @IdClient;
 		END
 		
 		IF @DateNaissance != ''

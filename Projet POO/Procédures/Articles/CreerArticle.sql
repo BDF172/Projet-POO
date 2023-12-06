@@ -4,7 +4,7 @@ GO
 CREATE PROCEDURE CreerArticle
     @NomArticle VARCHAR(255),
 	@PrixArticle INT, 
-	@PrctTVA FLOAT, 
+	@IdTva INT,
 	@SeuilReappro INT, 
 	@Cout FLOAT
 
@@ -19,11 +19,17 @@ BEGIN
 
     BEGIN TRY
         -- Insérez le nouveau client dans la table Clients
-        INSERT INTO Articles(reference, nom, stock, prixHT, prctTVA, montantTTC, seuil_reappro, cout, nb_vendus)
-        VALUES (0, @NomArticle, 0, @PrixArticle, @PrctTVA, @PrixArticle * @PrctTVA, @SeuilReappro, @Cout, 0);
+		DECLARE @PrctTVA FLOAT;
+		SET @PrctTVA = (SELECT prctTVA FROM id_TVA WHERE id_TVA = @IdTva);
+
+        INSERT INTO Articles(nom_articles)
+        VALUES (@NomArticle);
 		
-		-- Récupérez l'ID du nouveau client après la validation de la transaction
+		-- Récupérez l'ID du nouvel article
         SET @NouvelArticle = SCOPE_IDENTITY();
+
+		INSERT INTO prix (prix, dateAjout, prixHT, cout, id_article, id_TVA)
+		VALUES (@PrixArticle, GETDATE(), @PrixArticle, @Cout, @NouvelArticle, @IdTva);
 
         -- Valider la transaction
         COMMIT;
