@@ -214,7 +214,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->gestion_personnel = (gcnew System::Windows::Forms::TabPage());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->splitContainer1 = (gcnew System::Windows::Forms::SplitContainer());
-			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->button_valider = (gcnew System::Windows::Forms::Button());
@@ -234,6 +233,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->button_afficher_personnel = (gcnew System::Windows::Forms::Button());
 			this->button_supprimer_personnel = (gcnew System::Windows::Forms::Button());
 			this->button_modifier_personnel = (gcnew System::Windows::Forms::Button());
@@ -376,23 +376,17 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tabControl1
 			// 
-			this->tabControl1->Appearance = System::Windows::Forms::TabAppearance::FlatButtons;
 			this->tabControl1->Controls->Add(this->gestion_personnel);
 			this->tabControl1->Controls->Add(this->gestion_client);
 			this->tabControl1->Controls->Add(this->gestion_commande);
 			this->tabControl1->Controls->Add(this->gestion_stock);
 			this->tabControl1->Controls->Add(this->gestion_statistique);
-			this->tabControl1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->tabControl1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
 			this->tabControl1->ImeMode = System::Windows::Forms::ImeMode::Off;
-			this->tabControl1->ItemSize = System::Drawing::Size(365, 100);
 			this->tabControl1->Location = System::Drawing::Point(12, 12);
 			this->tabControl1->Name = L"tabControl1";
-			this->tabControl1->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->tabControl1->RightToLeftLayout = true;
 			this->tabControl1->SelectedIndex = 0;
-			this->tabControl1->Size = System::Drawing::Size(1500, 1200);
-			this->tabControl1->SizeMode = System::Windows::Forms::TabSizeMode::Fixed;
+			this->tabControl1->Size = System::Drawing::Size(1879, 1136);
 			this->tabControl1->TabIndex = 5;
 			this->tabControl1->SelectedIndexChanged += gcnew System::EventHandler(this, &principal::tabControl1_SelectedIndexChanged);
 			// 
@@ -405,11 +399,11 @@ private: System::ComponentModel::IContainer^ components;
 			this->gestion_personnel->Controls->Add(this->button_supprimer_personnel);
 			this->gestion_personnel->Controls->Add(this->button_modifier_personnel);
 			this->gestion_personnel->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->gestion_personnel->Location = System::Drawing::Point(4, 104);
+			this->gestion_personnel->Location = System::Drawing::Point(4, 38);
 			this->gestion_personnel->Name = L"gestion_personnel";
 			this->gestion_personnel->Padding = System::Windows::Forms::Padding(3);
 			this->gestion_personnel->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->gestion_personnel->Size = System::Drawing::Size(1871, 1092);
+			this->gestion_personnel->Size = System::Drawing::Size(1871, 1094);
 			this->gestion_personnel->TabIndex = 0;
 			this->gestion_personnel->Text = L"Gestion Personnel";
 			// 
@@ -436,45 +430,35 @@ private: System::ComponentModel::IContainer^ components;
 			// splitContainer1.Panel1
 			// 
 			this->splitContainer1->Panel1->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->splitContainer1->Panel1->Controls->Add(this->richTextBox1);
-			this->splitContainer1->Panel1->ForeColor = System::Drawing::SystemColors::ControlDark;
+			this->splitContainer1->Panel1->Controls->Add(this->label9);
+			this->splitContainer1->Panel1->Controls->Add(this->textBox7);
+			this->splitContainer1->Panel1->Controls->Add(this->button_valider);
+			this->splitContainer1->Panel1->Controls->Add(this->label1);
+			this->splitContainer1->Panel1->Controls->Add(this->label8);
+			this->splitContainer1->Panel1->Controls->Add(this->textBox1);
+			this->splitContainer1->Panel1->Controls->Add(this->comboBox1);
+			this->splitContainer1->Panel1->Controls->Add(this->textBox2);
+			this->splitContainer1->Panel1->Controls->Add(this->label7);
+			this->splitContainer1->Panel1->Controls->Add(this->label2);
+			this->splitContainer1->Panel1->Controls->Add(this->textBox6);
+			this->splitContainer1->Panel1->Controls->Add(this->label3);
+			this->splitContainer1->Panel1->Controls->Add(this->label6);
+			this->splitContainer1->Panel1->Controls->Add(this->dateTimePicker_personnel);
+			this->splitContainer1->Panel1->Controls->Add(this->textBox5);
+			this->splitContainer1->Panel1->Controls->Add(this->textBox3);
+			this->splitContainer1->Panel1->Controls->Add(this->label5);
+			this->splitContainer1->Panel1->Controls->Add(this->label4);
+			this->splitContainer1->Panel1->Controls->Add(this->textBox4);
+			this->splitContainer1->Panel1->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
 			// 
 			// splitContainer1.Panel2
 			// 
 			this->splitContainer1->Panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->splitContainer1->Panel2->Controls->Add(this->label9);
-			this->splitContainer1->Panel2->Controls->Add(this->textBox7);
-			this->splitContainer1->Panel2->Controls->Add(this->button_valider);
-			this->splitContainer1->Panel2->Controls->Add(this->label1);
-			this->splitContainer1->Panel2->Controls->Add(this->label8);
-			this->splitContainer1->Panel2->Controls->Add(this->textBox1);
-			this->splitContainer1->Panel2->Controls->Add(this->comboBox1);
-			this->splitContainer1->Panel2->Controls->Add(this->textBox2);
-			this->splitContainer1->Panel2->Controls->Add(this->label7);
-			this->splitContainer1->Panel2->Controls->Add(this->label2);
-			this->splitContainer1->Panel2->Controls->Add(this->textBox6);
-			this->splitContainer1->Panel2->Controls->Add(this->label3);
-			this->splitContainer1->Panel2->Controls->Add(this->label6);
-			this->splitContainer1->Panel2->Controls->Add(this->dateTimePicker_personnel);
-			this->splitContainer1->Panel2->Controls->Add(this->textBox5);
-			this->splitContainer1->Panel2->Controls->Add(this->textBox3);
-			this->splitContainer1->Panel2->Controls->Add(this->label5);
-			this->splitContainer1->Panel2->Controls->Add(this->label4);
-			this->splitContainer1->Panel2->Controls->Add(this->textBox4);
-			this->splitContainer1->Panel2->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->splitContainer1->Panel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &principal::splitContainer1_Panel1_Paint);
+			this->splitContainer1->Panel2->Controls->Add(this->richTextBox1);
+			this->splitContainer1->Panel2->ForeColor = System::Drawing::SystemColors::ControlDark;
 			this->splitContainer1->Size = System::Drawing::Size(1499, 1065);
-			this->splitContainer1->SplitterDistance = 993;
+			this->splitContainer1->SplitterDistance = 499;
 			this->splitContainer1->TabIndex = 26;
-			// 
-			// richTextBox1
-			// 
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			this->richTextBox1->Location = System::Drawing::Point(14, 15);
-			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(964, 1034);
-			this->richTextBox1->TabIndex = 0;
-			this->richTextBox1->Text = L"";
 			// 
 			// label9
 			// 
@@ -674,6 +658,15 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox4->TabIndex = 35;
 			this->textBox4->TextChanged += gcnew System::EventHandler(this, &principal::textBox4_TextChanged);
 			// 
+			// richTextBox1
+			// 
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+			this->richTextBox1->Location = System::Drawing::Point(14, 15);
+			this->richTextBox1->Name = L"richTextBox1";
+			this->richTextBox1->Size = System::Drawing::Size(964, 1034);
+			this->richTextBox1->TabIndex = 0;
+			this->richTextBox1->Text = L"";
+			// 
 			// button_afficher_personnel
 			// 
 			this->button_afficher_personnel->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
@@ -724,10 +717,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->gestion_client->Controls->Add(this->button4);
 			this->gestion_client->Controls->Add(this->button3);
 			this->gestion_client->Controls->Add(this->button2);
-			this->gestion_client->Location = System::Drawing::Point(4, 104);
+			this->gestion_client->Location = System::Drawing::Point(4, 38);
 			this->gestion_client->Name = L"gestion_client";
 			this->gestion_client->Padding = System::Windows::Forms::Padding(3);
-			this->gestion_client->Size = System::Drawing::Size(1871, 1092);
+			this->gestion_client->Size = System::Drawing::Size(1871, 1094);
 			this->gestion_client->TabIndex = 1;
 			this->gestion_client->Text = L"Gestion Client";
 			this->gestion_client->Click += gcnew System::EventHandler(this, &principal::gestion_client_Click);
@@ -741,34 +734,32 @@ private: System::ComponentModel::IContainer^ components;
 			// splitContainer2.Panel1
 			// 
 			this->splitContainer2->Panel1->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->splitContainer2->Panel1->Controls->Add(this->richTextBox2);
-			this->splitContainer2->Panel1->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->splitContainer2->Panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &principal::splitContainer2_Panel2_Paint);
+			this->splitContainer2->Panel1->Controls->Add(this->label37);
+			this->splitContainer2->Panel1->Controls->Add(this->textBox30);
+			this->splitContainer2->Panel1->Controls->Add(this->button10);
+			this->splitContainer2->Panel1->Controls->Add(this->dateTimePicker1);
+			this->splitContainer2->Panel1->Controls->Add(this->label15);
+			this->splitContainer2->Panel1->Controls->Add(this->label13);
+			this->splitContainer2->Panel1->Controls->Add(this->comboBox2);
+			this->splitContainer2->Panel1->Controls->Add(this->label14);
+			this->splitContainer2->Panel1->Controls->Add(this->textBox11);
+			this->splitContainer2->Panel1->Controls->Add(this->label16);
+			this->splitContainer2->Panel1->Controls->Add(this->textBox12);
+			this->splitContainer2->Panel1->Controls->Add(this->label10);
+			this->splitContainer2->Panel1->Controls->Add(this->textBox8);
+			this->splitContainer2->Panel1->Controls->Add(this->label11);
+			this->splitContainer2->Panel1->Controls->Add(this->textBox9);
+			this->splitContainer2->Panel1->Controls->Add(this->textBox10);
+			this->splitContainer2->Panel1->Controls->Add(this->label12);
+			this->splitContainer2->Panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &principal::splitContainer2_Panel1_Paint);
 			// 
 			// splitContainer2.Panel2
 			// 
 			this->splitContainer2->Panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->splitContainer2->Panel2->Controls->Add(this->label37);
-			this->splitContainer2->Panel2->Controls->Add(this->textBox30);
-			this->splitContainer2->Panel2->Controls->Add(this->button10);
-			this->splitContainer2->Panel2->Controls->Add(this->dateTimePicker1);
-			this->splitContainer2->Panel2->Controls->Add(this->label15);
-			this->splitContainer2->Panel2->Controls->Add(this->label13);
-			this->splitContainer2->Panel2->Controls->Add(this->comboBox2);
-			this->splitContainer2->Panel2->Controls->Add(this->label14);
-			this->splitContainer2->Panel2->Controls->Add(this->textBox11);
-			this->splitContainer2->Panel2->Controls->Add(this->label16);
-			this->splitContainer2->Panel2->Controls->Add(this->textBox12);
-			this->splitContainer2->Panel2->Controls->Add(this->label10);
-			this->splitContainer2->Panel2->Controls->Add(this->textBox8);
-			this->splitContainer2->Panel2->Controls->Add(this->label11);
-			this->splitContainer2->Panel2->Controls->Add(this->textBox9);
-			this->splitContainer2->Panel2->Controls->Add(this->textBox10);
-			this->splitContainer2->Panel2->Controls->Add(this->label12);
-			this->splitContainer2->Panel2->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->splitContainer2->Panel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &principal::splitContainer2_Panel1_Paint);
+			this->splitContainer2->Panel2->Controls->Add(this->richTextBox2);
+			this->splitContainer2->Panel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &principal::splitContainer2_Panel2_Paint);
 			this->splitContainer2->Size = System::Drawing::Size(1486, 1060);
-			this->splitContainer2->SplitterDistance = 993;
+			this->splitContainer2->SplitterDistance = 495;
 			this->splitContainer2->TabIndex = 4;
 			// 
 			// label37
@@ -1002,9 +993,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->gestion_commande->Controls->Add(this->button7);
 			this->gestion_commande->Controls->Add(this->button6);
 			this->gestion_commande->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14));
-			this->gestion_commande->Location = System::Drawing::Point(4, 104);
+			this->gestion_commande->Location = System::Drawing::Point(4, 38);
 			this->gestion_commande->Name = L"gestion_commande";
-			this->gestion_commande->Size = System::Drawing::Size(1871, 1092);
+			this->gestion_commande->Size = System::Drawing::Size(1871, 1094);
 			this->gestion_commande->TabIndex = 2;
 			this->gestion_commande->Text = L"Gestion Commande";
 			this->gestion_commande->Click += gcnew System::EventHandler(this, &principal::gestion_commande_Click);
@@ -1018,34 +1009,32 @@ private: System::ComponentModel::IContainer^ components;
 			// splitContainer3.Panel1
 			// 
 			this->splitContainer3->Panel1->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->splitContainer3->Panel1->Controls->Add(this->richTextBox3);
-			this->splitContainer3->Panel1->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->splitContainer3->Panel1->Controls->Add(this->label25);
+			this->splitContainer3->Panel1->Controls->Add(this->textBox18);
+			this->splitContainer3->Panel1->Controls->Add(this->button11);
+			this->splitContainer3->Panel1->Controls->Add(this->dateTimePicker3);
+			this->splitContainer3->Panel1->Controls->Add(this->label24);
+			this->splitContainer3->Panel1->Controls->Add(this->comboBox3);
+			this->splitContainer3->Panel1->Controls->Add(this->label23);
+			this->splitContainer3->Panel1->Controls->Add(this->textBox17);
+			this->splitContainer3->Panel1->Controls->Add(this->label22);
+			this->splitContainer3->Panel1->Controls->Add(this->textBox16);
+			this->splitContainer3->Panel1->Controls->Add(this->label21);
+			this->splitContainer3->Panel1->Controls->Add(this->dateTimePicker2);
+			this->splitContainer3->Panel1->Controls->Add(this->label17);
+			this->splitContainer3->Panel1->Controls->Add(this->label18);
+			this->splitContainer3->Panel1->Controls->Add(this->textBox13);
+			this->splitContainer3->Panel1->Controls->Add(this->label19);
+			this->splitContainer3->Panel1->Controls->Add(this->textBox14);
+			this->splitContainer3->Panel1->Controls->Add(this->textBox15);
+			this->splitContainer3->Panel1->Controls->Add(this->label20);
 			// 
 			// splitContainer3.Panel2
 			// 
 			this->splitContainer3->Panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->splitContainer3->Panel2->Controls->Add(this->label25);
-			this->splitContainer3->Panel2->Controls->Add(this->textBox18);
-			this->splitContainer3->Panel2->Controls->Add(this->button11);
-			this->splitContainer3->Panel2->Controls->Add(this->dateTimePicker3);
-			this->splitContainer3->Panel2->Controls->Add(this->label24);
-			this->splitContainer3->Panel2->Controls->Add(this->comboBox3);
-			this->splitContainer3->Panel2->Controls->Add(this->label23);
-			this->splitContainer3->Panel2->Controls->Add(this->textBox17);
-			this->splitContainer3->Panel2->Controls->Add(this->label22);
-			this->splitContainer3->Panel2->Controls->Add(this->textBox16);
-			this->splitContainer3->Panel2->Controls->Add(this->label21);
-			this->splitContainer3->Panel2->Controls->Add(this->dateTimePicker2);
-			this->splitContainer3->Panel2->Controls->Add(this->label17);
-			this->splitContainer3->Panel2->Controls->Add(this->label18);
-			this->splitContainer3->Panel2->Controls->Add(this->textBox13);
-			this->splitContainer3->Panel2->Controls->Add(this->label19);
-			this->splitContainer3->Panel2->Controls->Add(this->textBox14);
-			this->splitContainer3->Panel2->Controls->Add(this->textBox15);
-			this->splitContainer3->Panel2->Controls->Add(this->label20);
-			this->splitContainer3->Panel2->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->splitContainer3->Panel2->Controls->Add(this->richTextBox3);
 			this->splitContainer3->Size = System::Drawing::Size(1502, 1065);
-			this->splitContainer3->SplitterDistance = 993;
+			this->splitContainer3->SplitterDistance = 500;
 			this->splitContainer3->TabIndex = 4;
 			// 
 			// label25
@@ -1300,9 +1289,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->gestion_stock->Controls->Add(this->button14);
 			this->gestion_stock->Controls->Add(this->button13);
 			this->gestion_stock->Controls->Add(this->button12);
-			this->gestion_stock->Location = System::Drawing::Point(4, 104);
+			this->gestion_stock->Location = System::Drawing::Point(4, 38);
 			this->gestion_stock->Name = L"gestion_stock";
-			this->gestion_stock->Size = System::Drawing::Size(1871, 1092);
+			this->gestion_stock->Size = System::Drawing::Size(1871, 1094);
 			this->gestion_stock->TabIndex = 3;
 			this->gestion_stock->Text = L"Gestion Stock";
 			// 
@@ -1314,38 +1303,36 @@ private: System::ComponentModel::IContainer^ components;
 			// splitContainer4.Panel1
 			// 
 			this->splitContainer4->Panel1->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->splitContainer4->Panel1->Controls->Add(this->richTextBox4);
-			this->splitContainer4->Panel1->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->splitContainer4->Panel1->Controls->Add(this->comboBox4);
+			this->splitContainer4->Panel1->Controls->Add(this->button16);
+			this->splitContainer4->Panel1->Controls->Add(this->label36);
+			this->splitContainer4->Panel1->Controls->Add(this->textBox29);
+			this->splitContainer4->Panel1->Controls->Add(this->label34);
+			this->splitContainer4->Panel1->Controls->Add(this->textBox27);
+			this->splitContainer4->Panel1->Controls->Add(this->label35);
+			this->splitContainer4->Panel1->Controls->Add(this->textBox28);
+			this->splitContainer4->Panel1->Controls->Add(this->label30);
+			this->splitContainer4->Panel1->Controls->Add(this->textBox23);
+			this->splitContainer4->Panel1->Controls->Add(this->label31);
+			this->splitContainer4->Panel1->Controls->Add(this->textBox24);
+			this->splitContainer4->Panel1->Controls->Add(this->label32);
+			this->splitContainer4->Panel1->Controls->Add(this->textBox25);
+			this->splitContainer4->Panel1->Controls->Add(this->label33);
+			this->splitContainer4->Panel1->Controls->Add(this->label28);
+			this->splitContainer4->Panel1->Controls->Add(this->textBox21);
+			this->splitContainer4->Panel1->Controls->Add(this->label29);
+			this->splitContainer4->Panel1->Controls->Add(this->textBox22);
+			this->splitContainer4->Panel1->Controls->Add(this->label27);
+			this->splitContainer4->Panel1->Controls->Add(this->textBox20);
+			this->splitContainer4->Panel1->Controls->Add(this->label26);
+			this->splitContainer4->Panel1->Controls->Add(this->textBox19);
 			// 
 			// splitContainer4.Panel2
 			// 
 			this->splitContainer4->Panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->splitContainer4->Panel2->Controls->Add(this->comboBox4);
-			this->splitContainer4->Panel2->Controls->Add(this->button16);
-			this->splitContainer4->Panel2->Controls->Add(this->label36);
-			this->splitContainer4->Panel2->Controls->Add(this->textBox29);
-			this->splitContainer4->Panel2->Controls->Add(this->label34);
-			this->splitContainer4->Panel2->Controls->Add(this->textBox27);
-			this->splitContainer4->Panel2->Controls->Add(this->label35);
-			this->splitContainer4->Panel2->Controls->Add(this->textBox28);
-			this->splitContainer4->Panel2->Controls->Add(this->label30);
-			this->splitContainer4->Panel2->Controls->Add(this->textBox23);
-			this->splitContainer4->Panel2->Controls->Add(this->label31);
-			this->splitContainer4->Panel2->Controls->Add(this->textBox24);
-			this->splitContainer4->Panel2->Controls->Add(this->label32);
-			this->splitContainer4->Panel2->Controls->Add(this->textBox25);
-			this->splitContainer4->Panel2->Controls->Add(this->label33);
-			this->splitContainer4->Panel2->Controls->Add(this->label28);
-			this->splitContainer4->Panel2->Controls->Add(this->textBox21);
-			this->splitContainer4->Panel2->Controls->Add(this->label29);
-			this->splitContainer4->Panel2->Controls->Add(this->textBox22);
-			this->splitContainer4->Panel2->Controls->Add(this->label27);
-			this->splitContainer4->Panel2->Controls->Add(this->textBox20);
-			this->splitContainer4->Panel2->Controls->Add(this->label26);
-			this->splitContainer4->Panel2->Controls->Add(this->textBox19);
-			this->splitContainer4->Panel2->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->splitContainer4->Panel2->Controls->Add(this->richTextBox4);
 			this->splitContainer4->Size = System::Drawing::Size(1494, 1055);
-			this->splitContainer4->SplitterDistance = 993;
+			this->splitContainer4->SplitterDistance = 498;
 			this->splitContainer4->TabIndex = 4;
 			// 
 			// comboBox4
@@ -1644,9 +1631,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->gestion_statistique->Controls->Add(this->button19);
 			this->gestion_statistique->Controls->Add(this->button18);
 			this->gestion_statistique->Controls->Add(this->button17);
-			this->gestion_statistique->Location = System::Drawing::Point(4, 104);
+			this->gestion_statistique->Location = System::Drawing::Point(4, 38);
 			this->gestion_statistique->Name = L"gestion_statistique";
-			this->gestion_statistique->Size = System::Drawing::Size(1871, 1092);
+			this->gestion_statistique->Size = System::Drawing::Size(1871, 1094);
 			this->gestion_statistique->TabIndex = 4;
 			this->gestion_statistique->Text = L"Gestion Statistique";
 			// 
@@ -1658,32 +1645,29 @@ private: System::ComponentModel::IContainer^ components;
 			// splitContainer5.Panel1
 			// 
 			this->splitContainer5->Panel1->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->splitContainer5->Panel1->Controls->Add(this->richTextBox5);
-			this->splitContainer5->Panel1->Enabled = false;
-			this->splitContainer5->Panel1->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->splitContainer5->Panel1->Controls->Add(this->button26);
+			this->splitContainer5->Panel1->Controls->Add(this->checkBox9);
+			this->splitContainer5->Panel1->Controls->Add(this->checkBox10);
+			this->splitContainer5->Panel1->Controls->Add(this->checkBox11);
+			this->splitContainer5->Panel1->Controls->Add(this->label41);
+			this->splitContainer5->Panel1->Controls->Add(this->checkBox7);
+			this->splitContainer5->Panel1->Controls->Add(this->checkBox8);
+			this->splitContainer5->Panel1->Controls->Add(this->label40);
+			this->splitContainer5->Panel1->Controls->Add(this->checkBox4);
+			this->splitContainer5->Panel1->Controls->Add(this->checkBox5);
+			this->splitContainer5->Panel1->Controls->Add(this->checkBox6);
+			this->splitContainer5->Panel1->Controls->Add(this->label39);
+			this->splitContainer5->Panel1->Controls->Add(this->checkBox3);
+			this->splitContainer5->Panel1->Controls->Add(this->checkBox2);
+			this->splitContainer5->Panel1->Controls->Add(this->checkBox1);
+			this->splitContainer5->Panel1->Controls->Add(this->label38);
 			// 
 			// splitContainer5.Panel2
 			// 
 			this->splitContainer5->Panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->splitContainer5->Panel2->Controls->Add(this->button26);
-			this->splitContainer5->Panel2->Controls->Add(this->checkBox9);
-			this->splitContainer5->Panel2->Controls->Add(this->checkBox10);
-			this->splitContainer5->Panel2->Controls->Add(this->checkBox11);
-			this->splitContainer5->Panel2->Controls->Add(this->label41);
-			this->splitContainer5->Panel2->Controls->Add(this->checkBox7);
-			this->splitContainer5->Panel2->Controls->Add(this->checkBox8);
-			this->splitContainer5->Panel2->Controls->Add(this->label40);
-			this->splitContainer5->Panel2->Controls->Add(this->checkBox4);
-			this->splitContainer5->Panel2->Controls->Add(this->checkBox5);
-			this->splitContainer5->Panel2->Controls->Add(this->checkBox6);
-			this->splitContainer5->Panel2->Controls->Add(this->label39);
-			this->splitContainer5->Panel2->Controls->Add(this->checkBox3);
-			this->splitContainer5->Panel2->Controls->Add(this->checkBox2);
-			this->splitContainer5->Panel2->Controls->Add(this->checkBox1);
-			this->splitContainer5->Panel2->Controls->Add(this->label38);
-			this->splitContainer5->Panel2->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->splitContainer5->Panel2->Controls->Add(this->richTextBox5);
 			this->splitContainer5->Size = System::Drawing::Size(1498, 1053);
-			this->splitContainer5->SplitterDistance = 993;
+			this->splitContainer5->SplitterDistance = 499;
 			this->splitContainer5->TabIndex = 9;
 			// 
 			// button26
@@ -1878,7 +1862,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// richTextBox5
 			// 
-			this->richTextBox5->Location = System::Drawing::Point(17, 12);
+			this->richTextBox5->Location = System::Drawing::Point(15, 9);
 			this->richTextBox5->Name = L"richTextBox5";
 			this->richTextBox5->Size = System::Drawing::Size(964, 1034);
 			this->richTextBox5->TabIndex = 1;
@@ -2007,7 +1991,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoScroll = true;
 			this->AutoSize = true;
-			this->ClientSize = System::Drawing::Size(1893, 1230);
+			this->ClientSize = System::Drawing::Size(1908, 1189);
 			this->Controls->Add(this->tabControl1);
 			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->Name = L"principal";
@@ -2015,32 +1999,32 @@ private: System::ComponentModel::IContainer^ components;
 			this->tabControl1->ResumeLayout(false);
 			this->gestion_personnel->ResumeLayout(false);
 			this->splitContainer1->Panel1->ResumeLayout(false);
+			this->splitContainer1->Panel1->PerformLayout();
 			this->splitContainer1->Panel2->ResumeLayout(false);
-			this->splitContainer1->Panel2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->EndInit();
 			this->splitContainer1->ResumeLayout(false);
 			this->gestion_client->ResumeLayout(false);
 			this->splitContainer2->Panel1->ResumeLayout(false);
+			this->splitContainer2->Panel1->PerformLayout();
 			this->splitContainer2->Panel2->ResumeLayout(false);
-			this->splitContainer2->Panel2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer2))->EndInit();
 			this->splitContainer2->ResumeLayout(false);
 			this->gestion_commande->ResumeLayout(false);
 			this->splitContainer3->Panel1->ResumeLayout(false);
+			this->splitContainer3->Panel1->PerformLayout();
 			this->splitContainer3->Panel2->ResumeLayout(false);
-			this->splitContainer3->Panel2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer3))->EndInit();
 			this->splitContainer3->ResumeLayout(false);
 			this->gestion_stock->ResumeLayout(false);
 			this->splitContainer4->Panel1->ResumeLayout(false);
+			this->splitContainer4->Panel1->PerformLayout();
 			this->splitContainer4->Panel2->ResumeLayout(false);
-			this->splitContainer4->Panel2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer4))->EndInit();
 			this->splitContainer4->ResumeLayout(false);
 			this->gestion_statistique->ResumeLayout(false);
 			this->splitContainer5->Panel1->ResumeLayout(false);
+			this->splitContainer5->Panel1->PerformLayout();
 			this->splitContainer5->Panel2->ResumeLayout(false);
-			this->splitContainer5->Panel2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer5))->EndInit();
 			this->splitContainer5->ResumeLayout(false);
 			this->ResumeLayout(false);
@@ -2278,8 +2262,6 @@ private: System::Void button23_Click(System::Object^ sender, System::EventArgs^ 
 }
 private: System::Void button24_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->richTextBox5->Text = this->button24->Text;
-}
-private: System::Void splitContainer1_Panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 };
 }

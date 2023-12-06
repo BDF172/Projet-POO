@@ -2,9 +2,12 @@ USE POO;
 GO
 
 CREATE PROCEDURE AjouterAdresseClient
-	@IdClient int,
-    @Adresse varchar(50),
-	@Facturation bit
+	@IdClient INT,
+    @NumeroAdresse INT,
+	@NomRue varchar(50),
+	@IdVille INT,
+	@F_ou_L BIT
+
 
 AS
 BEGIN
@@ -14,9 +17,11 @@ BEGIN
 
     BEGIN TRY
         -- Insérez le nouveau client dans la table Clients
-		INSERT INTO POO.dbo.AdressesC(f_ou_l, villeID, adresse, clientID) VALUES (@Facturation, 1, @Adresse, @IdClient);
+		INSERT INTO AdressesC(numero_adresse_C, nom_rue_C, f_ou_l, id_ville, id_client) 
+		VALUES (@NumeroAdresse, @NomRue, @F_ou_L, @IdVille, @IdClient);
         -- Valider la transaction
         COMMIT;
+		SELECT 0;
     END TRY
     BEGIN CATCH
         -- En cas d'erreur, annuler la transaction

@@ -12,7 +12,15 @@ BEGIN
 
     BEGIN TRY
         -- Insérez le nouveau client dans la table Clients
-        DELETE FROM AdressesC WHERE clientID = @IdClient AND id_adresse = @IdAdresse;
+		IF NOT EXISTS (SELECT 1 FROM AdressesC WHERE id_client = @IdClient AND id_adresseC = @IdAdresse)
+		BEGIN
+		SELECT 1;
+		END
+		ELSE 
+		BEGIN
+        DELETE FROM AdressesC WHERE id_client = @IdClient AND id_adresseC = @IdAdresse;
+		SELECT 0;
+		END
         COMMIT;
     END TRY
     BEGIN CATCH
