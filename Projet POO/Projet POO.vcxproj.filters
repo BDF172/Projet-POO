@@ -40,6 +40,12 @@
     <Filter Include="Fichiers sources\Services\héritage gestion">
       <UniqueIdentifier>{34e45d1c-ac51-4dcb-9241-db7fd6c52e5e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Composants\objets">
+      <UniqueIdentifier>{303d8049-4f7e-4b01-ac4c-ba8fef6ebf9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Composants\objets">
+      <UniqueIdentifier>{020cfc21-cf6b-40b0-b249-4031e6a6f9e4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CL_CAD.cpp">
@@ -80,6 +86,18 @@
     </ClCompile>
     <ClCompile Include="mappingArticles.cpp">
       <Filter>Fichiers sources\Composants\héritage mapping</Filter>
+    </ClCompile>
+    <ClCompile Include="Personnel.cpp">
+      <Filter>Fichiers sources\Composants\objets</Filter>
+    </ClCompile>
+    <ClCompile Include="Client.cpp">
+      <Filter>Fichiers sources\Composants\objets</Filter>
+    </ClCompile>
+    <ClCompile Include="Commande.cpp">
+      <Filter>Fichiers sources\Composants\objets</Filter>
+    </ClCompile>
+    <ClCompile Include="Articles.cpp">
+      <Filter>Fichiers sources\Composants\objets</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +144,18 @@
     </ClInclude>
     <ClInclude Include="gestionArticles.h">
       <Filter>Fichiers d%27en-tête\Services\héritage gestion</Filter>
+    </ClInclude>
+    <ClInclude Include="Personnel.h">
+      <Filter>Fichiers d%27en-tête\Composants\objets</Filter>
+    </ClInclude>
+    <ClInclude Include="CLient.h">
+      <Filter>Fichiers d%27en-tête\Composants\objets</Filter>
+    </ClInclude>
+    <ClInclude Include="Commande.h">
+      <Filter>Fichiers d%27en-tête\Composants\objets</Filter>
+    </ClInclude>
+    <ClInclude Include="Articles.h">
+      <Filter>Fichiers d%27en-tête\Composants\objets</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

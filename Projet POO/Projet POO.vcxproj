@@ -93,7 +93,7 @@
     <Link>
       <AdditionalDependencies />
       <EntryPointSymbol>PageMain</EntryPointSymbol>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -122,9 +122,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Articles.cpp" />
+    <ClCompile Include="Client.cpp" />
     <ClCompile Include="CL_CAD.cpp" />
     <ClCompile Include="CL_Com_mapping.cpp" />
     <ClCompile Include="CL_Svc_gestion.cpp" />
+    <ClCompile Include="Commande.cpp" />
     <ClCompile Include="gestionArticles.cpp" />
     <ClCompile Include="gestionClient.cpp" />
     <ClCompile Include="gestionCommandes.cpp" />
@@ -133,13 +136,17 @@
     <ClCompile Include="mappingClient.cpp" />
     <ClCompile Include="mappingCommandes.cpp" />
     <ClCompile Include="mappingPersonnel.cpp" />
+    <ClCompile Include="Personnel.cpp" />
     <ClCompile Include="principal.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Articles.h" />
+    <ClInclude Include="CLient.h" />
     <ClInclude Include="CL_CAD.h" />
     <ClInclude Include="CL_Com_mapping.h" />
     <ClInclude Include="CL_Svc_gestion.h" />
+    <ClInclude Include="Commande.h" />
     <ClInclude Include="gestionArticles.h" />
     <ClInclude Include="gestionClient.h" />
     <ClInclude Include="gestionCommandes.h" />
@@ -149,6 +156,7 @@
     <ClInclude Include="headerLink.h" />
     <ClInclude Include="mappingCommandes.h" />
     <ClInclude Include="mappingPersonnel.h" />
+    <ClInclude Include="Personnel.h" />
     <ClInclude Include="principal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
