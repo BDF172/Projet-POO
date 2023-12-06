@@ -1,4 +1,5 @@
 #pragma once
+// La prochaine fois fais gaffe
 
 #include "gestion_personnel.h"
 
