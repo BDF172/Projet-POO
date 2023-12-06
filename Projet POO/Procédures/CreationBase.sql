@@ -137,3 +137,16 @@ CREATE TABLE fait_reference(
 );
 
 INSERT INTO Entrepot (nom_entrepot) VALUES ('FONCTION NON IMPLEMENTEE');
+INSERT INTO Articles (nom_articles) VALUES ('Article supprimé');
+
+INSERT INTO Clients (nom_client, prenom_client, date_naissance) 
+VALUES ('Client', 'supprimé', '2000-12-12');
+
+INSERT INTO Ville (id_pays, nom_ville) VALUES (1, 'Rouen');
+INSERT INTO Pays (nom_pays) VALUES ('France');
+
+INSERT INTO AdressesC (numero_adresse_C, nom_rue_C, id_ville, f_ou_l, id_client)
+VALUES (-1, 'Adresse de facutration supprimée', 1, 0, 1);
+INSERT INTO AdressesC (numero_adresse_C, nom_rue_C, id_ville, f_ou_l, id_client)
+VALUES (-1, 'Adresse de livraison supprimée', 1, 1, 1);
+

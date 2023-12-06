@@ -148,7 +148,7 @@
     <ClInclude Include="Personnel.h">
       <Filter>Fichiers d%27en-tête\Composants\objets</Filter>
     </ClInclude>
-    <ClInclude Include="CLient.h">
+    <ClInclude Include="Client.h">
       <Filter>Fichiers d%27en-tête\Composants\objets</Filter>
     </ClInclude>
     <ClInclude Include="Commande.h">

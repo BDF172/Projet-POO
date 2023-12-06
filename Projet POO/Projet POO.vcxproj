@@ -93,7 +93,7 @@
     <Link>
       <AdditionalDependencies />
       <EntryPointSymbol>PageMain</EntryPointSymbol>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -142,7 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Articles.h" />
-    <ClInclude Include="CLient.h" />
+    <ClInclude Include="Client.h" />
     <ClInclude Include="CL_CAD.h" />
     <ClInclude Include="CL_Com_mapping.h" />
     <ClInclude Include="CL_Svc_gestion.h" />

@@ -10,6 +10,5 @@ CL_Com_mapping::CL_Com_mapping(Void) {
 }
 
 DataSet^ CL_Com_mapping::executeRequest(Void) {
-	Console::WriteLine(this->request);
 	return this->accessToBase->getRows(this->request);
 }

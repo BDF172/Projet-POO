@@ -19,9 +19,6 @@ BEGIN
 
     BEGIN TRY
         -- Insérez le nouveau client dans la table Clients
-		DECLARE @PrctTVA FLOAT;
-		SET @PrctTVA = (SELECT prctTVA FROM id_TVA WHERE id_TVA = @IdTva);
-
         INSERT INTO Articles(nom_articles)
         VALUES (@NomArticle);
 		
@@ -31,12 +28,15 @@ BEGIN
 		INSERT INTO prix (prix, dateAjout, prixHT, cout, id_article, id_TVA)
 		VALUES (@PrixArticle, GETDATE(), @PrixArticle, @Cout, @NouvelArticle, @IdTva);
 
+		INSERT INTO stock (seuil_reappro, quantiteVendue, Id_Entrepot, id_article)
+		VALUES (@SeuilReappro, 0, 1, @NouvelArticle);
+
         -- Valider la transaction
         COMMIT;
 
-		-- Sélectionnez le nouvel ID du client
+		-- Sélectionnez le nouvel ID de l'article
 		SELECT 0;
-		SELECT @NouvelArticle AS 'ID de la nouvelle commande';        
+		SELECT @NouvelArticle AS 'ID du nouvel article';        
     END TRY
     BEGIN CATCH
         -- En cas d'erreur, annuler la transaction
