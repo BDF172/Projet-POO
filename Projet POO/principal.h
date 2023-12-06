@@ -290,6 +290,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->gestion_stock = (gcnew System::Windows::Forms::TabPage());
 			this->splitContainer4 = (gcnew System::Windows::Forms::SplitContainer());
 			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
+			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->button16 = (gcnew System::Windows::Forms::Button());
 			this->label36 = (gcnew System::Windows::Forms::Label());
 			this->textBox29 = (gcnew System::Windows::Forms::TextBox());
@@ -345,7 +346,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->button19 = (gcnew System::Windows::Forms::Button());
 			this->button18 = (gcnew System::Windows::Forms::Button());
 			this->button17 = (gcnew System::Windows::Forms::Button());
-			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->tabControl1->SuspendLayout();
 			this->gestion_personnel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->BeginInit();
@@ -376,17 +376,25 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// tabControl1
 			// 
+			this->tabControl1->Appearance = System::Windows::Forms::TabAppearance::FlatButtons;
 			this->tabControl1->Controls->Add(this->gestion_personnel);
 			this->tabControl1->Controls->Add(this->gestion_client);
 			this->tabControl1->Controls->Add(this->gestion_commande);
 			this->tabControl1->Controls->Add(this->gestion_stock);
 			this->tabControl1->Controls->Add(this->gestion_statistique);
-			this->tabControl1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+			this->tabControl1->Cursor = System::Windows::Forms::Cursors::Arrow;
+			this->tabControl1->Enabled = false;
+			this->tabControl1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20));
+			this->tabControl1->HotTrack = true;
 			this->tabControl1->ImeMode = System::Windows::Forms::ImeMode::Off;
+			this->tabControl1->ItemSize = System::Drawing::Size(350, 100);
 			this->tabControl1->Location = System::Drawing::Point(12, 12);
+			this->tabControl1->Multiline = true;
 			this->tabControl1->Name = L"tabControl1";
+			this->tabControl1->RightToLeft = System::Windows::Forms::RightToLeft::Yes;
 			this->tabControl1->SelectedIndex = 0;
-			this->tabControl1->Size = System::Drawing::Size(1880, 1132);
+			this->tabControl1->Size = System::Drawing::Size(1886, 1530);
+			this->tabControl1->SizeMode = System::Windows::Forms::TabSizeMode::Fixed;
 			this->tabControl1->TabIndex = 5;
 			this->tabControl1->SelectedIndexChanged += gcnew System::EventHandler(this, &principal::tabControl1_SelectedIndexChanged);
 			// 
@@ -399,11 +407,11 @@ private: System::ComponentModel::IContainer^ components;
 			this->gestion_personnel->Controls->Add(this->button_supprimer_personnel);
 			this->gestion_personnel->Controls->Add(this->button_modifier_personnel);
 			this->gestion_personnel->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->gestion_personnel->Location = System::Drawing::Point(4, 38);
+			this->gestion_personnel->Location = System::Drawing::Point(4, 104);
 			this->gestion_personnel->Name = L"gestion_personnel";
 			this->gestion_personnel->Padding = System::Windows::Forms::Padding(3);
 			this->gestion_personnel->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->gestion_personnel->Size = System::Drawing::Size(1872, 1090);
+			this->gestion_personnel->Size = System::Drawing::Size(1878, 1422);
 			this->gestion_personnel->TabIndex = 0;
 			this->gestion_personnel->Text = L"Gestion Personnel";
 			// 
@@ -476,7 +484,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox7->Location = System::Drawing::Point(13, 67);
 			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(460, 35);
+			this->textBox7->Size = System::Drawing::Size(460, 53);
 			this->textBox7->TabIndex = 44;
 			this->textBox7->TextChanged += gcnew System::EventHandler(this, &principal::textBox7_TextChanged);
 			// 
@@ -522,7 +530,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox1->Location = System::Drawing::Point(15, 147);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(460, 35);
+			this->textBox1->Size = System::Drawing::Size(460, 53);
 			this->textBox1->TabIndex = 27;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &principal::textBox1_TextChanged);
 			// 
@@ -533,7 +541,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"France", L"Belgique", L"Canada" });
 			this->comboBox1->Location = System::Drawing::Point(18, 801);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(457, 37);
+			this->comboBox1->Size = System::Drawing::Size(457, 54);
 			this->comboBox1->TabIndex = 41;
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &principal::comboBox1_SelectedIndexChanged);
 			// 
@@ -541,7 +549,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox2->Location = System::Drawing::Point(15, 235);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(460, 35);
+			this->textBox2->Size = System::Drawing::Size(460, 53);
 			this->textBox2->TabIndex = 29;
 			this->textBox2->TextChanged += gcnew System::EventHandler(this, &principal::textBox2_TextChanged_1);
 			// 
@@ -573,7 +581,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox6->Location = System::Drawing::Point(15, 708);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(460, 35);
+			this->textBox6->Size = System::Drawing::Size(460, 53);
 			this->textBox6->TabIndex = 39;
 			this->textBox6->TextChanged += gcnew System::EventHandler(this, &principal::textBox6_TextChanged);
 			// 
@@ -614,7 +622,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox5->Location = System::Drawing::Point(15, 617);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(460, 35);
+			this->textBox5->Size = System::Drawing::Size(460, 53);
 			this->textBox5->TabIndex = 37;
 			this->textBox5->TextChanged += gcnew System::EventHandler(this, &principal::textBox5_TextChanged);
 			// 
@@ -622,7 +630,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox3->Location = System::Drawing::Point(15, 434);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(460, 35);
+			this->textBox3->Size = System::Drawing::Size(460, 53);
 			this->textBox3->TabIndex = 33;
 			this->textBox3->TextChanged += gcnew System::EventHandler(this, &principal::textBox3_TextChanged);
 			// 
@@ -654,7 +662,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox4->Location = System::Drawing::Point(15, 516);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(460, 35);
+			this->textBox4->Size = System::Drawing::Size(460, 53);
 			this->textBox4->TabIndex = 35;
 			this->textBox4->TextChanged += gcnew System::EventHandler(this, &principal::textBox4_TextChanged);
 			// 
@@ -717,10 +725,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->gestion_client->Controls->Add(this->button4);
 			this->gestion_client->Controls->Add(this->button3);
 			this->gestion_client->Controls->Add(this->button2);
-			this->gestion_client->Location = System::Drawing::Point(4, 38);
+			this->gestion_client->Location = System::Drawing::Point(4, 104);
 			this->gestion_client->Name = L"gestion_client";
 			this->gestion_client->Padding = System::Windows::Forms::Padding(3);
-			this->gestion_client->Size = System::Drawing::Size(1872, 1090);
+			this->gestion_client->Size = System::Drawing::Size(1878, 1422);
 			this->gestion_client->TabIndex = 1;
 			this->gestion_client->Text = L"Gestion Client";
 			this->gestion_client->Click += gcnew System::EventHandler(this, &principal::gestion_client_Click);
@@ -751,12 +759,14 @@ private: System::ComponentModel::IContainer^ components;
 			this->splitContainer2->Panel1->Controls->Add(this->textBox9);
 			this->splitContainer2->Panel1->Controls->Add(this->textBox10);
 			this->splitContainer2->Panel1->Controls->Add(this->label12);
+			this->splitContainer2->Panel1->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->splitContainer2->Panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &principal::splitContainer2_Panel1_Paint);
 			// 
 			// splitContainer2.Panel2
 			// 
 			this->splitContainer2->Panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->splitContainer2->Panel2->Controls->Add(this->richTextBox2);
+			this->splitContainer2->Panel2->RightToLeft = System::Windows::Forms::RightToLeft::Yes;
 			this->splitContainer2->Panel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &principal::splitContainer2_Panel2_Paint);
 			this->splitContainer2->Size = System::Drawing::Size(1486, 1060);
 			this->splitContainer2->SplitterDistance = 495;
@@ -777,7 +787,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox30->Location = System::Drawing::Point(12, 717);
 			this->textBox30->Name = L"textBox30";
-			this->textBox30->Size = System::Drawing::Size(460, 35);
+			this->textBox30->Size = System::Drawing::Size(460, 53);
 			this->textBox30->TabIndex = 68;
 			// 
 			// button10
@@ -797,7 +807,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->dateTimePicker1->Location = System::Drawing::Point(12, 627);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(457, 35);
+			this->dateTimePicker1->Size = System::Drawing::Size(457, 53);
 			this->dateTimePicker1->TabIndex = 66;
 			this->dateTimePicker1->ValueChanged += gcnew System::EventHandler(this, &principal::dateTimePicker1_ValueChanged);
 			// 
@@ -830,7 +840,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"France", L"Belgique", L"Canada" });
 			this->comboBox2->Location = System::Drawing::Point(12, 513);
 			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(457, 37);
+			this->comboBox2->Size = System::Drawing::Size(457, 54);
 			this->comboBox2->TabIndex = 62;
 			// 
 			// label14
@@ -848,7 +858,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox11->Location = System::Drawing::Point(9, 420);
 			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(460, 35);
+			this->textBox11->Size = System::Drawing::Size(460, 53);
 			this->textBox11->TabIndex = 60;
 			// 
 			// label16
@@ -866,7 +876,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox12->Location = System::Drawing::Point(9, 329);
 			this->textBox12->Name = L"textBox12";
-			this->textBox12->Size = System::Drawing::Size(460, 35);
+			this->textBox12->Size = System::Drawing::Size(460, 53);
 			this->textBox12->TabIndex = 58;
 			// 
 			// label10
@@ -884,7 +894,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox8->Location = System::Drawing::Point(7, 65);
 			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(460, 35);
+			this->textBox8->Size = System::Drawing::Size(460, 53);
 			this->textBox8->TabIndex = 50;
 			// 
 			// label11
@@ -902,14 +912,14 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox9->Location = System::Drawing::Point(9, 145);
 			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(460, 35);
+			this->textBox9->Size = System::Drawing::Size(460, 53);
 			this->textBox9->TabIndex = 46;
 			// 
 			// textBox10
 			// 
 			this->textBox10->Location = System::Drawing::Point(9, 233);
 			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(460, 35);
+			this->textBox10->Size = System::Drawing::Size(460, 53);
 			this->textBox10->TabIndex = 48;
 			// 
 			// label12
@@ -993,9 +1003,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->gestion_commande->Controls->Add(this->button7);
 			this->gestion_commande->Controls->Add(this->button6);
 			this->gestion_commande->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14));
-			this->gestion_commande->Location = System::Drawing::Point(4, 38);
+			this->gestion_commande->Location = System::Drawing::Point(4, 104);
 			this->gestion_commande->Name = L"gestion_commande";
-			this->gestion_commande->Size = System::Drawing::Size(1872, 819);
+			this->gestion_commande->Size = System::Drawing::Size(1878, 1422);
 			this->gestion_commande->TabIndex = 2;
 			this->gestion_commande->Text = L"Gestion Commande";
 			this->gestion_commande->Click += gcnew System::EventHandler(this, &principal::gestion_commande_Click);
@@ -1028,11 +1038,13 @@ private: System::ComponentModel::IContainer^ components;
 			this->splitContainer3->Panel1->Controls->Add(this->textBox14);
 			this->splitContainer3->Panel1->Controls->Add(this->textBox15);
 			this->splitContainer3->Panel1->Controls->Add(this->label20);
+			this->splitContainer3->Panel1->RightToLeft = System::Windows::Forms::RightToLeft::Yes;
 			// 
 			// splitContainer3.Panel2
 			// 
 			this->splitContainer3->Panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->splitContainer3->Panel2->Controls->Add(this->richTextBox3);
+			this->splitContainer3->Panel2->RightToLeft = System::Windows::Forms::RightToLeft::Yes;
 			this->splitContainer3->Size = System::Drawing::Size(1502, 1065);
 			this->splitContainer3->SplitterDistance = 500;
 			this->splitContainer3->TabIndex = 4;
@@ -1289,9 +1301,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->gestion_stock->Controls->Add(this->button14);
 			this->gestion_stock->Controls->Add(this->button13);
 			this->gestion_stock->Controls->Add(this->button12);
-			this->gestion_stock->Location = System::Drawing::Point(4, 38);
+			this->gestion_stock->Location = System::Drawing::Point(4, 104);
 			this->gestion_stock->Name = L"gestion_stock";
-			this->gestion_stock->Size = System::Drawing::Size(1872, 1090);
+			this->gestion_stock->Size = System::Drawing::Size(1878, 1422);
 			this->gestion_stock->TabIndex = 3;
 			this->gestion_stock->Text = L"Gestion Stock";
 			// 
@@ -1326,11 +1338,13 @@ private: System::ComponentModel::IContainer^ components;
 			this->splitContainer4->Panel1->Controls->Add(this->textBox20);
 			this->splitContainer4->Panel1->Controls->Add(this->label26);
 			this->splitContainer4->Panel1->Controls->Add(this->textBox19);
+			this->splitContainer4->Panel1->RightToLeft = System::Windows::Forms::RightToLeft::Yes;
 			// 
 			// splitContainer4.Panel2
 			// 
 			this->splitContainer4->Panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->splitContainer4->Panel2->Controls->Add(this->richTextBox4);
+			this->splitContainer4->Panel2->RightToLeft = System::Windows::Forms::RightToLeft::Yes;
 			this->splitContainer4->Size = System::Drawing::Size(1494, 1055);
 			this->splitContainer4->SplitterDistance = 498;
 			this->splitContainer4->TabIndex = 4;
@@ -1344,8 +1358,14 @@ private: System::ComponentModel::IContainer^ components;
 			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"[TVA 1]", L"[TVA 2]", L"[TVA 3]" });
 			this->comboBox4->Location = System::Drawing::Point(14, 399);
 			this->comboBox4->Name = L"comboBox4";
-			this->comboBox4->Size = System::Drawing::Size(457, 37);
+			this->comboBox4->Size = System::Drawing::Size(457, 54);
 			this->comboBox4->TabIndex = 96;
+			// 
+			// contextMenuStrip1
+			// 
+			this->contextMenuStrip1->ImageScalingSize = System::Drawing::Size(24, 24);
+			this->contextMenuStrip1->Name = L"contextMenuStrip1";
+			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
 			// 
 			// button16
 			// 
@@ -1375,7 +1395,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox29->Location = System::Drawing::Point(14, 925);
 			this->textBox29->Name = L"textBox29";
-			this->textBox29->Size = System::Drawing::Size(460, 35);
+			this->textBox29->Size = System::Drawing::Size(460, 53);
 			this->textBox29->TabIndex = 93;
 			// 
 			// label34
@@ -1393,7 +1413,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox27->Location = System::Drawing::Point(14, 836);
 			this->textBox27->Name = L"textBox27";
-			this->textBox27->Size = System::Drawing::Size(460, 35);
+			this->textBox27->Size = System::Drawing::Size(460, 53);
 			this->textBox27->TabIndex = 91;
 			// 
 			// label35
@@ -1411,7 +1431,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox28->Location = System::Drawing::Point(14, 749);
 			this->textBox28->Name = L"textBox28";
-			this->textBox28->Size = System::Drawing::Size(460, 35);
+			this->textBox28->Size = System::Drawing::Size(460, 53);
 			this->textBox28->TabIndex = 89;
 			// 
 			// label30
@@ -1429,7 +1449,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox23->Location = System::Drawing::Point(14, 658);
 			this->textBox23->Name = L"textBox23";
-			this->textBox23->Size = System::Drawing::Size(460, 35);
+			this->textBox23->Size = System::Drawing::Size(460, 53);
 			this->textBox23->TabIndex = 87;
 			// 
 			// label31
@@ -1447,7 +1467,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox24->Location = System::Drawing::Point(14, 571);
 			this->textBox24->Name = L"textBox24";
-			this->textBox24->Size = System::Drawing::Size(460, 35);
+			this->textBox24->Size = System::Drawing::Size(460, 53);
 			this->textBox24->TabIndex = 85;
 			// 
 			// label32
@@ -1465,7 +1485,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox25->Location = System::Drawing::Point(14, 483);
 			this->textBox25->Name = L"textBox25";
-			this->textBox25->Size = System::Drawing::Size(460, 35);
+			this->textBox25->Size = System::Drawing::Size(460, 53);
 			this->textBox25->TabIndex = 83;
 			// 
 			// label33
@@ -1494,7 +1514,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox21->Location = System::Drawing::Point(14, 314);
 			this->textBox21->Name = L"textBox21";
-			this->textBox21->Size = System::Drawing::Size(460, 35);
+			this->textBox21->Size = System::Drawing::Size(460, 53);
 			this->textBox21->TabIndex = 79;
 			// 
 			// label29
@@ -1512,7 +1532,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox22->Location = System::Drawing::Point(14, 227);
 			this->textBox22->Name = L"textBox22";
-			this->textBox22->Size = System::Drawing::Size(460, 35);
+			this->textBox22->Size = System::Drawing::Size(460, 53);
 			this->textBox22->TabIndex = 77;
 			// 
 			// label27
@@ -1530,7 +1550,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox20->Location = System::Drawing::Point(14, 139);
 			this->textBox20->Name = L"textBox20";
-			this->textBox20->Size = System::Drawing::Size(460, 35);
+			this->textBox20->Size = System::Drawing::Size(460, 53);
 			this->textBox20->TabIndex = 75;
 			// 
 			// label26
@@ -1548,7 +1568,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->textBox19->Location = System::Drawing::Point(14, 52);
 			this->textBox19->Name = L"textBox19";
-			this->textBox19->Size = System::Drawing::Size(460, 35);
+			this->textBox19->Size = System::Drawing::Size(460, 53);
 			this->textBox19->TabIndex = 73;
 			// 
 			// richTextBox4
@@ -1625,9 +1645,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->gestion_statistique->Controls->Add(this->button19);
 			this->gestion_statistique->Controls->Add(this->button18);
 			this->gestion_statistique->Controls->Add(this->button17);
-			this->gestion_statistique->Location = System::Drawing::Point(4, 38);
+			this->gestion_statistique->Location = System::Drawing::Point(4, 104);
 			this->gestion_statistique->Name = L"gestion_statistique";
-			this->gestion_statistique->Size = System::Drawing::Size(1872, 1090);
+			this->gestion_statistique->Size = System::Drawing::Size(1878, 1422);
 			this->gestion_statistique->TabIndex = 4;
 			this->gestion_statistique->Text = L"Gestion Statistique";
 			// 
@@ -1655,11 +1675,13 @@ private: System::ComponentModel::IContainer^ components;
 			this->splitContainer5->Panel1->Controls->Add(this->checkBox2);
 			this->splitContainer5->Panel1->Controls->Add(this->checkBox1);
 			this->splitContainer5->Panel1->Controls->Add(this->label38);
+			this->splitContainer5->Panel1->RightToLeft = System::Windows::Forms::RightToLeft::Yes;
 			// 
 			// splitContainer5.Panel2
 			// 
 			this->splitContainer5->Panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->splitContainer5->Panel2->Controls->Add(this->richTextBox5);
+			this->splitContainer5->Panel2->RightToLeft = System::Windows::Forms::RightToLeft::Yes;
 			this->splitContainer5->Size = System::Drawing::Size(1498, 1053);
 			this->splitContainer5->SplitterDistance = 499;
 			this->splitContainer5->TabIndex = 9;
@@ -1979,21 +2001,16 @@ private: System::ComponentModel::IContainer^ components;
 			this->button17->UseVisualStyleBackColor = false;
 			this->button17->Click += gcnew System::EventHandler(this, &principal::button17_Click);
 			// 
-			// contextMenuStrip1
-			// 
-			this->contextMenuStrip1->ImageScalingSize = System::Drawing::Size(24, 24);
-			this->contextMenuStrip1->Name = L"contextMenuStrip1";
-			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
-			// 
 			// principal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1887, 1138);
+			this->ClientSize = System::Drawing::Size(1888, 1340);
 			this->Controls->Add(this->tabControl1);
 			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->Name = L"principal";
 			this->Text = L"principal";
+			this->Load += gcnew System::EventHandler(this, &principal::principal_Load);
 			this->tabControl1->ResumeLayout(false);
 			this->gestion_personnel->ResumeLayout(false);
 			this->splitContainer1->Panel1->ResumeLayout(false);
@@ -2260,6 +2277,8 @@ private: System::Void button23_Click(System::Object^ sender, System::EventArgs^ 
 }
 private: System::Void button24_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->richTextBox5->Text = this->button24->Text;
+}
+private: System::Void principal_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
