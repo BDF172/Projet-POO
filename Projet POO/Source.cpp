@@ -19,7 +19,7 @@ System::Void test(System::Void) {
 System::Void PageMain(Void) {
 	Application::SetCompatibleTextRenderingDefault(false);
 	Application::EnableVisualStyles();
-	ProjetPOO::principal page;
+	ProjetPOO2::MyForm page;
 	Application::Run(% page);
 
 	gestionArticles gestion;
