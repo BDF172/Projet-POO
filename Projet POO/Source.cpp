@@ -5,10 +5,11 @@ using namespace System::Windows::Forms;
 using namespace System::Data;
 using namespace NS_composants;
 using namespace NS_services;
+using namespace System::Collections::Generic;
 
 System::Void TestRecherche(Void) {
 	gestionClient gestion;
-	System::Collections::Generic::List<Client^ >^ mesClients = gestion.chercherClients("", "");
+	List<Client^>^ mesClients = gestion.chercherClients("", "");
 	if (mesClients != nullptr) {
 		Console::WriteLine("Clients : ");
 		for (int i = 0; i < mesClients->Count; i++) {
@@ -38,3 +39,8 @@ System::Void PageMain(Void) {
 		+ " " + personnel->getNomRue() + ", " + personnel->getNomVille() + ", "
 		+ personnel->getNomPays());
 }
+
+System::Void PageMain(Void) {
+	TestRecherche();
+	//TestObtentionPersonnel();
+}    
