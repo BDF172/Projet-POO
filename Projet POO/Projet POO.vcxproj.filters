@@ -108,8 +108,8 @@
     <ClCompile Include="GestionClientFormulaire.cpp">
       <Filter>Fichiers d%27en-tête\Services</Filter>
     </ClCompile>
-    <ClCompile Include="GestionCommandeFormulaire.cpp">
-      <Filter>Fichiers d%27en-tête\Services</Filter>
+    <ClCompile Include="GestionArticlesFormulaire.cpp">
+      <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -181,8 +181,8 @@
     <ClInclude Include="GestionClientFormulaire.h">
       <Filter>Fichiers d%27en-tête\Services</Filter>
     </ClInclude>
-    <ClInclude Include="GestionCommandeFormulaire.h">
-      <Filter>Fichiers d%27en-tête\Services</Filter>
+    <ClInclude Include="GestionArticlesFormulaire.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

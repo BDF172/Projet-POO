@@ -1,6 +1,6 @@
 #pragma once
-#include "headerLink.h"
 
+#include "GestionPersonnelFormulaire.h"
 
 namespace ProjetPOO {
 
@@ -99,7 +99,6 @@ namespace ProjetPOO {
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"Gestion Clients";
 			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &MainFormulaire::button2_Click);
 			// 
 			// button3
 			// 
@@ -116,6 +115,7 @@ namespace ProjetPOO {
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Gestion Articles";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MainFormulaire::button3_Click);
 			// 
 			// button4
 			// 
@@ -132,7 +132,6 @@ namespace ProjetPOO {
 			this->button4->TabIndex = 3;
 			this->button4->Text = L"Gestion Commandes";
 			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &MainFormulaire::button4_Click);
 			// 
 			// button5
 			// 
@@ -170,21 +169,14 @@ namespace ProjetPOO {
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
-		FormulaireGestionPersonnel toOpenPersonnel;
-		toOpenPersonnel.ShowDialog();
+		FormulaireGestionPersonnel toOpenClient;
+		toOpenClient.ShowDialog();
 		this->Show();
-		
 	}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Hide();
-	GestionClientFormulaire toOpenClient;
-	toOpenClient.ShowDialog();
-	this->Show();
-}
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Hide();
-	GestionCommandeFormulaire toOpenCommande;
-	toOpenCommande.ShowDialog();
+	FormulaireGestionPersonnel toOpenArticle;
+	toOpenArticle.ShowDialog();
 	this->Show();
 }
 };
