@@ -60,6 +60,9 @@ namespace ProjetPOO {
     private: System::Windows::Forms::TextBox^ textBox3;
     private: System::Windows::Forms::Label^ label2;
     private: System::Windows::Forms::TextBox^ textBox4;
+    private: System::Windows::Forms::Button^ button5;
+
+
 
 	protected:
 
@@ -187,6 +190,7 @@ namespace ProjetPOO {
             this->textBox5 = (gcnew System::Windows::Forms::TextBox());
             this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
             this->panel1 = (gcnew System::Windows::Forms::Panel());
+            this->button5 = (gcnew System::Windows::Forms::Button());
             this->label1 = (gcnew System::Windows::Forms::Label());
             this->textBox3 = (gcnew System::Windows::Forms::TextBox());
             this->label2 = (gcnew System::Windows::Forms::Label());
@@ -210,6 +214,7 @@ namespace ProjetPOO {
             this->button1->TabIndex = 92;
             this->button1->Text = L"Créer Personnel";
             this->button1->UseVisualStyleBackColor = false;
+            this->button1->Click += gcnew System::EventHandler(this, &FormulaireGestionPersonnel::button1_Click);
             // 
             // label15
             // 
@@ -478,6 +483,7 @@ namespace ProjetPOO {
             // 
             // panel1
             // 
+            this->panel1->Controls->Add(this->button5);
             this->panel1->Controls->Add(this->label1);
             this->panel1->Controls->Add(this->textBox3);
             this->panel1->Controls->Add(this->label2);
@@ -497,10 +503,31 @@ namespace ProjetPOO {
             this->panel1->Controls->Add(this->label6);
             this->panel1->Controls->Add(this->dateTimePicker_personnel);
             this->panel1->Controls->Add(this->textBox5);
-            this->panel1->Location = System::Drawing::Point(1120, 41);
+            this->panel1->Location = System::Drawing::Point(1120, 39);
             this->panel1->Name = L"panel1";
-            this->panel1->Size = System::Drawing::Size(489, 944);
+            this->panel1->Size = System::Drawing::Size(502, 946);
             this->panel1->TabIndex = 95;
+            // 
+            // button5
+            // 
+            this->button5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->button5->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)),
+                static_cast<System::Int32>(static_cast<System::Byte>(188)), static_cast<System::Int32>(static_cast<System::Byte>(251)));
+            this->button5->FlatAppearance->BorderSize = 2;
+            this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->button5->Font = (gcnew System::Drawing::Font(L"Consolas", 15, System::Drawing::FontStyle::Bold));
+            this->button5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
+                static_cast<System::Int32>(static_cast<System::Byte>(251)));
+            this->button5->Location = System::Drawing::Point(352, 0);
+            this->button5->Margin = System::Windows::Forms::Padding(0);
+            this->button5->Name = L"button5";
+            this->button5->Size = System::Drawing::Size(136, 53);
+            this->button5->TabIndex = 99;
+            this->button5->Text = L"Retour";
+            this->button5->UseVisualStyleBackColor = false;
+            this->button5->Click += gcnew System::EventHandler(this, &FormulaireGestionPersonnel::button5_Click_1);
             // 
             // label1
             // 
@@ -569,16 +596,13 @@ namespace ProjetPOO {
 
         }
 #pragma endregion
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-}
 
-private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void button5_Click_1(System::Object^ sender, System::EventArgs^ e) {
+    this->Close();
 }
 };
 }
