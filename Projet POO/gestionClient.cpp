@@ -65,9 +65,9 @@ List<Client^>^ gestionClient::chercherClients(String^ nom, String^ prenom) {
 	List<Client^>^ toReturn = gcnew List<Client^>;
 	for (int i = 0; i < result->Tables[1]->Rows->Count; i++) {
 		Client^ toAdd = gcnew Client;
-		toAdd->setNom(Convert::ToString(result->Tables[1]->Rows[0][0]));
-		toAdd->setPrenom(Convert::ToString(result->Tables[1]->Rows[0][1]));
-		toAdd->setNaissance(Convert::ToString(result->Tables[1]->Rows[0][2]));
+		toAdd->setNom(Convert::ToString(result->Tables[1]->Rows[i][0]));
+		toAdd->setPrenom(Convert::ToString(result->Tables[1]->Rows[i][1]));
+		toAdd->setNaissance(Convert::ToString(result->Tables[1]->Rows[i][2]));
 		toReturn->Add(toAdd);
 	}
 	return toReturn;
