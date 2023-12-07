@@ -25,6 +25,8 @@ System::Void Page(Void) {
 	Application::SetCompatibleTextRenderingDefault(false);
 	Application::EnableVisualStyles();
 	ProjetPOO2::MyForm page;
+	page.ShowDialog();
+	page.Hide();
 	Application::Run(% page);
 
 	gestionArticles gestion;
