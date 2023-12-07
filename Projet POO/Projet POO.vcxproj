@@ -81,7 +81,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <EntryPointSymbol>PageMain</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
@@ -136,6 +136,7 @@
     <ClCompile Include="GestionCommandeFormulaire.cpp" />
     <ClCompile Include="gestionCommandes.cpp" />
     <ClCompile Include="gestionPersonnel.cpp" />
+    <ClCompile Include="GestionStatFormulaire.cpp" />
     <ClCompile Include="MainFormulaire.cpp" />
     <ClCompile Include="mappingArticles.cpp" />
     <ClCompile Include="mappingClient.cpp" />
@@ -168,6 +169,9 @@
     </ClInclude>
     <ClInclude Include="gestionCommandes.h" />
     <ClInclude Include="gestionPersonnel.h" />
+    <ClInclude Include="GestionStatFormulaire.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MainFormulaire.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -197,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionPersonnelFormulaire.resx">
       <DependentUpon>GestionPersonnelFormulaire.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionStatFormulaire.resx">
+      <DependentUpon>GestionStatFormulaire.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainFormulaire.resx">
       <DependentUpon>MainFormulaire.h</DependentUpon>
