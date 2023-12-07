@@ -20,7 +20,7 @@ System::Void TestRecherche(Void) {
 
 }
 
-System::Void PageMain(Void) {
+System::Void Page(Void) {
 	Application::SetCompatibleTextRenderingDefault(false);
 	Application::EnableVisualStyles();
 	ProjetPOO2::MyForm page;
@@ -30,7 +30,7 @@ System::Void PageMain(Void) {
 	Console::WriteLine(gestion.ajouterArticle("Article 1", "13.99", "0.2", "100", "3.46"));
 }
 
-System::Void PageMainIlias(Void) {
+System::Void PageMain(Void) {
 	gestionPersonnel gestion;
 	Personnel^ personnel = gestion.obtenirPersonnel("1");
 	Console::WriteLine("Personnel : " + personnel->getNom() + " "

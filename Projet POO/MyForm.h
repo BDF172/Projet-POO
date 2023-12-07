@@ -34,39 +34,68 @@ namespace ProjetPOO2 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Button^ button2;
-
-
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
-
+	private: System::Windows::Forms::TabControl^ tabControl1;
+	protected:
+	private: System::Windows::Forms::TabPage^ tabPage1;
+	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::Label^ label15;
 	private: System::Windows::Forms::TextBox^ textBox7;
 	private: System::Windows::Forms::Button^ button_valider;
-
+	private: System::Windows::Forms::Label^ label14;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::ComboBox^ comboBox1;
 	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::Label^ label7;
-
+	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::TextBox^ textBox6;
-
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::DateTimePicker^ dateTimePicker_personnel;
 	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::Label^ label5;
-
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::Panel^ panel1;
-	private: System::Windows::Forms::Label^ label15;
-	private: System::Windows::Forms::Label^ label14;
-	private: System::Windows::Forms::Label^ label13;
-	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::TextBox^ textBox3;
 	private: System::Windows::Forms::Label^ label10;
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::TabPage^ tabPage2;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	protected:
 
 	private:
@@ -82,83 +111,151 @@ namespace ProjetPOO2 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
+			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->button_valider = (gcnew System::Windows::Forms::Button());
+			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->dateTimePicker_personnel = (gcnew System::Windows::Forms::DateTimePicker());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->label15 = (gcnew System::Windows::Forms::Label());
-			this->label14 = (gcnew System::Windows::Forms::Label());
-			this->label13 = (gcnew System::Windows::Forms::Label());
-			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->tabControl1->SuspendLayout();
+			this->tabPage1->SuspendLayout();
 			this->panel1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// button1
+			// tabControl1
 			// 
-			this->button1->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)),
-				static_cast<System::Int32>(static_cast<System::Byte>(188)), static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->button1->Location = System::Drawing::Point(38, 36);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(228, 204);
-			this->button1->TabIndex = 28;
-			this->button1->Text = L"Créer Personnel";
-			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			this->tabControl1->Controls->Add(this->tabPage1);
+			this->tabControl1->Controls->Add(this->tabPage2);
+			this->tabControl1->Location = System::Drawing::Point(2, -1);
+			this->tabControl1->Name = L"tabControl1";
+			this->tabControl1->SelectedIndex = 0;
+			this->tabControl1->Size = System::Drawing::Size(1639, 1021);
+			this->tabControl1->TabIndex = 0;
 			// 
-			// button2
+			// tabPage1
 			// 
-			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(38)), static_cast<System::Int32>(static_cast<System::Byte>(196)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->button2->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
+			this->tabPage1->Controls->Add(this->button4);
+			this->tabPage1->Controls->Add(this->button3);
+			this->tabPage1->Controls->Add(this->panel1);
+			this->tabPage1->Controls->Add(this->dataGridView1);
+			this->tabPage1->Controls->Add(this->button2);
+			this->tabPage1->Controls->Add(this->button1);
+			this->tabPage1->Location = System::Drawing::Point(4, 29);
+			this->tabPage1->Name = L"tabPage1";
+			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage1->Size = System::Drawing::Size(1631, 988);
+			this->tabPage1->TabIndex = 0;
+			this->tabPage1->Text = L"tabPage1";
+			this->tabPage1->UseVisualStyleBackColor = true;
+			// 
+			// tabPage2
+			// 
+			this->tabPage2->Location = System::Drawing::Point(4, 29);
+			this->tabPage2->Name = L"tabPage2";
+			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage2->Size = System::Drawing::Size(1631, 988);
+			this->tabPage2->TabIndex = 1;
+			this->tabPage2->Text = L"tabPage2";
+			this->tabPage2->UseVisualStyleBackColor = true;
+			// 
+			// button4
+			// 
+			this->button4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(254)), static_cast<System::Int32>(static_cast<System::Byte>(104)),
+				static_cast<System::Int32>(static_cast<System::Byte>(46)));
+			this->button4->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
 				static_cast<System::Int32>(static_cast<System::Byte>(13)), static_cast<System::Int32>(static_cast<System::Byte>(54)));
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(254)), static_cast<System::Int32>(static_cast<System::Byte>(254)),
+			this->button4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(254)), static_cast<System::Int32>(static_cast<System::Byte>(254)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->button2->Location = System::Drawing::Point(38, 266);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(228, 217);
-			this->button2->TabIndex = 29;
-			this->button2->Text = L" Modifier Personnel";
-			this->button2->UseVisualStyleBackColor = false;
-			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
+			this->button4->Location = System::Drawing::Point(23, 742);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(228, 225);
+			this->button4->TabIndex = 73;
+			this->button4->Text = L"Afficher Personnel";
+			this->button4->UseVisualStyleBackColor = false;
 			// 
-			// dataGridView1
+			// button3
 			// 
-			this->dataGridView1->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(34)),
-				static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(73)));
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(316, 34);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->RowHeadersWidth = 62;
-			this->dataGridView1->RowTemplate->Height = 28;
-			this->dataGridView1->Size = System::Drawing::Size(797, 946);
-			this->dataGridView1->TabIndex = 32;
+			this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(93)),
+				static_cast<System::Int32>(static_cast<System::Byte>(171)));
+			this->button3->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
+				static_cast<System::Int32>(static_cast<System::Byte>(13)), static_cast<System::Int32>(static_cast<System::Byte>(54)));
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(254)), static_cast<System::Int32>(static_cast<System::Byte>(254)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->button3->Location = System::Drawing::Point(23, 500);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(228, 218);
+			this->button3->TabIndex = 72;
+			this->button3->Text = L"Supprimer Personnel";
+			this->button3->UseVisualStyleBackColor = false;
+			// 
+			// panel1
+			// 
+			this->panel1->Controls->Add(this->label15);
+			this->panel1->Controls->Add(this->textBox7);
+			this->panel1->Controls->Add(this->button_valider);
+			this->panel1->Controls->Add(this->label14);
+			this->panel1->Controls->Add(this->label8);
+			this->panel1->Controls->Add(this->textBox1);
+			this->panel1->Controls->Add(this->comboBox1);
+			this->panel1->Controls->Add(this->textBox2);
+			this->panel1->Controls->Add(this->label13);
+			this->panel1->Controls->Add(this->label7);
+			this->panel1->Controls->Add(this->label12);
+			this->panel1->Controls->Add(this->textBox6);
+			this->panel1->Controls->Add(this->label6);
+			this->panel1->Controls->Add(this->dateTimePicker_personnel);
+			this->panel1->Controls->Add(this->textBox5);
+			this->panel1->Controls->Add(this->label11);
+			this->panel1->Controls->Add(this->textBox3);
+			this->panel1->Controls->Add(this->label10);
+			this->panel1->Controls->Add(this->textBox4);
+			this->panel1->Location = System::Drawing::Point(1118, 23);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(489, 944);
+			this->panel1->TabIndex = 71;
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label15->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
+				static_cast<System::Int32>(static_cast<System::Byte>(251)));
+			this->label15->Location = System::Drawing::Point(22, 20);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(192, 34);
+			this->label15->TabIndex = 64;
+			this->label15->Text = L"ID Personnel";
 			// 
 			// textBox7
 			// 
@@ -181,6 +278,19 @@ namespace ProjetPOO2 {
 			this->button_valider->TabIndex = 62;
 			this->button_valider->Text = L"Valider";
 			this->button_valider->UseVisualStyleBackColor = false;
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label14->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
+				static_cast<System::Int32>(static_cast<System::Byte>(251)));
+			this->label14->Location = System::Drawing::Point(16, 122);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(77, 32);
+			this->label14->TabIndex = 47;
+			this->label14->Text = L"Nom";
 			// 
 			// label8
 			// 
@@ -219,6 +329,19 @@ namespace ProjetPOO2 {
 			this->textBox2->Size = System::Drawing::Size(460, 26);
 			this->textBox2->TabIndex = 48;
 			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label13->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
+				static_cast<System::Int32>(static_cast<System::Byte>(251)));
+			this->label13->Location = System::Drawing::Point(11, 213);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(120, 32);
+			this->label13->TabIndex = 49;
+			this->label13->Text = L"Prénom";
+			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
@@ -231,6 +354,19 @@ namespace ProjetPOO2 {
 			this->label7->Size = System::Drawing::Size(76, 32);
 			this->label7->TabIndex = 59;
 			this->label7->Text = L"Ville";
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label12->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
+				static_cast<System::Int32>(static_cast<System::Byte>(251)));
+			this->label12->Location = System::Drawing::Point(11, 297);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(251, 32);
+			this->label12->TabIndex = 50;
+			this->label12->Text = L"Date d\'embauche";
 			// 
 			// textBox6
 			// 
@@ -251,7 +387,6 @@ namespace ProjetPOO2 {
 			this->label6->Size = System::Drawing::Size(235, 32);
 			this->label6->TabIndex = 57;
 			this->label6->Text = L"Rue et n° de rue";
-			this->label6->Click += gcnew System::EventHandler(this, &MyForm::label6_Click);
 			// 
 			// dateTimePicker_personnel
 			// 
@@ -267,112 +402,6 @@ namespace ProjetPOO2 {
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(460, 26);
 			this->textBox5->TabIndex = 56;
-			this->textBox5->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox5_TextChanged);
-			// 
-			// textBox3
-			// 
-			this->textBox3->Location = System::Drawing::Point(17, 439);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(460, 26);
-			this->textBox3->TabIndex = 52;
-			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14));
-			this->label5->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->label5->Location = System::Drawing::Point(4, 468);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(444, 32);
-			this->label5->TabIndex = 55;
-			this->label5->Text = L"Prénom du supérieur hiérarchique";
-			// 
-			// textBox4
-			// 
-			this->textBox4->Location = System::Drawing::Point(17, 534);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(460, 26);
-			this->textBox4->TabIndex = 54;
-			// 
-			// panel1
-			// 
-			this->panel1->Controls->Add(this->label15);
-			this->panel1->Controls->Add(this->textBox7);
-			this->panel1->Controls->Add(this->button_valider);
-			this->panel1->Controls->Add(this->label14);
-			this->panel1->Controls->Add(this->label8);
-			this->panel1->Controls->Add(this->textBox1);
-			this->panel1->Controls->Add(this->comboBox1);
-			this->panel1->Controls->Add(this->textBox2);
-			this->panel1->Controls->Add(this->label13);
-			this->panel1->Controls->Add(this->label7);
-			this->panel1->Controls->Add(this->label12);
-			this->panel1->Controls->Add(this->textBox6);
-			this->panel1->Controls->Add(this->label6);
-			this->panel1->Controls->Add(this->dateTimePicker_personnel);
-			this->panel1->Controls->Add(this->textBox5);
-			this->panel1->Controls->Add(this->label11);
-			this->panel1->Controls->Add(this->textBox3);
-			this->panel1->Controls->Add(this->label10);
-			this->panel1->Controls->Add(this->label5);
-			this->panel1->Controls->Add(this->textBox4);
-			this->panel1->Location = System::Drawing::Point(1133, 36);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(489, 944);
-			this->panel1->TabIndex = 65;
-			// 
-			// label15
-			// 
-			this->label15->AutoSize = true;
-			this->label15->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label15->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label15->Location = System::Drawing::Point(9, 42);
-			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(192, 34);
-			this->label15->TabIndex = 64;
-			this->label15->Text = L"ID Personnel";
-			// 
-			// label14
-			// 
-			this->label14->AutoSize = true;
-			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label14->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label14->Location = System::Drawing::Point(16, 122);
-			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(77, 32);
-			this->label14->TabIndex = 47;
-			this->label14->Text = L"Nom";
-			// 
-			// label13
-			// 
-			this->label13->AutoSize = true;
-			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label13->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label13->Location = System::Drawing::Point(11, 213);
-			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(120, 32);
-			this->label13->TabIndex = 49;
-			this->label13->Text = L"Prénom";
-			// 
-			// label12
-			// 
-			this->label12->AutoSize = true;
-			this->label12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label12->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label12->Location = System::Drawing::Point(11, 297);
-			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(251, 32);
-			this->label12->TabIndex = 50;
-			this->label12->Text = L"Date d\'embauche";
 			// 
 			// label11
 			// 
@@ -387,6 +416,13 @@ namespace ProjetPOO2 {
 			this->label11->TabIndex = 55;
 			this->label11->Text = L"Prénom du supérieur hiérarchique";
 			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(17, 439);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(460, 26);
+			this->textBox3->TabIndex = 52;
+			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
@@ -400,42 +436,58 @@ namespace ProjetPOO2 {
 			this->label10->TabIndex = 53;
 			this->label10->Text = L"Nom du supérieur hiérarchique";
 			// 
-			// button3
+			// textBox4
 			// 
-			this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(93)),
-				static_cast<System::Int32>(static_cast<System::Byte>(171)));
-			this->button3->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
+			this->textBox4->Location = System::Drawing::Point(17, 534);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(460, 26);
+			this->textBox4->TabIndex = 54;
+			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(34)),
+				static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(73)));
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Location = System::Drawing::Point(301, 21);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->RowHeadersWidth = 62;
+			this->dataGridView1->RowTemplate->Height = 28;
+			this->dataGridView1->Size = System::Drawing::Size(797, 946);
+			this->dataGridView1->TabIndex = 70;
+			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(38)), static_cast<System::Int32>(static_cast<System::Byte>(196)),
+				static_cast<System::Int32>(static_cast<System::Byte>(251)));
+			this->button2->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
 				static_cast<System::Int32>(static_cast<System::Byte>(13)), static_cast<System::Int32>(static_cast<System::Byte>(54)));
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(254)), static_cast<System::Int32>(static_cast<System::Byte>(254)),
+			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(254)), static_cast<System::Int32>(static_cast<System::Byte>(254)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->button3->Location = System::Drawing::Point(38, 513);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(228, 218);
-			this->button3->TabIndex = 66;
-			this->button3->Text = L"Supprimer Personnel";
-			this->button3->UseVisualStyleBackColor = false;
+			this->button2->Location = System::Drawing::Point(23, 253);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(228, 217);
+			this->button2->TabIndex = 69;
+			this->button2->Text = L" Modifier Personnel";
+			this->button2->UseVisualStyleBackColor = false;
 			// 
-			// button4
+			// button1
 			// 
-			this->button4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(254)), static_cast<System::Int32>(static_cast<System::Byte>(104)),
-				static_cast<System::Int32>(static_cast<System::Byte>(46)));
-			this->button4->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
-				static_cast<System::Int32>(static_cast<System::Byte>(13)), static_cast<System::Int32>(static_cast<System::Byte>(54)));
-			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->button1->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(188)), static_cast<System::Int32>(static_cast<System::Byte>(251)));
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(254)), static_cast<System::Int32>(static_cast<System::Byte>(254)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->button4->Location = System::Drawing::Point(38, 755);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(228, 225);
-			this->button4->TabIndex = 67;
-			this->button4->Text = L"Afficher Personnel";
-			this->button4->UseVisualStyleBackColor = false;
-			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
+			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
+				static_cast<System::Int32>(static_cast<System::Byte>(251)));
+			this->button1->Location = System::Drawing::Point(23, 23);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(228, 204);
+			this->button1->TabIndex = 68;
+			this->button1->Text = L"Créer Personnel";
+			this->button1->UseVisualStyleBackColor = false;
 			// 
 			// MyForm
 			// 
@@ -444,18 +496,15 @@ namespace ProjetPOO2 {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
 				static_cast<System::Int32>(static_cast<System::Byte>(41)));
 			this->ClientSize = System::Drawing::Size(1634, 1025);
-			this->Controls->Add(this->button4);
-			this->Controls->Add(this->button3);
-			this->Controls->Add(this->panel1);
-			this->Controls->Add(this->dataGridView1);
-			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->tabControl1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			this->tabControl1->ResumeLayout(false);
+			this->tabPage1->ResumeLayout(false);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
