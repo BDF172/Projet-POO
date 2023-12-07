@@ -5,72 +5,72 @@
 
 namespace ProjetPOO {
 
-	using namespace System;
-	using namespace System::ComponentModel;
-	using namespace System::Collections;
-	using namespace System::Windows::Forms;
-	using namespace System::Data;
-	using namespace System::Drawing;
+    using namespace System;
+    using namespace System::ComponentModel;
+    using namespace System::Collections;
+    using namespace System::Windows::Forms;
+    using namespace System::Data;
+    using namespace System::Drawing;
 
 
-	/// <summary>
-	/// Description résumée de FormulaireGestionPersonnel
-	/// </summary>
-	public ref class FormulaireGestionPersonnel : public System::Windows::Forms::Form
-	{
-	public:
+    /// <summary>
+    /// Description résumée de FormulaireGestionPersonnel
+    /// </summary>
+    public ref class FormulaireGestionPersonnel : public System::Windows::Forms::Form
+    {
+    public:
         FormulaireGestionPersonnel(void)
-		{
-			InitializeComponent();
-			//
-			//TODO: ajoutez ici le code du constructeur
-			//
-		}
+        {
+            InitializeComponent();
+            //
+            //TODO: ajoutez ici le code du constructeur
+            //
+        }
 
-	protected:
-		/// <summary>
-		/// Nettoyage des ressources utilisées.
-		/// </summary>
-		~FormulaireGestionPersonnel()
-		{
-			if (components)
-			{
-				delete components;
-			}
-		}
+    protected:
+        /// <summary>
+        /// Nettoyage des ressources utilisées.
+        /// </summary>
+        ~FormulaireGestionPersonnel()
+        {
+            if (components)
+            {
+                delete components;
+            }
+        }
     private: System::Windows::Forms::Button^ button1;
     protected:
     private: System::Windows::Forms::Label^ label15;
-
+    private: System::Windows::Forms::TextBox^ textBox7;
     private: System::Windows::Forms::Button^ button_valider;
     private: System::Windows::Forms::Label^ label14;
     private: System::Windows::Forms::Label^ label8;
-
+    private: System::Windows::Forms::TextBox^ textBox1;
     private: System::Windows::Forms::Button^ button4;
     private: System::Windows::Forms::Button^ button2;
     private: System::Windows::Forms::Button^ button3;
-
-
+    private: System::Windows::Forms::ComboBox^ comboBox1;
+    private: System::Windows::Forms::TextBox^ textBox2;
     private: System::Windows::Forms::Label^ label13;
     private: System::Windows::Forms::Label^ label7;
     private: System::Windows::Forms::Label^ label12;
-
+    private: System::Windows::Forms::TextBox^ textBox6;
     private: System::Windows::Forms::Label^ label6;
     private: System::Windows::Forms::DateTimePicker^ dateTimePicker_personnel;
-
-
+    private: System::Windows::Forms::TextBox^ textBox5;
+    private: System::Windows::Forms::DataGridView^ dataGridView1;
     private: System::Windows::Forms::Panel^ panel1;
 
 
     private: System::Windows::Forms::Label^ label2;
-
+    private: System::Windows::Forms::TextBox^ textBox4;
     private: System::Windows::Forms::Button^ button5;
     private: System::Windows::Forms::Label^ label1;
     private: System::Windows::Forms::TextBox^ textBox3;
 
 
 
-	protected:
+    protected:
 
 
 
@@ -97,7 +97,7 @@ namespace ProjetPOO {
 
 
 
-	protected:
+    protected:
 
 
 
@@ -158,40 +158,50 @@ namespace ProjetPOO {
 
 
 
-	protected:
+    protected:
 
-	private:
-		/// <summary>
-		/// Variable nécessaire au concepteur.
-		/// </summary>
-		System::ComponentModel::Container ^components;
+    private:
+        /// <summary>
+        /// Variable nécessaire au concepteur.
+        /// </summary>
+        System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
-		/// </summary>
-		void InitializeComponent(void)
-		{
+        /// <summary>
+        /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+        /// le contenu de cette méthode avec l'éditeur de code.
+        /// </summary>
+        void InitializeComponent(void)
+        {
+            System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+            System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
             this->button1 = (gcnew System::Windows::Forms::Button());
             this->label15 = (gcnew System::Windows::Forms::Label());
+            this->textBox7 = (gcnew System::Windows::Forms::TextBox());
             this->button_valider = (gcnew System::Windows::Forms::Button());
             this->label14 = (gcnew System::Windows::Forms::Label());
             this->label8 = (gcnew System::Windows::Forms::Label());
+            this->textBox1 = (gcnew System::Windows::Forms::TextBox());
             this->button4 = (gcnew System::Windows::Forms::Button());
             this->button2 = (gcnew System::Windows::Forms::Button());
             this->button3 = (gcnew System::Windows::Forms::Button());
+            this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+            this->textBox2 = (gcnew System::Windows::Forms::TextBox());
             this->label13 = (gcnew System::Windows::Forms::Label());
             this->label7 = (gcnew System::Windows::Forms::Label());
             this->label12 = (gcnew System::Windows::Forms::Label());
+            this->textBox6 = (gcnew System::Windows::Forms::TextBox());
             this->label6 = (gcnew System::Windows::Forms::Label());
             this->dateTimePicker_personnel = (gcnew System::Windows::Forms::DateTimePicker());
+            this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+            this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
             this->panel1 = (gcnew System::Windows::Forms::Panel());
             this->label1 = (gcnew System::Windows::Forms::Label());
             this->textBox3 = (gcnew System::Windows::Forms::TextBox());
             this->button5 = (gcnew System::Windows::Forms::Button());
             this->label2 = (gcnew System::Windows::Forms::Label());
-            this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
+            this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
             this->panel1->SuspendLayout();
             this->SuspendLayout();
             // 
@@ -225,6 +235,18 @@ namespace ProjetPOO {
             this->label15->TabIndex = 64;
             this->label15->Text = L"ID Personnel";
             // 
+            // textBox7
+            // 
+            this->textBox7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
+                static_cast<System::Int32>(static_cast<System::Byte>(41)));
+            this->textBox7->Cursor = System::Windows::Forms::Cursors::IBeam;
+            this->textBox7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
+                static_cast<System::Int32>(static_cast<System::Byte>(251)));
+            this->textBox7->Location = System::Drawing::Point(17, 75);
+            this->textBox7->Name = L"textBox7";
+            this->textBox7->Size = System::Drawing::Size(460, 26);
+            this->textBox7->TabIndex = 63;
+            // 
             // button_valider
             // 
             this->button_valider->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
@@ -252,7 +274,7 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->label14->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
                 static_cast<System::Int32>(static_cast<System::Byte>(251)));
-            this->label14->Location = System::Drawing::Point(22, 108);
+            this->label14->Location = System::Drawing::Point(16, 122);
             this->label14->Name = L"label14";
             this->label14->Size = System::Drawing::Size(60, 33);
             this->label14->TabIndex = 47;
@@ -298,7 +320,6 @@ namespace ProjetPOO {
             this->button4->TabIndex = 97;
             this->button4->Text = L"Afficher Personnel";
             this->button4->UseVisualStyleBackColor = false;
-            this->button4->Click += gcnew System::EventHandler(this, &FormulaireGestionPersonnel::button4_Click);
             // 
             // button2
             // 
@@ -316,9 +337,8 @@ namespace ProjetPOO {
             this->button2->Name = L"button2";
             this->button2->Size = System::Drawing::Size(228, 217);
             this->button2->TabIndex = 93;
-            this->button2->Text = L"Modifier Personnel";
+            this->button2->Text = L" Modifier Personnel";
             this->button2->UseVisualStyleBackColor = false;
-            this->button2->Click += gcnew System::EventHandler(this, &FormulaireGestionPersonnel::button2_Click);
             // 
             // button3
             // 
@@ -337,7 +357,6 @@ namespace ProjetPOO {
             this->button3->TabIndex = 96;
             this->button3->Text = L"Supprimer Personnel";
             this->button3->UseVisualStyleBackColor = false;
-            this->button3->Click += gcnew System::EventHandler(this, &FormulaireGestionPersonnel::button3_Click);
             // 
             // comboBox1
             // 
@@ -369,7 +388,7 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->label13->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
                 static_cast<System::Int32>(static_cast<System::Byte>(251)));
-            this->label13->Location = System::Drawing::Point(22, 199);
+            this->label13->Location = System::Drawing::Point(11, 213);
             this->label13->Name = L"label13";
             this->label13->Size = System::Drawing::Size(105, 33);
             this->label13->TabIndex = 49;
@@ -482,15 +501,22 @@ namespace ProjetPOO {
             this->panel1->Controls->Add(this->textBox3);
             this->panel1->Controls->Add(this->button5);
             this->panel1->Controls->Add(this->label2);
+            this->panel1->Controls->Add(this->textBox4);
             this->panel1->Controls->Add(this->label15);
+            this->panel1->Controls->Add(this->textBox7);
             this->panel1->Controls->Add(this->button_valider);
             this->panel1->Controls->Add(this->label14);
             this->panel1->Controls->Add(this->label8);
+            this->panel1->Controls->Add(this->textBox1);
+            this->panel1->Controls->Add(this->comboBox1);
+            this->panel1->Controls->Add(this->textBox2);
             this->panel1->Controls->Add(this->label13);
             this->panel1->Controls->Add(this->label7);
             this->panel1->Controls->Add(this->label12);
+            this->panel1->Controls->Add(this->textBox6);
             this->panel1->Controls->Add(this->label6);
             this->panel1->Controls->Add(this->dateTimePicker_personnel);
+            this->panel1->Controls->Add(this->textBox5);
             this->panel1->Location = System::Drawing::Point(1120, 39);
             this->panel1->Name = L"panel1";
             this->panel1->Size = System::Drawing::Size(502, 946);
@@ -553,7 +579,7 @@ namespace ProjetPOO {
             this->label2->TabIndex = 66;
             this->label2->Text = L"Nom du supérieur";
             // 
-            // richTextBox1
+            // textBox4
             // 
             this->textBox4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
                 static_cast<System::Int32>(static_cast<System::Byte>(41)));
@@ -570,15 +596,16 @@ namespace ProjetPOO {
             this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
                 static_cast<System::Int32>(static_cast<System::Byte>(41)));
             this->ClientSize = System::Drawing::Size(1634, 1025);
-            this->Controls->Add(this->richTextBox1);
             this->Controls->Add(this->button1);
             this->Controls->Add(this->button4);
             this->Controls->Add(this->button2);
             this->Controls->Add(this->button3);
+            this->Controls->Add(this->dataGridView1);
             this->Controls->Add(this->panel1);
             this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
             this->Name = L"FormulaireGestionPersonnel";
             this->Text = L"FormulaireGestionPersonnel";
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
             this->panel1->ResumeLayout(false);
             this->panel1->PerformLayout();
             this->ResumeLayout(false);
@@ -586,26 +613,25 @@ namespace ProjetPOO {
         }
 #pragma endregion
 
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->richTextBox1->Text = " "+ this->button1->Text;
-}
-private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button5_Click_1(System::Object^ sender, System::EventArgs^ e) {
-    this->Close();
-}
+    private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void button5_Click_1(System::Object^ sender, System::EventArgs^ e) {
+        this->Close();
+    }
 
-private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
-    NS_composants::Personnel personnel;
-    //personnel.setId(Convert::ToInt32(this->textBox1->Text));
-    personnel.setNom(this->textBox2->Text);
-    personnel.setPrenom(this->textBox3->Text);
-    personnel.setDateEmbauche(this->dateTimePicker_personnel->Text);
-    personnel.setNumeroRue(this->textBox4->Text);
-    personnel.setNomRue(this->textBox5->Text);
-    personnel.setNomVille(this->textBox6->Text);
-    personnel.setNomPays(this->textBox7->Text);
-    //personnel.setSuperieur() TO DO 
-}
-};
+    private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
+        NS_composants::Personnel personnel;
+        //personnel.setId(Convert::ToInt32(this->textBox1->Text));
+        personnel.setNom(this->textBox2->Text);
+        personnel.setPrenom(this->textBox3->Text);
+        personnel.setDateEmbauche(this->dateTimePicker_personnel->Text);
+        personnel.setNumeroRue(this->textBox4->Text);
+        personnel.setNomRue(this->textBox5->Text);
+        personnel.setNomVille(this->textBox6->Text);
+        personnel.setNomPays(this->textBox7->Text);
+        //personnel.setSuperieur() TO DO 
+    }
+    };
 }

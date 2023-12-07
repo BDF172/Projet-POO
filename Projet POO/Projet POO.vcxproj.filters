@@ -24,6 +24,8 @@
     <ClCompile Include="principal.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="GestionStatFormulaire.cpp" />
+    <ClCompile Include="ajouterArticle.cpp" />
+    <ClCompile Include="supprimerArticle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Articles.h" />
@@ -48,8 +50,9 @@
     <ClInclude Include="mappingPersonnel.h" />
     <ClInclude Include="GestionPersonnelFormulaire.h" />
     <ClInclude Include="Personnel.h" />
-    <ClInclude Include="principal.h" />
     <ClInclude Include="statsMapping.h" />
     <ClInclude Include="GestionStatFormulaire.h" />
+    <ClInclude Include="ajouterArticle.h" />
+    <ClInclude Include="supprimerArticle.h" />
   </ItemGroup>
 </Project>

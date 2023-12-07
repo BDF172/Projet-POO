@@ -41,7 +41,7 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Button^ button3;
 
 	private: System::Windows::Forms::Panel^ panel1;
-	private: System::Windows::Forms::Button^ button6;
+
 
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Button^ button5;
@@ -77,7 +77,6 @@ namespace ProjetPOO {
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->label15 = (gcnew System::Windows::Forms::Label());
@@ -169,7 +168,6 @@ namespace ProjetPOO {
 			// 
 			this->panel1->Controls->Add(this->textBox3);
 			this->panel1->Controls->Add(this->textBox2);
-			this->panel1->Controls->Add(this->button6);
 			this->panel1->Controls->Add(this->label1);
 			this->panel1->Controls->Add(this->button5);
 			this->panel1->Controls->Add(this->label15);
@@ -178,7 +176,7 @@ namespace ProjetPOO {
 			this->panel1->Controls->Add(this->label14);
 			this->panel1->Controls->Add(this->textBox1);
 			this->panel1->Controls->Add(this->label13);
-			this->panel1->Location = System::Drawing::Point(1121, 26);
+			this->panel1->Location = System::Drawing::Point(1120, 26);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(502, 946);
 			this->panel1->TabIndex = 101;
@@ -208,25 +206,6 @@ namespace ProjetPOO {
 			this->textBox2->Size = System::Drawing::Size(460, 35);
 			this->textBox2->TabIndex = 103;
 			this->textBox2->TextChanged += gcnew System::EventHandler(this, &GestionArticlesFormulaire::textBox2_TextChanged_1);
-			// 
-			// button6
-			// 
-			this->button6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
-				static_cast<System::Int32>(static_cast<System::Byte>(41)));
-			this->button6->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)),
-				static_cast<System::Int32>(static_cast<System::Byte>(188)), static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->button6->FlatAppearance->BorderSize = 2;
-			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button6->Font = (gcnew System::Drawing::Font(L"Consolas", 22, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button6->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->button6->Location = System::Drawing::Point(15, 499);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(465, 80);
-			this->button6->TabIndex = 102;
-			this->button6->Text = L"Article suivant";
-			this->button6->UseVisualStyleBackColor = false;
 			// 
 			// label1
 			// 
