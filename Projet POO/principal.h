@@ -239,6 +239,7 @@ namespace ProjetPOO {
 			this->button_modifier_personnel = (gcnew System::Windows::Forms::Button());
 			this->gestion_client = (gcnew System::Windows::Forms::TabPage());
 			this->splitContainer2 = (gcnew System::Windows::Forms::SplitContainer());
+			this->richTextBox2 = (gcnew System::Windows::Forms::RichTextBox());
 			this->label37 = (gcnew System::Windows::Forms::Label());
 			this->textBox30 = (gcnew System::Windows::Forms::TextBox());
 			this->button10 = (gcnew System::Windows::Forms::Button());
@@ -256,13 +257,13 @@ namespace ProjetPOO {
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
 			this->label12 = (gcnew System::Windows::Forms::Label());
-			this->richTextBox2 = (gcnew System::Windows::Forms::RichTextBox());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->gestion_commande = (gcnew System::Windows::Forms::TabPage());
 			this->splitContainer3 = (gcnew System::Windows::Forms::SplitContainer());
+			this->richTextBox3 = (gcnew System::Windows::Forms::RichTextBox());
 			this->label25 = (gcnew System::Windows::Forms::Label());
 			this->textBox18 = (gcnew System::Windows::Forms::TextBox());
 			this->button11 = (gcnew System::Windows::Forms::Button());
@@ -282,13 +283,13 @@ namespace ProjetPOO {
 			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox15 = (gcnew System::Windows::Forms::TextBox());
 			this->label20 = (gcnew System::Windows::Forms::Label());
-			this->richTextBox3 = (gcnew System::Windows::Forms::RichTextBox());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->gestion_stock = (gcnew System::Windows::Forms::TabPage());
 			this->splitContainer4 = (gcnew System::Windows::Forms::SplitContainer());
+			this->richTextBox4 = (gcnew System::Windows::Forms::RichTextBox());
 			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
 			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->button16 = (gcnew System::Windows::Forms::Button());
@@ -313,13 +314,13 @@ namespace ProjetPOO {
 			this->textBox20 = (gcnew System::Windows::Forms::TextBox());
 			this->label26 = (gcnew System::Windows::Forms::Label());
 			this->textBox19 = (gcnew System::Windows::Forms::TextBox());
-			this->richTextBox4 = (gcnew System::Windows::Forms::RichTextBox());
 			this->button15 = (gcnew System::Windows::Forms::Button());
 			this->button14 = (gcnew System::Windows::Forms::Button());
 			this->button13 = (gcnew System::Windows::Forms::Button());
 			this->button12 = (gcnew System::Windows::Forms::Button());
 			this->gestion_statistique = (gcnew System::Windows::Forms::TabPage());
 			this->splitContainer5 = (gcnew System::Windows::Forms::SplitContainer());
+			this->richTextBox5 = (gcnew System::Windows::Forms::RichTextBox());
 			this->button26 = (gcnew System::Windows::Forms::Button());
 			this->checkBox9 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox10 = (gcnew System::Windows::Forms::CheckBox());
@@ -336,7 +337,6 @@ namespace ProjetPOO {
 			this->checkBox2 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
 			this->label38 = (gcnew System::Windows::Forms::Label());
-			this->richTextBox5 = (gcnew System::Windows::Forms::RichTextBox());
 			this->button25 = (gcnew System::Windows::Forms::Button());
 			this->button24 = (gcnew System::Windows::Forms::Button());
 			this->button23 = (gcnew System::Windows::Forms::Button());
@@ -771,6 +771,15 @@ namespace ProjetPOO {
 			this->splitContainer2->SplitterDistance = 993;
 			this->splitContainer2->TabIndex = 4;
 			// 
+			// richTextBox2
+			// 
+			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+			this->richTextBox2->Location = System::Drawing::Point(10, 12);
+			this->richTextBox2->Name = L"richTextBox2";
+			this->richTextBox2->Size = System::Drawing::Size(964, 1034);
+			this->richTextBox2->TabIndex = 1;
+			this->richTextBox2->Text = L"";
+			// 
 			// label37
 			// 
 			this->label37->AutoSize = true;
@@ -932,15 +941,6 @@ namespace ProjetPOO {
 			this->label12->TabIndex = 49;
 			this->label12->Text = L"Prénom";
 			// 
-			// richTextBox2
-			// 
-			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			this->richTextBox2->Location = System::Drawing::Point(10, 12);
-			this->richTextBox2->Name = L"richTextBox2";
-			this->richTextBox2->Size = System::Drawing::Size(964, 1034);
-			this->richTextBox2->TabIndex = 1;
-			this->richTextBox2->Text = L"";
-			// 
 			// button5
 			// 
 			this->button5->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
@@ -1047,6 +1047,15 @@ namespace ProjetPOO {
 			this->splitContainer3->Size = System::Drawing::Size(1502, 1065);
 			this->splitContainer3->SplitterDistance = 993;
 			this->splitContainer3->TabIndex = 4;
+			// 
+			// richTextBox3
+			// 
+			this->richTextBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+			this->richTextBox3->Location = System::Drawing::Point(16, 14);
+			this->richTextBox3->Name = L"richTextBox3";
+			this->richTextBox3->Size = System::Drawing::Size(964, 1034);
+			this->richTextBox3->TabIndex = 1;
+			this->richTextBox3->Text = L"";
 			// 
 			// label25
 			// 
@@ -1231,15 +1240,6 @@ namespace ProjetPOO {
 			this->label20->TabIndex = 70;
 			this->label20->Text = L"Prénom client";
 			// 
-			// richTextBox3
-			// 
-			this->richTextBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			this->richTextBox3->Location = System::Drawing::Point(16, 14);
-			this->richTextBox3->Name = L"richTextBox3";
-			this->richTextBox3->Size = System::Drawing::Size(964, 1034);
-			this->richTextBox3->TabIndex = 1;
-			this->richTextBox3->Text = L"";
-			// 
 			// button9
 			// 
 			this->button9->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
@@ -1347,6 +1347,15 @@ namespace ProjetPOO {
 			this->splitContainer4->Size = System::Drawing::Size(1494, 1055);
 			this->splitContainer4->SplitterDistance = 993;
 			this->splitContainer4->TabIndex = 4;
+			// 
+			// richTextBox4
+			// 
+			this->richTextBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+			this->richTextBox4->Location = System::Drawing::Point(14, 10);
+			this->richTextBox4->Name = L"richTextBox4";
+			this->richTextBox4->Size = System::Drawing::Size(964, 1034);
+			this->richTextBox4->TabIndex = 1;
+			this->richTextBox4->Text = L"";
 			// 
 			// comboBox4
 			// 
@@ -1570,15 +1579,6 @@ namespace ProjetPOO {
 			this->textBox19->Size = System::Drawing::Size(460, 35);
 			this->textBox19->TabIndex = 73;
 			// 
-			// richTextBox4
-			// 
-			this->richTextBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			this->richTextBox4->Location = System::Drawing::Point(14, 10);
-			this->richTextBox4->Name = L"richTextBox4";
-			this->richTextBox4->Size = System::Drawing::Size(964, 1034);
-			this->richTextBox4->TabIndex = 1;
-			this->richTextBox4->Text = L"";
-			// 
 			// button15
 			// 
 			this->button15->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
@@ -1685,6 +1685,14 @@ namespace ProjetPOO {
 			this->splitContainer5->Size = System::Drawing::Size(1498, 1053);
 			this->splitContainer5->SplitterDistance = 993;
 			this->splitContainer5->TabIndex = 9;
+			// 
+			// richTextBox5
+			// 
+			this->richTextBox5->Location = System::Drawing::Point(17, 12);
+			this->richTextBox5->Name = L"richTextBox5";
+			this->richTextBox5->Size = System::Drawing::Size(964, 1034);
+			this->richTextBox5->TabIndex = 1;
+			this->richTextBox5->Text = L"";
 			// 
 			// button26
 			// 
@@ -1876,14 +1884,6 @@ namespace ProjetPOO {
 			this->label38->Text = L"TVA";
 			this->label38->Click += gcnew System::EventHandler(this, &principal::label38_Click);
 			// 
-			// richTextBox5
-			// 
-			this->richTextBox5->Location = System::Drawing::Point(17, 12);
-			this->richTextBox5->Name = L"richTextBox5";
-			this->richTextBox5->Size = System::Drawing::Size(964, 1034);
-			this->richTextBox5->TabIndex = 1;
-			this->richTextBox5->Text = L"";
-			// 
 			// button25
 			// 
 			this->button25->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
@@ -2003,15 +2003,15 @@ namespace ProjetPOO {
 			// 
 			// principal
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Inherit;
 			this->AutoScroll = true;
 			this->AutoSize = true;
-			this->ClientSize = System::Drawing::Size(1908, 1264);
+			this->ClientSize = System::Drawing::Size(1898, 1024);
 			this->Controls->Add(this->tabControl1);
 			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->Name = L"principal";
 			this->Text = L"principal";
+			this->Load += gcnew System::EventHandler(this, &principal::principal_Load);
 			this->tabControl1->ResumeLayout(false);
 			this->gestion_personnel->ResumeLayout(false);
 			this->splitContainer1->Panel1->ResumeLayout(false);
@@ -2282,5 +2282,7 @@ namespace ProjetPOO {
 	}
 	private: System::Void splitContainer1_Panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 	}
-	};
+	private: System::Void principal_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
