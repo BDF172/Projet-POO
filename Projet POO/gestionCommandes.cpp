@@ -16,4 +16,5 @@ Int64 gestionCommandes::creerCommande(String^ idClient, articles articlesChoisis
 		Console::WriteLine("Ajout de la commande réussi !");
 		return Convert::ToInt64(result->Tables[1]->Rows[0][0]);
 	}
+	return -1;
 }

@@ -99,9 +99,6 @@
     <ClCompile Include="Articles.cpp">
       <Filter>Fichiers sources\Composants\objets</Filter>
     </ClCompile>
-    <ClCompile Include="MyForm.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="MainFormulaire.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>

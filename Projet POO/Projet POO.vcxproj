@@ -139,7 +139,6 @@
     <ClCompile Include="mappingClient.cpp" />
     <ClCompile Include="mappingCommandes.cpp" />
     <ClCompile Include="mappingPersonnel.cpp" />
-    <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Personnel.cpp" />
     <ClCompile Include="principal.cpp" />
     <ClCompile Include="Source.cpp" />
