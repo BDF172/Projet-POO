@@ -102,6 +102,9 @@
     <ClCompile Include="MyForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="GestionClientForm.cpp">
+      <Filter>Fichiers d%27en-tête\Services</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headerLink.h">
@@ -162,6 +165,9 @@
     </ClInclude>
     <ClInclude Include="MyForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="GestionClientForm.h">
+      <Filter>Fichiers d%27en-tête\Services</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
