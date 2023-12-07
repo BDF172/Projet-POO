@@ -46,20 +46,25 @@ namespace ProjetPOO2 {
     private: System::Windows::Forms::Button^ button2;
     private: System::Windows::Forms::Button^ button3;
     private: System::Windows::Forms::ComboBox^ comboBox1;
-    private: System::Windows::Forms::TextBox^ textBox2;
+
     private: System::Windows::Forms::Label^ label13;
     private: System::Windows::Forms::Label^ label7;
     private: System::Windows::Forms::Label^ label12;
-    private: System::Windows::Forms::TextBox^ textBox6;
+
     private: System::Windows::Forms::Label^ label6;
     private: System::Windows::Forms::DateTimePicker^ dateTimePicker_personnel;
-    private: System::Windows::Forms::TextBox^ textBox5;
+
     private: System::Windows::Forms::DataGridView^ dataGridView1;
     private: System::Windows::Forms::Panel^ panel1;
     private: System::Windows::Forms::Label^ label1;
-    private: System::Windows::Forms::TextBox^ textBox3;
+
     private: System::Windows::Forms::Label^ label2;
+    private: System::Windows::Forms::TextBox^ textBox2;
+    private: System::Windows::Forms::TextBox^ textBox3;
+    private: System::Windows::Forms::TextBox^ textBox6;
+    private: System::Windows::Forms::TextBox^ textBox5;
     private: System::Windows::Forms::TextBox^ textBox4;
+
 
 	protected:
 
@@ -164,8 +169,8 @@ namespace ProjetPOO2 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-            System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-            System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+            System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+            System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
             this->button1 = (gcnew System::Windows::Forms::Button());
             this->label15 = (gcnew System::Windows::Forms::Label());
             this->textBox7 = (gcnew System::Windows::Forms::TextBox());
@@ -177,20 +182,20 @@ namespace ProjetPOO2 {
             this->button2 = (gcnew System::Windows::Forms::Button());
             this->button3 = (gcnew System::Windows::Forms::Button());
             this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-            this->textBox2 = (gcnew System::Windows::Forms::TextBox());
             this->label13 = (gcnew System::Windows::Forms::Label());
             this->label7 = (gcnew System::Windows::Forms::Label());
             this->label12 = (gcnew System::Windows::Forms::Label());
-            this->textBox6 = (gcnew System::Windows::Forms::TextBox());
             this->label6 = (gcnew System::Windows::Forms::Label());
             this->dateTimePicker_personnel = (gcnew System::Windows::Forms::DateTimePicker());
-            this->textBox5 = (gcnew System::Windows::Forms::TextBox());
             this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
             this->panel1 = (gcnew System::Windows::Forms::Panel());
             this->label1 = (gcnew System::Windows::Forms::Label());
-            this->textBox3 = (gcnew System::Windows::Forms::TextBox());
             this->label2 = (gcnew System::Windows::Forms::Label());
+            this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+            this->textBox3 = (gcnew System::Windows::Forms::TextBox());
             this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+            this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+            this->textBox6 = (gcnew System::Windows::Forms::TextBox());
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
             this->panel1->SuspendLayout();
             this->SuspendLayout();
@@ -229,11 +234,12 @@ namespace ProjetPOO2 {
             this->textBox7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
                 static_cast<System::Int32>(static_cast<System::Byte>(41)));
             this->textBox7->Cursor = System::Windows::Forms::Cursors::IBeam;
-            this->textBox7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-                static_cast<System::Int32>(static_cast<System::Byte>(251)));
+            this->textBox7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->textBox7->ForeColor = System::Drawing::Color::White;
             this->textBox7->Location = System::Drawing::Point(17, 75);
             this->textBox7->Name = L"textBox7";
-            this->textBox7->Size = System::Drawing::Size(460, 26);
+            this->textBox7->Size = System::Drawing::Size(460, 35);
             this->textBox7->TabIndex = 63;
             // 
             // button_valider
@@ -285,9 +291,12 @@ namespace ProjetPOO2 {
             // 
             this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
                 static_cast<System::Int32>(static_cast<System::Byte>(41)));
+            this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->textBox1->ForeColor = System::Drawing::Color::White;
             this->textBox1->Location = System::Drawing::Point(17, 157);
             this->textBox1->Name = L"textBox1";
-            this->textBox1->Size = System::Drawing::Size(460, 26);
+            this->textBox1->Size = System::Drawing::Size(460, 35);
             this->textBox1->TabIndex = 46;
             // 
             // button4
@@ -357,15 +366,6 @@ namespace ProjetPOO2 {
             this->comboBox1->Size = System::Drawing::Size(457, 28);
             this->comboBox1->TabIndex = 60;
             // 
-            // textBox2
-            // 
-            this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
-                static_cast<System::Int32>(static_cast<System::Byte>(41)));
-            this->textBox2->Location = System::Drawing::Point(17, 248);
-            this->textBox2->Name = L"textBox2";
-            this->textBox2->Size = System::Drawing::Size(460, 26);
-            this->textBox2->TabIndex = 48;
-            // 
             // label13
             // 
             this->label13->AutoSize = true;
@@ -405,15 +405,6 @@ namespace ProjetPOO2 {
             this->label12->TabIndex = 50;
             this->label12->Text = L"Date d\'embauche";
             // 
-            // textBox6
-            // 
-            this->textBox6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
-                static_cast<System::Int32>(static_cast<System::Byte>(41)));
-            this->textBox6->Location = System::Drawing::Point(15, 700);
-            this->textBox6->Name = L"textBox6";
-            this->textBox6->Size = System::Drawing::Size(460, 26);
-            this->textBox6->TabIndex = 58;
-            // 
             // label6
             // 
             this->label6->AutoSize = true;
@@ -437,38 +428,29 @@ namespace ProjetPOO2 {
             this->dateTimePicker_personnel->Size = System::Drawing::Size(460, 35);
             this->dateTimePicker_personnel->TabIndex = 51;
             // 
-            // textBox5
-            // 
-            this->textBox5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
-                static_cast<System::Int32>(static_cast<System::Byte>(41)));
-            this->textBox5->Location = System::Drawing::Point(17, 616);
-            this->textBox5->Name = L"textBox5";
-            this->textBox5->Size = System::Drawing::Size(460, 26);
-            this->textBox5->TabIndex = 56;
-            // 
             // dataGridView1
             // 
             this->dataGridView1->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(34)),
                 static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(73)));
-            dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-            dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
-            dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+            dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Control;
+            dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
-            dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-            dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-            dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-            this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::WindowText;
+            dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+            dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+            dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+            this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-            dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-            dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
-            dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+            dataGridViewCellStyle6->BackColor = System::Drawing::SystemColors::Window;
+            dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
-            dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-            dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-            dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-            this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6->ForeColor = System::Drawing::SystemColors::ControlText;
+            dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+            dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+            dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+            this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle6;
             this->dataGridView1->Location = System::Drawing::Point(303, 39);
             this->dataGridView1->Name = L"dataGridView1";
             this->dataGridView1->RowHeadersWidth = 62;
@@ -478,10 +460,13 @@ namespace ProjetPOO2 {
             // 
             // panel1
             // 
-            this->panel1->Controls->Add(this->label1);
-            this->panel1->Controls->Add(this->textBox3);
-            this->panel1->Controls->Add(this->label2);
+            this->panel1->Controls->Add(this->textBox6);
+            this->panel1->Controls->Add(this->textBox5);
             this->panel1->Controls->Add(this->textBox4);
+            this->panel1->Controls->Add(this->textBox3);
+            this->panel1->Controls->Add(this->textBox2);
+            this->panel1->Controls->Add(this->label1);
+            this->panel1->Controls->Add(this->label2);
             this->panel1->Controls->Add(this->label15);
             this->panel1->Controls->Add(this->textBox7);
             this->panel1->Controls->Add(this->button_valider);
@@ -489,14 +474,11 @@ namespace ProjetPOO2 {
             this->panel1->Controls->Add(this->label8);
             this->panel1->Controls->Add(this->textBox1);
             this->panel1->Controls->Add(this->comboBox1);
-            this->panel1->Controls->Add(this->textBox2);
             this->panel1->Controls->Add(this->label13);
             this->panel1->Controls->Add(this->label7);
             this->panel1->Controls->Add(this->label12);
-            this->panel1->Controls->Add(this->textBox6);
             this->panel1->Controls->Add(this->label6);
             this->panel1->Controls->Add(this->dateTimePicker_personnel);
-            this->panel1->Controls->Add(this->textBox5);
             this->panel1->Location = System::Drawing::Point(1120, 41);
             this->panel1->Name = L"panel1";
             this->panel1->Size = System::Drawing::Size(489, 944);
@@ -515,15 +497,6 @@ namespace ProjetPOO2 {
             this->label1->TabIndex = 68;
             this->label1->Text = L"Prénom du supérieur";
             // 
-            // textBox3
-            // 
-            this->textBox3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
-                static_cast<System::Int32>(static_cast<System::Byte>(41)));
-            this->textBox3->Location = System::Drawing::Point(17, 519);
-            this->textBox3->Name = L"textBox3";
-            this->textBox3->Size = System::Drawing::Size(460, 26);
-            this->textBox3->TabIndex = 67;
-            // 
             // label2
             // 
             this->label2->AutoSize = true;
@@ -537,14 +510,67 @@ namespace ProjetPOO2 {
             this->label2->TabIndex = 66;
             this->label2->Text = L"Nom du supérieur";
             // 
+            // textBox2
+            // 
+            this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
+                static_cast<System::Int32>(static_cast<System::Byte>(41)));
+            this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->textBox2->ForeColor = System::Drawing::Color::White;
+            this->textBox2->Location = System::Drawing::Point(14, 436);
+            this->textBox2->Name = L"textBox2";
+            this->textBox2->Size = System::Drawing::Size(460, 35);
+            this->textBox2->TabIndex = 69;
+            this->textBox2->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox2_TextChanged);
+            // 
+            // textBox3
+            // 
+            this->textBox3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
+                static_cast<System::Int32>(static_cast<System::Byte>(41)));
+            this->textBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->textBox3->ForeColor = System::Drawing::Color::White;
+            this->textBox3->Location = System::Drawing::Point(17, 249);
+            this->textBox3->Name = L"textBox3";
+            this->textBox3->Size = System::Drawing::Size(460, 35);
+            this->textBox3->TabIndex = 70;
+            this->textBox3->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox3_TextChanged);
+            // 
             // textBox4
             // 
             this->textBox4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
                 static_cast<System::Int32>(static_cast<System::Byte>(41)));
-            this->textBox4->Location = System::Drawing::Point(19, 435);
+            this->textBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->textBox4->ForeColor = System::Drawing::Color::White;
+            this->textBox4->Location = System::Drawing::Point(17, 520);
             this->textBox4->Name = L"textBox4";
-            this->textBox4->Size = System::Drawing::Size(460, 26);
-            this->textBox4->TabIndex = 65;
+            this->textBox4->Size = System::Drawing::Size(460, 35);
+            this->textBox4->TabIndex = 71;
+            // 
+            // textBox5
+            // 
+            this->textBox5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
+                static_cast<System::Int32>(static_cast<System::Byte>(41)));
+            this->textBox5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->textBox5->ForeColor = System::Drawing::Color::White;
+            this->textBox5->Location = System::Drawing::Point(17, 627);
+            this->textBox5->Name = L"textBox5";
+            this->textBox5->Size = System::Drawing::Size(460, 35);
+            this->textBox5->TabIndex = 72;
+            // 
+            // textBox6
+            // 
+            this->textBox6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
+                static_cast<System::Int32>(static_cast<System::Byte>(41)));
+            this->textBox6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->textBox6->ForeColor = System::Drawing::Color::White;
+            this->textBox6->Location = System::Drawing::Point(17, 711);
+            this->textBox6->Name = L"textBox6";
+            this->textBox6->Size = System::Drawing::Size(460, 35);
+            this->textBox6->TabIndex = 73;
             // 
             // MyForm
             // 
@@ -579,6 +605,10 @@ private: System::Void textBox5_TextChanged(System::Object^ sender, System::Event
 private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
