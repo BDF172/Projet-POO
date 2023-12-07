@@ -21,12 +21,22 @@ System::Void TestRecherche(Void) {
 
 }
 
-System::Void TestObtentionPersonnel(Void) {
+System::Void PageMain(Void) {
+	Application::SetCompatibleTextRenderingDefault(false);
+	Application::EnableVisualStyles();
+	ProjetPOO2::MyForm page;
+	Application::Run(% page);
+
+	gestionArticles gestion;
+	Console::WriteLine(gestion.ajouterArticle("Article 1", "13.99", "0.2", "100", "3.46"));
+}
+
+System::Void PageMainIlias(Void) {
 	gestionPersonnel gestion;
 	Personnel^ personnel = gestion.obtenirPersonnel("1");
-	Console::WriteLine("Personnel : " + personnel->getNom() + " " 
-		+ personnel->getPrenom() + ", habite au " + personnel->getNumeroRue() 
-		+ " " + personnel->getNomRue() + ", "+ personnel->getNomVille() + ", " 
+	Console::WriteLine("Personnel : " + personnel->getNom() + " "
+		+ personnel->getPrenom() + ", habite au " + personnel->getNumeroRue()
+		+ " " + personnel->getNomRue() + ", " + personnel->getNomVille() + ", "
 		+ personnel->getNomPays());
 }
 
