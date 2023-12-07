@@ -115,6 +115,7 @@ namespace ProjetPOO {
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Gestion Articles";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MainFormulaire::button3_Click);
 			// 
 			// button4
 			// 
@@ -168,9 +169,15 @@ namespace ProjetPOO {
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
-		FormulaireGestionPersonnel toOpen;
-		toOpen.ShowDialog();
+		FormulaireGestionPersonnel toOpenClient;
+		toOpenClient.ShowDialog();
 		this->Show();
 	}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	FormulaireGestionPersonnel toOpenArticle;
+	toOpenArticle.ShowDialog();
+	this->Show();
+}
 };
 }
