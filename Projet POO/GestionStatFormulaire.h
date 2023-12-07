@@ -388,6 +388,7 @@ namespace ProjetPOO {
 			this->button_valider->TabIndex = 62;
 			this->button_valider->Text = L"Valider";
 			this->button_valider->UseVisualStyleBackColor = false;
+			this->button_valider->Click += gcnew System::EventHandler(this, &GestionStatFormulaire::button_valider_Click_1);
 			// 
 			// button1
 			// 
@@ -757,6 +758,8 @@ private: System::Void button5_Click_1(System::Object^ sender, System::EventArgs^
 	this->Close();
 }
 private: System::Void richTextBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button_valider_Click_1(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
