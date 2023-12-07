@@ -19,12 +19,11 @@ CREATE TABLE Personnel(
    nom_personnel VARCHAR(50),
    prenom_personnel VARCHAR(50),
    date_embauche DATE,
-   id_superieur INT,
    statut VARCHAR(50),
-   id_personnel_1 INT NOT NULL,
+   id_superieur INT,
    PRIMARY KEY(id_personnel),
-   UNIQUE(id_personnel_1),
-   FOREIGN KEY(id_personnel_1) REFERENCES Personnel(id_personnel)
+   UNIQUE(id_superieur),
+   FOREIGN KEY(id_superieur) REFERENCES Personnel(id_personnel)
 );
 
 CREATE TABLE Articles(
@@ -41,15 +40,16 @@ CREATE TABLE TVA(
 
 CREATE TABLE Entrepot(
    Id_Entrepot INT IDENTITY(1,1) NOT NULL,
+   nom_entrepot VARCHAR(100),
    PRIMARY KEY(Id_Entrepot)
 );
 
 CREATE TABLE historique_tva(
-   Id_Entité_13 INT IDENTITY(1,1) NOT NULL,
+   id_historique_tva INT IDENTITY(1,1) NOT NULL,
    prct DECIMAL(15,2) NOT NULL,
    date_changement DATE,
    id_TVA INT NOT NULL,
-   PRIMARY KEY(Id_Entité_13),
+   PRIMARY KEY(id_historique_tva),
    FOREIGN KEY(id_TVA) REFERENCES TVA(id_TVA)
 );
 
@@ -137,3 +137,18 @@ CREATE TABLE fait_reference(
 );
 
 INSERT INTO Entrepot (nom_entrepot) VALUES ('FONCTION NON IMPLEMENTEE');
+INSERT INTO Articles (nom_articles) VALUES ('Article supprimé');
+
+INSERT INTO Clients (nom_client, prenom_client, date_naissance) 
+VALUES ('Client', 'supprimé', '2000-12-12');
+
+INSERT INTO Pays (nom_pays) VALUES ('France');
+INSERT INTO Ville (id_pays, nom_ville) VALUES (1, 'Rouen');
+
+INSERT INTO AdressesC (numero_adresse_C, nom_rue_C, id_ville, f_ou_l, id_client)
+VALUES (-1, 'Adresse de facutration supprimée', 1, 0, 1);
+INSERT INTO AdressesC (numero_adresse_C, nom_rue_C, id_ville, f_ou_l, id_client)
+VALUES (-1, 'Adresse de livraison supprimée', 1, 1, 1);
+
+INSERT INTO Personnel (nom_personnel, prenom_personnel, date_embauche, id_superieur, statut) 
+VALUES ('TRAGHA', 'Ilias', '2023-12-06', 1, 'Chef équipe');

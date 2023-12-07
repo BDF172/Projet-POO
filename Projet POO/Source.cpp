@@ -6,14 +6,18 @@ using namespace System::Data;
 using namespace NS_composants;
 using namespace NS_services;
 
-System::Void test(System::Void) {
-	mappingClient^ client = gcnew mappingClient();
-	client->creerClient("TRAGHA", "Ilias", "2004-10-02");
-	DataSet^ result = client->executeRequest();
-	DataRow^ message = result->Tables[0]->Rows[0];
-	DataRow^ ligne = result->Tables[1]->Rows[0];
-		Object^ toPrint = ligne[0];
-		Console::WriteLine("Message d'erreur : " + message[0] + "\nNouvel idenfiant : " + toPrint);
+System::Void TestRecherche(Void) {
+	gestionClient gestion;
+	System::Collections::Generic::List<Client^ >^ mesClients = gestion.chercherClients("", "");
+	if (mesClients != nullptr) {
+		Console::WriteLine("Clients : ");
+		for (int i = 0; i < mesClients->Count; i++) {
+			Console::WriteLine("Client : " + mesClients[i]->getNom() + " " + mesClients[i]->getPrenom() + " né le " + mesClients[i]->getNaissance());
+		}
+	}
+	else
+		Console::WriteLine("Client introuvable");
+
 }
 
 System::Void PageMain(Void) {
@@ -24,4 +28,13 @@ System::Void PageMain(Void) {
 
 	gestionArticles gestion;
 	Console::WriteLine(gestion.ajouterArticle("Article 1", "13.99", "0.2", "100", "3.46"));
+}
+
+System::Void PageMainIlias(Void) {
+	gestionPersonnel gestion;
+	Personnel^ personnel = gestion.obtenirPersonnel("1");
+	Console::WriteLine("Personnel : " + personnel->getNom() + " "
+		+ personnel->getPrenom() + ", habite au " + personnel->getNumeroRue()
+		+ " " + personnel->getNomRue() + ", " + personnel->getNomVille() + ", "
+		+ personnel->getNomPays());
 }

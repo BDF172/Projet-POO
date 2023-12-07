@@ -36,3 +36,11 @@ Void mappingClient::supprimerAdresse(String^ clientID, String^ adresseID){
 		+ clientID + ", @IdAdresse = " + adresseID +";";
 	Console::WriteLine(request);
 }
+
+Void mappingClient::obtenirClient(String^ clientID) {
+	this->request = "EXEC ObtenirClient @IdClient = " + clientID;
+}
+
+Void mappingClient::rechercherClients(String^ nom, String^ prenom) {
+	this->request = "EXEC RechercherClient @Nom = '" + nom + "', @Prenom = '" + prenom + "';";
+}

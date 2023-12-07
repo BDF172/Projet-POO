@@ -5,7 +5,8 @@ namespace NS_services {
 	public:
 		gestionClient();
 		System::Int64 createClient(System::String^ nom, System::String^ prenom, System::String^ naissance);
-	
+		NS_composants::Client^ obtenirClient(System::String^ idClient);
+		System::Collections::Generic::List<NS_composants::Client^>^ chercherClients(System::String^ nom, System::String^ prenom);
 	private:
 		NS_composants::mappingClient^ clientTableMap;
 	};
