@@ -19,4 +19,6 @@
 #include "gestionCommandes.h"
 #include "principal.h"
 #include "GestionPersonnelFormulaire.h"
+#include "GestionClientFormulaire.h"
+#include "GestionCommandeFormulaire.h"
 #include "MainFormulaire.h"
