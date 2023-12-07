@@ -1,5 +1,7 @@
 #pragma once
 
+#include "GestionPersonnelFormulaire.h"
+
 namespace ProjetPOO {
 
 	using namespace System;
@@ -80,6 +82,7 @@ namespace ProjetPOO {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Gestion Personnels";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MainFormulaire::button1_Click);
 			// 
 			// button2
 			// 
@@ -163,5 +166,11 @@ namespace ProjetPOO {
 
 		}
 #pragma endregion
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Hide();
+		FormulaireGestionPersonnel toOpen;
+		toOpen.ShowDialog();
+		this->Show();
+	}
+};
 }
