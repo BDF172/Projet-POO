@@ -194,6 +194,7 @@ namespace ProjetPOO {
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(460, 35);
 			this->textBox3->TabIndex = 104;
+			this->textBox3->TextChanged += gcnew System::EventHandler(this, &GestionArticlesFormulaire::textBox3_TextChanged);
 			// 
 			// textBox2
 			// 
@@ -407,7 +408,12 @@ private: System::Void button_valider_Click(System::Object^ sender, System::Event
 	NS_composants::Articles articles;
 	if (this->richTextBox1->Text == this->button1->Text) {
 		articles.setidArticles(Convert::ToInt32(this->textBox7->Text));
+		articles.setNom(this->textBox1->Text);
+		articles.setPrix(Convert::ToSingle(this->textBox2->Text));
+		articles.setTva(Convert::ToSingle(this->textBox3->Text));
 	}
+}
+private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
