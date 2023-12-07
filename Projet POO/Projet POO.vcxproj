@@ -132,7 +132,7 @@
     <ClCompile Include="gestionClient.cpp" />
     <ClCompile Include="gestionCommandes.cpp" />
     <ClCompile Include="gestionPersonnel.cpp" />
-    <ClCompile Include="MainFormulaire1.cpp" />
+    <ClCompile Include="MainFormulaire.cpp" />
     <ClCompile Include="mappingArticles.cpp" />
     <ClCompile Include="mappingClient.cpp" />
     <ClCompile Include="mappingCommandes.cpp" />
@@ -152,7 +152,7 @@
     <ClInclude Include="gestionClient.h" />
     <ClInclude Include="gestionCommandes.h" />
     <ClInclude Include="gestionPersonnel.h" />
-    <ClInclude Include="MainFormulaire1.h">
+    <ClInclude Include="MainFormulaire.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="mappingArticles.h" />
@@ -160,7 +160,7 @@
     <ClInclude Include="headerLink.h" />
     <ClInclude Include="mappingCommandes.h" />
     <ClInclude Include="mappingPersonnel.h" />
-    <ClInclude Include="MyForm.h">
+    <ClInclude Include="GestionPersonnelFormulaire.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Personnel.h" />
@@ -173,8 +173,8 @@
     <EmbeddedResource Include="GestionPersonnelFormulaire.resx">
       <DependentUpon>GestionPersonnelFormulaire.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainFormulaire1.resx">
-      <DependentUpon>MainFormulaire1.h</DependentUpon>
+    <EmbeddedResource Include="MainFormulaire.resx">
+      <DependentUpon>MainFormulaire.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="principal.resx">
       <DependentUpon>principal.h</DependentUpon>

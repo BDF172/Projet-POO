@@ -102,6 +102,9 @@
     <ClCompile Include="MainFormulaire1.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="MainFormulaire.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headerLink.h">
@@ -163,7 +166,7 @@
     <ClInclude Include="GestionPersonnelFormulaire.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="MainFormulaire1.h">
+    <ClInclude Include="MainFormulaire.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
