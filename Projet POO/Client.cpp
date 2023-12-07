@@ -1,55 +1,55 @@
 #include "CLient.h"
 
+using namespace System;
+using namespace NS_composants;
 
-
-NS_composants::Client::Client()
+Client::Client()
 {
 	this->nom ="";
 	this->prenom = "";
 	this->naissance = "";
-	this->adresse = "";
-
+	this->adresse = nullptr;
 }
 
-void NS_composants::Client::setNom(String^ nom)
+void Client::setNom(String^ nom)
 {
 	this->nom = nom;
 
 }
 
-void NS_composants::Client::setPrenom(String^ prenom)
+void Client::setPrenom(String^ prenom)
 {
 	this->prenom = prenom;
 
 }
 
-void NS_composants::Client::setNaissance(String^ naissance)
+void Client::setNaissance(String^ naissance)
 {
 	this->naissance = naissance;
 
 }
 
-void NS_composants::Client::setAdresse(String^ adresse)
+void Client::setAdresse(adresseClient^ adresse)
 {
 	this->adresse = adresse;
 }
 
-String^ NS_composants::Client::getNom()
+String^ Client::getNom()
 {
 	return this->nom;
 }
 
-String^ NS_composants::Client::getPrenom()
+String^ Client::getPrenom()
 {
 	return this->prenom;
 }
 
-String^ NS_composants::Client::getNaissance()
+String^ Client::getNaissance()
 {
 	return this->naissance;
 }
 
-String^ NS_composants::Client::getAdresse()
+adresseClient^ Client::getAdresse()
 {
 	return this->adresse;
 }

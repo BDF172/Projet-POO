@@ -93,7 +93,7 @@
     <Link>
       <AdditionalDependencies />
       <EntryPointSymbol>PageMain</EntryPointSymbol>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -136,13 +136,14 @@
     <ClCompile Include="mappingClient.cpp" />
     <ClCompile Include="mappingCommandes.cpp" />
     <ClCompile Include="mappingPersonnel.cpp" />
+    <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Personnel.cpp" />
     <ClCompile Include="principal.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Articles.h" />
-    <ClInclude Include="CLient.h" />
+    <ClInclude Include="Client.h" />
     <ClInclude Include="CL_CAD.h" />
     <ClInclude Include="CL_Com_mapping.h" />
     <ClInclude Include="CL_Svc_gestion.h" />
@@ -156,6 +157,9 @@
     <ClInclude Include="headerLink.h" />
     <ClInclude Include="mappingCommandes.h" />
     <ClInclude Include="mappingPersonnel.h" />
+    <ClInclude Include="MyForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Personnel.h" />
     <ClInclude Include="principal.h">
       <FileType>CppForm</FileType>
@@ -163,6 +167,9 @@
     <ClInclude Include="statsMapping.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="principal.resx">
       <DependentUpon>principal.h</DependentUpon>
     </EmbeddedResource>

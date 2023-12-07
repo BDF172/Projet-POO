@@ -19,7 +19,8 @@ BEGIN
 		END;
 		ELSE
 		BEGIN
-		DELETE FROM Commandes WHERE reference = @IdArticle;
+		UPDATE fait_reference SET id_article = 1 WHERE id_article = @IdArticle;
+		DELETE FROM stock WHERE id_article = @IdArticle;
 		SELECT 0;
 		END;
 		COMMIT;

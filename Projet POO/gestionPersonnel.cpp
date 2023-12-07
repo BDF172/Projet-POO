@@ -39,3 +39,20 @@ System::Boolean NS_services::gestionPersonnel::supprimerPersonnel(System::String
 	DataSet^ result = this->personnelTableMap->executeRequest();
 	return this->verifyErrorCode(result);
 }
+
+Personnel^ gestionPersonnel::obtenirPersonnel(String^ idPersonnel) {
+	this->personnelTableMap->obtenirPersonnel(idPersonnel);
+	DataSet^ result = this->personnelTableMap->executeRequest();
+	if (!this->verifyErrorCode(result))return nullptr;
+	Personnel^ toReturn = gcnew Personnel;
+	toReturn->setNom(Convert::ToString(result->Tables[1]->Rows[0][0]));
+	toReturn->setPrenom(Convert::ToString(result->Tables[1]->Rows[0][1]));
+	toReturn->setDateEmbauche(Convert::ToString(result->Tables[1]->Rows[0][2]));
+	toReturn->setSuperieur(Convert::ToString(result->Tables[1]->Rows[0][3]));
+	toReturn->setStatut(Convert::ToString(result->Tables[1]->Rows[0][4]));
+	toReturn->setNumeroRue(Convert::ToString(result->Tables[1]->Rows[0][5]));
+	toReturn->setNomRue(Convert::ToString(result->Tables[1]->Rows[0][6]));
+	toReturn->setNomVille(Convert::ToString(result->Tables[1]->Rows[0][7]));
+	toReturn->setNomPays(Convert::ToString(result->Tables[1]->Rows[0][8]));
+	return toReturn;
+}

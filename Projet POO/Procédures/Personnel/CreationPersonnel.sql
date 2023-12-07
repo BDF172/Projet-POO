@@ -1,7 +1,7 @@
 USE POO;
 GO
 
-ALTER PROCEDURE InsererNouveauPersonnel
+CREATE PROCEDURE InsererNouveauPersonnel
     @Nom varchar(50),
     @Prenom varchar(50),
     @IdSuperieur int,
