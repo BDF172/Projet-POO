@@ -99,7 +99,7 @@
     <ClCompile Include="Articles.cpp">
       <Filter>Fichiers sources\Composants\objets</Filter>
     </ClCompile>
-    <ClCompile Include="MyForm.cpp">
+    <ClCompile Include="MainFormulaire1.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -160,7 +160,10 @@
     <ClInclude Include="Articles.h">
       <Filter>Fichiers d%27en-tête\Composants\objets</Filter>
     </ClInclude>
-    <ClInclude Include="MyForm.h">
+    <ClInclude Include="GestionPersonnelFormulaire.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFormulaire1.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
