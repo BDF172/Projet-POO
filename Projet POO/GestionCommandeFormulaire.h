@@ -12,28 +12,28 @@ namespace ProjetPOO {
 	/// <summary>
 	/// Description résumée de GestionCommandeFormulaire
 	/// </summary>
-	public ref class GestionCommandeFormulaire : public System::Windows::Forms::Form
-	{
-	public:
-		GestionCommandeFormulaire(void)
-		{
-			InitializeComponent();
-			//
-			//TODO: ajoutez ici le code du constructeur
-			//
-		}
+    public ref class GestionCommandeFormulaire : public System::Windows::Forms::Form
+    {
+    public:
+        GestionCommandeFormulaire(void)
+        {
+            InitializeComponent();
+            //
+            //TODO: ajoutez ici le code du constructeur
+            //
+        }
 
-	protected:
-		/// <summary>
-		/// Nettoyage des ressources utilisées.
-		/// </summary>
-		~GestionCommandeFormulaire()
-		{
-			if (components)
-			{
-				delete components;
-			}
-		}
+    protected:
+        /// <summary>
+        /// Nettoyage des ressources utilisées.
+        /// </summary>
+        ~GestionCommandeFormulaire()
+        {
+            if (components)
+            {
+                delete components;
+            }
+        }
     private: System::Windows::Forms::TextBox^ moyenPaiement;
     protected:
 
@@ -44,14 +44,14 @@ namespace ProjetPOO {
 
 
 
-    private: System::Windows::Forms::TextBox^ id;
+
     private: System::Windows::Forms::TextBox^ reference;
 
 
     private: System::Windows::Forms::Button^ button5;
     private: System::Windows::Forms::Label^ label1;
     private: System::Windows::Forms::Label^ label2;
-    private: System::Windows::Forms::Label^ label15;
+
     private: System::Windows::Forms::Button^ button_valider;
     private: System::Windows::Forms::Label^ label14;
 
@@ -59,7 +59,7 @@ namespace ProjetPOO {
 
     private: System::Windows::Forms::Label^ label12;
     private: System::Windows::Forms::Label^ label6;
-    private: System::Windows::Forms::DateTimePicker^ dateLivraison;
+
 
     private: System::Windows::Forms::RichTextBox^ richTextBox1;
     private: System::Windows::Forms::Button^ button1;
@@ -67,46 +67,52 @@ namespace ProjetPOO {
     private: System::Windows::Forms::Button^ button2;
     private: System::Windows::Forms::Button^ button3;
     private: System::Windows::Forms::Panel^ panel1;
-    private: System::Windows::Forms::DateTimePicker^ datePaiement;
+
 
     private: System::Windows::Forms::DateTimePicker^ dateEmission;
+    private: System::Windows::Forms::Button^ button6;
+    private: System::Windows::Forms::Button^ button7;
+    private: System::Windows::Forms::Button^ button8;
+    private: System::Windows::Forms::DateTimePicker^ dateTimePicker2;
+    private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 
 
-	private:
-		/// <summary>
-		/// Variable nécessaire au concepteur.
-		/// </summary>
-		System::ComponentModel::Container ^components;
+    private:
+        /// <summary>
+        /// Variable nécessaire au concepteur.
+        /// </summary>
+        System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
-		/// </summary>
-		void InitializeComponent(void)
-		{
+        /// <summary>
+        /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+        /// le contenu de cette méthode avec l'éditeur de code.
+        /// </summary>
+        void InitializeComponent(void)
+        {
             this->moyenPaiement = (gcnew System::Windows::Forms::TextBox());
             this->montantCommande = (gcnew System::Windows::Forms::TextBox());
-            this->id = (gcnew System::Windows::Forms::TextBox());
             this->reference = (gcnew System::Windows::Forms::TextBox());
             this->button5 = (gcnew System::Windows::Forms::Button());
             this->label1 = (gcnew System::Windows::Forms::Label());
             this->label2 = (gcnew System::Windows::Forms::Label());
-            this->label15 = (gcnew System::Windows::Forms::Label());
             this->button_valider = (gcnew System::Windows::Forms::Button());
             this->label14 = (gcnew System::Windows::Forms::Label());
             this->label13 = (gcnew System::Windows::Forms::Label());
             this->label12 = (gcnew System::Windows::Forms::Label());
             this->label6 = (gcnew System::Windows::Forms::Label());
-            this->dateLivraison = (gcnew System::Windows::Forms::DateTimePicker());
             this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
             this->button1 = (gcnew System::Windows::Forms::Button());
             this->button4 = (gcnew System::Windows::Forms::Button());
             this->button2 = (gcnew System::Windows::Forms::Button());
             this->button3 = (gcnew System::Windows::Forms::Button());
             this->panel1 = (gcnew System::Windows::Forms::Panel());
-            this->datePaiement = (gcnew System::Windows::Forms::DateTimePicker());
             this->dateEmission = (gcnew System::Windows::Forms::DateTimePicker());
+            this->button6 = (gcnew System::Windows::Forms::Button());
+            this->button7 = (gcnew System::Windows::Forms::Button());
+            this->button8 = (gcnew System::Windows::Forms::Button());
+            this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
+            this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
             this->panel1->SuspendLayout();
             this->SuspendLayout();
             // 
@@ -133,19 +139,6 @@ namespace ProjetPOO {
             this->montantCommande->Name = L"montantCommande";
             this->montantCommande->Size = System::Drawing::Size(460, 35);
             this->montantCommande->TabIndex = 102;
-            // 
-            // id
-            // 
-            this->id->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
-                static_cast<System::Int32>(static_cast<System::Byte>(41)));
-            this->id->Cursor = System::Windows::Forms::Cursors::IBeam;
-            this->id->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->id->ForeColor = System::Drawing::Color::White;
-            this->id->Location = System::Drawing::Point(16, 70);
-            this->id->Name = L"id";
-            this->id->Size = System::Drawing::Size(460, 35);
-            this->id->TabIndex = 101;
             // 
             // reference
             // 
@@ -174,7 +167,7 @@ namespace ProjetPOO {
             this->button5->Location = System::Drawing::Point(352, 0);
             this->button5->Margin = System::Windows::Forms::Padding(0);
             this->button5->Name = L"button5";
-            this->button5->Size = System::Drawing::Size(136, 53);
+            this->button5->Size = System::Drawing::Size(136, 0);
             this->button5->TabIndex = 99;
             this->button5->Text = L"Retour";
             this->button5->UseVisualStyleBackColor = false;
@@ -206,19 +199,6 @@ namespace ProjetPOO {
             this->label2->TabIndex = 66;
             this->label2->Text = L"Montant de la commande";
             // 
-            // label15
-            // 
-            this->label15->AutoSize = true;
-            this->label15->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label15->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-                static_cast<System::Int32>(static_cast<System::Byte>(251)));
-            this->label15->Location = System::Drawing::Point(22, 20);
-            this->label15->Name = L"label15";
-            this->label15->Size = System::Drawing::Size(180, 33);
-            this->label15->TabIndex = 64;
-            this->label15->Text = L"ID Commande";
-            // 
             // button_valider
             // 
             this->button_valider->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
@@ -231,7 +211,7 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->button_valider->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
                 static_cast<System::Int32>(static_cast<System::Byte>(251)));
-            this->button_valider->Location = System::Drawing::Point(10, 852);
+            this->button_valider->Location = System::Drawing::Point(15, 721);
             this->button_valider->Name = L"button_valider";
             this->button_valider->Size = System::Drawing::Size(465, 80);
             this->button_valider->TabIndex = 62;
@@ -293,17 +273,6 @@ namespace ProjetPOO {
             this->label6->TabIndex = 57;
             this->label6->Text = L"Moyen de paiement";
             this->label6->Click += gcnew System::EventHandler(this, &GestionCommandeFormulaire::label6_Click);
-            // 
-            // dateLivraison
-            // 
-            this->dateLivraison->CalendarMonthBackground = System::Drawing::SystemColors::WindowFrame;
-            this->dateLivraison->CalendarTitleForeColor = System::Drawing::Color::AliceBlue;
-            this->dateLivraison->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-            this->dateLivraison->Location = System::Drawing::Point(17, 353);
-            this->dateLivraison->Name = L"dateLivraison";
-            this->dateLivraison->Size = System::Drawing::Size(460, 35);
-            this->dateLivraison->TabIndex = 51;
-            this->dateLivraison->ValueChanged += gcnew System::EventHandler(this, &GestionCommandeFormulaire::dateTimePicker_personnel_ValueChanged);
             // 
             // richTextBox1
             // 
@@ -396,46 +365,117 @@ namespace ProjetPOO {
             // 
             // panel1
             // 
-            this->panel1->Controls->Add(this->datePaiement);
+            this->panel1->Controls->Add(this->dateTimePicker2);
+            this->panel1->Controls->Add(this->dateTimePicker1);
+            this->panel1->Controls->Add(this->button6);
             this->panel1->Controls->Add(this->dateEmission);
             this->panel1->Controls->Add(this->moyenPaiement);
             this->panel1->Controls->Add(this->montantCommande);
-            this->panel1->Controls->Add(this->id);
             this->panel1->Controls->Add(this->reference);
             this->panel1->Controls->Add(this->button5);
             this->panel1->Controls->Add(this->label1);
             this->panel1->Controls->Add(this->label2);
-            this->panel1->Controls->Add(this->label15);
             this->panel1->Controls->Add(this->button_valider);
             this->panel1->Controls->Add(this->label14);
             this->panel1->Controls->Add(this->label13);
             this->panel1->Controls->Add(this->label12);
             this->panel1->Controls->Add(this->label6);
-            this->panel1->Controls->Add(this->dateLivraison);
             this->panel1->Location = System::Drawing::Point(1114, 39);
             this->panel1->Name = L"panel1";
-            this->panel1->Size = System::Drawing::Size(502, 946);
+            this->panel1->Size = System::Drawing::Size(502, 815);
             this->panel1->TabIndex = 108;
-            // 
-            // datePaiement
-            // 
-            this->datePaiement->CalendarMonthBackground = System::Drawing::SystemColors::WindowFrame;
-            this->datePaiement->CalendarTitleForeColor = System::Drawing::Color::AliceBlue;
-            this->datePaiement->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-            this->datePaiement->Location = System::Drawing::Point(15, 543);
-            this->datePaiement->Name = L"datePaiement";
-            this->datePaiement->Size = System::Drawing::Size(460, 35);
-            this->datePaiement->TabIndex = 107;
             // 
             // dateEmission
             // 
             this->dateEmission->CalendarMonthBackground = System::Drawing::SystemColors::WindowFrame;
             this->dateEmission->CalendarTitleForeColor = System::Drawing::Color::AliceBlue;
+            this->dateEmission->CustomFormat = L"yyyy-MM-dd";
             this->dateEmission->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+            this->dateEmission->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
             this->dateEmission->Location = System::Drawing::Point(15, 252);
             this->dateEmission->Name = L"dateEmission";
             this->dateEmission->Size = System::Drawing::Size(460, 35);
             this->dateEmission->TabIndex = 106;
+            // 
+            // button6
+            // 
+            this->button6->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->button6->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)),
+                static_cast<System::Int32>(static_cast<System::Byte>(188)), static_cast<System::Int32>(static_cast<System::Byte>(251)));
+            this->button6->FlatAppearance->BorderSize = 2;
+            this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->button6->Font = (gcnew System::Drawing::Font(L"Consolas", 15, System::Drawing::FontStyle::Bold));
+            this->button6->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
+                static_cast<System::Int32>(static_cast<System::Byte>(251)));
+            this->button6->Location = System::Drawing::Point(366, 2);
+            this->button6->Margin = System::Windows::Forms::Padding(0);
+            this->button6->Name = L"button6";
+            this->button6->Size = System::Drawing::Size(136, 53);
+            this->button6->TabIndex = 108;
+            this->button6->Text = L"Retour";
+            this->button6->UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this->button7->BackColor = System::Drawing::Color::Transparent;
+            this->button7->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)),
+                static_cast<System::Int32>(static_cast<System::Byte>(227)), static_cast<System::Int32>(static_cast<System::Byte>(161)));
+            this->button7->FlatAppearance->BorderSize = 2;
+            this->button7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->button7->Font = (gcnew System::Drawing::Font(L"Consolas", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->button7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(227)),
+                static_cast<System::Int32>(static_cast<System::Byte>(161)));
+            this->button7->Location = System::Drawing::Point(1114, 866);
+            this->button7->Name = L"button7";
+            this->button7->Size = System::Drawing::Size(226, 105);
+            this->button7->TabIndex = 112;
+            this->button7->Text = L"Ajouter article";
+            this->button7->UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this->button8->BackColor = System::Drawing::Color::Transparent;
+            this->button8->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(243)),
+                static_cast<System::Int32>(static_cast<System::Byte>(139)), static_cast<System::Int32>(static_cast<System::Byte>(168)));
+            this->button8->FlatAppearance->BorderSize = 2;
+            this->button8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->button8->Font = (gcnew System::Drawing::Font(L"Consolas", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->button8->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(243)), static_cast<System::Int32>(static_cast<System::Byte>(139)),
+                static_cast<System::Int32>(static_cast<System::Byte>(168)));
+            this->button8->Location = System::Drawing::Point(1368, 866);
+            this->button8->Name = L"button8";
+            this->button8->Size = System::Drawing::Size(226, 105);
+            this->button8->TabIndex = 113;
+            this->button8->Text = L"Supprimer Article";
+            this->button8->UseVisualStyleBackColor = false;
+            // 
+            // dateTimePicker1
+            // 
+            this->dateTimePicker1->CalendarMonthBackground = System::Drawing::SystemColors::WindowFrame;
+            this->dateTimePicker1->CalendarTitleForeColor = System::Drawing::Color::AliceBlue;
+            this->dateTimePicker1->CustomFormat = L"yyyy-MM-dd";
+            this->dateTimePicker1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+            this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+            this->dateTimePicker1->Location = System::Drawing::Point(17, 351);
+            this->dateTimePicker1->Name = L"dateTimePicker1";
+            this->dateTimePicker1->Size = System::Drawing::Size(460, 35);
+            this->dateTimePicker1->TabIndex = 109;
+            // 
+            // dateTimePicker2
+            // 
+            this->dateTimePicker2->CalendarMonthBackground = System::Drawing::SystemColors::WindowFrame;
+            this->dateTimePicker2->CalendarTitleForeColor = System::Drawing::Color::AliceBlue;
+            this->dateTimePicker2->CustomFormat = L"yyyy-MM-dd";
+            this->dateTimePicker2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+            this->dateTimePicker2->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+            this->dateTimePicker2->Location = System::Drawing::Point(20, 544);
+            this->dateTimePicker2->Name = L"dateTimePicker2";
+            this->dateTimePicker2->Size = System::Drawing::Size(460, 35);
+            this->dateTimePicker2->TabIndex = 110;
             // 
             // GestionCommandeFormulaire
             // 
@@ -444,6 +484,8 @@ namespace ProjetPOO {
             this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
                 static_cast<System::Int32>(static_cast<System::Byte>(41)));
             this->ClientSize = System::Drawing::Size(1634, 1025);
+            this->Controls->Add(this->button8);
+            this->Controls->Add(this->button7);
             this->Controls->Add(this->richTextBox1);
             this->Controls->Add(this->button1);
             this->Controls->Add(this->button4);
@@ -458,42 +500,34 @@ namespace ProjetPOO {
 
         }
 #pragma endregion
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e){
-    this->richTextBox1->Text = " " + this->button4->Text;
-}
-private: System::Void label13_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void dateTimePicker_personnel_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label12_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->richTextBox1->Text = " " + this->button1->Text;
-}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->richTextBox1->Text = " " + this->button2->Text;
+    private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+        this->richTextBox1->Text = " " + this->button4->Text;
+    }
+    private: System::Void label13_Click(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void dateTimePicker_personnel_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void label12_Click(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+        this->richTextBox1->Text = " " + this->button1->Text;
+    }
+    private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+        this->richTextBox1->Text = " " + this->button2->Text;
 
-}
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->richTextBox1->Text = " " + this->button3->Text;
+    }
+    private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+        this->richTextBox1->Text = " " + this->button3->Text;
 
-}
-private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->Close();
-}
-private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
-    NS_composants::Commande commande;
-    //commande.setIdCommande(Convert::ToInt32(this->textBox1->Text));
-    commande.setReference(this->reference->Text);
-    commande.setDateEmissionCommande(this->dateEmission->Text);
-    commande.setDateLivraison(this->dateLivraison->Text);
-    commande.setMontantCommande(Convert::ToInt32(this->montantCommande->Text));
-    commande.setDatePaiment(this->datePaiement->Text);
-    commande.setMoyenPaiement(this->moyenPaiement->Text);
-}
-
+    }
+    private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+        this->Close();
+    }
+    private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
+        NS_composants::Commande commande;
+    }
 };
