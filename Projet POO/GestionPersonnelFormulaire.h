@@ -1,6 +1,6 @@
 #pragma once
 
-namespace ProjetPOO2 {
+namespace ProjetPOO {
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -10,12 +10,12 @@ namespace ProjetPOO2 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de MyForm
+	/// Description résumée de FormulaireGestionPersonnel
 	/// </summary>
-	public ref class MyForm : public System::Windows::Forms::Form
+	public ref class FormulaireGestionPersonnel : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm(void)
+        FormulaireGestionPersonnel(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace ProjetPOO2 {
 		/// <summary>
 		/// Nettoyage des ressources utilisées.
 		/// </summary>
-		~MyForm()
+		~FormulaireGestionPersonnel()
 		{
 			if (components)
 			{
@@ -546,7 +546,7 @@ namespace ProjetPOO2 {
             this->textBox4->Size = System::Drawing::Size(460, 26);
             this->textBox4->TabIndex = 65;
             // 
-            // MyForm
+            // FormulaireGestionPersonnel
             // 
             this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
             this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -560,8 +560,8 @@ namespace ProjetPOO2 {
             this->Controls->Add(this->dataGridView1);
             this->Controls->Add(this->panel1);
             this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
-            this->Name = L"MyForm";
-            this->Text = L"MyForm";
+            this->Name = L"FormulaireGestionPersonnel";
+            this->Text = L"FormulaireGestionPersonnel";
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
             this->panel1->ResumeLayout(false);
             this->panel1->PerformLayout();
