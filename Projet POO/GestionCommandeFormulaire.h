@@ -107,12 +107,12 @@ namespace ProjetPOO {
             this->button2 = (gcnew System::Windows::Forms::Button());
             this->button3 = (gcnew System::Windows::Forms::Button());
             this->panel1 = (gcnew System::Windows::Forms::Panel());
-            this->dateEmission = (gcnew System::Windows::Forms::DateTimePicker());
+            this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
+            this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
             this->button6 = (gcnew System::Windows::Forms::Button());
+            this->dateEmission = (gcnew System::Windows::Forms::DateTimePicker());
             this->button7 = (gcnew System::Windows::Forms::Button());
             this->button8 = (gcnew System::Windows::Forms::Button());
-            this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
-            this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
             this->panel1->SuspendLayout();
             this->SuspendLayout();
             // 
@@ -385,17 +385,32 @@ namespace ProjetPOO {
             this->panel1->Size = System::Drawing::Size(502, 815);
             this->panel1->TabIndex = 108;
             // 
-            // dateEmission
+            // dateTimePicker2
             // 
-            this->dateEmission->CalendarMonthBackground = System::Drawing::SystemColors::WindowFrame;
-            this->dateEmission->CalendarTitleForeColor = System::Drawing::Color::AliceBlue;
-            this->dateEmission->CustomFormat = L"yyyy-MM-dd";
-            this->dateEmission->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-            this->dateEmission->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-            this->dateEmission->Location = System::Drawing::Point(15, 252);
-            this->dateEmission->Name = L"dateEmission";
-            this->dateEmission->Size = System::Drawing::Size(460, 35);
-            this->dateEmission->TabIndex = 106;
+            this->dateTimePicker2->CalendarMonthBackground = System::Drawing::SystemColors::WindowFrame;
+            this->dateTimePicker2->CalendarTitleForeColor = System::Drawing::Color::AliceBlue;
+            this->dateTimePicker2->CustomFormat = L"yyyy-MM-dd";
+            this->dateTimePicker2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+            this->dateTimePicker2->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+            this->dateTimePicker2->Location = System::Drawing::Point(20, 544);
+            this->dateTimePicker2->Name = L"dateTimePicker2";
+            this->dateTimePicker2->Size = System::Drawing::Size(460, 35);
+            this->dateTimePicker2->TabIndex = 110;
+            this->dateTimePicker2->Value = System::DateTime(1753, 1, 1, 0, 0, 0, 0);
+            // 
+            // dateTimePicker1
+            // 
+            this->dateTimePicker1->CalendarMonthBackground = System::Drawing::SystemColors::WindowFrame;
+            this->dateTimePicker1->CalendarTitleForeColor = System::Drawing::Color::AliceBlue;
+            this->dateTimePicker1->CustomFormat = L"yyyy-MM-dd";
+            this->dateTimePicker1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+            this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+            this->dateTimePicker1->Location = System::Drawing::Point(17, 351);
+            this->dateTimePicker1->Name = L"dateTimePicker1";
+            this->dateTimePicker1->Size = System::Drawing::Size(460, 35);
+            this->dateTimePicker1->TabIndex = 109;
+            this->dateTimePicker1->Value = System::DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this->dateTimePicker1->ValueChanged += gcnew System::EventHandler(this, &GestionCommandeFormulaire::dateTimePicker1_ValueChanged);
             // 
             // button6
             // 
@@ -416,6 +431,20 @@ namespace ProjetPOO {
             this->button6->TabIndex = 108;
             this->button6->Text = L"Retour";
             this->button6->UseVisualStyleBackColor = false;
+            // 
+            // dateEmission
+            // 
+            this->dateEmission->CalendarMonthBackground = System::Drawing::SystemColors::WindowFrame;
+            this->dateEmission->CalendarTitleForeColor = System::Drawing::Color::AliceBlue;
+            this->dateEmission->CustomFormat = L"yyyy-MM-dd";
+            this->dateEmission->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+            this->dateEmission->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+            this->dateEmission->Location = System::Drawing::Point(15, 252);
+            this->dateEmission->Name = L"dateEmission";
+            this->dateEmission->Size = System::Drawing::Size(460, 35);
+            this->dateEmission->TabIndex = 106;
+            this->dateEmission->Value = System::DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this->dateEmission->ValueChanged += gcnew System::EventHandler(this, &GestionCommandeFormulaire::dateEmission_ValueChanged);
             // 
             // button7
             // 
@@ -452,30 +481,6 @@ namespace ProjetPOO {
             this->button8->TabIndex = 113;
             this->button8->Text = L"Supprimer Article";
             this->button8->UseVisualStyleBackColor = false;
-            // 
-            // dateTimePicker1
-            // 
-            this->dateTimePicker1->CalendarMonthBackground = System::Drawing::SystemColors::WindowFrame;
-            this->dateTimePicker1->CalendarTitleForeColor = System::Drawing::Color::AliceBlue;
-            this->dateTimePicker1->CustomFormat = L"yyyy-MM-dd";
-            this->dateTimePicker1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-            this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-            this->dateTimePicker1->Location = System::Drawing::Point(17, 351);
-            this->dateTimePicker1->Name = L"dateTimePicker1";
-            this->dateTimePicker1->Size = System::Drawing::Size(460, 35);
-            this->dateTimePicker1->TabIndex = 109;
-            // 
-            // dateTimePicker2
-            // 
-            this->dateTimePicker2->CalendarMonthBackground = System::Drawing::SystemColors::WindowFrame;
-            this->dateTimePicker2->CalendarTitleForeColor = System::Drawing::Color::AliceBlue;
-            this->dateTimePicker2->CustomFormat = L"yyyy-MM-dd";
-            this->dateTimePicker2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-            this->dateTimePicker2->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-            this->dateTimePicker2->Location = System::Drawing::Point(20, 544);
-            this->dateTimePicker2->Name = L"dateTimePicker2";
-            this->dateTimePicker2->Size = System::Drawing::Size(460, 35);
-            this->dateTimePicker2->TabIndex = 110;
             // 
             // GestionCommandeFormulaire
             // 
@@ -530,4 +535,8 @@ namespace ProjetPOO {
     private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
         NS_composants::Commande commande;
     }
+private: System::Void dateTimePicker1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void dateEmission_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 };
