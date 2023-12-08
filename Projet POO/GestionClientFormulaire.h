@@ -161,6 +161,7 @@ namespace ProjetPOO {
             this->button_valider->TabIndex = 62;
             this->button_valider->Text = L"Valider";
             this->button_valider->UseVisualStyleBackColor = false;
+            this->button_valider->Click += gcnew System::EventHandler(this, &GestionClientFormulaire::button_valider_Click);
             // 
             // label14
             // 
@@ -374,6 +375,7 @@ namespace ProjetPOO {
             this->dateTimePicker_personnel->Name = L"dateTimePicker_personnel";
             this->dateTimePicker_personnel->Size = System::Drawing::Size(460, 35);
             this->dateTimePicker_personnel->TabIndex = 51;
+            this->dateTimePicker_personnel->ValueChanged += gcnew System::EventHandler(this, &GestionClientFormulaire::dateTimePicker_personnel_ValueChanged);
             // 
             // button4
             // 
@@ -518,6 +520,15 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
     this->richTextBox1->Text = " " + this->button4->Text;
+}
+private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
+    NS_composants::Client client;
+    client.setNom(this->textBox1->Text);
+    client.setPrenom(this->textBox3->Text);
+    client.setNaissance(this->dateTimePicker_personnel->Text);
+    //client.setAdresse(this->textBox2->Text);
+}
+private: System::Void dateTimePicker_personnel_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

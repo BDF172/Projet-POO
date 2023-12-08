@@ -51,7 +51,7 @@ namespace ProjetPOO {
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -176,30 +176,31 @@ namespace ProjetPOO {
 		toOpenClient.ShowDialog();
 		this->Show();
 	}
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Hide();
-	GestionArticlesFormulaire toOpenArticle;
-	toOpenArticle.ShowDialog();
-	this->Show();
-}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Hide();
-	GestionClientFormulaire toOpenClient;
-	toOpenClient.ShowDialog();
-	this->Show();
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Hide();
+		GestionArticlesFormulaire toOpenArticle;
+		toOpenArticle.ShowDialog();
+		this->Show();
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Hide();
+		GestionClientFormulaire toOpenClient;
+		toOpenClient.ShowDialog();
+		this->Show();
+	}
+
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Hide();
+		GestionCommandeFormulaire toOpenCommande;
+		toOpenCommande.ShowDialog();
+		this->Show();
+	}
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Hide();
+		GestionStatFormulaire toOpenStat;
+		toOpenStat.ShowDialog();
+		this->Show();
+	}
+	};
 }
 
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Hide();
-	GestionCommandeFormulaire toOpenCommande;
-	toOpenCommande.ShowDialog();
-	this->Show();
-}
-private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Hide();
-	GestionStatFormulaire toOpenStat;
-	toOpenStat.ShowDialog();
-	this->Show();
-}
-};
-}

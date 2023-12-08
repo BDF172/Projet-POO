@@ -385,12 +385,10 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
 	NS_composants::Articles articles;
-	if (this->richTextBox1->Text == this->button1->Text) {
-		articles.setidArticles(Convert::ToInt32(this->textBox7->Text));
-		articles.setNom(this->textBox1->Text);
-		articles.setPrix(Convert::ToSingle(this->textBox2->Text));
-		articles.setTva(Convert::ToSingle(this->textBox3->Text));
-	}
+	articles.setidArticles(Convert::ToInt32(this->textBox7->Text));
+	articles.setNom(this->textBox1->Text);
+	articles.setPrix(Convert::ToSingle(this->textBox2->Text));
+	articles.setTva(Convert::ToSingle(this->textBox3->Text));
 }
 private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
