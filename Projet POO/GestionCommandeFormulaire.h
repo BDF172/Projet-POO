@@ -512,6 +512,14 @@ namespace ProjetPOO {
 #pragma endregion
     private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
         this->richTextBox1->Text = " " + this->button4->Text;
+        this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
+        this->button3->ForeColor = System::Drawing::Color::FromArgb(244, 184, 228);
+        this->button2->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
+        this->button4->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
+        this->button4->BackColor = System::Drawing::Color::FromArgb(239, 159, 118);
+        this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+        this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+        this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
     }
     private: System::Void label13_Click(System::Object^ sender, System::EventArgs^ e) {
     }
@@ -525,14 +533,36 @@ namespace ProjetPOO {
     }
     private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
         this->richTextBox1->Text = " " + this->button1->Text;
+        this->button2->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
+        this->button3->ForeColor = System::Drawing::Color::FromArgb(244, 184, 228);
+        this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
+        this->button1->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
+        this->button1->BackColor = System::Drawing::Color::FromArgb(192, 188, 251);
+        this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+        this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+        this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
     }
     private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
         this->richTextBox1->Text = " " + this->button2->Text;
-
+        this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
+        this->button3->ForeColor = System::Drawing::Color::FromArgb(244, 184, 228);
+        this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
+        this->button2->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
+        this->button2->BackColor = System::Drawing::Color::FromArgb(153, 209, 219);
+        this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+        this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+        this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
     }
     private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
         this->richTextBox1->Text = " " + this->button3->Text;
-
+        this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
+        this->button2->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
+        this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
+        this->button3->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
+        this->button3->BackColor = System::Drawing::Color::FromArgb(244, 184, 228);
+        this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+        this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+        this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
     }
     private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
         this->Close();

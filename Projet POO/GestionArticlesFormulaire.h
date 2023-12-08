@@ -104,7 +104,7 @@ namespace ProjetPOO {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(228, 204);
 			this->button1->TabIndex = 98;
-			this->button1->Text = L"Créer Article";
+			this->button1->Text = L"Creer Article";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &GestionArticlesFormulaire::button1_Click);
 			// 
@@ -365,7 +365,15 @@ namespace ProjetPOO {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->richTextBox1->Text = this->button1->Text;
+		this->richTextBox1->Text = " " + this->button1->Text;
+		this->button2->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
+		this->button3->ForeColor = System::Drawing::Color::FromArgb(244, 184, 228);
+		this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
+		this->button1->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
+		this->button1->BackColor = System::Drawing::Color::FromArgb(192, 188, 251);
+		this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+		this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+		this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
 	}
 	private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
@@ -379,12 +387,36 @@ namespace ProjetPOO {
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->richTextBox1->Text = " " + this->button2->Text;
+		this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
+		this->button3->ForeColor = System::Drawing::Color::FromArgb(244, 184, 228);
+		this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
+		this->button2->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
+		this->button2->BackColor = System::Drawing::Color::FromArgb(153, 209, 219);
+		this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+		this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+		this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
+		this->button2->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
+		this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
+		this->button3->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
 		this->richTextBox1->Text = " " + this->button3->Text;
+		this->button3->BackColor = System::Drawing::Color::FromArgb(244, 184, 228);
+		this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+		this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+		this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->richTextBox1->Text = " " + this->button4->Text;
+		this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
+		this->button3->ForeColor = System::Drawing::Color::FromArgb(244, 184, 228);
+		this->button2->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
+		this->button4->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
+		this->button4->BackColor = System::Drawing::Color::FromArgb(239, 159, 118);
+		this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+		this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+		this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
 	}
 	private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
 		NS_composants::Articles articles;
