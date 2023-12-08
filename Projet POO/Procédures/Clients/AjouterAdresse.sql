@@ -31,3 +31,10 @@ BEGIN
 
 END;
 GO
+
+EXEC AjouterAdresseClient
+	@IdClient = 2,
+    @NumeroAdresse = 39,
+	@NomRue = 'Rue de Bammeville',
+	@IdVille = 1,
+	@F_ou_L = 1;

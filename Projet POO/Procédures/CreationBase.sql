@@ -22,7 +22,6 @@ CREATE TABLE Personnel(
    statut VARCHAR(50),
    id_superieur INT,
    PRIMARY KEY(id_personnel),
-   UNIQUE(id_superieur),
    FOREIGN KEY(id_superieur) REFERENCES Personnel(id_personnel)
 );
 
@@ -35,6 +34,7 @@ CREATE TABLE Articles(
 
 CREATE TABLE TVA(
    id_TVA INT IDENTITY(1,1) NOT NULL,
+   prctTVA REAL,
    PRIMARY KEY(id_TVA)
 );
 
@@ -77,6 +77,7 @@ CREATE TABLE stock(
    id_stock INT IDENTITY(1,1) NOT NULL,
    seuil_reappro INT,
    quantiteVendue INT,
+   quantite_stock INT,
    Id_Entrepot INT NOT NULL,
    id_article INT NOT NULL,
    PRIMARY KEY(id_stock),
@@ -90,7 +91,6 @@ CREATE TABLE prix(
    dateAjout DATE,
    prixHT REAL,
    cout REAL,
-   TVAappliquee VARCHAR(50),
    id_article INT NOT NULL,
    id_TVA INT NOT NULL,
    PRIMARY KEY(id_prix),
@@ -115,25 +115,46 @@ CREATE TABLE Commandes(
    reference_commande VARCHAR(50) NOT NULL,
    date_emission_commande DATE,
    date_livraison DATE,
-   montant_commande FLOAT,
+   montant_commande MONEY,
    date_paiement_commande DATE,
    moyen_paiement VARCHAR(50),
    est_complete BIT,
+   est_envoyee BIT,
    est_rembourse BIT,
    a_rembourse BIT,
    id_client INT NOT NULL,
-   id_adresseC INT NOT NULL,
+   id_adresseL INT NOT NULL,
+   id_adresseF INT NOT NULL,
    PRIMARY KEY(id_commandes),
    FOREIGN KEY(id_client) REFERENCES Clients(id_client),
-   FOREIGN KEY(id_adresseC) REFERENCES AdressesC(id_adresseC)
+   FOREIGN KEY(id_adresseL) REFERENCES AdressesC(id_adresseC),
+   FOREIGN KEY(id_adresseF) REFERENCES AdressesC(id_adresseC)
 );
 
 CREATE TABLE fait_reference(
    id_commandes INT,
    id_article INT,
-   PRIMARY KEY(id_commandes, id_article),
+   id_entrepot INT,
+   quantite INT,
    FOREIGN KEY(id_commandes) REFERENCES Commandes(id_commandes),
-   FOREIGN KEY(id_article) REFERENCES Articles(id_article)
+   FOREIGN KEY(id_article) REFERENCES Articles(id_article),
+   FOREIGN KEY(id_entrepot) REFERENCES Entrepot(Id_Entrepot)
+);
+
+CREATE TABLE Moyens_paiement(
+   Id_Moyens_paiement INT IDENTITY(1,1) NOT NULL,
+   moyen VARCHAR(50),
+   PRIMARY KEY(Id_Moyens_paiement)
+);
+
+CREATE TABLE Paiements(
+   Id_Paiements INT IDENTITY(1,1) NOT NULL,
+   montant MONEY NOT NULL,
+   Id_Moyens_paiement INT NOT NULL,
+   id_commandes INT NOT NULL,
+   PRIMARY KEY(Id_Paiements),
+   FOREIGN KEY(Id_Moyens_paiement) REFERENCES Moyens_paiement(Id_Moyens_paiement),
+   FOREIGN KEY(id_commandes) REFERENCES Commandes(id_commandes)
 );
 
 INSERT INTO Entrepot (nom_entrepot) VALUES ('FONCTION NON IMPLEMENTEE');
@@ -150,5 +171,20 @@ VALUES (-1, 'Adresse de facutration supprimée', 1, 0, 1);
 INSERT INTO AdressesC (numero_adresse_C, nom_rue_C, id_ville, f_ou_l, id_client)
 VALUES (-1, 'Adresse de livraison supprimée', 1, 1, 1);
 
-INSERT INTO Personnel (nom_personnel, prenom_personnel, date_embauche, id_superieur, statut) 
-VALUES ('TRAGHA', 'Ilias', '2023-12-06', 1, 'Chef équipe');
+INSERT INTO Personnel (nom_personnel, prenom_personnel, date_embauche, id_superieur)
+VALUES ('TRAGHA', 'Ilias', '2023-12-07', NULL);
+INSERT INTO AdressesP (numero_adresse_P, nom_rue_P, id_ville, id_personnel)
+VALUES(39, 'Rue de Bammeville', 1, 1);
+
+INSERT INTO TVA (prctTVA) VALUES (1.05);
+INSERT INTO TVA (prctTVA) VALUES (1.10);
+INSERT INTO TVA (prctTVA) VALUES (1.20);
+
+INSERT INTO historique_tva (prct, date_changement, id_TVA)
+VALUES (1.05, GETDATE(), 1);
+INSERT INTO historique_tva (prct, date_changement, id_TVA)
+VALUES (1.1, GETDATE(), 2);
+INSERT INTO historique_tva (prct, date_changement, id_TVA)
+VALUES (1.2, GETDATE(), 3);
+
+insert into moyens_paiement (moyen) VALUES ('Carte bancaire'),('Espèces');

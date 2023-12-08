@@ -93,6 +93,7 @@
     <ClCompile Include="GestionArticlesFormulaire.cpp" />
     <ClCompile Include="gestionClient.cpp" />
     <ClCompile Include="GestionClientForm.cpp" />
+
     <ClCompile Include="GestionClientFormulaire.cpp" />
     <ClCompile Include="GestionCommandeFormulaire.cpp" />
     <ClCompile Include="gestionCommandes.cpp" />
@@ -124,6 +125,7 @@
     </ClInclude>
     <ClInclude Include="gestionClient.h" />
     <ClInclude Include="GestionClientForm.h">
+
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="GestionClientFormulaire.h">
@@ -140,12 +142,15 @@
     <ClInclude Include="MainFormulaire.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="gestionCommandes.h" />
+    <ClInclude Include="gestionPersonnel.h" />
     <ClInclude Include="mappingArticles.h" />
     <ClInclude Include="mappingClient.h" />
     <ClInclude Include="headerLink.h" />
     <ClInclude Include="mappingCommandes.h" />
+    <ClInclude Include="mappingDemarrage.h" />
     <ClInclude Include="mappingPersonnel.h" />
-    <ClInclude Include="GestionPersonnelFormulaire.h">
+    <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Personnel.h" />
@@ -155,6 +160,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+
     <EmbeddedResource Include="ajouterArticle.resx">
       <DependentUpon>ajouterArticle.h</DependentUpon>
     </EmbeddedResource>

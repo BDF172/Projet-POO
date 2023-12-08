@@ -1,7 +1,7 @@
 USE POO;
 GO
 
-ALTER PROCEDURE ModifierPersonnel
+CREATE PROCEDURE ModifierPersonnel
 	@IdPersonnel int,
     @Nom varchar(50),
     @Prenom varchar(50),
@@ -19,19 +19,19 @@ BEGIN
         IF @Nom != ''
 		BEGIN
 		UPDATE Personnel
-        SET nom = @Nom WHERE id_personnel = @IdPersonnel;
+        SET nom_personnel = @Nom WHERE id_personnel = @IdPersonnel;
 		END
 		
 		IF @Prenom != ''
 		BEGIN
 		UPDATE Personnel 
-        SET prenom = @Prenom WHERE id_personnel = @IdPersonnel;
+        SET prenom_personnel = @Prenom WHERE id_personnel = @IdPersonnel;
 		END
 		
 		IF @IdSuperieur != ''
 		BEGIN
 		UPDATE Personnel
-        SET superieur = @IdSuperieur WHERE id_personnel = @IdPersonnel;
+        SET id_superieur = @IdSuperieur WHERE id_personnel = @IdPersonnel;
 		END
         -- Valider la transaction
         COMMIT;

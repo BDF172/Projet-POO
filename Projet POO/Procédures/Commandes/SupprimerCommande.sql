@@ -13,13 +13,14 @@ BEGIN
 
     BEGIN TRY
         IF NOT EXISTS 
-		(SELECT 1 FROM Commandes WHERE reference = @reference)
+		(SELECT 1 FROM Commandes WHERE reference_commande = @reference)
 		BEGIN
 		SELECT 1;
 		END;
 		ELSE
 		BEGIN
-		DELETE FROM Commandes WHERE reference = @reference;
+		DELETE FROM fait_reference WHERE id_commandes = (SELECT id_commandes FROM Commandes WHERE reference_commande = @reference)
+		DELETE FROM Commandes WHERE reference_commande = @reference;
 		SELECT 0;
 		END;
 		COMMIT;

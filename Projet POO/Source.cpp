@@ -13,7 +13,7 @@ System::Void TestRecherche(Void) {
 	if (mesClients != nullptr) {
 		Console::WriteLine("Clients : ");
 		for (int i = 0; i < mesClients->Count; i++) {
-			Console::WriteLine("Client : " + mesClients[i]->getNom() + " " + mesClients[i]->getPrenom() + " né le " + mesClients[i]->getNaissance());
+			Console::WriteLine("Client : " + mesClients[i]->getNom() + " " + mesClients[i]->getPrenom() + " nï¿½ le " + mesClients[i]->getNaissance());
 		}
 	}
 	else
@@ -27,6 +27,7 @@ System::Void PageMain(Void) {
 	ProjetPOO::MainFormulaire page;
 	//page.ShowDialog();
 	//page.Hide();
+
 	Application::Run(% page);
 
 	gestionArticles gestion;
@@ -42,9 +43,5 @@ System::Void Page(Void) {
 		+ personnel->getNomPays());
 }
 
-/*
-System::Void PageMain(Void) {
-	TestRecherche();
-	//TestObtentionPersonnel();
-	}
-*/ 
+
+

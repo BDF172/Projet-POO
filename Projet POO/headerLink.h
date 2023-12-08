@@ -22,3 +22,5 @@
 #include "GestionArticlesFormulaire.h"
 #include "principal.h"
 #include "MainFormulaire.h"
+#include "MyForm.h"
+#include "GestionClientForm.h"

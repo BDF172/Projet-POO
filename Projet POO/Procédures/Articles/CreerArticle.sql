@@ -28,8 +28,8 @@ BEGIN
 		INSERT INTO prix (prix, dateAjout, prixHT, cout, id_article, id_TVA)
 		VALUES (@PrixArticle, GETDATE(), @PrixArticle, @Cout, @NouvelArticle, @IdTva);
 
-		INSERT INTO stock (seuil_reappro, quantiteVendue, Id_Entrepot, id_article)
-		VALUES (@SeuilReappro, 0, 1, @NouvelArticle);
+		INSERT INTO stock (seuil_reappro, quantiteVendue, Id_Entrepot, id_article, quantite_stock)
+		VALUES (@SeuilReappro, 0, 1, @NouvelArticle, 0);
 
         -- Valider la transaction
         COMMIT;
@@ -47,3 +47,18 @@ BEGIN
     -- Rétablir le niveau d'isolation par défaut
     SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 END;
+GO
+
+EXEC CreerArticle
+@NomArticle = 'Article 1',
+	@PrixArticle = 10, 
+	@IdTva = 1,
+	@SeuilReappro = 100, 
+	@Cout = 10;
+
+EXEC CreerArticle
+@NomArticle = 'Article 2',
+	@PrixArticle = 20, 
+	@IdTva = 2,
+	@SeuilReappro = 100, 
+	@Cout = 5;

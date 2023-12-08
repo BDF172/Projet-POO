@@ -30,6 +30,74 @@
   <ItemGroup>
     <ClInclude Include="Articles.h" />
     <ClInclude Include="Client.h" />
+    <ClCompile Include="CL_CAD.cpp">
+      <Filter>Fichiers sources\Composants</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="mappingClient.cpp">
+      <Filter>Fichiers sources\Composants\héritage mapping</Filter>
+    </ClCompile>
+    <ClCompile Include="principal.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CL_Com_mapping.cpp">
+      <Filter>Fichiers sources\Composants</Filter>
+    </ClCompile>
+    <ClCompile Include="mappingPersonnel.cpp">
+      <Filter>Fichiers sources\Composants\héritage mapping</Filter>
+    </ClCompile>
+    <ClCompile Include="gestionPersonnel.cpp">
+      <Filter>Fichiers sources\Services\héritage gestion</Filter>
+    </ClCompile>
+    <ClCompile Include="gestionClient.cpp">
+      <Filter>Fichiers sources\Services\héritage gestion</Filter>
+    </ClCompile>
+    <ClCompile Include="CL_Svc_gestion.cpp">
+      <Filter>Fichiers sources\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="mappingCommandes.cpp">
+      <Filter>Fichiers sources\Composants\héritage mapping</Filter>
+    </ClCompile>
+    <ClCompile Include="gestionCommandes.cpp">
+      <Filter>Fichiers sources\Services\héritage gestion</Filter>
+    </ClCompile>
+    <ClCompile Include="gestionArticles.cpp">
+      <Filter>Fichiers sources\Services\héritage gestion</Filter>
+    </ClCompile>
+    <ClCompile Include="mappingArticles.cpp">
+      <Filter>Fichiers sources\Composants\héritage mapping</Filter>
+    </ClCompile>
+    <ClCompile Include="Personnel.cpp">
+      <Filter>Fichiers sources\Composants\objets</Filter>
+    </ClCompile>
+    <ClCompile Include="Client.cpp">
+      <Filter>Fichiers sources\Composants\objets</Filter>
+    </ClCompile>
+    <ClCompile Include="Commande.cpp">
+      <Filter>Fichiers sources\Composants\objets</Filter>
+    </ClCompile>
+    <ClCompile Include="Articles.cpp">
+      <Filter>Fichiers sources\Composants\objets</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFormulaire1.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFormulaire.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="GestionClientForm.cpp">
+      <Filter>Fichiers d%27en-tête\Services</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="headerLink.h">
+      <Filter>Fichiers d'en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CL_CAD.h">
+      <Filter>Fichiers d'en-tête\Composants</Filter>
+    </ClInclude>
     <ClInclude Include="CL_CAD.h" />
     <ClInclude Include="CL_Com_mapping.h" />
     <ClInclude Include="CL_Svc_gestion.h" />
@@ -54,5 +122,65 @@
     <ClInclude Include="GestionStatFormulaire.h" />
     <ClInclude Include="ajouterArticle.h" />
     <ClInclude Include="supprimerArticle.h" />
+    <ClInclude Include="statsMapping.h">
+      <Filter>Fichiers d%27en-tête\Composants\stats</Filter>
+    </ClInclude>
+    <ClInclude Include="principal.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CL_Com_mapping.h">
+      <Filter>Fichiers d%27en-tête\Composants</Filter>
+    </ClInclude>
+    <ClInclude Include="mappingClient.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage mapping</Filter>
+    </ClInclude>
+    <ClInclude Include="CL_Svc_gestion.h">
+      <Filter>Fichiers d%27en-tête\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="mappingPersonnel.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage mapping</Filter>
+    </ClInclude>
+    <ClInclude Include="gestionClient.h">
+      <Filter>Fichiers d%27en-tête\Services\héritage gestion</Filter>
+    </ClInclude>
+    <ClInclude Include="gestionPersonnel.h">
+      <Filter>Fichiers d%27en-tête\Services\héritage gestion</Filter>
+    </ClInclude>
+    <ClInclude Include="mappingCommandes.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage mapping</Filter>
+    </ClInclude>
+    <ClInclude Include="gestionCommandes.h">
+      <Filter>Fichiers d%27en-tête\Services\héritage gestion</Filter>
+    </ClInclude>
+    <ClInclude Include="mappingArticles.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage mapping</Filter>
+    </ClInclude>
+    <ClInclude Include="gestionArticles.h">
+      <Filter>Fichiers d%27en-tête\Services\héritage gestion</Filter>
+    </ClInclude>
+    <ClInclude Include="Personnel.h">
+      <Filter>Fichiers d%27en-tête\Composants\objets</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>Fichiers d%27en-tête\Composants\objets</Filter>
+    </ClInclude>
+    <ClInclude Include="Commande.h">
+      <Filter>Fichiers d%27en-tête\Composants\objets</Filter>
+    </ClInclude>
+    <ClInclude Include="Articles.h">
+      <Filter>Fichiers d%27en-tête\Composants\objets</Filter>
+    </ClInclude>
+    <ClInclude Include="GestionPersonnelFormulaire.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="mappingDemarrage.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage mapping</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFormulaire.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="GestionClientForm.h">
+      <Filter>Fichiers d%27en-tête\Services</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
