@@ -1,5 +1,9 @@
 #pragma once
 
+#include "Articles.h"
+#include "gestionArticles.h"
+#include "mappingCommandes.h"
+
 namespace NS_services {
 	ref class gestionCommandes : public CL_Svc_gestion {
 	public:

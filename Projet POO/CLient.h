@@ -4,6 +4,7 @@ using namespace System;
 
 namespace NS_composants {
 	typedef ref struct adresseC {
+		System::String^ idAdresse;
 		System::String^ numeroRue;
 		System::String^ nomRue;
 		System::String^ nomVille;

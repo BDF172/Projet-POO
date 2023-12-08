@@ -38,3 +38,7 @@ Void mappingClient::obtenirClient(String^ clientID) {
 Void mappingClient::rechercherClients(String^ nom, String^ prenom) {
 	this->request = "EXEC RechercherClient @Nom = '" + nom + "', @Prenom = '" + prenom + "';";
 }
+
+Void mappingClient::supprimerClient(String^ idClient) {
+	this->request = "EXEC SupprimerClient @IdClient = " + idClient;
+}

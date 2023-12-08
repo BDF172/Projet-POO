@@ -17,7 +17,7 @@ BEGIN
 			FROM Clients
 			WHERE id_client = @IdClient;
 
-			SELECT f_ou_l, numero_adresse_C, nom_rue_C, nom_ville, nom_pays
+			SELECT f_ou_l, numero_adresse_C, nom_rue_C, nom_ville, nom_pays, id_adresseC
 			FROM AdressesC
 			LEFT JOIN Ville ON AdressesC.id_ville = Ville.id_ville
 			LEFT JOIN Pays ON Ville.id_pays = Pays.id_pays

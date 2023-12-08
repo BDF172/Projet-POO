@@ -138,11 +138,13 @@
     <ClCompile Include="gestionPersonnel.cpp" />
     <ClCompile Include="gestionPersonnelFormulaire1.cpp" />
     <ClCompile Include="gestionStatFormulaire.cpp" />
+    <ClCompile Include="gestionValeurs.cpp" />
     <ClCompile Include="mainFormulaire1.cpp" />
     <ClCompile Include="mappingArticles.cpp" />
     <ClCompile Include="mappingClient.cpp" />
     <ClCompile Include="mappingCommandes.cpp" />
     <ClCompile Include="mappingPersonnel.cpp" />
+    <ClCompile Include="mappingValeurs.cpp" />
     <ClCompile Include="Personnel.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="supprimerArticle.cpp" />
@@ -176,6 +178,7 @@
     <ClInclude Include="gestionStatFormulaire.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="gestionValeurs.h" />
     <ClInclude Include="mainFormulaire1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -184,6 +187,7 @@
     <ClInclude Include="headerLink.h" />
     <ClInclude Include="mappingCommandes.h" />
     <ClInclude Include="mappingPersonnel.h" />
+    <ClInclude Include="mappingValeurs.h" />
     <ClInclude Include="Personnel.h" />
     <ClInclude Include="statsMapping.h" />
     <ClInclude Include="supprimerArticle.h">

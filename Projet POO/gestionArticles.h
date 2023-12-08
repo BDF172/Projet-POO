@@ -1,5 +1,7 @@
 #pragma once
 
+#include "mappingArticles.h"
+
 namespace NS_services {
 	ref class gestionArticles : public CL_Svc_gestion {
 	public:

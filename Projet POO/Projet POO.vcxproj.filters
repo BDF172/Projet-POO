@@ -126,6 +126,12 @@
     <ClCompile Include="supprimerArticle.cpp">
       <Filter>Fichiers sources\Composants\Forms</Filter>
     </ClCompile>
+    <ClCompile Include="mappingValeurs.cpp">
+      <Filter>Fichiers sources\Composants\héritage mapping</Filter>
+    </ClCompile>
+    <ClCompile Include="gestionValeurs.cpp">
+      <Filter>Fichiers sources\Services\héritage gestion</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headerLink.h">
@@ -204,6 +210,12 @@
     </ClInclude>
     <ClInclude Include="supprimerArticle.h">
       <Filter>Fichiers d%27en-tête\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="mappingValeurs.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage mapping</Filter>
+    </ClInclude>
+    <ClInclude Include="gestionValeurs.h">
+      <Filter>Fichiers d%27en-tête\Services\héritage gestion</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -35,10 +35,12 @@ BEGIN
 		END
         -- Valider la transaction
         COMMIT;
+		SELECT 0;
     END TRY
     BEGIN CATCH
         -- En cas d'erreur, annuler la transaction
         ROLLBACK;
+		SELECT 1;
         -- Vous pouvez gérer l'erreur ici selon vos besoins
     END CATCH;
 
