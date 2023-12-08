@@ -135,6 +135,7 @@
     <ClCompile Include="mappingArticles.cpp" />
     <ClCompile Include="mappingClient.cpp" />
     <ClCompile Include="mappingCommandes.cpp" />
+    <ClCompile Include="mappingDemarrage.cpp" />
     <ClCompile Include="mappingPersonnel.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Personnel.cpp" />
@@ -152,6 +153,7 @@
     <ClInclude Include="gestionClient.h" />
     <ClInclude Include="gestionCommandes.h" />
     <ClInclude Include="gestionPersonnel.h" />
+    <ClInclude Include="Header.h" />
     <ClInclude Include="mappingArticles.h" />
     <ClInclude Include="mappingClient.h" />
     <ClInclude Include="headerLink.h" />

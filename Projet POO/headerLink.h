@@ -17,5 +17,6 @@
 #include "gestionArticles.h"
 #include "mappingCommandes.h"
 #include "gestionCommandes.h"
+#include "mappingDemarrage.h"
 #include "principal.h"
 #include "MyForm.h"
