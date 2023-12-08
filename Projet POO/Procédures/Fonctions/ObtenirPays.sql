@@ -1,0 +1,9 @@
+USE POO;
+GO
+
+CREATE PROCEDURE ObtenirPays
+AS
+BEGIN
+	SELECT 0;
+	SELECT id_pays, nom_pays FROM Pays;
+END
