@@ -61,17 +61,57 @@
 	<ImportGroup Label="Shared">
 	</ImportGroup>
 	<ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
 	</ImportGroup>
 	<ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
 	</ImportGroup>
 	<ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
 	</ImportGroup>
 	<ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
 	</ImportGroup>
-	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup />
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<ClCompile>
+			<WarningLevel>Level3</WarningLevel>
+			<PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+		</ClCompile>
 		<Link>
-			<SubSystem>Console</SubSystem>
+			<AdditionalDependencies />
+			<SubSystem>Windows</SubSystem>
 			<EntryPointSymbol>PageMain</EntryPointSymbol>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<ClCompile>
+			<WarningLevel>Level3</WarningLevel>
+			<PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+		</ClCompile>
+		<Link>
+			<AdditionalDependencies />
+			<EntryPointSymbol>PageMain</EntryPointSymbol>
+			<SubSystem>Console</SubSystem>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<ClCompile>
+			<WarningLevel>Level3</WarningLevel>
+			<PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+		</ClCompile>
+		<Link>
+			<AdditionalDependencies />
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<ClCompile>
+			<WarningLevel>Level3</WarningLevel>
+			<PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+		</ClCompile>
+		<Link>
+			<AdditionalDependencies />
 		</Link>
 	</ItemDefinitionGroup>
 	<ItemGroup>
@@ -82,7 +122,6 @@
 		<Reference Include="System.Xml" />
 	</ItemGroup>
 	<ItemGroup>
-		<ClCompile Include="ajouterArticle.cpp" />
 		<ClCompile Include="Articles.cpp" />
 		<ClCompile Include="Client.cpp" />
 		<ClCompile Include="CL_CAD.cpp" />
@@ -90,30 +129,20 @@
 		<ClCompile Include="CL_Svc_gestion.cpp" />
 		<ClCompile Include="Commande.cpp" />
 		<ClCompile Include="gestionArticles.cpp" />
-		<ClCompile Include="GestionArticlesFormulaire.cpp" />
 		<ClCompile Include="gestionClient.cpp" />
 		<ClCompile Include="GestionClientForm.cpp" />
-
-		<ClCompile Include="GestionClientFormulaire.cpp" />
-		<ClCompile Include="GestionCommandeFormulaire.cpp" />
 		<ClCompile Include="gestionCommandes.cpp" />
 		<ClCompile Include="gestionPersonnel.cpp" />
-		<ClCompile Include="GestionStatFormulaire.cpp" />
-		<ClCompile Include="MainFormulaire.cpp" />
 		<ClCompile Include="mappingArticles.cpp" />
 		<ClCompile Include="mappingClient.cpp" />
 		<ClCompile Include="mappingCommandes.cpp" />
-		<ClCompile Include="mappingDemarrage.cpp" />
 		<ClCompile Include="mappingPersonnel.cpp" />
+		<ClCompile Include="MyForm.cpp" />
 		<ClCompile Include="Personnel.cpp" />
 		<ClCompile Include="principal.cpp" />
 		<ClCompile Include="Source.cpp" />
-		<ClCompile Include="supprimerArticle.cpp" />
 	</ItemGroup>
 	<ItemGroup>
-		<ClInclude Include="ajouterArticle.h">
-			<FileType>CppForm</FileType>
-		</ClInclude>
 		<ClInclude Include="Articles.h" />
 		<ClInclude Include="Client.h" />
 		<ClInclude Include="CL_CAD.h" />
@@ -121,29 +150,12 @@
 		<ClInclude Include="CL_Svc_gestion.h" />
 		<ClInclude Include="Commande.h" />
 		<ClInclude Include="gestionArticles.h" />
-		<ClInclude Include="GestionArticlesFormulaire.h">
-			<FileType>CppForm</FileType>
-		</ClInclude>
 		<ClInclude Include="gestionClient.h" />
 		<ClInclude Include="GestionClientForm.h">
-
-			<FileType>CppForm</FileType>
-		</ClInclude>
-		<ClInclude Include="GestionClientFormulaire.h">
-			<FileType>CppForm</FileType>
-		</ClInclude>
-		<ClInclude Include="GestionCommandeFormulaire.h">
-			<FileType>CppForm</FileType>
-		</ClInclude>
-		<ClInclude Include="GestionStatFormulaire.h">
-			<FileType>CppForm</FileType>
-		</ClInclude>
-		<ClInclude Include="MainFormulaire.h">
 			<FileType>CppForm</FileType>
 		</ClInclude>
 		<ClInclude Include="gestionCommandes.h" />
 		<ClInclude Include="gestionPersonnel.h" />
-		<ClInclude Include="Header.h" />
 		<ClInclude Include="mappingArticles.h" />
 		<ClInclude Include="mappingClient.h" />
 		<ClInclude Include="headerLink.h" />
@@ -154,39 +166,20 @@
 			<FileType>CppForm</FileType>
 		</ClInclude>
 		<ClInclude Include="Personnel.h" />
-		<ClInclude Include="statsMapping.h" />
-		<ClInclude Include="supprimerArticle.h">
+		<ClInclude Include="principal.h">
 			<FileType>CppForm</FileType>
 		</ClInclude>
+		<ClInclude Include="statsMapping.h" />
 	</ItemGroup>
 	<ItemGroup>
-
-		<EmbeddedResource Include="ajouterArticle.resx">
-			<DependentUpon>ajouterArticle.h</DependentUpon>
+		<EmbeddedResource Include="GestionClientForm.resx">
+			<DependentUpon>GestionClientForm.h</DependentUpon>
 		</EmbeddedResource>
-		<EmbeddedResource Include="GestionArticlesFormulaire.resx">
-			<DependentUpon>GestionArticlesFormulaire.h</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="GestionClientFormulaire.resx">
-			<DependentUpon>GestionClientFormulaire.h</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="GestionCommandeFormulaire.resx">
-			<DependentUpon>GestionCommandeFormulaire.h</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="GestionPersonnelFormulaire.resx">
-			<DependentUpon>GestionPersonnelFormulaire.h</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="GestionStatFormulaire.resx">
-			<DependentUpon>GestionStatFormulaire.h</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="MainFormulaire.resx">
-			<DependentUpon>MainFormulaire.h</DependentUpon>
+		<EmbeddedResource Include="MyForm.resx">
+			<DependentUpon>MyForm.h</DependentUpon>
 		</EmbeddedResource>
 		<EmbeddedResource Include="principal.resx">
 			<DependentUpon>principal.h</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="supprimerArticle.resx">
-			<DependentUpon>supprimerArticle.h</DependentUpon>
 		</EmbeddedResource>
 	</ItemGroup>
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
