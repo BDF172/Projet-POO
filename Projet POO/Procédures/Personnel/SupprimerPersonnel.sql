@@ -1,7 +1,7 @@
 USE POO;
 GO
 
-ALTER PROCEDURE supprimerPersonnel
+CREATE PROCEDURE supprimerPersonnel
 	@IdPersonnel int
 AS
 BEGIN
@@ -11,7 +11,7 @@ BEGIN
 
     BEGIN TRY
         -- Insérez le nouveau client dans la table Clients
-        DELETE FROM AdressesP WHERE Personnelid_personnel = @IdPersonnel;
+        DELETE FROM AdressesP WHERE id_personnel = @IdPersonnel;
 		DELETE FROM Personnel WHERE id_personnel = @IdPersonnel;
         COMMIT;
 		SELECT 0;

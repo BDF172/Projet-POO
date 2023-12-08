@@ -13,7 +13,7 @@ System::Void TestRecherche(Void) {
 	if (mesClients != nullptr) {
 		Console::WriteLine("Clients : ");
 		for (int i = 0; i < mesClients->Count; i++) {
-			Console::WriteLine("Client : " + mesClients[i]->getNom() + " " + mesClients[i]->getPrenom() + " né le " + mesClients[i]->getNaissance());
+			Console::WriteLine("Client : " + mesClients[i]->getNom() + " " + mesClients[i]->getPrenom() + " nï¿½ le " + mesClients[i]->getNaissance());
 		}
 	}
 	else
@@ -24,14 +24,17 @@ System::Void TestRecherche(Void) {
 System::Void PageMain(Void) {
 	Application::SetCompatibleTextRenderingDefault(false);
 	Application::EnableVisualStyles();
-	ProjetPOO2::MyForm page;
+	ProjetPOO::MainFormulaire page;
+	//page.ShowDialog();
+	//page.Hide();
+
 	Application::Run(% page);
 
 	gestionArticles gestion;
 	Console::WriteLine(gestion.ajouterArticle("Article 1", "13.99", "0.2", "100", "3.46"));
 }
 
-System::Void PageMainIlias(Void) {
+System::Void Page(Void) {
 	gestionPersonnel gestion;
 	Personnel^ personnel = gestion.obtenirPersonnel("1");
 	Console::WriteLine("Personnel : " + personnel->getNom() + " "
@@ -40,7 +43,5 @@ System::Void PageMainIlias(Void) {
 		+ personnel->getNomPays());
 }
 
-System::Void PageMain(Void) {
-	TestRecherche();
-	//TestObtentionPersonnel();
-}    
+
+

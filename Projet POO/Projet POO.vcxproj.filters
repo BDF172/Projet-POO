@@ -1,53 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Fichiers sources">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Fichiers d'en-tête">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Fichiers de ressources">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Fichiers d'en-tête\Composants">
-      <UniqueIdentifier>{5287d365-e0bd-4013-bbfa-447eb49733b1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers sources\Composants">
-      <UniqueIdentifier>{54b75cec-f75c-4e91-a70b-e599d91fad4e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête\Composants\stats">
-      <UniqueIdentifier>{b16845dc-73c2-42c4-8d41-a425f366ecd6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers sources\Services">
-      <UniqueIdentifier>{b4da88f4-8bd2-438f-82cd-1da06cd772dd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête\Services">
-      <UniqueIdentifier>{07090abe-b95c-45f2-a13e-2666e458e838}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête\Composants\heritage mapping">
-      <UniqueIdentifier>{d812eda0-dcac-4854-b61c-1eee54a54e00}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers sources\Composants\héritage mapping">
-      <UniqueIdentifier>{420edfe1-328f-42b1-a2c2-60112b6a71e7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête\Services\héritage gestion">
-      <UniqueIdentifier>{6a927f44-2e5d-44b3-94d3-f3122052681b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers sources\Services\héritage gestion">
-      <UniqueIdentifier>{34e45d1c-ac51-4dcb-9241-db7fd6c52e5e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête\Composants\objets">
-      <UniqueIdentifier>{303d8049-4f7e-4b01-ac4c-ba8fef6ebf9f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers sources\Composants\objets">
-      <UniqueIdentifier>{020cfc21-cf6b-40b0-b249-4031e6a6f9e4}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="Articles.cpp" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="CL_CAD.cpp" />
+    <ClCompile Include="CL_Com_mapping.cpp" />
+    <ClCompile Include="CL_Svc_gestion.cpp" />
+    <ClCompile Include="Commande.cpp" />
+    <ClCompile Include="gestionArticles.cpp" />
+    <ClCompile Include="GestionArticlesFormulaire.cpp" />
+    <ClCompile Include="gestionClient.cpp" />
+    <ClCompile Include="GestionClientForm.cpp" />
+    <ClCompile Include="GestionClientFormulaire.cpp" />
+    <ClCompile Include="GestionCommandeFormulaire.cpp" />
+    <ClCompile Include="gestionCommandes.cpp" />
+    <ClCompile Include="gestionPersonnel.cpp" />
+    <ClCompile Include="MainFormulaire.cpp" />
+    <ClCompile Include="mappingArticles.cpp" />
+    <ClCompile Include="mappingClient.cpp" />
+    <ClCompile Include="mappingCommandes.cpp" />
+    <ClCompile Include="mappingPersonnel.cpp" />
+    <ClCompile Include="Personnel.cpp" />
+    <ClCompile Include="principal.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="GestionStatFormulaire.cpp" />
+    <ClCompile Include="ajouterArticle.cpp" />
+    <ClCompile Include="supprimerArticle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Articles.h" />
+    <ClInclude Include="Client.h" />
     <ClCompile Include="CL_CAD.cpp">
       <Filter>Fichiers sources\Composants</Filter>
     </ClCompile>
@@ -99,8 +81,14 @@
     <ClCompile Include="Articles.cpp">
       <Filter>Fichiers sources\Composants\objets</Filter>
     </ClCompile>
-    <ClCompile Include="MyForm.cpp">
+    <ClCompile Include="MainFormulaire1.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFormulaire.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="GestionClientForm.cpp">
+      <Filter>Fichiers d%27en-tête\Services</Filter>
     </ClCompile>
     <ClCompile Include="mappingDemarrage.cpp">
       <Filter>Fichiers sources\Composants\héritage mapping</Filter>
@@ -114,7 +102,29 @@
       <Filter>Fichiers d'en-tête\Composants</Filter>
     </ClInclude>
     <ClInclude Include="CL_CAD.h" />
+    <ClInclude Include="CL_Com_mapping.h" />
+    <ClInclude Include="CL_Svc_gestion.h" />
+    <ClInclude Include="Commande.h" />
+    <ClInclude Include="gestionArticles.h" />
+    <ClInclude Include="GestionArticlesFormulaire.h" />
+    <ClInclude Include="gestionClient.h" />
+    <ClInclude Include="GestionClientForm.h" />
+    <ClInclude Include="GestionClientFormulaire.h" />
+    <ClInclude Include="GestionCommandeFormulaire.h" />
+    <ClInclude Include="gestionCommandes.h" />
+    <ClInclude Include="gestionPersonnel.h" />
+    <ClInclude Include="MainFormulaire.h" />
+    <ClInclude Include="mappingArticles.h" />
+    <ClInclude Include="mappingClient.h" />
     <ClInclude Include="headerLink.h" />
+    <ClInclude Include="mappingCommandes.h" />
+    <ClInclude Include="mappingPersonnel.h" />
+    <ClInclude Include="GestionPersonnelFormulaire.h" />
+    <ClInclude Include="Personnel.h" />
+    <ClInclude Include="statsMapping.h" />
+    <ClInclude Include="GestionStatFormulaire.h" />
+    <ClInclude Include="ajouterArticle.h" />
+    <ClInclude Include="supprimerArticle.h" />
     <ClInclude Include="statsMapping.h">
       <Filter>Fichiers d%27en-tête\Composants\stats</Filter>
     </ClInclude>
@@ -163,7 +173,13 @@
     <ClInclude Include="Articles.h">
       <Filter>Fichiers d%27en-tête\Composants\objets</Filter>
     </ClInclude>
-    <ClInclude Include="MyForm.h">
+    <ClInclude Include="GestionPersonnelFormulaire.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="mappingDemarrage.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage mapping</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFormulaire.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="mappingDemarrage.h">
@@ -171,6 +187,9 @@
     </ClInclude>
     <ClInclude Include="Header.h">
       <Filter>Fichiers d%27en-tête\Services\héritage gestion</Filter>
+    </ClInclude>
+    <ClInclude Include="GestionClientForm.h">
+      <Filter>Fichiers d%27en-tête\Services</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

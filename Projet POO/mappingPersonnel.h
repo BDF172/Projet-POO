@@ -10,5 +10,6 @@ namespace NS_composants {
 		System::Void modifierAdresse(System::String^ idPersonnel, System::String^ adresse);
 		System::Void supprimerPersonnel(System::String^ personnelID);
 		System::Void obtenirPersonnel(System::String^ personnelID);
+		System::Void rechercherPersonnel(System::String^ nom, System::String^ prenom);
 	};
 }

@@ -1,4 +1,4 @@
-ALTER PROCEDURE ModifierLivraison 
+CREATE PROCEDURE ModifierLivraison 
 @Reference VARCHAR(20),
 @NouvelleDate VARCHAR(20)
 AS
@@ -6,13 +6,13 @@ BEGIN
 	BEGIN TRANSACTION;
 	BEGIN TRY
 		IF NOT EXISTS 
-		(SELECT 1 FROM Commandes WHERE reference = @Reference)
+		(SELECT 1 FROM Commandes WHERE reference_commande = @Reference)
 		BEGIN
 			SELECT 1;
 		END;
 		ELSE
 		BEGIN
-			UPDATE Commandes SET date_livraison = @NouvelleDate WHERE reference = @Reference;
+			UPDATE Commandes SET date_livraison = @NouvelleDate WHERE reference_commande = @Reference;
 			SELECT 0;
 		END;
 		COMMIT;
