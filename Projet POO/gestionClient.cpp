@@ -11,8 +11,8 @@ gestionClient::gestionClient(Void){
 	this->clientTableMap = gcnew mappingClient;
 }
 
-Int64 gestionClient::createClient(String^ nom, String^ prenom, String^ naissance) {
-	this->clientTableMap->creerClient(nom, prenom, naissance);
+Int64 gestionClient::createClient(String^ nom, String^ prenom, String^ naissance, String^ nRue, String^ nomRue, String^ idVille) {
+	this->clientTableMap->creerClient(nom, prenom, naissance, nRue, nomRue, idVille);
 	DataSet^ result = this->clientTableMap->executeRequest();
 	if (!this->verifyErrorCode(result)) {
 		return -1;
