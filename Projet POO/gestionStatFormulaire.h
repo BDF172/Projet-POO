@@ -57,22 +57,26 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Button^ button9;
 	private: System::Windows::Forms::Button^ button10;
 	private: System::Windows::Forms::Button^ button11;
-	private: System::Windows::Forms::CheckBox^ checkBox9;
-	private: System::Windows::Forms::CheckBox^ checkBox10;
-	private: System::Windows::Forms::CheckBox^ checkBox11;
+
+
+
 	private: System::Windows::Forms::Label^ label41;
-	private: System::Windows::Forms::CheckBox^ checkBox7;
-	private: System::Windows::Forms::CheckBox^ checkBox8;
+
+
 	private: System::Windows::Forms::Label^ label40;
-	private: System::Windows::Forms::CheckBox^ checkBox4;
-	private: System::Windows::Forms::CheckBox^ checkBox5;
-	private: System::Windows::Forms::CheckBox^ checkBox6;
+
+
+
 	private: System::Windows::Forms::Label^ label39;
-	private: System::Windows::Forms::CheckBox^ checkBox3;
-	private: System::Windows::Forms::CheckBox^ checkBox2;
-	private: System::Windows::Forms::CheckBox^ checkBox1;
+
+
+
 	private: System::Windows::Forms::Label^ label38;
 	private: System::Windows::Forms::RichTextBox^ richTextBox1;
+	private: System::Windows::Forms::ComboBox^ comboBox1;
+	private: System::Windows::Forms::ComboBox^ comboBox4;
+	private: System::Windows::Forms::ComboBox^ comboBox3;
+	private: System::Windows::Forms::ComboBox^ comboBox2;
 
 	private:
 		/// <summary>
@@ -88,20 +92,9 @@ namespace ProjetPOO {
 		void InitializeComponent(void)
 		{
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->checkBox9 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox10 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox11 = (gcnew System::Windows::Forms::CheckBox());
 			this->label41 = (gcnew System::Windows::Forms::Label());
-			this->checkBox7 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox8 = (gcnew System::Windows::Forms::CheckBox());
 			this->label40 = (gcnew System::Windows::Forms::Label());
-			this->checkBox4 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox5 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox6 = (gcnew System::Windows::Forms::CheckBox());
 			this->label39 = (gcnew System::Windows::Forms::Label());
-			this->checkBox3 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox2 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
 			this->label38 = (gcnew System::Windows::Forms::Label());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button_valider = (gcnew System::Windows::Forms::Button());
@@ -115,25 +108,22 @@ namespace ProjetPOO {
 			this->button10 = (gcnew System::Windows::Forms::Button());
 			this->button11 = (gcnew System::Windows::Forms::Button());
 			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel1
 			// 
-			this->panel1->Controls->Add(this->checkBox9);
-			this->panel1->Controls->Add(this->checkBox10);
-			this->panel1->Controls->Add(this->checkBox11);
+			this->panel1->Controls->Add(this->comboBox4);
+			this->panel1->Controls->Add(this->comboBox3);
+			this->panel1->Controls->Add(this->comboBox2);
+			this->panel1->Controls->Add(this->comboBox1);
 			this->panel1->Controls->Add(this->label41);
-			this->panel1->Controls->Add(this->checkBox7);
-			this->panel1->Controls->Add(this->checkBox8);
 			this->panel1->Controls->Add(this->label40);
-			this->panel1->Controls->Add(this->checkBox4);
-			this->panel1->Controls->Add(this->checkBox5);
-			this->panel1->Controls->Add(this->checkBox6);
 			this->panel1->Controls->Add(this->label39);
-			this->panel1->Controls->Add(this->checkBox3);
-			this->panel1->Controls->Add(this->checkBox2);
-			this->panel1->Controls->Add(this->checkBox1);
 			this->panel1->Controls->Add(this->label38);
 			this->panel1->Controls->Add(this->button5);
 			this->panel1->Controls->Add(this->button_valider);
@@ -141,48 +131,6 @@ namespace ProjetPOO {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(502, 946);
 			this->panel1->TabIndex = 107;
-			// 
-			// checkBox9
-			// 
-			this->checkBox9->AutoSize = true;
-			this->checkBox9->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->checkBox9->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->checkBox9->Location = System::Drawing::Point(239, 448);
-			this->checkBox9->Name = L"checkBox9";
-			this->checkBox9->Size = System::Drawing::Size(71, 37);
-			this->checkBox9->TabIndex = 114;
-			this->checkBox9->Text = L"5%";
-			this->checkBox9->UseVisualStyleBackColor = true;
-			// 
-			// checkBox10
-			// 
-			this->checkBox10->AutoSize = true;
-			this->checkBox10->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->checkBox10->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->checkBox10->Location = System::Drawing::Point(128, 448);
-			this->checkBox10->Name = L"checkBox10";
-			this->checkBox10->Size = System::Drawing::Size(71, 37);
-			this->checkBox10->TabIndex = 113;
-			this->checkBox10->Text = L"3%";
-			this->checkBox10->UseVisualStyleBackColor = true;
-			// 
-			// checkBox11
-			// 
-			this->checkBox11->AutoSize = true;
-			this->checkBox11->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->checkBox11->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->checkBox11->Location = System::Drawing::Point(32, 448);
-			this->checkBox11->Name = L"checkBox11";
-			this->checkBox11->Size = System::Drawing::Size(71, 37);
-			this->checkBox11->TabIndex = 112;
-			this->checkBox11->Text = L"2%";
-			this->checkBox11->UseVisualStyleBackColor = true;
 			// 
 			// label41
 			// 
@@ -197,35 +145,6 @@ namespace ProjetPOO {
 			this->label41->TabIndex = 111;
 			this->label41->Text = L"Démarque inconnue";
 			// 
-			// checkBox7
-			// 
-			this->checkBox7->AutoSize = true;
-			this->checkBox7->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->checkBox7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->checkBox7->Location = System::Drawing::Point(128, 345);
-			this->checkBox7->Name = L"checkBox7";
-			this->checkBox7->Size = System::Drawing::Size(71, 37);
-			this->checkBox7->TabIndex = 110;
-			this->checkBox7->Text = L"6%";
-			this->checkBox7->UseVisualStyleBackColor = true;
-			// 
-			// checkBox8
-			// 
-			this->checkBox8->AutoSize = true;
-			this->checkBox8->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->checkBox8->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->checkBox8->Location = System::Drawing::Point(32, 345);
-			this->checkBox8->Name = L"checkBox8";
-			this->checkBox8->Size = System::Drawing::Size(71, 37);
-			this->checkBox8->TabIndex = 109;
-			this->checkBox8->Text = L"5%";
-			this->checkBox8->UseVisualStyleBackColor = true;
-			this->checkBox8->CheckedChanged += gcnew System::EventHandler(this, &GestionStatFormulaire::checkBox8_CheckedChanged_1);
-			// 
 			// label40
 			// 
 			this->label40->AutoSize = true;
@@ -239,48 +158,6 @@ namespace ProjetPOO {
 			this->label40->TabIndex = 108;
 			this->label40->Text = L"Remise commerciale";
 			// 
-			// checkBox4
-			// 
-			this->checkBox4->AutoSize = true;
-			this->checkBox4->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->checkBox4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->checkBox4->Location = System::Drawing::Point(239, 240);
-			this->checkBox4->Name = L"checkBox4";
-			this->checkBox4->Size = System::Drawing::Size(86, 37);
-			this->checkBox4->TabIndex = 107;
-			this->checkBox4->Text = L"15%";
-			this->checkBox4->UseVisualStyleBackColor = true;
-			// 
-			// checkBox5
-			// 
-			this->checkBox5->AutoSize = true;
-			this->checkBox5->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->checkBox5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->checkBox5->Location = System::Drawing::Point(128, 240);
-			this->checkBox5->Name = L"checkBox5";
-			this->checkBox5->Size = System::Drawing::Size(86, 37);
-			this->checkBox5->TabIndex = 106;
-			this->checkBox5->Text = L"10%";
-			this->checkBox5->UseVisualStyleBackColor = true;
-			// 
-			// checkBox6
-			// 
-			this->checkBox6->AutoSize = true;
-			this->checkBox6->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->checkBox6->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->checkBox6->Location = System::Drawing::Point(32, 240);
-			this->checkBox6->Name = L"checkBox6";
-			this->checkBox6->Size = System::Drawing::Size(71, 37);
-			this->checkBox6->TabIndex = 105;
-			this->checkBox6->Text = L"5%";
-			this->checkBox6->UseVisualStyleBackColor = true;
-			// 
 			// label39
 			// 
 			this->label39->AutoSize = true;
@@ -293,48 +170,6 @@ namespace ProjetPOO {
 			this->label39->Size = System::Drawing::Size(270, 33);
 			this->label39->TabIndex = 104;
 			this->label39->Text = L"Marge commerciale";
-			// 
-			// checkBox3
-			// 
-			this->checkBox3->AutoSize = true;
-			this->checkBox3->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->checkBox3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->checkBox3->Location = System::Drawing::Point(375, 130);
-			this->checkBox3->Name = L"checkBox3";
-			this->checkBox3->Size = System::Drawing::Size(131, 37);
-			this->checkBox3->TabIndex = 103;
-			this->checkBox3->Text = L"[TVA3]";
-			this->checkBox3->UseVisualStyleBackColor = true;
-			// 
-			// checkBox2
-			// 
-			this->checkBox2->AutoSize = true;
-			this->checkBox2->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->checkBox2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->checkBox2->Location = System::Drawing::Point(188, 130);
-			this->checkBox2->Name = L"checkBox2";
-			this->checkBox2->Size = System::Drawing::Size(131, 37);
-			this->checkBox2->TabIndex = 102;
-			this->checkBox2->Text = L"[TVA2]";
-			this->checkBox2->UseVisualStyleBackColor = true;
-			// 
-			// checkBox1
-			// 
-			this->checkBox1->AutoSize = true;
-			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->checkBox1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->checkBox1->Location = System::Drawing::Point(32, 130);
-			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(131, 37);
-			this->checkBox1->TabIndex = 101;
-			this->checkBox1->Text = L"[TVA1]";
-			this->checkBox1->UseVisualStyleBackColor = true;
 			// 
 			// label38
 			// 
@@ -566,6 +401,42 @@ namespace ProjetPOO {
 			this->richTextBox1->TabIndex = 115;
 			this->richTextBox1->Text = L"";
 			this->richTextBox1->TextChanged += gcnew System::EventHandler(this, &GestionStatFormulaire::richTextBox1_TextChanged);
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"TVA 1", L"TVA 2", L"TVA 3" });
+			this->comboBox1->Location = System::Drawing::Point(32, 125);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(460, 28);
+			this->comboBox1->TabIndex = 115;
+			// 
+			// comboBox2
+			// 
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"5%", L"10%", L"15%" });
+			this->comboBox2->Location = System::Drawing::Point(32, 236);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(460, 28);
+			this->comboBox2->TabIndex = 116;
+			// 
+			// comboBox3
+			// 
+			this->comboBox3->FormattingEnabled = true;
+			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"5%", L"6%" });
+			this->comboBox3->Location = System::Drawing::Point(32, 347);
+			this->comboBox3->Name = L"comboBox3";
+			this->comboBox3->Size = System::Drawing::Size(460, 28);
+			this->comboBox3->TabIndex = 117;
+			// 
+			// comboBox4
+			// 
+			this->comboBox4->FormattingEnabled = true;
+			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"2%", L"3%", L"5%" });
+			this->comboBox4->Location = System::Drawing::Point(32, 445);
+			this->comboBox4->Name = L"comboBox4";
+			this->comboBox4->Size = System::Drawing::Size(460, 28);
+			this->comboBox4->TabIndex = 118;
 			// 
 			// GestionStatFormulaire
 			// 
