@@ -10,14 +10,14 @@ using namespace System::Collections::Generic;
 System::Void PageMainJerem(Void) {
 	Application::SetCompatibleTextRenderingDefault(false);
 	Application::EnableVisualStyles();
-	ProjetPOO2::MyForm page;
+	ProjetPOO::GestionClientForm page;
 	Application::Run(% page);
 
 	gestionArticles gestion;
 	Console::WriteLine(gestion.ajouterArticle("Article 1", "13.99", "0.2", "100", "3.46"));
 }
 
-System::Void PageMainIlias(Void) {
+System::Void Page(Void) {
 	gestionPersonnel gestion;
 	Personnel^ personnel = gestion.obtenirPersonnel("1");
 	Console::WriteLine("Personnel : " + personnel->getNom() + " "
@@ -32,11 +32,11 @@ System::Void TestRecherche(Void) {
 	if (mesClients != nullptr) {
 		Console::WriteLine("Clients : ");
 		for (int i = 0; i < mesClients->Count; i++) {
-			Console::WriteLine("Client : " + mesClients[i]->getNom() + " " + mesClients[i]->getPrenom() + " né le " + mesClients[i]->getNaissance());
+			Console::WriteLine("Client : " + mesClients[i]->getNom() + " " + mesClients[i]->getPrenom() + " nÃ© le " + mesClients[i]->getNaissance());
 		}
 	}
 	else
-		Console::WriteLine("Aucun client trouvé");
+		Console::WriteLine("Aucun client trouvÃ©");
 
 }
 
@@ -46,11 +46,11 @@ System::Void TestRecherchePersonnel(Void) {
 	if (mesPersonnels != nullptr) {
 		Console::WriteLine("Personnels : ");
 		for (int i = 0; i < mesPersonnels->Count; i++) {
-			Console::WriteLine("Personnel : " + mesPersonnels[i]->getNom() + " " + mesPersonnels[i]->getPrenom() + " embauché le " + mesPersonnels[i]->getDateEmbauche());
+			Console::WriteLine("Personnel : " + mesPersonnels[i]->getNom() + " " + mesPersonnels[i]->getPrenom() + " embauchÃ© le " + mesPersonnels[i]->getDateEmbauche());
 		}
 	}
 	else
-		Console::WriteLine("Aucun personnel trouvé");
+		Console::WriteLine("Aucun personnel trouvÃ©");
 }
 
 System::Void testAjoutCommande(Void) {

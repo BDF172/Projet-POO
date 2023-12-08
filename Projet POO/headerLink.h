@@ -15,5 +15,5 @@
 #include "gestionArticles.h"
 #include "mappingCommandes.h"
 #include "gestionCommandes.h"
-#include "principal.h"
 #include "MyForm.h"
+#include "GestionClientForm.h"
