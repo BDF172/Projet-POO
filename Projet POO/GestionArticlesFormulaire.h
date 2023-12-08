@@ -12,7 +12,7 @@ namespace ProjetPOO {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de GestionArticlesFormulaire
+	/// Description rÃ©sumÃ©e de GestionArticlesFormulaire
 	/// </summary>
 	public ref class GestionArticlesFormulaire : public System::Windows::Forms::Form
 	{
@@ -27,7 +27,7 @@ namespace ProjetPOO {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisÃ©es.
 		/// </summary>
 		~GestionArticlesFormulaire()
 		{
@@ -61,14 +61,14 @@ namespace ProjetPOO {
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nÃ©cessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// MÃ©thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mÃ©thode avec l'Ã©diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -104,7 +104,7 @@ namespace ProjetPOO {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(228, 204);
 			this->button1->TabIndex = 98;
-			this->button1->Text = L"Créer Article";
+			this->button1->Text = L"CrÃ©er Article";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &GestionArticlesFormulaire::button1_Click);
 			// 
@@ -366,33 +366,33 @@ namespace ProjetPOO {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->richTextBox1->Text = this->button1->Text;
 	}
-private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox2_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->richTextBox1->Text = " " + this->button2->Text;
-}
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->richTextBox1->Text = " " + this->button3->Text;
-}
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->richTextBox1->Text = " " + this->button4->Text;
-}
-private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
-	NS_composants::Articles articles;
-	articles.setidArticles(Convert::ToInt32(this->textBox7->Text));
-	articles.setNom(this->textBox1->Text);
-	articles.setPrix(Convert::ToSingle(this->textBox2->Text));
-	articles.setTva(Convert::ToSingle(this->textBox3->Text));
-}
-private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-};
+	private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void textBox2_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->richTextBox1->Text = " " + this->button2->Text;
+	}
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->richTextBox1->Text = " " + this->button3->Text;
+	}
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->richTextBox1->Text = " " + this->button4->Text;
+	}
+	private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
+		NS_composants::Articles articles;
+		articles.setidArticles(Convert::ToInt32(this->textBox7->Text));
+		articles.setNom(this->textBox1->Text);
+		articles.setPrix(Convert::ToSingle(this->textBox2->Text));
+		articles.setTva(Convert::ToSingle(this->textBox3->Text));
+	}
+	private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	};
 }

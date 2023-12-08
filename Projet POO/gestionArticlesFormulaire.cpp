@@ -1,2 +1,2 @@
-#include "gestionArticlesFormulaire.h"
+#include "GestionArticlesFormulaire.h"
 

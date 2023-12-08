@@ -4,38 +4,38 @@
 
 namespace ProjetPOO {
 
-    using namespace System;
-    using namespace System::ComponentModel;
-    using namespace System::Collections;
-    using namespace System::Windows::Forms;
-    using namespace System::Data;
-    using namespace System::Drawing;
+	using namespace System;
+	using namespace System::ComponentModel;
+	using namespace System::Collections;
+	using namespace System::Windows::Forms;
+	using namespace System::Data;
+	using namespace System::Drawing;
 
-    /// <summary>
-    /// Description résumée de GestionClientFormulaire
-    /// </summary>
-    public ref class GestionClientFormulaire : public System::Windows::Forms::Form
-    {
-    public:
-        GestionClientFormulaire(void)
-        {
-            InitializeComponent();
-            //
-            //TODO: ajoutez ici le code du constructeur
-            //
-        }
+	/// <summary>
+	/// Description résumée de GestionClientFormulaire
+	/// </summary>
+	public ref class GestionClientFormulaire : public System::Windows::Forms::Form
+	{
+	public:
+		GestionClientFormulaire(void)
+		{
+			InitializeComponent();
+			//
+			//TODO: ajoutez ici le code du constructeur
+			//
+		}
 
-    protected:
-        /// <summary>
-        /// Nettoyage des ressources utilisées.
-        /// </summary>
-        ~GestionClientFormulaire()
-        {
-            if (components)
-            {
-                delete components;
-            }
-        }
+	protected:
+		/// <summary>
+		/// Nettoyage des ressources utilisées.
+		/// </summary>
+		~GestionClientFormulaire()
+		{
+			if (components)
+			{
+				delete components;
+			}
+		}
     private: System::Windows::Forms::Label^ label15;
     protected:
 
@@ -94,19 +94,19 @@ namespace ProjetPOO {
 
 
 
-    private:
-        /// <summary>
-        /// Variable nécessaire au concepteur.
-        /// </summary>
-        System::ComponentModel::Container^ components;
+	private:
+		/// <summary>
+		/// Variable nécessaire au concepteur.
+		/// </summary>
+		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
-        /// <summary>
-        /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-        /// le contenu de cette méthode avec l'éditeur de code.
-        /// </summary>
-        void InitializeComponent(void)
-        {
+		/// <summary>
+		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette méthode avec l'éditeur de code.
+		/// </summary>
+		void InitializeComponent(void)
+		{
             this->label15 = (gcnew System::Windows::Forms::Label());
             this->button_valider = (gcnew System::Windows::Forms::Button());
             this->label14 = (gcnew System::Windows::Forms::Label());
@@ -491,46 +491,46 @@ namespace ProjetPOO {
 #pragma endregion
     private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
     }
-    private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
-    private: System::Void textBox7_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-        this->Close();
+private: System::Void textBox7_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->Close();
 
-    }
-    private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-        this->richTextBox1->Text = " " + this->button1->Text;
-    }
-    private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-        this->richTextBox1->Text = " " + this->button2->Text;
-    }
-    private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-        this->richTextBox1->Text = " " + this->button3->Text;
-    }
-    private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-        this->richTextBox1->Text = " " + this->button4->Text;
-    }
-    private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
-        NS_composants::Client client;
-        client.setNom(this->textBox1->Text);
-        client.setPrenom(this->textBox3->Text);
-        client.setNaissance(this->dateTimePicker_personnel->Text);
-        //client.setAdresse(this->textBox2->Text);
-    }
-    private: System::Void dateTimePicker_personnel_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-    }
-    };
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->richTextBox1->Text = " " + this->button1->Text;
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->richTextBox1->Text = " " + this->button2->Text;
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->richTextBox1->Text = " " + this->button3->Text;
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->richTextBox1->Text = " " + this->button4->Text;
+}
+private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
+    NS_composants::Client client;
+    client.setNom(this->textBox1->Text);
+    client.setPrenom(this->textBox3->Text);
+    client.setNaissance(this->dateTimePicker_personnel->Text);
+    //client.setAdresse(this->textBox2->Text);
+}
+private: System::Void dateTimePicker_personnel_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+};
 }

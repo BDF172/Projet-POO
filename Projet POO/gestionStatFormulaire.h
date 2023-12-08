@@ -78,7 +78,7 @@ namespace ProjetPOO {
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container^ components;
+		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -662,13 +662,13 @@ namespace ProjetPOO {
 	}
 	private: System::Void splitContainer2_Panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 	}
-	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e){ 
 		this->richTextBox1->Text = " " + this->button5->Text;
 	}
 	private: System::Void button4_Click_1(System::Object^ sender, System::EventArgs^ e) {
 		this->richTextBox1->Text = " " + this->button4->Text;
 	}
-	private: System::Void button3_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button3_Click_1(System::Object^ sender, System::EventArgs^ e){
 		this->richTextBox1->Text = " " + this->button3->Text;
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -723,43 +723,43 @@ namespace ProjetPOO {
 	}
 	private: System::Void GestionStatFormulaire_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-	}
-	private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
-		this->richTextBox1->Text = " " + this->button2->Text;
-	}
-	private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->richTextBox1->Text = " " + this->button11->Text;
-	}
-	private: System::Void checkBox8_CheckedChanged_1(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
-		this->richTextBox1->Text = " " + this->button1->Text;
-	}
-	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->richTextBox1->Text = " " + this->button3->Text;
-	}
-	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->richTextBox1->Text = " " + this->button4->Text;
-	}
-	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->richTextBox1->Text = " " + this->button7->Text;
-	}
-	private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->richTextBox1->Text = " " + this->button8->Text;
-	}
-	private: System::Void button9_Click_1(System::Object^ sender, System::EventArgs^ e) {
-		this->richTextBox1->Text = " " + this->button9->Text;
-	}
-	private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->richTextBox1->Text = " " + this->button10->Text;
-	}
-	private: System::Void button5_Click_1(System::Object^ sender, System::EventArgs^ e) {
-		this->Close();
-	}
-	private: System::Void richTextBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void button_valider_Click_1(System::Object^ sender, System::EventArgs^ e) {
-	}
-	};
+private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox1->Text = " " + this->button2->Text;
+}
+private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox1->Text = " " + this->button11->Text;
+}
+private: System::Void checkBox8_CheckedChanged_1(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox1->Text = " " + this->button1->Text;
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox1->Text = " " + this->button3->Text;
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox1->Text = " " + this->button4->Text;
+}
+private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox1->Text = " " + this->button7->Text;
+}
+private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox1->Text = " " + this->button8->Text;
+}
+private: System::Void button9_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox1->Text = " " + this->button9->Text;
+}
+private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->richTextBox1->Text = " " + this->button10->Text;
+}
+private: System::Void button5_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
+}
+private: System::Void richTextBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button_valider_Click_1(System::Object^ sender, System::EventArgs^ e) {
+}
+};
 }

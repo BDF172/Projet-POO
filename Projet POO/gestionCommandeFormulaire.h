@@ -572,6 +572,13 @@ namespace ProjetPOO {
         this->Close();
     }
     private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
+        NS_composants::Commande commande;
+        commande.setReference(this->reference->Text);
+        commande.setDateEmissionCommande(this->dateEmission->Text);
+        commande.setDateLivraison(this->dateTimePicker1->Text);
+        commande.setDatePaiment(this->dateTimePicker2->Text);
+        commande.setMontantCommande(Convert::ToInt32(this->montantCommande->Text));
+        commande.setMoyenPaiement(this->moyenPaiement->Text);
     }
     private: System::Void dateEmission_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
     }
