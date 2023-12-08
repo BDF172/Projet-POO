@@ -2,6 +2,7 @@
 
 #include "CLient.h"
 #include "gestionClient.h"
+#include "gestionValeurs.h"
 
 namespace ProjetPOO {
 
@@ -60,7 +61,7 @@ namespace ProjetPOO {
     private: System::Windows::Forms::Button^ button2;
     private: System::Windows::Forms::Button^ button3;
     private: System::Windows::Forms::Button^ button1;
-    private: System::Windows::Forms::TextBox^ villeTextBox;
+
 
 
     private: System::Windows::Forms::TextBox^ prenomTextBox;
@@ -77,6 +78,7 @@ namespace ProjetPOO {
     private: System::Windows::Forms::RichTextBox^ richTextBox1;
     private: System::Windows::Forms::Label^ label1;
     private: System::Windows::Forms::TextBox^ rueTextBox;
+    private: System::Windows::Forms::ComboBox^ villeComboBox;
 
 
     protected:
@@ -123,17 +125,17 @@ namespace ProjetPOO {
             this->label14 = (gcnew System::Windows::Forms::Label());
             this->label8 = (gcnew System::Windows::Forms::Label());
             this->panel1 = (gcnew System::Windows::Forms::Panel());
+            this->villeComboBox = (gcnew System::Windows::Forms::ComboBox());
             this->label1 = (gcnew System::Windows::Forms::Label());
             this->rueTextBox = (gcnew System::Windows::Forms::TextBox());
             this->button5 = (gcnew System::Windows::Forms::Button());
             this->paysComboBox = (gcnew System::Windows::Forms::ComboBox());
-            this->villeTextBox = (gcnew System::Windows::Forms::TextBox());
             this->prenomTextBox = (gcnew System::Windows::Forms::TextBox());
             this->nRueTextBox = (gcnew System::Windows::Forms::TextBox());
+            this->label7 = (gcnew System::Windows::Forms::Label());
             this->idTextBox = (gcnew System::Windows::Forms::TextBox());
             this->nomTextBox = (gcnew System::Windows::Forms::TextBox());
             this->label13 = (gcnew System::Windows::Forms::Label());
-            this->label7 = (gcnew System::Windows::Forms::Label());
             this->label12 = (gcnew System::Windows::Forms::Label());
             this->label6 = (gcnew System::Windows::Forms::Label());
             this->naissanceDatePicker = (gcnew System::Windows::Forms::DateTimePicker());
@@ -171,7 +173,7 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->button_valider->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
                 static_cast<System::Int32>(static_cast<System::Byte>(251)));
-            this->button_valider->Location = System::Drawing::Point(12, 1022);
+            this->button_valider->Location = System::Drawing::Point(18, 1022);
             this->button_valider->Margin = System::Windows::Forms::Padding(4);
             this->button_valider->Name = L"button_valider";
             this->button_valider->Size = System::Drawing::Size(568, 96);
@@ -201,7 +203,7 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->label8->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
                 static_cast<System::Int32>(static_cast<System::Byte>(251)));
-            this->label8->Location = System::Drawing::Point(17, 876);
+            this->label8->Location = System::Drawing::Point(17, 751);
             this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label8->Name = L"label8";
             this->label8->Size = System::Drawing::Size(89, 38);
@@ -210,13 +212,14 @@ namespace ProjetPOO {
             // 
             // panel1
             // 
+            this->panel1->Controls->Add(this->villeComboBox);
             this->panel1->Controls->Add(this->label1);
             this->panel1->Controls->Add(this->rueTextBox);
             this->panel1->Controls->Add(this->button5);
             this->panel1->Controls->Add(this->paysComboBox);
-            this->panel1->Controls->Add(this->villeTextBox);
             this->panel1->Controls->Add(this->prenomTextBox);
             this->panel1->Controls->Add(this->nRueTextBox);
+            this->panel1->Controls->Add(this->label7);
             this->panel1->Controls->Add(this->idTextBox);
             this->panel1->Controls->Add(this->nomTextBox);
             this->panel1->Controls->Add(this->label15);
@@ -224,7 +227,6 @@ namespace ProjetPOO {
             this->panel1->Controls->Add(this->label14);
             this->panel1->Controls->Add(this->label8);
             this->panel1->Controls->Add(this->label13);
-            this->panel1->Controls->Add(this->label7);
             this->panel1->Controls->Add(this->label12);
             this->panel1->Controls->Add(this->label6);
             this->panel1->Controls->Add(this->naissanceDatePicker);
@@ -233,6 +235,20 @@ namespace ProjetPOO {
             this->panel1->Name = L"panel1";
             this->panel1->Size = System::Drawing::Size(598, 1133);
             this->panel1->TabIndex = 101;
+            // 
+            // villeComboBox
+            // 
+            this->villeComboBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
+                static_cast<System::Int32>(static_cast<System::Byte>(41)));
+            this->villeComboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->villeComboBox->FormattingEnabled = true;
+            this->villeComboBox->IntegralHeight = false;
+            this->villeComboBox->Location = System::Drawing::Point(18, 946);
+            this->villeComboBox->Margin = System::Windows::Forms::Padding(4);
+            this->villeComboBox->Name = L"villeComboBox";
+            this->villeComboBox->Size = System::Drawing::Size(558, 40);
+            this->villeComboBox->TabIndex = 115;
             // 
             // label1
             // 
@@ -291,25 +307,12 @@ namespace ProjetPOO {
             this->paysComboBox->FormattingEnabled = true;
             this->paysComboBox->IntegralHeight = false;
             this->paysComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1", L"Belgique", L"Canada" });
-            this->paysComboBox->Location = System::Drawing::Point(18, 933);
+            this->paysComboBox->Location = System::Drawing::Point(18, 808);
             this->paysComboBox->Margin = System::Windows::Forms::Padding(4);
             this->paysComboBox->Name = L"paysComboBox";
             this->paysComboBox->Size = System::Drawing::Size(558, 40);
             this->paysComboBox->TabIndex = 111;
-            // 
-            // villeTextBox
-            // 
-            this->villeTextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
-                static_cast<System::Int32>(static_cast<System::Byte>(41)));
-            this->villeTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->villeTextBox->ForeColor = System::Drawing::Color::White;
-            this->villeTextBox->Location = System::Drawing::Point(20, 796);
-            this->villeTextBox->Margin = System::Windows::Forms::Padding(4);
-            this->villeTextBox->Name = L"villeTextBox";
-            this->villeTextBox->Size = System::Drawing::Size(561, 39);
-            this->villeTextBox->TabIndex = 110;
-            this->villeTextBox->TextChanged += gcnew System::EventHandler(this, &GestionClientFormulaire::textBox4_TextChanged);
+            this->paysComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &GestionClientFormulaire::paysComboBox_SelectedIndexChanged);
             // 
             // prenomTextBox
             // 
@@ -338,6 +341,21 @@ namespace ProjetPOO {
             this->nRueTextBox->Size = System::Drawing::Size(561, 39);
             this->nRueTextBox->TabIndex = 108;
             this->nRueTextBox->TextChanged += gcnew System::EventHandler(this, &GestionClientFormulaire::textBox2_TextChanged);
+            // 
+            // label7
+            // 
+            this->label7->AutoSize = true;
+            this->label7->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
+                static_cast<System::Int32>(static_cast<System::Byte>(251)));
+            this->label7->Location = System::Drawing::Point(17, 884);
+            this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label7->Name = L"label7";
+            this->label7->Size = System::Drawing::Size(107, 38);
+            this->label7->TabIndex = 59;
+            this->label7->Text = L"Ville";
+            this->label7->Click += gcnew System::EventHandler(this, &GestionClientFormulaire::label7_Click);
             // 
             // idTextBox
             // 
@@ -381,21 +399,6 @@ namespace ProjetPOO {
             this->label13->Size = System::Drawing::Size(125, 38);
             this->label13->TabIndex = 49;
             this->label13->Text = L"Prénom";
-            // 
-            // label7
-            // 
-            this->label7->AutoSize = true;
-            this->label7->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-                static_cast<System::Int32>(static_cast<System::Byte>(251)));
-            this->label7->Location = System::Drawing::Point(17, 742);
-            this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->label7->Name = L"label7";
-            this->label7->Size = System::Drawing::Size(107, 38);
-            this->label7->TabIndex = 59;
-            this->label7->Text = L"Ville";
-            this->label7->Click += gcnew System::EventHandler(this, &GestionClientFormulaire::label7_Click);
             // 
             // label12
             // 
@@ -557,9 +560,30 @@ namespace ProjetPOO {
 #pragma endregion
     private: System::Void GestionClientFormulaire_Load(System::Object^ sender, System::EventArgs^ e) {
         this->fonctionChoisie = 'N';
+        this->gestionDesClients = gcnew NS_services::gestionClient;
+        this->gestionDesValeurs = gcnew NS_services::gestionValeurs;
+        this->paysComboBox->Items->Clear();
+        this->paysComboBox->Text = "Veuillez choisir un pays";
+        DicoPays = this->gestionDesValeurs->obtenirPays();
+        if (this->DicoPays == nullptr) return;
+        for each (System::String^ i in DicoPays->Keys) {
+            this->paysComboBox->Items->Add(i);
+        }
     }
-    private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-    }
+    private: System::Void paysComboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+        this->villeComboBox->Items->Clear();
+        this->villeComboBox->Text = "Veuillez choisir une ville";
+        try {
+            String^ idChoisi = this->DicoPays[this->paysComboBox->Text];
+            DicoVilles = this->gestionDesValeurs->obtenirVilles(idChoisi);
+            for each (System::String^ i in DicoVilles->Keys) {
+                this->villeComboBox->Items->Add(i);
+            }
+        }
+        catch (Exception^ e) {
+            MessageBox::Show("Erreur :" + e->Data);
+        }
+}
 private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
 private: System::Void textBox7_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
@@ -602,6 +626,7 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
     this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
     this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
     this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+    this->fonctionChoisie = 'M';
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
     this->richTextBox1->Text = " " + this->button3->Text;
@@ -613,6 +638,7 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
     this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
     this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
     this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+    this->fonctionChoisie = 'S';
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
     this->richTextBox1->Text = " " + this->button4->Text;
@@ -624,27 +650,49 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
     this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
     this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
     this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+    this->fonctionChoisie = 'A';
 }
 private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
     DateTime selectedDate = this->naissanceDatePicker->Value;
-    if (this->fonctionChoisie == 'C') {
-        Int64 resultID = this->gestionDesClients.createClient(
+    if (this->fonctionChoisie == 'N') {
+        MessageBox::Show("Veuillez faire un choix");
+    }
+    else if (this->fonctionChoisie == 'C') {
+        Int64 resultID = this->gestionDesClients->createClient(
             this->nomTextBox->Text,
             this->prenomTextBox->Text,
             selectedDate.ToString(L"yyyy-MM-dd"),
             this->nRueTextBox->Text,
             this->rueTextBox->Text,
-            this->paysComboBox->Text
+            this->DicoVilles[this->villeComboBox->Text]
         );
         if (resultID == -1) this->idTextBox->Text = "Erreur lors de la création du client";
         else this->idTextBox->Text = resultID.ToString();
     }
-    else if (this->fonctionChoisie = 'M') {
-        
+    else if (this->fonctionChoisie == 'S') {
+        if (this->gestionDesClients->supprimerClient(this->idTextBox->Text))
+            MessageBox::Show("Client supprimé");
+        else
+            MessageBox::Show("Echec de la suppression du client");
     }
+    else if (this->fonctionChoisie == 'M') {
+        if (this->gestionDesClients->modifierClient(
+            this->idTextBox->Text,
+            this->nomTextBox->Text,
+            this->prenomTextBox->Text,
+            this->naissanceDatePicker->Value.ToString(L"yyyy-MM-dd")
+        ))
+            MessageBox::Show("Client modifié avec succés");
+        else
+            MessageBox::Show("Echec de la modification du client");
+    }
+    this->fonctionChoisie = 'N';
 }
 private: 
     System::Char fonctionChoisie;
-    NS_services::gestionClient gestionDesClients;
+    NS_services::gestionClient^ gestionDesClients;
+    NS_services::gestionValeurs^ gestionDesValeurs;
+    System::Collections::Generic::Dictionary<System::String^, System::String^>^ DicoPays;
+    System::Collections::Generic::Dictionary<System::String^, System::String^>^ DicoVilles;
 };
 }
