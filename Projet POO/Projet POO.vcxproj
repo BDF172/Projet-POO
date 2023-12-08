@@ -190,6 +190,17 @@
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gestionArticlesFormulaire.resx">
+      <DependentUpon>gestionArticlesFormulaire.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCommandeFormulaire.resx">
+      <DependentUpon>gestionCommandeFormulaire.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionStatFormulaire.resx">
+      <DependentUpon>gestionStatFormulaire.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

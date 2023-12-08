@@ -241,6 +241,7 @@ namespace ProjetPOO {
 			this->button5->TabIndex = 99;
 			this->button5->Text = L"Retour";
 			this->button5->UseVisualStyleBackColor = false;
+			this->button5->Click += gcnew System::EventHandler(this, &GestionArticlesFormulaire::button5_Click);
 			// 
 			// label15
 			// 
@@ -394,5 +395,8 @@ namespace ProjetPOO {
 	}
 	private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-	};
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
+	}
+};
 }
