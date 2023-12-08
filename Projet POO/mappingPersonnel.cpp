@@ -4,10 +4,12 @@ using namespace System;
 using namespace System::Data;
 using namespace NS_composants;
 
-Void mappingPersonnel::creerPersonnel(String^ nom, String^ prenom, String^ adresse, String^ idSuperieur, String^ dateEmbauche) {
+Void mappingPersonnel::creerPersonnel(String^ nom, String^ prenom, String^ numRue, String^ nomRue, String^ idVille,
+	String^ idSuperieur, String^ dateEmbauche) {
 	this->request = "EXEC InsererNouveauPersonnel @Nom = '" + nom
-		+ "', @Prenom = '" + prenom + "',@IdSuperieur = " + idSuperieur + ", @Adresse = '" + adresse 
-		+ "', @DateEmbauche = '" + dateEmbauche + "';";
+		+ "', @Prenom = '" + prenom + "',@IdSuperieur = " + idSuperieur + ", @NumeroRue = " + numRue 
+		+ ", @NomRue = '" + nomRue + "', @IdVille = " + idVille + ", @DateEmbauche = '" + dateEmbauche + "';";
+	Console::WriteLine(this->request);
 }
 
 Void mappingPersonnel::modifierPersonnel(String^ idPersonnel, String^ nom, String^ prenom, String^ idSuperieur, String^ dateEmbauche) {
@@ -15,8 +17,10 @@ Void mappingPersonnel::modifierPersonnel(String^ idPersonnel, String^ nom, Strin
 		+ ", @Nom = '" + nom + "', @Prenom = '" + prenom + "', @IdSuperieur = " + idSuperieur + ";";
 }
 
-System::Void NS_composants::mappingPersonnel::modifierAdresse(System::String^ idPersonnel, System::String^ adresse) {
-	this->request = "EXEC ModifierAdressePersonnel @IdPersonnel = " + idPersonnel + ", @Adresse = '" + adresse + "';";
+System::Void NS_composants::mappingPersonnel::modifierAdresse(System::String^ idPersonnel, System::String^ numRue,
+	System::String^ nomRue, System::String^ idVille) {
+	this->request = "EXEC ModifierAdressePersonnel @IdPersonnel = " + idPersonnel + ", @NumeroRue = " + numRue 
+		+ ", @nomRue = '" + nomRue + "', @IdVille = " + idVille + ";";
 }
 
 System::Void NS_composants::mappingPersonnel::supprimerPersonnel(System::String^ idPersonnel) {

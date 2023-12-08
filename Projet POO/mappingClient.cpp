@@ -3,18 +3,12 @@
 using namespace System;
 using namespace NS_composants;
 
-Void mappingClient::creerClient(String^ nom, String^ prenom, String^ naissance) {
-	if (nom->Length == 0 || prenom->Length == 0 || naissance->Length == 0) throw gcnew Exception("Entree incorrecte");
-	this->request = "EXEC InsereNouveauClient @Nom = '" + nom + "', @Prenom = '" + prenom + "', @DateNaissance = '" + naissance + "'; ";
-	Console::WriteLine(request);
-}
-
-Void mappingClient::creerClient(String^ nom, String^ prenom, String^ naissance, String^ adresse) {
-	if (nom->Length == 0 || prenom->Length == 0 || naissance->Length == 0 || adresse->Length == 0) 
+Void mappingClient::creerClient(String^ nom, String^ prenom, String^ naissance, String^ nRue, String^ nomRue, String^ idVille) {
+	if (nom->Length == 0 || prenom->Length == 0 || naissance->Length == 0 || nRue->Length == 0) 
 		throw gcnew Exception("Entree incorrecte");
 	this->request = "EXEC InsererNouveauClientAvecAdresse @Nom = '" + nom
 		+ "', @Prenom = '" + prenom + "', @DateNaissance = '" + naissance
-		+ "', @Adresse = '" + adresse + "'";
+		+ "', @NumeroAdresse = " + nRue + ", @NomRue = '" + nomRue + "', @F_ou_L = 0, @IdVille = " + idVille;
 	Console::WriteLine(request);
 }
 

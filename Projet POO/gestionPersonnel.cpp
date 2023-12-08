@@ -10,9 +10,9 @@ gestionPersonnel::gestionPersonnel(Void) {
 	this->personnelTableMap = gcnew mappingPersonnel;
 }
 
-System::Int64 NS_services::gestionPersonnel::createPersonnel(String^ nom, String^ prenom, String^ adresse, 
-	String^ idSuperieur, String^ dateEmbauche){
-	this->personnelTableMap->creerPersonnel(nom, prenom, adresse, idSuperieur, dateEmbauche);
+System::Int64 NS_services::gestionPersonnel::createPersonnel(String^ nom, String^ prenom, String^ numRue, 
+	String^ nomRue, String^ idVille, String^ idSuperieur, String^ dateEmbauche){
+	this->personnelTableMap->creerPersonnel(nom, prenom, numRue, nomRue, idVille, idSuperieur, dateEmbauche);
 	DataSet^ result = this->personnelTableMap->executeRequest();
 	if (!this->verifyErrorCode(result)) {
 		return -1;
@@ -29,8 +29,9 @@ System::Boolean NS_services::gestionPersonnel::modifyPersonnel(String^ idPersonn
 	return this->verifyErrorCode(result);
 }
 
-System::Boolean NS_services::gestionPersonnel::modifierAdressePersonnel(System::String^ idPersonnel, System::String^ Adresse){
-	this->personnelTableMap->modifierAdresse(idPersonnel, Adresse);
+System::Boolean NS_services::gestionPersonnel::modifierAdressePersonnel(System::String^ idPersonnel, System::String^ numRue,
+	System::String^ nomRue, System::String^ idVille){
+	this->personnelTableMap->modifierAdresse(idPersonnel, numRue, nomRue, idVille);
 	DataSet^ result = this->personnelTableMap->executeRequest();
 	return this->verifyErrorCode(result);
 }

@@ -8,8 +8,7 @@ NS_composants::Articles::Articles()
 	this->tva = -1.0;
 }
 
-void NS_composants::Articles::setidArticles(int id)
-{
+void NS_composants::Articles::setidArticles(int id){
 	this->idArticles = id;
 }
 

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "CL_CAD.h"
+
 namespace NS_composants {
 	ref class CL_Com_mapping {
 	public: 
