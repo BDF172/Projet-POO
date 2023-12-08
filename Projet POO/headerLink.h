@@ -1,7 +1,5 @@
 #pragma once
 
-#include <vector>
-
 #include "CL_CAD.h"
 #include "Articles.h"
 #include "Client.h"

@@ -6,7 +6,9 @@ CREATE PROCEDURE InsererNouveauPersonnel
     @Prenom varchar(50),
     @IdSuperieur int,
 	@DateEmbauche varchar(50),
-	@Adresse varchar(100)
+	@NumeroRue INT,
+	@NomRue VARCHAR(100),
+	@IdVille INT
 AS
 BEGIN
     -- Déclarez une variable pour stocker l'ID du nouveau client
@@ -18,14 +20,14 @@ BEGIN
 
     BEGIN TRY
         -- Insérez le nouveau client dans la table Clients
-        INSERT INTO Personnel(nom, prenom, date_embauche,superieur)
+        INSERT INTO Personnel(nom_personnel, prenom_personnel, date_embauche,id_superieur)
         VALUES (@Nom, @Prenom, @DateEmbauche, @IdSuperieur);
 		
 		-- Récupérez l'ID du nouveau client après la validation de la transaction
         SET @NouveauPersonnelID = SCOPE_IDENTITY();
 
-		INSERT INTO AdressesP(adresse, Villeid_ville, Personnelid_personnel)
-		VALUES(@Adresse, 1, @NouveauPersonnelID);
+		INSERT INTO AdressesP(numero_adresse_P, nom_rue_P, id_ville, id_personnel)
+		VALUES(@NumeroRue, @NomRue, @IdVille, @NouveauPersonnelID);
 
         -- Valider la transaction
         COMMIT;

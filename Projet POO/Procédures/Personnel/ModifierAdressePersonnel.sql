@@ -1,9 +1,11 @@
 USE POO;
 GO
 
-ALTER PROCEDURE ModifierAdressePersonnel
+CREATE PROCEDURE ModifierAdressePersonnel
 	@IdPersonnel int,
-    @Adresse varchar(50)
+    @NumeroRue INT,
+	@NomRue varchar(50),
+	@IdVille INT
 AS
 BEGIN
 
@@ -12,15 +14,18 @@ BEGIN
 
     BEGIN TRY
         -- Insérez le nouveau client dans la table Clients
-		IF EXISTS (SELECT 1 FROM AdressesP WHERE Personnelid_personnel = @IdPersonnel)
+		IF EXISTS (SELECT 1 FROM AdressesP WHERE id_personnel = @IdPersonnel)
 		BEGIN
-        UPDATE AdressesP SET adresse = @Adresse 
-		WHERE Personnelid_personnel = @IdPersonnel;
+        UPDATE AdressesP 
+		SET numero_adresse_P = @NumeroRue,
+		nom_rue_P = @NomRue,
+		id_ville = @IdVille
+		WHERE id_personnel = @IdPersonnel;
 		END
 		ELSE
 		BEGIN
-		INSERT INTO AdressesP (adresse, Villeid_ville, Personnelid_personnel)
-		VALUES (@Adresse, 1, @IdPersonnel);
+		INSERT INTO AdressesP (numero_adresse_P, nom_rue_P, id_ville, id_personnel)
+		VALUES (@NumeroRue, @NomRue, @IdVille, @IdPersonnel);
 		END
 		SELECT 0;
 		COMMIT;
