@@ -156,6 +156,7 @@
     <ClInclude Include="mappingClient.h" />
     <ClInclude Include="headerLink.h" />
     <ClInclude Include="mappingCommandes.h" />
+    <ClInclude Include="mappingDemarrage.h" />
     <ClInclude Include="mappingPersonnel.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>

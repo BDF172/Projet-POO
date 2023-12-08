@@ -8,7 +8,7 @@ AS
 BEGIN
 	SELECT 0;
 
-	SELECT nom_client, prenom_client, date_naissance 
+	SELECT id_client
 	FROM Clients
 	WHERE nom_client LIKE '%' + @Nom + '%' AND prenom_client LIKE '%' + @Prenom + '%';
 END

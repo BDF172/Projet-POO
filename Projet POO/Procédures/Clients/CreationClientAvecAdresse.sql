@@ -5,7 +5,7 @@ CREATE PROCEDURE InsererNouveauClientAvecAdresse
     @Nom varchar(50),
     @Prenom varchar(50),
     @DateNaissance date,
-	@NumeroAdresse varchar(5),
+	@NumeroAdresse INT,
 	@NomRue varchar(100),
 	@F_ou_L bit,
 	@IdVille int
@@ -45,3 +45,12 @@ BEGIN
     -- Rétablir le niveau d'isolation par défaut
     SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 END;
+GO
+
+EXEC InsererNouveauClientAvecAdresse 
+@Nom = 'TRAGHA', 
+@Prenom = 'Ilias', 
+@DateNaissance = '2004-10-02', 
+@NumeroAdresse=39, 
+@NomRue = 'Rue de Bammeville', 
+@F_ou_L = 0, @IdVille = 1;

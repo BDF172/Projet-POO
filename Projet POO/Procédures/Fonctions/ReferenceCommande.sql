@@ -1,7 +1,7 @@
 USE POO;
 GO
 
-ALTER PROCEDURE GenererReferenceCommande
+CREATE PROCEDURE GenererReferenceCommande
     @CodeConcatene VARCHAR(20) OUTPUT,
 	@IdClient INT, 
 	@Increment NUMERIC
@@ -12,8 +12,8 @@ BEGIN
     DECLARE @Annee NVARCHAR(4);
 
     -- Exemple de valeurs à utiliser (remplacez-les par vos données réelles)
-    SELECT @PremieresLettres1 = SUBSTRING(nom, 1, 2) FROM Clients WHERE id_client = @IdClient;
-    SELECT @PremieresLettres2 = SUBSTRING(prenom, 1, 2) FROM Clients WHERE id_client = @IdClient;
+    SELECT @PremieresLettres1 = SUBSTRING(UPPER(nom_client), 1, 2) FROM Clients WHERE id_client = @IdClient;
+    SELECT @PremieresLettres2 = SUBSTRING(UPPER(prenom_client), 1, 2) FROM Clients WHERE id_client = @IdClient;
     SELECT @Annee = CONVERT(NVARCHAR(4), YEAR(GetDate()));
 
     -- Concaténation des valeurs
