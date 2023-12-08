@@ -122,6 +122,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ajouterArticle.cpp" />
     <ClCompile Include="Articles.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="CL_CAD.cpp" />
@@ -129,20 +130,27 @@
     <ClCompile Include="CL_Svc_gestion.cpp" />
     <ClCompile Include="Commande.cpp" />
     <ClCompile Include="gestionArticles.cpp" />
+    <ClCompile Include="gestionArticlesFormulaire.cpp" />
     <ClCompile Include="gestionClient.cpp" />
-    <ClCompile Include="GestionClientForm.cpp" />
+    <ClCompile Include="gestionClientFormulaire.cpp" />
+    <ClCompile Include="gestionCommandeFormulaire.cpp" />
     <ClCompile Include="gestionCommandes.cpp" />
     <ClCompile Include="gestionPersonnel.cpp" />
+    <ClCompile Include="gestionPersonnelFormulaire1.cpp" />
+    <ClCompile Include="gestionStatFormulaire.cpp" />
+    <ClCompile Include="mainFormulaire1.cpp" />
     <ClCompile Include="mappingArticles.cpp" />
     <ClCompile Include="mappingClient.cpp" />
     <ClCompile Include="mappingCommandes.cpp" />
     <ClCompile Include="mappingPersonnel.cpp" />
-    <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Personnel.cpp" />
-    <ClCompile Include="principal.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="supprimerArticle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ajouterArticle.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Articles.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="CL_CAD.h" />
@@ -150,36 +158,37 @@
     <ClInclude Include="CL_Svc_gestion.h" />
     <ClInclude Include="Commande.h" />
     <ClInclude Include="gestionArticles.h" />
+    <ClInclude Include="gestionArticlesFormulaire.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="gestionClient.h" />
-    <ClInclude Include="GestionClientForm.h">
+    <ClInclude Include="gestionClientFormulaire.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="gestionCommandeFormulaire.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="gestionCommandes.h" />
     <ClInclude Include="gestionPersonnel.h" />
+    <ClInclude Include="gestionPersonnelFormulaire1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="gestionStatFormulaire.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="mainFormulaire1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="mappingArticles.h" />
     <ClInclude Include="mappingClient.h" />
     <ClInclude Include="headerLink.h" />
     <ClInclude Include="mappingCommandes.h" />
     <ClInclude Include="mappingPersonnel.h" />
-    <ClInclude Include="MyForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="Personnel.h" />
-    <ClInclude Include="principal.h">
+    <ClInclude Include="statsMapping.h" />
+    <ClInclude Include="supprimerArticle.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="statsMapping.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GestionClientForm.resx">
-      <DependentUpon>GestionClientForm.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyForm.resx">
-      <DependentUpon>MyForm.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="principal.resx">
-      <DependentUpon>principal.h</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

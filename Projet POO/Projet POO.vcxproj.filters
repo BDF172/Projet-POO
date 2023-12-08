@@ -46,6 +46,12 @@
     <Filter Include="Fichiers sources\Composants\objets">
       <UniqueIdentifier>{020cfc21-cf6b-40b0-b249-4031e6a6f9e4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\Composants\Forms">
+      <UniqueIdentifier>{7aa16352-a8d9-4e7d-8954-fc626be0f63c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Forms">
+      <UniqueIdentifier>{bb4180be-df93-429e-944f-fbb9e0b41518}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CL_CAD.cpp">
@@ -56,9 +62,6 @@
     </ClCompile>
     <ClCompile Include="mappingClient.cpp">
       <Filter>Fichiers sources\Composants\héritage mapping</Filter>
-    </ClCompile>
-    <ClCompile Include="principal.cpp">
-      <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="CL_Com_mapping.cpp">
       <Filter>Fichiers sources\Composants</Filter>
@@ -99,14 +102,29 @@
     <ClCompile Include="Articles.cpp">
       <Filter>Fichiers sources\Composants\objets</Filter>
     </ClCompile>
-    <ClCompile Include="MainFormulaire1.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="ajouterArticle.cpp">
+      <Filter>Fichiers sources\Composants\Forms</Filter>
     </ClCompile>
-    <ClCompile Include="MainFormulaire.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="gestionArticlesFormulaire.cpp">
+      <Filter>Fichiers sources\Composants\Forms</Filter>
     </ClCompile>
-    <ClCompile Include="GestionClientForm.cpp">
-      <Filter>Fichiers d%27en-tête\Services</Filter>
+    <ClCompile Include="gestionClientFormulaire.cpp">
+      <Filter>Fichiers sources\Composants\Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="gestionCommandeFormulaire.cpp">
+      <Filter>Fichiers sources\Composants\Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="gestionPersonnelFormulaire1.cpp">
+      <Filter>Fichiers sources\Composants\Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="gestionStatFormulaire.cpp">
+      <Filter>Fichiers sources\Composants\Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="mainFormulaire1.cpp">
+      <Filter>Fichiers sources\Composants\Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="supprimerArticle.cpp">
+      <Filter>Fichiers sources\Composants\Forms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -120,9 +138,6 @@
     <ClInclude Include="headerLink.h" />
     <ClInclude Include="statsMapping.h">
       <Filter>Fichiers d%27en-tête\Composants\stats</Filter>
-    </ClInclude>
-    <ClInclude Include="principal.h">
-      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="CL_Com_mapping.h">
       <Filter>Fichiers d%27en-tête\Composants</Filter>
@@ -166,14 +181,29 @@
     <ClInclude Include="Articles.h">
       <Filter>Fichiers d%27en-tête\Composants\objets</Filter>
     </ClInclude>
-    <ClInclude Include="GestionPersonnelFormulaire.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="ajouterArticle.h">
+      <Filter>Fichiers d%27en-tête\Forms</Filter>
     </ClInclude>
-    <ClInclude Include="MainFormulaire.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="gestionArticlesFormulaire.h">
+      <Filter>Fichiers d%27en-tête\Forms</Filter>
     </ClInclude>
-    <ClInclude Include="GestionClientForm.h">
-      <Filter>Fichiers d%27en-tête\Services</Filter>
+    <ClInclude Include="gestionClientFormulaire.h">
+      <Filter>Fichiers d%27en-tête\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="gestionCommandeFormulaire.h">
+      <Filter>Fichiers d%27en-tête\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="gestionPersonnelFormulaire1.h">
+      <Filter>Fichiers d%27en-tête\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="gestionStatFormulaire.h">
+      <Filter>Fichiers d%27en-tête\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="mainFormulaire1.h">
+      <Filter>Fichiers d%27en-tête\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="supprimerArticle.h">
+      <Filter>Fichiers d%27en-tête\Forms</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
