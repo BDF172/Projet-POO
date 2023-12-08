@@ -1,17 +1,18 @@
 #pragma once
+#include "Commande.h"
 
 namespace ProjetPOO {
 
-	using namespace System;
-	using namespace System::ComponentModel;
-	using namespace System::Collections;
-	using namespace System::Windows::Forms;
-	using namespace System::Data;
-	using namespace System::Drawing;
+    using namespace System;
+    using namespace System::ComponentModel;
+    using namespace System::Collections;
+    using namespace System::Windows::Forms;
+    using namespace System::Data;
+    using namespace System::Drawing;
 
-	/// <summary>
-	/// Description résumée de GestionCommandeFormulaire
-	/// </summary>
+    /// <summary>
+    /// Description résumée de GestionCommandeFormulaire
+    /// </summary>
     public ref class GestionCommandeFormulaire : public System::Windows::Forms::Form
     {
     public:
@@ -579,14 +580,15 @@ namespace ProjetPOO {
         commande.setMontantCommande(Convert::ToInt32(this->montantCommande->Text));
         commande.setMoyenPaiement(this->moyenPaiement->Text);
     }
-private: System::Void dateEmission_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+    private: System::Void dateEmission_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void reference_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void dateTimePicker1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void montantCommande_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void moyenPaiement_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    };
 }
-private: System::Void reference_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void dateTimePicker1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void montantCommande_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void moyenPaiement_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-};

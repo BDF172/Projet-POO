@@ -236,7 +236,7 @@ namespace ProjetPOO {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
 				static_cast<System::Int32>(static_cast<System::Byte>(41)));
-			this->ClientSize = System::Drawing::Size(1436, 1013);
+			this->ClientSize = System::Drawing::Size(1428, 1013);
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->panel1);
 			this->Name = L"supprimerArticle";

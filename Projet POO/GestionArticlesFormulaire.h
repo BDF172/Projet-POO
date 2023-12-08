@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Articles.h"
+
 namespace ProjetPOO {
 
 	using namespace System;

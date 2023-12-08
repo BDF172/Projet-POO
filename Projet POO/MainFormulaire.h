@@ -1,6 +1,10 @@
 #pragma once
 
-#include "headerLink.h"
+#include "GestionPersonnelFormulaire.h"
+#include "GestionArticlesFormulaire.h"
+#include "gestionClientFormulaire.h"
+#include "GestionCommandeFormulaire.h"
+#include "GestionStatFormulaire.h"
 
 namespace ProjetPOO {
 
@@ -172,7 +176,7 @@ namespace ProjetPOO {
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
-		FormulaireGestionPersonnel toOpenClient;
+		ProjetPOO::FormulaireGestionPersonnel toOpenClient;
 		toOpenClient.ShowDialog();
 		this->Show();
 	}

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "CLient.h"
+
 namespace ProjetPOO {
 
 	using namespace System;
