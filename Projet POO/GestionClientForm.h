@@ -1,5 +1,4 @@
 #pragma once
-#include "headerLink.h"
 
 namespace ProjetPOO {
 
@@ -11,7 +10,7 @@ namespace ProjetPOO {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de GestionClientForm
+	/// Description rÃ©sumÃ©e de GestionClientForm
 	/// </summary>
 	public ref class GestionClientForm : public System::Windows::Forms::Form
 	{
@@ -26,7 +25,7 @@ namespace ProjetPOO {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisÃ©es.
 		/// </summary>
 		~GestionClientForm()
 		{
@@ -114,19 +113,28 @@ namespace ProjetPOO {
 
 
 
+
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nÃ©cessaire au concepteur.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// MÃ©thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mÃ©thode avec l'Ã©diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = gcnew System::ComponentModel::Container();
+			this->Size = System::Drawing::Size(300,300);
+			this->Text = L"GestionClientForm";
+			this->Padding = System::Windows::Forms::Padding(0);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+		}
+#pragma endregion
+	};
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
@@ -372,7 +380,7 @@ namespace ProjetPOO {
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(105, 33);
 			this->label13->TabIndex = 49;
-			this->label13->Text = L"Prénom";
+			this->label13->Text = L"PrÃ©nom";
 			// 
 			// label7
 			// 
@@ -420,7 +428,7 @@ namespace ProjetPOO {
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(255, 33);
 			this->label6->TabIndex = 57;
-			this->label6->Text = L"Rue et n° de rue";
+			this->label6->Text = L"Rue et nÂ° de rue";
 			// 
 			// dateTimePicker_personnel
 			// 
@@ -454,7 +462,7 @@ namespace ProjetPOO {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(228, 204);
 			this->button1->TabIndex = 86;
-			this->button1->Text = L"Créer Client";
+			this->button1->Text = L"CrÃ©er Client";
 			this->button1->UseVisualStyleBackColor = false;
 			// 
 			// GestionClientForm

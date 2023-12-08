@@ -45,5 +45,5 @@ Void CL_CAD::actionRows(String^ sqlRequest) {
     finally {
         if (this->connToDB->State == ConnectionState::Open)
             this->connToDB->Close();
-    }
+     }
 }

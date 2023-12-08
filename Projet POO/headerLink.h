@@ -1,5 +1,5 @@
 #pragma once
-	
+
 #include "CL_CAD.h"
 #include "Articles.h"
 #include "Client.h"
@@ -15,5 +15,12 @@
 #include "gestionArticles.h"
 #include "mappingCommandes.h"
 #include "gestionCommandes.h"
+#include "GestionPersonnelFormulaire.h"
+#include "GestionClientFormulaire.h"
+#include "GestionCommandeFormulaire.h"
+#include "GestionStatFormulaire.h"
+#include "GestionArticlesFormulaire.h"
+#include "principal.h"
+#include "MainFormulaire.h"
 #include "MyForm.h"
 #include "GestionClientForm.h"
