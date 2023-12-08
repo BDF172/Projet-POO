@@ -1,7 +1,7 @@
 USE POO;
 GO
 
-ALTER PROCEDURE SupprimerClient
+CREATE PROCEDURE SupprimerClient
 	@IdClient int
 AS
 BEGIN

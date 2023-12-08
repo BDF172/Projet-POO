@@ -26,3 +26,8 @@ System::Void NS_composants::mappingPersonnel::supprimerPersonnel(System::String^
 System::Void mappingPersonnel::obtenirPersonnel(String^ idPersonnel) {
 	this->request = "EXEC ObtenirPersonnel @IdPersonnel = " + idPersonnel + ";";
 }
+
+System::Void mappingPersonnel::rechercherPersonnel(String^ nom, String^ prenom) {
+	this->request = "EXEC RecherchePersonnel @Nom = '"
+		+ nom + "', @Prenom = '" + prenom + "';";
+}

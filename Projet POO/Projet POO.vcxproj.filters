@@ -169,6 +169,9 @@
     <ClInclude Include="GestionPersonnelFormulaire.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="mappingDemarrage.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage mapping</Filter>
+    </ClInclude>
     <ClInclude Include="MainFormulaire.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
