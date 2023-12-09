@@ -2,9 +2,11 @@
 
 namespace NS_composants {
 	typedef ref struct articles {
-		System::Int64 idArticle;
-		System::Int64 quantite;
-		System::Int64 idEntrepot;
+		System::String^ idArticle;
+		System::String^ quantite;
+		System::String^ nom;
+		System::String^ idEntrepot;
+		System::String^ prix;
 		articles^ suivant;
 	} articles;
 

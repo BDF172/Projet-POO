@@ -1,6 +1,8 @@
 #pragma once
 
 #include "gestionArticlesFormulaire.h"
+#include "gestionCommandes.h"
+#include "gestionArticles.h"
 
 namespace ProjetPOO {
 
@@ -38,16 +40,20 @@ namespace ProjetPOO {
 		}
 	private: System::Windows::Forms::Panel^ panel1;
 	protected:
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::TextBox^ textBox2;
+
+
+
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ quantiteTextBox;
+
 
 	private: System::Windows::Forms::Label^ label15;
-	private: System::Windows::Forms::TextBox^ textBox7;
+	private: System::Windows::Forms::TextBox^ idTextBox;
+
 	private: System::Windows::Forms::Button^ button_valider;
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::TextBox^ rechercheTextBox;
+
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::RichTextBox^ richTextBox1;
 
@@ -73,14 +79,12 @@ namespace ProjetPOO {
 		{
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->rechercheTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->quantiteTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->label15 = (gcnew System::Windows::Forms::Label());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
+			this->idTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->button_valider = (gcnew System::Windows::Forms::Button());
 			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->panel1->SuspendLayout();
@@ -89,18 +93,17 @@ namespace ProjetPOO {
 			// panel1
 			// 
 			this->panel1->Controls->Add(this->label3);
-			this->panel1->Controls->Add(this->textBox3);
-			this->panel1->Controls->Add(this->label2);
-			this->panel1->Controls->Add(this->textBox2);
+			this->panel1->Controls->Add(this->rechercheTextBox);
 			this->panel1->Controls->Add(this->label1);
-			this->panel1->Controls->Add(this->textBox1);
+			this->panel1->Controls->Add(this->quantiteTextBox);
 			this->panel1->Controls->Add(this->button5);
 			this->panel1->Controls->Add(this->label15);
-			this->panel1->Controls->Add(this->textBox7);
+			this->panel1->Controls->Add(this->idTextBox);
 			this->panel1->Controls->Add(this->button_valider);
-			this->panel1->Location = System::Drawing::Point(958, 23);
+			this->panel1->Location = System::Drawing::Point(1171, 28);
+			this->panel1->Margin = System::Windows::Forms::Padding(4);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(502, 946);
+			this->panel1->Size = System::Drawing::Size(614, 1135);
 			this->panel1->TabIndex = 107;
 			// 
 			// label3
@@ -110,48 +113,25 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label3->Location = System::Drawing::Point(22, 534);
+			this->label3->Location = System::Drawing::Point(27, 139);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(285, 33);
+			this->label3->Size = System::Drawing::Size(341, 38);
 			this->label3->TabIndex = 105;
 			this->label3->Text = L"Rechercher Article";
 			// 
-			// textBox3
+			// rechercheTextBox
 			// 
-			this->textBox3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
+			this->rechercheTextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
 				static_cast<System::Int32>(static_cast<System::Byte>(41)));
-			this->textBox3->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->textBox3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->textBox3->Location = System::Drawing::Point(17, 589);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(460, 26);
-			this->textBox3->TabIndex = 104;
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label2->Location = System::Drawing::Point(22, 252);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(300, 33);
-			this->label2->TabIndex = 103;
-			this->label2->Text = L"Nature de l\'article";
-			// 
-			// textBox2
-			// 
-			this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
-				static_cast<System::Int32>(static_cast<System::Byte>(41)));
-			this->textBox2->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->textBox2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->textBox2->Location = System::Drawing::Point(17, 307);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(460, 26);
-			this->textBox2->TabIndex = 102;
+			this->rechercheTextBox->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->rechercheTextBox->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(188)), static_cast<System::Int32>(static_cast<System::Byte>(251)));
+			this->rechercheTextBox->Location = System::Drawing::Point(21, 205);
+			this->rechercheTextBox->Margin = System::Windows::Forms::Padding(4);
+			this->rechercheTextBox->Name = L"rechercheTextBox";
+			this->rechercheTextBox->Size = System::Drawing::Size(561, 29);
+			this->rechercheTextBox->TabIndex = 104;
 			// 
 			// label1
 			// 
@@ -160,23 +140,25 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label1->Location = System::Drawing::Point(22, 127);
+			this->label1->Location = System::Drawing::Point(27, 475);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(285, 33);
+			this->label1->Size = System::Drawing::Size(341, 38);
 			this->label1->TabIndex = 101;
 			this->label1->Text = L"Quantité à ajouter";
 			// 
-			// textBox1
+			// quantiteTextBox
 			// 
-			this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
+			this->quantiteTextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
 				static_cast<System::Int32>(static_cast<System::Byte>(41)));
-			this->textBox1->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->textBox1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
+			this->quantiteTextBox->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->quantiteTextBox->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->textBox1->Location = System::Drawing::Point(17, 182);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(460, 26);
-			this->textBox1->TabIndex = 100;
+			this->quantiteTextBox->Location = System::Drawing::Point(21, 541);
+			this->quantiteTextBox->Margin = System::Windows::Forms::Padding(4);
+			this->quantiteTextBox->Name = L"quantiteTextBox";
+			this->quantiteTextBox->Size = System::Drawing::Size(561, 29);
+			this->quantiteTextBox->TabIndex = 100;
 			// 
 			// button5
 			// 
@@ -190,10 +172,10 @@ namespace ProjetPOO {
 			this->button5->Font = (gcnew System::Drawing::Font(L"Consolas", 15, System::Drawing::FontStyle::Bold));
 			this->button5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->button5->Location = System::Drawing::Point(352, 0);
+			this->button5->Location = System::Drawing::Point(430, 0);
 			this->button5->Margin = System::Windows::Forms::Padding(0);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(136, 53);
+			this->button5->Size = System::Drawing::Size(166, 64);
 			this->button5->TabIndex = 99;
 			this->button5->Text = L"Retour";
 			this->button5->UseVisualStyleBackColor = false;
@@ -206,23 +188,25 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label15->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label15->Location = System::Drawing::Point(22, 20);
+			this->label15->Location = System::Drawing::Point(27, 347);
+			this->label15->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(165, 33);
+			this->label15->Size = System::Drawing::Size(197, 38);
 			this->label15->TabIndex = 64;
 			this->label15->Text = L"ID Article";
 			// 
-			// textBox7
+			// idTextBox
 			// 
-			this->textBox7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
+			this->idTextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
 				static_cast<System::Int32>(static_cast<System::Byte>(41)));
-			this->textBox7->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->textBox7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
+			this->idTextBox->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->idTextBox->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->textBox7->Location = System::Drawing::Point(17, 75);
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(460, 26);
-			this->textBox7->TabIndex = 63;
+			this->idTextBox->Location = System::Drawing::Point(21, 413);
+			this->idTextBox->Margin = System::Windows::Forms::Padding(4);
+			this->idTextBox->Name = L"idTextBox";
+			this->idTextBox->Size = System::Drawing::Size(561, 29);
+			this->idTextBox->TabIndex = 63;
 			// 
 			// button_valider
 			// 
@@ -236,12 +220,14 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->button_valider->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->button_valider->Location = System::Drawing::Point(10, 852);
+			this->button_valider->Location = System::Drawing::Point(14, 811);
+			this->button_valider->Margin = System::Windows::Forms::Padding(4);
 			this->button_valider->Name = L"button_valider";
-			this->button_valider->Size = System::Drawing::Size(465, 80);
+			this->button_valider->Size = System::Drawing::Size(568, 96);
 			this->button_valider->TabIndex = 62;
 			this->button_valider->Text = L"Valider";
 			this->button_valider->UseVisualStyleBackColor = false;
+			this->button_valider->Click += gcnew System::EventHandler(this, &ajouterArticle::button_valider_Click);
 			// 
 			// richTextBox1
 			// 
@@ -251,31 +237,58 @@ namespace ProjetPOO {
 			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->richTextBox1->ForeColor = System::Drawing::Color::White;
-			this->richTextBox1->Location = System::Drawing::Point(87, 23);
+			this->richTextBox1->Location = System::Drawing::Point(106, 28);
+			this->richTextBox1->Margin = System::Windows::Forms::Padding(4);
 			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(758, 932);
+			this->richTextBox1->Size = System::Drawing::Size(926, 1118);
 			this->richTextBox1->TabIndex = 112;
 			this->richTextBox1->Text = L"";
 			// 
 			// ajouterArticle
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(11, 24);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
 				static_cast<System::Int32>(static_cast<System::Byte>(41)));
-			this->ClientSize = System::Drawing::Size(1489, 995);
+			this->ClientSize = System::Drawing::Size(1820, 1194);
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->panel1);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"ajouterArticle";
 			this->Text = L"ajouterArticle";
+			this->Load += gcnew System::EventHandler(this, &ajouterArticle::ajouterArticle_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+	public:
+		property NS_composants::articles^ choixUtilisateur;
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
+private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (this->idTextBox->Text == "" || this->quantiteTextBox->Text == "") {
+		MessageBox::Show("Veuillez remplir les champs nécessaires");
+		return;
+	}
+	NS_services::gestionArticles^ gestionDesArticles = gcnew NS_services::gestionArticles;
+	NS_composants::Articles^ articleChoisi = gestionDesArticles->obtenirArticle(this->idTextBox->Text);
+	if (articleChoisi == nullptr) {
+		MessageBox::Show("Article non trouvé");
+		return;
+	}
+	this->choixUtilisateur = gcnew NS_composants::articles;
+	this->choixUtilisateur->idEntrepot = "1";
+	this->choixUtilisateur->idArticle = articleChoisi->getidArticles();;
+	this->choixUtilisateur->quantite = this->quantiteTextBox->Text;
+	this->choixUtilisateur->nom = articleChoisi->getNom();
+	this->choixUtilisateur->prix = (articleChoisi->getPrix() * Convert::ToInt64(this->quantiteTextBox->Text)).ToString();
+	this->Close();
+}
+private: System::Void ajouterArticle_Load(System::Object^ sender, System::EventArgs^ e) {
+	this->choixUtilisateur = nullptr;
+}
 };
 }

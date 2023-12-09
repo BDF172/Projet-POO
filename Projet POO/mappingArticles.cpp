@@ -3,6 +3,10 @@
 using namespace NS_composants;
 using namespace System;
 
+Void mappingArticles::obtenirArticle(String^ idArticle) {
+	this->request = "EXEC ObtenirArticle @IdArticle = " + idArticle;
+}
+
 Void mappingArticles::ajouterArticle(String^ nom, String^ prix, String^ IdTVA, String^ seuilReappro, 
 	String^ cout, String^ stock) {
 	this->request = "EXEC CreerArticle @NomArticle = '" + nom

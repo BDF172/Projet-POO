@@ -132,6 +132,9 @@
     <ClCompile Include="gestionValeurs.cpp">
       <Filter>Fichiers sources\Services\héritage gestion</Filter>
     </ClCompile>
+    <ClCompile Include="fonctions.cpp">
+      <Filter>Fichiers sources\Services</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headerLink.h">
@@ -216,6 +219,9 @@
     </ClInclude>
     <ClInclude Include="gestionValeurs.h">
       <Filter>Fichiers d%27en-tête\Services\héritage gestion</Filter>
+    </ClInclude>
+    <ClInclude Include="fonctions.h">
+      <Filter>Fichiers d%27en-tête\Services</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -9,17 +9,18 @@ gestionCommandes::gestionCommandes(Void) {
 	this->commandesTableAccess = gcnew mappingCommandes;
 }
 
-Int64 gestionCommandes::creerCommande(String^ idClient, articles^ articlesChoisis, String^ idAdresseL, String^ idAdresseF){
+String^ gestionCommandes::creerCommande(String^ idClient, articles^ articlesChoisis, String^ idAdresseL, String^ idAdresseF){
 	this->commandesTableAccess->creerCommande(idClient, idAdresseL, idAdresseF);
 	DataSet^ result = this->commandesTableAccess->executeRequest();
 	if (!this->verifyErrorCode(result)) {
-		Console::WriteLine("Erreur facturation");
-		return -1;
+		Console::WriteLine("Erreur adresses");
+		return nullptr;
 	}
-	Int64 toReturn = Convert::ToInt64(result->Tables[1]->Rows[0][0]);
-	this->commandesTableAccess->ajouterArticlesCommande(Convert::ToString(toReturn), articlesChoisis);
+	String^ toReturn = Convert::ToString(result->Tables[1]->Rows[0][0]);
+	this->commandesTableAccess->ajouterArticlesCommande(toReturn, articlesChoisis);
 	result = this->commandesTableAccess->executeRequest();
-	if (!this->verifyErrorCode(result)) return -1;
+	if (!this->verifyErrorCode(result)) return nullptr;
+	toReturn = Convert::ToString(result->Tables[1]->Rows[0][0]);
 	return toReturn;
 }
 

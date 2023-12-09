@@ -1,7 +1,7 @@
 USE POO;
 GO
 
-CREATE PROCEDURE AjouterArticleCommande
+ALTER PROCEDURE AjouterArticleCommande
 	@IdCommande INT,
 	@IdArticle INT,
 	@Quantite INT,
@@ -20,7 +20,6 @@ BEGIN
 				LEFT JOIN TVA ON prix.id_TVA = TVA.id_TVA
 				WHERE id_article = @IdArticle
 			) WHERE id_commandes = @IdCommande;
-			SELECT 0;
 			COMMIT;
 		END TRY
 		BEGIN CATCH

@@ -20,11 +20,12 @@ BEGIN
 			BEGIN
 				UPDATE Commandes SET est_complete = 1
 				WHERE id_commandes = @IdCommande;
-				SELECT 0;
 				IF EXISTS(SELECT 1 FROM Clients WHERE DATEADD(DAY, 14, CAST(GETDATE() AS DATE)) = date_naissance AND id_client = @IdClient)
 					BEGIN
 						UPDATE Commandes SET montant_commande = 0.85*montant_commande WHERE id_commandes = @IdCommande;
 					END
+				SELECT 0;
+				SELECT reference_commande FROM Commandes WHERE id_commandes = @IdCommande;
 			END;
 			COMMIT;
 		END TRY

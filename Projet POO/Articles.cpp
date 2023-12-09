@@ -2,13 +2,13 @@
 
 NS_composants::Articles::Articles()
 {
-	this->idArticles = 0;
+	this->idArticles = "-1";
 	this->nom = "";
 	this->prix = -1.0;
 	this->tva = -1.0;
 }
 
-void NS_composants::Articles::setidArticles(int id){
+void NS_composants::Articles::setidArticles(String^ id){
 	this->idArticles = id;
 }
 
@@ -42,7 +42,7 @@ float NS_composants::Articles::getCout()
 	return this->cout;
 }
 
-int NS_composants::Articles::getidArticles()
+String^ NS_composants::Articles::getidArticles()
 {
 	return this->idArticles;
 }

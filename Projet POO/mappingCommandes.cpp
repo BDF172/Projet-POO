@@ -14,8 +14,8 @@ System::Void mappingCommandes::ajouterArticlesCommande(String^ idCommande, artic
 	this->request = "";
 	while (articlesToAdd != nullptr) {
 		this->request += "EXEC AjouterArticleCommande @IdCommande = " + idCommande
-			+ ", @IdArticle = " + articlesToAdd->idArticle.ToString() + ", @Quantite = "
-			+ articlesToAdd->quantite.ToString() + ", @IdEntrepot = " + articlesToAdd->idEntrepot.ToString()
+			+ ", @IdArticle = " + articlesToAdd->idArticle + ", @Quantite = "
+			+ articlesToAdd->quantite + ", @IdEntrepot = " + articlesToAdd->idEntrepot
 			+ "; ";
 		articlesToAdd = articlesToAdd->suivant;
 	}

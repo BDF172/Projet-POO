@@ -20,8 +20,11 @@ BEGIN
 		ELSE
 		BEGIN
 		DELETE FROM fait_reference WHERE id_commandes = (SELECT id_commandes FROM Commandes WHERE reference_commande = @reference)
+		DECLARE @ToRefund INT;
+		SET @ToRefund = (SELECT SUM(montant) FROM Paiements WHERE id_commandes = (SELECT id_commandes FROM Commandes WHERE reference_commande = @reference));
 		DELETE FROM Commandes WHERE reference_commande = @reference;
 		SELECT 0;
+		SELECT @ToRefund;
 		END;
 		COMMIT;
     END TRY
