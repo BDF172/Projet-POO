@@ -130,6 +130,7 @@
     <ClCompile Include="CL_Svc_gestion.cpp" />
     <ClCompile Include="Commande.cpp" />
     <ClCompile Include="fonctions.cpp" />
+    <ClCompile Include="gestionAdressesClients.cpp" />
     <ClCompile Include="gestionArticles.cpp" />
     <ClCompile Include="gestionArticlesFormulaire.cpp" />
     <ClCompile Include="gestionClient.cpp" />
@@ -161,6 +162,9 @@
     <ClInclude Include="CL_Svc_gestion.h" />
     <ClInclude Include="Commande.h" />
     <ClInclude Include="fonctions.h" />
+    <ClInclude Include="gestionAdressesClients.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="gestionArticles.h" />
     <ClInclude Include="gestionArticlesFormulaire.h">
       <FileType>CppForm</FileType>
@@ -199,6 +203,9 @@
   <ItemGroup>
     <EmbeddedResource Include="ajouterArticle.resx">
       <DependentUpon>ajouterArticle.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gestionAdressesClients.resx">
+      <DependentUpon>gestionAdressesClients.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gestionArticlesFormulaire.resx">
       <DependentUpon>gestionArticlesFormulaire.h</DependentUpon>
