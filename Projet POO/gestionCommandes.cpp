@@ -43,3 +43,4 @@ Boolean gestionCommandes::payerMontantRestant(String^ idCommande, String^ moyen)
 	if (!this->verifyErrorCode(result))return false;
 	return true;
 }
+

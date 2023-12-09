@@ -500,6 +500,7 @@ namespace ProjetPOO {
 		this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
 		this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
 		this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+		this->choixFonction = 'M';
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
@@ -511,6 +512,7 @@ namespace ProjetPOO {
 		this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
 		this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
 		this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+		this->choixFonction = 'S';
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->richTextBox1->Text = " " + this->button4->Text;
@@ -524,11 +526,13 @@ namespace ProjetPOO {
 		this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
 	}
 	private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
+		Int64 resultID;
 		switch (this->choixFonction) {
 		case 'N':
 			MessageBox::Show("Veuillez sélectionner une action");
+			break;
 		case 'C':
-			Int64 resultID = this->gestionDesArticles->ajouterArticle(
+			resultID = this->gestionDesArticles->ajouterArticle(
 				this->nomTextBox->Text,
 				this->prixTextBox->Text,
 				this->DicoTVA[this->tvaComboBox->Text],
@@ -541,6 +545,26 @@ namespace ProjetPOO {
 			else {
 				this->idTextBox->Text = resultID.ToString();
 			}
+			break;
+		case 'S':
+			if (this->gestionDesArticles->supprimerArticle(this->idTextBox->Text))
+				MessageBox::Show("L'article a bien été supprimé");
+			else 
+				MessageBox::Show("Echec de la suppression");
+		case 'M' :
+			if (this->gestionDesArticles->modifierArticle(
+				this->idTextBox->Text,
+				this->nomTextBox->Text,
+				this->prixTextBox->Text,
+				this->DicoTVA[this->tvaComboBox->Text],
+				this->seuilTextBox->Text,
+				this->coutTextBox->Text,
+				"0"
+			))
+				MessageBox::Show("Modification réussie");
+			else
+				MessageBox::Show("Echec de la modification");
+			
 		}
 	}
 	private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
