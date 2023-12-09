@@ -88,7 +88,7 @@ CREATE TABLE stock(
 CREATE TABLE prix(
    id_prix INT IDENTITY(1,1) NOT NULL,
    prix REAL,
-   dateAjout DATE,
+   dateAjout DATETIME,
    prixHT REAL,
    cout REAL,
    id_article INT NOT NULL,

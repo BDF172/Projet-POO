@@ -6,7 +6,8 @@ CREATE PROCEDURE CreerArticle
 	@PrixArticle INT, 
 	@IdTva INT,
 	@SeuilReappro INT, 
-	@Cout FLOAT
+	@Cout FLOAT,
+	@Stock INT
 
 AS
 BEGIN
@@ -29,7 +30,7 @@ BEGIN
 		VALUES (@PrixArticle, GETDATE(), @PrixArticle, @Cout, @NouvelArticle, @IdTva);
 
 		INSERT INTO stock (seuil_reappro, quantiteVendue, Id_Entrepot, id_article, quantite_stock)
-		VALUES (@SeuilReappro, 0, 1, @NouvelArticle, 0);
+		VALUES (@SeuilReappro, 0, 1, @NouvelArticle, @Stock);
 
         -- Valider la transaction
         COMMIT;
@@ -54,11 +55,13 @@ EXEC CreerArticle
 	@PrixArticle = 10, 
 	@IdTva = 1,
 	@SeuilReappro = 100, 
-	@Cout = 10;
+	@Cout = 10,
+	@Stock = 1000;
 
 EXEC CreerArticle
 @NomArticle = 'Article 2',
 	@PrixArticle = 20, 
 	@IdTva = 2,
 	@SeuilReappro = 100, 
-	@Cout = 5;
+	@Cout = 5, 
+	@Stock = 1000;

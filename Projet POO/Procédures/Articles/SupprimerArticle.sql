@@ -11,7 +11,7 @@ BEGIN
     SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
     BEGIN TRANSACTION;
 
-    --BEGIN TRY
+    BEGIN TRY
         IF NOT EXISTS 
 		(SELECT 1 FROM Articles WHERE id_article = @IdArticle)
 			BEGIN
@@ -26,12 +26,12 @@ BEGIN
 				SELECT 0;
 			END;
 		COMMIT;
-    --END TRY
-    --BEGIN CATCH
-    --    -- En cas d'erreur, annuler la transaction
-	--	SELECT 1;
-    --    ROLLBACK;
-    --END CATCH;
+    END TRY
+    BEGIN CATCH
+        -- En cas d'erreur, annuler la transaction
+		SELECT 1;
+        ROLLBACK;
+    END CATCH;
 
     -- Rétablir le niveau d'isolation par défaut
     SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
