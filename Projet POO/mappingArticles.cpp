@@ -7,6 +7,10 @@ Void mappingArticles::obtenirArticle(String^ idArticle) {
 	this->request = "EXEC ObtenirArticle @IdArticle = " + idArticle;
 }
 
+System::Void NS_composants::mappingArticles::chercherArticle(System::String^ nomArticle){
+	this->request = "EXEC RechercherArticle @NomArticle = '" + nomArticle + "';";
+}
+
 Void mappingArticles::ajouterArticle(String^ nom, String^ prix, String^ IdTVA, String^ seuilReappro, 
 	String^ cout, String^ stock) {
 	this->request = "EXEC CreerArticle @NomArticle = '" + nom

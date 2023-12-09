@@ -103,6 +103,7 @@ CREATE TABLE AdressesC(
    numero_adresse_C INT NOT NULL,
    nom_rue_C VARCHAR(50),
    f_ou_l BIT,
+   is_listed BIT,
    id_ville INT NOT NULL,
    id_client INT NOT NULL,
    PRIMARY KEY(id_adresseC),

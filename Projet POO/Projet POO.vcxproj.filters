@@ -136,7 +136,7 @@
       <Filter>Fichiers sources\Services</Filter>
     </ClCompile>
     <ClCompile Include="gestionAdressesClients.cpp">
-      <Filter>Fichiers d%27en-tête\Forms</Filter>
+      <Filter>Fichiers sources\Composants\Forms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

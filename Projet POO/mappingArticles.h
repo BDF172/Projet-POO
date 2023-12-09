@@ -7,6 +7,8 @@ namespace NS_composants{
 	public:
 		System::Void obtenirArticle(System::String^ idArticle);
 
+		System::Void chercherArticle(System::String^ nomArticle);
+
 		System::Void ajouterArticle(System::String^ nom, System::String^ prix, System::String^ prctTVA,
 			System::String^ seuilReappro, System::String^ cout, System::String^ stock);
 

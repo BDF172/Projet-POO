@@ -69,7 +69,8 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TextBox^ seuilTextBox;
 
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ stockTextBox;
+
 	private: System::Windows::Forms::Label^ label4;
 
 
@@ -91,6 +92,8 @@ namespace ProjetPOO {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->stockTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->coutTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->seuilTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -106,8 +109,6 @@ namespace ProjetPOO {
 			this->nomTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -120,9 +121,10 @@ namespace ProjetPOO {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Consolas", 18, System::Drawing::FontStyle::Bold));
 			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->button1->Location = System::Drawing::Point(26, 28);
+			this->button1->Location = System::Drawing::Point(17, 18);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(228, 204);
+			this->button1->Size = System::Drawing::Size(152, 133);
 			this->button1->TabIndex = 98;
 			this->button1->Text = L"Creer Article";
 			this->button1->UseVisualStyleBackColor = false;
@@ -139,9 +141,10 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->button4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(159)),
 				static_cast<System::Int32>(static_cast<System::Byte>(118)));
-			this->button4->Location = System::Drawing::Point(26, 747);
+			this->button4->Location = System::Drawing::Point(17, 486);
+			this->button4->Margin = System::Windows::Forms::Padding(2);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(228, 225);
+			this->button4->Size = System::Drawing::Size(152, 146);
 			this->button4->TabIndex = 103;
 			this->button4->Text = L"Afficher Article";
 			this->button4->UseVisualStyleBackColor = false;
@@ -159,9 +162,10 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(153)), static_cast<System::Int32>(static_cast<System::Byte>(209)),
 				static_cast<System::Int32>(static_cast<System::Byte>(219)));
-			this->button2->Location = System::Drawing::Point(26, 258);
+			this->button2->Location = System::Drawing::Point(17, 168);
+			this->button2->Margin = System::Windows::Forms::Padding(2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(228, 217);
+			this->button2->Size = System::Drawing::Size(152, 141);
 			this->button2->TabIndex = 99;
 			this->button2->Text = L"Modifier Article";
 			this->button2->UseVisualStyleBackColor = false;
@@ -178,9 +182,10 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(184)),
 				static_cast<System::Int32>(static_cast<System::Byte>(228)));
-			this->button3->Location = System::Drawing::Point(26, 505);
+			this->button3->Location = System::Drawing::Point(17, 328);
+			this->button3->Margin = System::Windows::Forms::Padding(2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(228, 218);
+			this->button3->Size = System::Drawing::Size(152, 142);
 			this->button3->TabIndex = 102;
 			this->button3->Text = L"Supprimer Article";
 			this->button3->UseVisualStyleBackColor = false;
@@ -188,7 +193,7 @@ namespace ProjetPOO {
 			// 
 			// panel1
 			// 
-			this->panel1->Controls->Add(this->textBox1);
+			this->panel1->Controls->Add(this->stockTextBox);
 			this->panel1->Controls->Add(this->label4);
 			this->panel1->Controls->Add(this->coutTextBox);
 			this->panel1->Controls->Add(this->label3);
@@ -204,10 +209,38 @@ namespace ProjetPOO {
 			this->panel1->Controls->Add(this->label14);
 			this->panel1->Controls->Add(this->nomTextBox);
 			this->panel1->Controls->Add(this->label13);
-			this->panel1->Location = System::Drawing::Point(1120, 26);
+			this->panel1->Location = System::Drawing::Point(747, 17);
+			this->panel1->Margin = System::Windows::Forms::Padding(2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(502, 946);
+			this->panel1->Size = System::Drawing::Size(335, 615);
 			this->panel1->TabIndex = 101;
+			// 
+			// stockTextBox
+			// 
+			this->stockTextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
+				static_cast<System::Int32>(static_cast<System::Byte>(41)));
+			this->stockTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->stockTextBox->ForeColor = System::Drawing::Color::White;
+			this->stockTextBox->Location = System::Drawing::Point(2, 385);
+			this->stockTextBox->Margin = System::Windows::Forms::Padding(2);
+			this->stockTextBox->Name = L"stockTextBox";
+			this->stockTextBox->Size = System::Drawing::Size(308, 26);
+			this->stockTextBox->TabIndex = 110;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
+				static_cast<System::Int32>(static_cast<System::Byte>(251)));
+			this->label4->Location = System::Drawing::Point(-4, 362);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(340, 22);
+			this->label4->TabIndex = 109;
+			this->label4->Text = L"Quantite à rajouter dans le stock";
 			// 
 			// coutTextBox
 			// 
@@ -216,9 +249,10 @@ namespace ProjetPOO {
 			this->coutTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->coutTextBox->ForeColor = System::Drawing::Color::White;
-			this->coutTextBox->Location = System::Drawing::Point(3, 390);
+			this->coutTextBox->Location = System::Drawing::Point(2, 253);
+			this->coutTextBox->Margin = System::Windows::Forms::Padding(2);
 			this->coutTextBox->Name = L"coutTextBox";
-			this->coutTextBox->Size = System::Drawing::Size(460, 35);
+			this->coutTextBox->Size = System::Drawing::Size(308, 26);
 			this->coutTextBox->TabIndex = 108;
 			// 
 			// label3
@@ -228,9 +262,10 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label3->Location = System::Drawing::Point(-3, 354);
+			this->label3->Location = System::Drawing::Point(-2, 230);
+			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(75, 33);
+			this->label3->Size = System::Drawing::Size(50, 22);
 			this->label3->TabIndex = 107;
 			this->label3->Text = L"Cout";
 			// 
@@ -241,9 +276,10 @@ namespace ProjetPOO {
 			this->seuilTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->seuilTextBox->ForeColor = System::Drawing::Color::White;
-			this->seuilTextBox->Location = System::Drawing::Point(3, 493);
+			this->seuilTextBox->Location = System::Drawing::Point(2, 320);
+			this->seuilTextBox->Margin = System::Windows::Forms::Padding(2);
 			this->seuilTextBox->Name = L"seuilTextBox";
-			this->seuilTextBox->Size = System::Drawing::Size(460, 35);
+			this->seuilTextBox->Size = System::Drawing::Size(308, 26);
 			this->seuilTextBox->TabIndex = 106;
 			// 
 			// label2
@@ -253,19 +289,20 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label2->Location = System::Drawing::Point(-3, 457);
+			this->label2->Location = System::Drawing::Point(-2, 297);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(435, 33);
+			this->label2->Size = System::Drawing::Size(290, 22);
 			this->label2->TabIndex = 105;
 			this->label2->Text = L"Seuil de réapprovisionnement";
 			// 
 			// tvaComboBox
 			// 
 			this->tvaComboBox->FormattingEnabled = true;
-			this->tvaComboBox->Location = System::Drawing::Point(3, 699);
-			this->tvaComboBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->tvaComboBox->Location = System::Drawing::Point(2, 454);
+			this->tvaComboBox->Margin = System::Windows::Forms::Padding(1);
 			this->tvaComboBox->Name = L"tvaComboBox";
-			this->tvaComboBox->Size = System::Drawing::Size(459, 28);
+			this->tvaComboBox->Size = System::Drawing::Size(307, 21);
 			this->tvaComboBox->TabIndex = 104;
 			// 
 			// prixTextBox
@@ -275,9 +312,10 @@ namespace ProjetPOO {
 			this->prixTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->prixTextBox->ForeColor = System::Drawing::Color::White;
-			this->prixTextBox->Location = System::Drawing::Point(3, 291);
+			this->prixTextBox->Location = System::Drawing::Point(2, 189);
+			this->prixTextBox->Margin = System::Windows::Forms::Padding(2);
 			this->prixTextBox->Name = L"prixTextBox";
-			this->prixTextBox->Size = System::Drawing::Size(460, 35);
+			this->prixTextBox->Size = System::Drawing::Size(308, 26);
 			this->prixTextBox->TabIndex = 103;
 			this->prixTextBox->TextChanged += gcnew System::EventHandler(this, &GestionArticlesFormulaire::textBox2_TextChanged_1);
 			// 
@@ -288,9 +326,10 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label1->Location = System::Drawing::Point(3, 664);
+			this->label1->Location = System::Drawing::Point(2, 432);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(60, 33);
+			this->label1->Size = System::Drawing::Size(40, 22);
 			this->label1->TabIndex = 101;
 			this->label1->Text = L"TVA";
 			// 
@@ -306,10 +345,10 @@ namespace ProjetPOO {
 			this->button5->Font = (gcnew System::Drawing::Font(L"Consolas", 15, System::Drawing::FontStyle::Bold));
 			this->button5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->button5->Location = System::Drawing::Point(356, 14);
+			this->button5->Location = System::Drawing::Point(237, 9);
 			this->button5->Margin = System::Windows::Forms::Padding(0);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(136, 53);
+			this->button5->Size = System::Drawing::Size(91, 34);
 			this->button5->TabIndex = 99;
 			this->button5->Text = L"Retour";
 			this->button5->UseVisualStyleBackColor = false;
@@ -322,9 +361,10 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label15->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label15->Location = System::Drawing::Point(-3, 74);
+			this->label15->Location = System::Drawing::Point(-2, 48);
+			this->label15->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(165, 33);
+			this->label15->Size = System::Drawing::Size(110, 22);
 			this->label15->TabIndex = 64;
 			this->label15->Text = L"ID Article";
 			// 
@@ -336,9 +376,10 @@ namespace ProjetPOO {
 			this->idTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->idTextBox->ForeColor = System::Drawing::Color::White;
-			this->idTextBox->Location = System::Drawing::Point(3, 110);
+			this->idTextBox->Location = System::Drawing::Point(2, 71);
+			this->idTextBox->Margin = System::Windows::Forms::Padding(2);
 			this->idTextBox->Name = L"idTextBox";
-			this->idTextBox->Size = System::Drawing::Size(460, 35);
+			this->idTextBox->Size = System::Drawing::Size(308, 26);
 			this->idTextBox->TabIndex = 63;
 			this->idTextBox->TextChanged += gcnew System::EventHandler(this, &GestionArticlesFormulaire::textBox7_TextChanged);
 			// 
@@ -354,9 +395,10 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->button_valider->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->button_valider->Location = System::Drawing::Point(19, 776);
+			this->button_valider->Location = System::Drawing::Point(2, 504);
+			this->button_valider->Margin = System::Windows::Forms::Padding(2);
 			this->button_valider->Name = L"button_valider";
-			this->button_valider->Size = System::Drawing::Size(465, 80);
+			this->button_valider->Size = System::Drawing::Size(310, 52);
 			this->button_valider->TabIndex = 62;
 			this->button_valider->Text = L"Valider";
 			this->button_valider->UseVisualStyleBackColor = false;
@@ -369,9 +411,10 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label14->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label14->Location = System::Drawing::Point(-3, 164);
+			this->label14->Location = System::Drawing::Point(-2, 107);
+			this->label14->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(60, 33);
+			this->label14->Size = System::Drawing::Size(40, 22);
 			this->label14->TabIndex = 47;
 			this->label14->Text = L"Nom";
 			// 
@@ -382,9 +425,10 @@ namespace ProjetPOO {
 			this->nomTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->nomTextBox->ForeColor = System::Drawing::Color::White;
-			this->nomTextBox->Location = System::Drawing::Point(3, 200);
+			this->nomTextBox->Location = System::Drawing::Point(2, 130);
+			this->nomTextBox->Margin = System::Windows::Forms::Padding(2);
 			this->nomTextBox->Name = L"nomTextBox";
-			this->nomTextBox->Size = System::Drawing::Size(460, 35);
+			this->nomTextBox->Size = System::Drawing::Size(308, 26);
 			this->nomTextBox->TabIndex = 46;
 			this->nomTextBox->TextChanged += gcnew System::EventHandler(this, &GestionArticlesFormulaire::textBox1_TextChanged);
 			// 
@@ -395,9 +439,10 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label13->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label13->Location = System::Drawing::Point(-3, 255);
+			this->label13->Location = System::Drawing::Point(-2, 166);
+			this->label13->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(75, 33);
+			this->label13->Size = System::Drawing::Size(50, 22);
 			this->label13->TabIndex = 49;
 			this->label13->Text = L"Prix";
 			// 
@@ -409,50 +454,27 @@ namespace ProjetPOO {
 			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->richTextBox1->ForeColor = System::Drawing::Color::White;
-			this->richTextBox1->Location = System::Drawing::Point(311, 26);
+			this->richTextBox1->Location = System::Drawing::Point(207, 17);
+			this->richTextBox1->Margin = System::Windows::Forms::Padding(2);
 			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(758, 932);
+			this->richTextBox1->Size = System::Drawing::Size(505, 606);
 			this->richTextBox1->TabIndex = 112;
 			this->richTextBox1->Text = L"";
 			// 
-			// textBox1
-			// 
-			this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
-				static_cast<System::Int32>(static_cast<System::Byte>(41)));
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox1->ForeColor = System::Drawing::Color::White;
-			this->textBox1->Location = System::Drawing::Point(3, 593);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(460, 35);
-			this->textBox1->TabIndex = 110;
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
-				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label4->Location = System::Drawing::Point(-6, 557);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(510, 33);
-			this->label4->TabIndex = 109;
-			this->label4->Text = L"Quantite à rajouter dans le stock";
-			// 
 			// GestionArticlesFormulaire
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
 				static_cast<System::Int32>(static_cast<System::Byte>(41)));
-			this->ClientSize = System::Drawing::Size(1634, 1025);
+			this->ClientSize = System::Drawing::Size(1089, 666);
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->panel1);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"GestionArticlesFormulaire";
 			this->Text = L"GestionArticlesFormulaire";
 			this->Load += gcnew System::EventHandler(this, &GestionArticlesFormulaire::GestionArticlesFormulaire_Load);
@@ -550,7 +572,8 @@ namespace ProjetPOO {
 				this->prixTextBox->Text,
 				this->DicoTVA[this->tvaComboBox->Text],
 				this->seuilTextBox->Text,
-				this->coutTextBox->Text
+				this->coutTextBox->Text,
+				this->stockTextBox->Text
 			);
 			if (resultID == -1) {
 				MessageBox::Show("Impossible d'ajotuer l'article");

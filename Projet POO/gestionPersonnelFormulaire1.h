@@ -774,7 +774,7 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
     }
     NS_composants::Personnel^ personnelCherche = this->gestionDuPersonnel->obtenirPersonnel(this->idPersonnelTextBox->Text);
     if (personnelCherche == nullptr) {
-        MessageBox::Show("Aucun personnel ne correspon à cet identifiant");
+        MessageBox::Show("Aucun personnel ne correspond à cet identifiant");
         return;
     }
     this->nomTextBox->Text = personnelCherche->getNom();

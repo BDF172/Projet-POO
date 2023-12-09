@@ -3,10 +3,10 @@ GO
 
 CREATE PROCEDURE CreerArticle
     @NomArticle VARCHAR(255),
-	@PrixArticle INT, 
+	@PrixArticle MONEY, 
 	@IdTva INT,
 	@SeuilReappro INT, 
-	@Cout FLOAT,
+	@Cout MONEY,
 	@Stock INT
 
 AS

@@ -4,6 +4,7 @@ using namespace NS_services;
 using namespace System;
 using namespace System::Data;
 using namespace NS_composants;
+using namespace System::Collections::Generic;
 
 gestionArticles::gestionArticles(Void) {
 	this->articlesMap = gcnew mappingArticles;
@@ -27,8 +28,25 @@ Articles^ gestionArticles::obtenirArticle(String^ idArticle) {
 	}
 }
 
-Int64 gestionArticles::ajouterArticle(String^ nom, String^ prix, String^ prctTVA,String^ seuilReappro, String^ cout) {
-	this->articlesMap->ajouterArticle(nom, prix, prctTVA, seuilReappro, cout, "1");
+List<NS_composants::articles^>^ NS_services::gestionArticles::rechercherArticle(System::String^ nom){
+	this->articlesMap->chercherArticle(nom);
+	DataSet^ result = this->articlesMap->executeRequest();
+	if (!this->verifyErrorCode(result)) return nullptr;
+	if (result->Tables[1]->Rows->Count == 0) return nullptr;
+	List<articles^>^ toReturn = gcnew List<articles^>;
+	for each (DataRow ^ i in result->Tables[1]->Rows) {
+		articles^ toAdd = gcnew articles;
+		toAdd->idArticle = Convert::ToString(i[0]);
+		toAdd->nom = Convert::ToString(i[1]);
+		toAdd->prix = Convert::ToString(i[2]);
+		toAdd->quantite = Convert::ToString(i[3]);
+		toReturn->Add(toAdd);
+	}
+	return toReturn;
+}
+
+Int64 gestionArticles::ajouterArticle(String^ nom, String^ prix, String^ prctTVA,String^ seuilReappro, String^ cout, String^ stock) {
+	this->articlesMap->ajouterArticle(nom, prix, prctTVA, seuilReappro, cout, stock);
 	DataSet^ result = this->articlesMap->executeRequest();
 	if (this->verifyErrorCode(result)) {
 		Console::WriteLine("Article ajouté sous l'ID " + Convert::ToString(result->Tables[1]->Rows[0][0]));
