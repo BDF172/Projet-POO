@@ -147,6 +147,7 @@
     <ClCompile Include="mappingClient.cpp" />
     <ClCompile Include="mappingCommandes.cpp" />
     <ClCompile Include="mappingPersonnel.cpp" />
+    <ClCompile Include="mappingStats.cpp" />
     <ClCompile Include="mappingValeurs.cpp" />
     <ClCompile Include="Personnel.cpp" />
     <ClCompile Include="Source.cpp" />

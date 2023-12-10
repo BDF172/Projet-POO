@@ -141,6 +141,9 @@
     <ClCompile Include="gestionPaiementCommande.cpp">
       <Filter>Fichiers d%27en-tête\Forms</Filter>
     </ClCompile>
+    <ClCompile Include="mappingStats.cpp">
+      <Filter>Fichiers sources\Composants\héritage mapping</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headerLink.h">
