@@ -141,6 +141,7 @@
     <ClCompile Include="gestionPersonnel.cpp" />
     <ClCompile Include="gestionPersonnelFormulaire1.cpp" />
     <ClCompile Include="gestionStatFormulaire.cpp" />
+    <ClCompile Include="gestionStats.cpp" />
     <ClCompile Include="gestionValeurs.cpp" />
     <ClCompile Include="mainFormulaire1.cpp" />
     <ClCompile Include="mappingArticles.cpp" />
@@ -189,6 +190,7 @@
     <ClInclude Include="gestionStatFormulaire.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="gestionStats.h" />
     <ClInclude Include="gestionValeurs.h" />
     <ClInclude Include="mainFormulaire1.h">
       <FileType>CppForm</FileType>
@@ -201,7 +203,6 @@
     <ClInclude Include="mappingStats.h" />
     <ClInclude Include="mappingValeurs.h" />
     <ClInclude Include="Personnel.h" />
-    <ClInclude Include="statsMapping.h" />
     <ClInclude Include="supprimerArticle.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -230,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="gestionPersonnelFormulaire1.resx">
       <DependentUpon>gestionPersonnelFormulaire1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormulaire1.resx">
+      <DependentUpon>mainFormulaire1.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="supprimerArticle.resx">
       <DependentUpon>supprimerArticle.h</DependentUpon>

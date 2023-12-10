@@ -28,7 +28,7 @@ Articles^ gestionArticles::obtenirArticle(String^ idArticle) {
 	}
 }
 
-List<NS_composants::articles^>^ NS_services::gestionArticles::rechercherArticle(System::String^ nom){
+List<articles^>^ NS_services::gestionArticles::rechercherArticle(System::String^ nom){
 	this->articlesMap->chercherArticle(nom);
 	DataSet^ result = this->articlesMap->executeRequest();
 	if (!this->verifyErrorCode(result)) return nullptr;

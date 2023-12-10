@@ -5,6 +5,7 @@
 #include "ajouterArticle.h"
 #include "supprimerArticle.h"
 #include "fonctions.h"
+#include "gestionPaiementCommande.h"
 
 namespace ProjetPOO {
 
@@ -90,6 +91,8 @@ namespace ProjetPOO {
     private: System::Windows::Forms::Label^ label1;
     private: System::Windows::Forms::ComboBox^ fComboBox;
     private: System::Windows::Forms::ComboBox^ lComboBox;
+    private: System::Windows::Forms::Button^ payerBouton;
+
 
 
 
@@ -126,6 +129,7 @@ namespace ProjetPOO {
             this->label3 = (gcnew System::Windows::Forms::Label());
             this->idClientTextBox = (gcnew System::Windows::Forms::TextBox());
             this->label1 = (gcnew System::Windows::Forms::Label());
+            this->payerBouton = (gcnew System::Windows::Forms::Button());
             this->panel1->SuspendLayout();
             this->SuspendLayout();
             // 
@@ -141,7 +145,6 @@ namespace ProjetPOO {
             this->reference->Name = L"reference";
             this->reference->Size = System::Drawing::Size(561, 26);
             this->reference->TabIndex = 100;
-            this->reference->TextChanged += gcnew System::EventHandler(this, &GestionCommandeFormulaire::reference_TextChanged);
             // 
             // button5
             // 
@@ -228,7 +231,7 @@ namespace ProjetPOO {
             this->button1->Name = L"button1";
             this->button1->Size = System::Drawing::Size(279, 245);
             this->button1->TabIndex = 106;
-            this->button1->Text = L"Créer Commande";
+            this->button1->Text = L"Créer commande";
             this->button1->UseVisualStyleBackColor = false;
             this->button1->Click += gcnew System::EventHandler(this, &GestionCommandeFormulaire::button1_Click);
             // 
@@ -243,12 +246,12 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->button4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(159)),
                 static_cast<System::Int32>(static_cast<System::Byte>(118)));
-            this->button4->Location = System::Drawing::Point(23, 798);
+            this->button4->Location = System::Drawing::Point(23, 593);
             this->button4->Margin = System::Windows::Forms::Padding(4);
             this->button4->Name = L"button4";
             this->button4->Size = System::Drawing::Size(279, 270);
             this->button4->TabIndex = 110;
-            this->button4->Text = L"Afficher Commande";
+            this->button4->Text = L"Afficher commande";
             this->button4->UseVisualStyleBackColor = false;
             this->button4->Click += gcnew System::EventHandler(this, &GestionCommandeFormulaire::button4_Click);
             // 
@@ -264,12 +267,12 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->supprimerBouton->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(153)), static_cast<System::Int32>(static_cast<System::Byte>(209)),
                 static_cast<System::Int32>(static_cast<System::Byte>(219)));
-            this->supprimerBouton->Location = System::Drawing::Point(23, 414);
+            this->supprimerBouton->Location = System::Drawing::Point(23, 311);
             this->supprimerBouton->Margin = System::Windows::Forms::Padding(4);
             this->supprimerBouton->Name = L"supprimerBouton";
             this->supprimerBouton->Size = System::Drawing::Size(279, 260);
             this->supprimerBouton->TabIndex = 107;
-            this->supprimerBouton->Text = L"Supprimer Commande";
+            this->supprimerBouton->Text = L"Supprimer commande";
             this->supprimerBouton->UseVisualStyleBackColor = false;
             this->supprimerBouton->Click += gcnew System::EventHandler(this, &GestionCommandeFormulaire::button2_Click);
             // 
@@ -407,6 +410,26 @@ namespace ProjetPOO {
             this->label1->TabIndex = 109;
             this->label1->Text = L"ID client";
             // 
+            // payerBouton
+            // 
+            this->payerBouton->BackColor = System::Drawing::Color::Transparent;
+            this->payerBouton->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)),
+                static_cast<System::Int32>(static_cast<System::Byte>(159)), static_cast<System::Int32>(static_cast<System::Byte>(118)));
+            this->payerBouton->FlatAppearance->BorderSize = 2;
+            this->payerBouton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->payerBouton->Font = (gcnew System::Drawing::Font(L"Consolas", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->payerBouton->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(159)),
+                static_cast<System::Int32>(static_cast<System::Byte>(118)));
+            this->payerBouton->Location = System::Drawing::Point(23, 884);
+            this->payerBouton->Margin = System::Windows::Forms::Padding(4);
+            this->payerBouton->Name = L"payerBouton";
+            this->payerBouton->Size = System::Drawing::Size(279, 270);
+            this->payerBouton->TabIndex = 112;
+            this->payerBouton->Text = L"Payer commande";
+            this->payerBouton->UseVisualStyleBackColor = false;
+            this->payerBouton->Click += gcnew System::EventHandler(this, &GestionCommandeFormulaire::payerBouton_Click);
+            // 
             // GestionCommandeFormulaire
             // 
             this->AutoScaleDimensions = System::Drawing::SizeF(11, 24);
@@ -414,6 +437,7 @@ namespace ProjetPOO {
             this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
                 static_cast<System::Int32>(static_cast<System::Byte>(41)));
             this->ClientSize = System::Drawing::Size(1997, 1230);
+            this->Controls->Add(this->payerBouton);
             this->Controls->Add(this->mainTextBox);
             this->Controls->Add(this->button1);
             this->Controls->Add(this->button4);
@@ -429,203 +453,23 @@ namespace ProjetPOO {
 
         }
 #pragma endregion
-    private:
-        NS_services::gestionClient^ gestionDuClient;
-        NS_services::gestionCommandes^ gestionDeCommande;
-        NS_composants::Client^ clientCommande;
-        System::Collections::Generic::Dictionary<String^, String^>^ adressesF;
-        System::Collections::Generic::Dictionary<String^, String^>^ adressesL;
-        NS_composants::articles^ articlesChoisis;
-        System::Char fonctionChoisie;
-
-    private: System::Void GestionCommandeFormulaire_Load(System::Object^ sender, System::EventArgs^ e) {
-        this->gestionDeCommande = gcnew NS_services::gestionCommandes;
-        this->gestionDuClient = gcnew NS_services::gestionClient;
-        this->clientCommande = gcnew NS_composants::Client;
-        this->articlesChoisis = nullptr;
-        this->fonctionChoisie = 'N';
-        adressesF = gcnew System::Collections::Generic::Dictionary<String^, String^>;
-        adressesL = gcnew System::Collections::Generic::Dictionary<String^, String^>;
-    }
-
-    private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (this->reference->Text == "") {
-            MessageBox::Show("Veuillez entrer une référence de commande à rechercher.");
-            return;
-        }
-        else {
-            this->mainTextBox->Text = this->gestionDeCommande->obtenirCommande(this->reference->Text);
-        }
-    }
-    private: System::Void label13_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void dateTimePicker_personnel_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void label12_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-        this->mainTextBox->Text = " " + this->button1->Text;
-        this->supprimerBouton->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
-        this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
-        this->button1->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
-        this->button1->BackColor = System::Drawing::Color::FromArgb(192, 188, 251);
-        this->supprimerBouton->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-        this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-        this->fonctionChoisie = 'C';
-    }
-    private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-        this->mainTextBox->Text = " " + this->supprimerBouton->Text;
-        this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
-        this->supprimerBouton->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
-        this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
-        this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-        this->supprimerBouton->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-        this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-        this->fonctionChoisie = 'S';
-    }
-    private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-        this->Close();
-    }
-    private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (this->fonctionChoisie == 'N') {
-            MessageBox::Show("Veuillez sélectionner une action à effectuer");
-            return;
-        }
-        if (this->fonctionChoisie == 'C') {
-            if (this->articlesChoisis == nullptr || this->idClientTextBox->Text == "") {
-                MessageBox::Show("Veuillez sélectionner au moins un article et un client");
-                return;
-            }
-            if (!adressesF->ContainsKey(this->fComboBox->Text) || !adressesL->ContainsKey(this->lComboBox->Text)) {
-                MessageBox::Show("Veuillez sélectionner les adresses correspondant au client");
-                return;
-            }
-            System::String^ referenceResult = this->gestionDeCommande->creerCommande(
-                this->idClientTextBox->Text,
-                this->articlesChoisis,
-                this->adressesL[this->lComboBox->Text],
-                this->adressesF[this->fComboBox->Text]
-            );
-            if (referenceResult == nullptr) {
-                MessageBox::Show("Erreur lors de la création de commande");
-                return;
-            }
-            else
-                this->reference->Text = referenceResult;
-        }
-        else if (this->fonctionChoisie == 'S') {
-            Double result = this->gestionDeCommande->supprimerCommande(this->reference->Text);
-            if (result == -1) MessageBox::Show("Erreur lors de la suppression de la commande");
-            else MessageBox::Show("Commande supprimée avec succés, " + result.ToString() + "€ viennent d'être remboursés");
-        }
-        
-    }
-    private: System::Void dateEmission_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void reference_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void dateTimePicker1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void montantCommande_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void moyenPaiement_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-    }
-    private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-        this->Close();
-    }
-private: System::Void idClientTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-    adressesF->Clear();
-    adressesL->Clear();
-
-    if (this->idClientTextBox->Text == "" || !verifyEntryUint(this->idClientTextBox->Text)) {
-        Console::WriteLine(this->idClientTextBox->Text);
-        return;
-    }
-
-    clientCommande = gestionDuClient->obtenirClient(this->idClientTextBox->Text);
-
-    if (clientCommande == nullptr)return;
-    NS_composants::adresseClient^ adresses = clientCommande->getAdresse();
-    while (adresses != nullptr) {
-        System::String^ adresseFormatted = adresses->numeroRue + " " + adresses->nomRue 
-            + ", " + adresses->nomVille + ", " + adresses->nomPays;
-        if (adresses->f_ou_l){
-            if (!adressesL->ContainsKey(adresseFormatted))
-                this->adressesL->Add(adresseFormatted, adresses->idAdresse);
-        }
-        else if(!adressesF->ContainsKey(adresseFormatted))
-            this->adressesF->Add(adresseFormatted, adresses->idAdresse);
-        adresses = adresses->suivant;
-    }
-    fComboBox->Items->Clear();
-    lComboBox->Items->Clear();
-    for each (String ^ i in this->adressesF->Keys) fComboBox->Items->Add(i);
-    for each (String ^ i in this->adressesL->Keys) lComboBox->Items->Add(i);
-}   
-private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->Hide();
-    ajouterArticle toOpenAjouterArticles;
-    toOpenAjouterArticles.ShowDialog();
-    NS_composants::articles^ tempPtr = this->articlesChoisis;
-    if (tempPtr == nullptr) this->articlesChoisis = toOpenAjouterArticles.choixUtilisateur;
-    else {
-        while (tempPtr->suivant != nullptr) {
-            if (tempPtr->idArticle == toOpenAjouterArticles.choixUtilisateur->idArticle) {
-                tempPtr->quantite = (Convert::ToInt64(tempPtr->quantite) + Convert::ToInt64(toOpenAjouterArticles.choixUtilisateur->quantite)).ToString();
-                tempPtr->prix = (Convert::ToInt64(tempPtr->prix) + Convert::ToInt64(toOpenAjouterArticles.choixUtilisateur->prix)).ToString();
-                break;
-            }
-            tempPtr = tempPtr->suivant;
-        }
-        if (tempPtr->idArticle == toOpenAjouterArticles.choixUtilisateur->idArticle) {
-            tempPtr->quantite = (Convert::ToInt64(tempPtr->quantite) + Convert::ToInt64(toOpenAjouterArticles.choixUtilisateur->quantite)).ToString();
-            tempPtr->prix = (Convert::ToDouble(tempPtr->prix) + Convert::ToDouble(toOpenAjouterArticles.choixUtilisateur->prix)).ToString();
-        }
-        else
-            tempPtr->suivant = toOpenAjouterArticles.choixUtilisateur;
-    }
-    this->mainTextBox->Text = "";
-    tempPtr = this->articlesChoisis;
-    while (tempPtr != nullptr) {
-        this->mainTextBox->Text += "Article : " + tempPtr->nom + "\n";
-        this->mainTextBox->Text += "Quantité : " + tempPtr->quantite + "\n";
-        this->mainTextBox->Text += "Montant : " + tempPtr->prix + "\n";
-        tempPtr = tempPtr->suivant;
-    }
-    this->Show();
-}
-private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
-    if (this->articlesChoisis == nullptr) {
-        MessageBox::Show("Aucun article n'a été choisi");
-        return;
-    }
-    this->Hide();
-    supprimerArticle toOpenSupprimerArticles;
-    toOpenSupprimerArticles.articlesChoisis = this->articlesChoisis;
-    toOpenSupprimerArticles.ShowDialog();
-    NS_composants::articles^ tempPtr = this->articlesChoisis;
-    if (!(toOpenSupprimerArticles.toDelete == nullptr)) {
-        if (this->articlesChoisis->idArticle == toOpenSupprimerArticles.toDelete) {
-            this->articlesChoisis = this->articlesChoisis->suivant;
-        }
-        else {
-            while (tempPtr->suivant->idArticle != toOpenSupprimerArticles.toDelete) tempPtr = tempPtr->suivant;
-            tempPtr->suivant = tempPtr->suivant->suivant;
-        }
-    }
-    this->mainTextBox->Text = "";
-    tempPtr = this->articlesChoisis;
-    while (tempPtr != nullptr) {
-        this->mainTextBox->Text += "Article : " + tempPtr->nom + "\n";
-        this->mainTextBox->Text += "Quantité : " + tempPtr->quantite + "\n";
-        this->mainTextBox->Text += "Montant : " + tempPtr->prix + "\n";
-        tempPtr = tempPtr->suivant;
-    }
-    this->Show();
-}
+        private:
+            NS_services::gestionClient^ gestionDuClient;
+            NS_services::gestionCommandes^ gestionDeCommande;
+            NS_composants::Client^ clientCommande;
+            System::Collections::Generic::Dictionary<String^, String^>^ adressesF;
+            System::Collections::Generic::Dictionary<String^, String^>^ adressesL;
+            NS_composants::articles^ articlesChoisis;
+            System::Char fonctionChoisie;
+            System::Void GestionCommandeFormulaire_Load(System::Object^ sender, System::EventArgs^ e);
+            System::Void button4_Click(System::Object^ sender, System::EventArgs^ e);
+            System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
+            System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
+            System::Void button5_Click(System::Object^ sender, System::EventArgs^ e);
+            System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e);
+            System::Void idClientTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e);
+            System::Void button7_Click(System::Object^ sender, System::EventArgs^ e);
+            System::Void button8_Click(System::Object^ sender, System::EventArgs^ e);
+            System::Void payerBouton_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

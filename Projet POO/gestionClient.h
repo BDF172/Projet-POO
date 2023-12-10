@@ -20,6 +20,8 @@ namespace NS_services {
 		NS_composants::Client^ obtenirClient(System::String^ idClient);
 
 		System::Collections::Generic::List<NS_composants::Client^>^ chercherClients(System::String^ nom, System::String^ prenom);
+
+		System::Collections::Generic::List<NS_composants::Client^>^ clientsAnniv(System::Void);
 		
 		System::Boolean modifierClient(System::String^ idClient, System::String^ nom, 
 			System::String^ prenom, System::String^ dateNaissance);

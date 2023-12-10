@@ -1,8 +1,9 @@
 USE POO;
 GO
 
-CREATE PROCEDURE ClientsMailAnniversaire
+ALTER PROCEDURE ClientsMailAnniversaire
 AS
 BEGIN
+	SELECT 0;
 	SELECT id_client FROM Clients WHERE date_naissance = CAST(DATEADD(DAY, 14, GETDATE()) AS DATE);
 END

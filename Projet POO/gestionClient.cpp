@@ -66,8 +66,20 @@ List<Client^>^ gestionClient::chercherClients(String^ nom, String^ prenom) {
 	DataSet^ result = this->clientTableMap->executeRequest();
 	if (!verifyErrorCode(result)) return nullptr;
 	List<Client^>^ toReturn = gcnew List<Client^>;
-	for (int i = 0; i < result->Tables[1]->Rows->Count; i++) {
-		Client^ toAdd = this->obtenirClient(Convert::ToString(result->Tables[1]->Rows[i][0]));
+	for each (DataRow ^ i in result->Tables[1]->Rows) {
+		Client^ toAdd = this->obtenirClient(i[0]->ToString());
+		if (toAdd != nullptr) toReturn->Add(toAdd);
+	}
+	return toReturn;
+}
+
+System::Collections::Generic::List<NS_composants::Client^>^ NS_services::gestionClient::clientsAnniv(System::Void){
+	this->clientTableMap->clientsAnniv();
+	DataSet^ result = this->clientTableMap->executeRequest();
+	if (!verifyErrorCode(result)) return nullptr;
+	List<Client^>^ toReturn = gcnew List<Client^>;
+	for each(DataRow^ i in result->Tables[1]->Rows) {
+		Client^ toAdd = this->obtenirClient(i[0]->ToString());
 		if (toAdd != nullptr) toReturn->Add(toAdd);
 	}
 	return toReturn;

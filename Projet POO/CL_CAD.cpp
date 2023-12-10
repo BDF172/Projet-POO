@@ -32,18 +32,3 @@ DataSet^ CL_CAD::getRows(String^ sqlRequest) {
 
 	return toReturn;
 }
-
-Void CL_CAD::actionRows(String^ sqlRequest) {
-    try {
-        this->commSQL->CommandText = sqlRequest;
-        this->connToDB->Open();
-        this->commSQL->ExecuteNonQuery();
-    }
-    catch (Exception^ ex) {
-        Console::WriteLine("Erreur: " + ex->Message);
-    }
-    finally {
-        if (this->connToDB->State == ConnectionState::Open)
-            this->connToDB->Close();
-     }
-}

@@ -5,7 +5,6 @@ CREATE PROCEDURE ObtenirFacture
 @Reference VARCHAR(20)
 AS
 BEGIN
-
     DECLARE @DateCommande DATETIME;
     SET @DateCommande = (SELECT date_emission_commande FROM Commandes WHERE reference_commande = @Reference);
 	IF EXISTS (SELECT 1 FROM Commandes WHERE reference_commande = @Reference)

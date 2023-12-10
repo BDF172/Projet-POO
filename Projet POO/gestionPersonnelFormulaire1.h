@@ -694,7 +694,7 @@ namespace ProjetPOO {
                 );
             }
             catch (Exception^ e) {
-                MessageBox::Show("Impossible de créer le personnel");
+                MessageBox::Show("Impossible de créer le personnel : " + e->Data);
                 return;
             }
             if (NouvelID == -1) MessageBox::Show("Impossible de créer le personnel");
@@ -717,7 +717,7 @@ namespace ProjetPOO {
                 );
             }
             catch (Exception^ e) {
-                MessageBox::Show("Echec de la modification");
+                MessageBox::Show("Echec de la modification : " + e->Data);
             }
             if(result)
                 MessageBox::Show("Modification réussie", "Information", MessageBoxButtons::OK, MessageBoxIcon::Information);

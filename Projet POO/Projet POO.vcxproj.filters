@@ -19,9 +19,6 @@
     <Filter Include="Fichiers sources\Composants">
       <UniqueIdentifier>{54b75cec-f75c-4e91-a70b-e599d91fad4e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\Composants\stats">
-      <UniqueIdentifier>{b16845dc-73c2-42c4-8d41-a425f366ecd6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Fichiers sources\Services">
       <UniqueIdentifier>{b4da88f4-8bd2-438f-82cd-1da06cd772dd}</UniqueIdentifier>
     </Filter>
@@ -135,14 +132,17 @@
     <ClCompile Include="fonctions.cpp">
       <Filter>Fichiers sources\Services</Filter>
     </ClCompile>
-    <ClCompile Include="gestionAdressesClients.cpp">
-      <Filter>Fichiers d%27en-tête\Forms</Filter>
-    </ClCompile>
-    <ClCompile Include="gestionPaiementCommande.cpp">
-      <Filter>Fichiers d%27en-tête\Forms</Filter>
-    </ClCompile>
     <ClCompile Include="mappingStats.cpp">
       <Filter>Fichiers sources\Composants\héritage mapping</Filter>
+    </ClCompile>
+    <ClCompile Include="gestionStats.cpp">
+      <Filter>Fichiers sources\Services\héritage gestion</Filter>
+    </ClCompile>
+    <ClCompile Include="gestionAdressesClients.cpp">
+      <Filter>Fichiers sources\Composants\Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="gestionPaiementCommande.cpp">
+      <Filter>Fichiers sources\Composants\Forms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -154,9 +154,6 @@
     </ClInclude>
     <ClInclude Include="CL_CAD.h" />
     <ClInclude Include="headerLink.h" />
-    <ClInclude Include="statsMapping.h">
-      <Filter>Fichiers d%27en-tête\Composants\stats</Filter>
-    </ClInclude>
     <ClInclude Include="CL_Com_mapping.h">
       <Filter>Fichiers d%27en-tête\Composants</Filter>
     </ClInclude>
@@ -240,6 +237,9 @@
     </ClInclude>
     <ClInclude Include="mappingStats.h">
       <Filter>Fichiers d%27en-tête\Composants\heritage mapping</Filter>
+    </ClInclude>
+    <ClInclude Include="gestionStats.h">
+      <Filter>Fichiers d%27en-tête\Services\héritage gestion</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

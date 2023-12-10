@@ -13,7 +13,7 @@ namespace NS_services {
 		System::Boolean payerCommande(System::String^ referenceCommande, System::String^ montant, System::String^ moyen);
 		System::Double supprimerCommande(System::String^ reference);
 		System::Double montantRestant(System::String^ referenceCommande);
-		System::Boolean payerMontantRestant(System::String^ idCommande, String^ moyen);
+		System::Boolean payerMontantRestant(System::String^ reference, String^ moyen);
 	
 	private:
 		NS_composants::mappingCommandes^ commandesTableAccess;

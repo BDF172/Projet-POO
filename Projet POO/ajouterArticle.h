@@ -265,49 +265,17 @@ namespace ProjetPOO {
 		}
 #pragma endregion
 	public:
-		property NS_composants::articles^ choixUtilisateur;
+		NS_composants::articles^ choixUtilisateur;
 
 	private:
 		System::Collections::Generic::List<NS_composants::articles^>^ articlesList;
 		NS_services::gestionArticles^ gestionDesArticles;
 
-	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Close();
-	}
-private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (this->idTextBox->Text == "" || this->quantiteTextBox->Text == "") {
-		MessageBox::Show("Veuillez remplir les champs nécessaires");
-		return;
-	}
-	if (!(this->gestionDesArticles->verifierStock(this->idTextBox->Text, this->quantiteTextBox->Text))) {
-		MessageBox::Show("Erreur d'entrée dans l'article ou stock épuisées");
-		return;
-	}
-	NS_composants::Articles^ articleChoisi = this->gestionDesArticles->obtenirArticle(this->idTextBox->Text);
-	if (articleChoisi == nullptr) {
-		MessageBox::Show("Article non trouvé");
-		return;
-	}
-	this->choixUtilisateur = gcnew NS_composants::articles;
-	this->choixUtilisateur->idEntrepot = "1";
-	this->choixUtilisateur->idArticle = articleChoisi->getidArticles();;
-	this->choixUtilisateur->quantite = this->quantiteTextBox->Text;
-	this->choixUtilisateur->nom = articleChoisi->getNom();
-	this->choixUtilisateur->prix = (articleChoisi->getPrix() * Convert::ToInt64(this->quantiteTextBox->Text)).ToString();
-	this->Close();
-}
-private: System::Void ajouterArticle_Load(System::Object^ sender, System::EventArgs^ e) {
-	this->choixUtilisateur = nullptr;
-	this->articlesList = nullptr;
-	this->gestionDesArticles = gcnew NS_services::gestionArticles;
-}
-private: System::Void rechercheTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	this->richTextBox1->Text = "";
-	this->articlesList = this->gestionDesArticles->rechercherArticle(this->rechercheTextBox->Text);
-	if (this->articlesList == nullptr)this->richTextBox1->Text = "Aucun article trouvé";
-	for each (NS_composants::articles ^ i in this->articlesList) {
-		this->richTextBox1->Text += "ID : " + i->idArticle + ", Nom d'article : " + i->nom + "\n\tprix : " + i->prix + "\n\tstock : " + i->quantite + "\n\n";
-	}
-}
+	private:
+		System::Void button5_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void ajouterArticle_Load(System::Object^ sender, System::EventArgs^ e);
+		System::Void rechercheTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e);
+
 };
 }

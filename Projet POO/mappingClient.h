@@ -14,5 +14,6 @@ namespace NS_composants {
 		System::Void supprimerAdresse(System::String^ clientID, System::String^ adresse);
 		System::Void obtenirClient(System::String^ idClient);
 		System::Void rechercherClients(System::String^ nom, System::String^ prenom);
+		System::Void clientsAnniv(System::Void);
 	};
 }

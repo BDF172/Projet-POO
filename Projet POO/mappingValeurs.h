@@ -8,5 +8,6 @@ namespace NS_composants {
 		System::Void obtenirPays(System::Void);
 		System::Void obtenirVilles(System::String^ idPays);
 		System::Void obtenirTVA(System::Void);
+		System::Void obtenirMoyensPaiement(System::Void);
 	};
 }

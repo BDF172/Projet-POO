@@ -30,6 +30,7 @@ BEGIN
 			INSERT INTO Paiements (montant, Id_Moyens_paiement, id_commandes)
 			VALUES (@Montant, @IdMoyen, @IdCommande);
 			EXEC VerifierPaiementCommande @IdCommandeToVerify = @IdCommande;
+			SELECT 0;
 		END
 		COMMIT;
 		SET TRANSACTION ISOLATION LEVEL READ COMMITTED;

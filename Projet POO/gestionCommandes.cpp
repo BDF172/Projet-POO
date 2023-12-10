@@ -58,6 +58,7 @@ System::Double NS_services::gestionCommandes::supprimerCommande(System::String^ 
 		return Convert::ToDouble(result->Tables[1]->Rows[0][0]);
 	}
 	catch (Exception^ e) {
+		System::Windows::Forms::MessageBox::Show("Erreur : " + e->Data);
 		return -1;
 	}
 }

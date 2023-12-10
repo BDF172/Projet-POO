@@ -317,7 +317,6 @@ namespace ProjetPOO {
 			this->prixTextBox->Name = L"prixTextBox";
 			this->prixTextBox->Size = System::Drawing::Size(308, 26);
 			this->prixTextBox->TabIndex = 103;
-			this->prixTextBox->TextChanged += gcnew System::EventHandler(this, &GestionArticlesFormulaire::textBox2_TextChanged_1);
 			// 
 			// label1
 			// 
@@ -381,7 +380,6 @@ namespace ProjetPOO {
 			this->idTextBox->Name = L"idTextBox";
 			this->idTextBox->Size = System::Drawing::Size(308, 26);
 			this->idTextBox->TabIndex = 63;
-			this->idTextBox->TextChanged += gcnew System::EventHandler(this, &GestionArticlesFormulaire::textBox7_TextChanged);
 			// 
 			// button_valider
 			// 
@@ -430,7 +428,6 @@ namespace ProjetPOO {
 			this->nomTextBox->Name = L"nomTextBox";
 			this->nomTextBox->Size = System::Drawing::Size(308, 26);
 			this->nomTextBox->TabIndex = 46;
-			this->nomTextBox->TextChanged += gcnew System::EventHandler(this, &GestionArticlesFormulaire::textBox1_TextChanged);
 			// 
 			// label13
 			// 
@@ -490,123 +487,14 @@ namespace ProjetPOO {
 		NS_services::gestionArticles^ gestionDesArticles;
 		System::Char choixFonction;
 
-	private: System::Void GestionArticlesFormulaire_Load(System::Object^ sender, System::EventArgs^ e) {
-		this->choixFonction = 'N';
-		this->gestionDesValeurs = gcnew NS_services::gestionValeurs;
-		this->gestionDesArticles = gcnew NS_services::gestionArticles;
-		this->tvaComboBox->Items->Clear();
-		this->tvaComboBox->Text = "Veuillez choisir une TVA";
-		DicoTVA = this->gestionDesValeurs->obtenirTVA();
-		if (this->DicoTVA == nullptr) return;
-		for each (System::String ^ i in DicoTVA->Keys) {
-			this->tvaComboBox->Items->Add(i);
-		}
-	}
+	private:
+		System::Void GestionArticlesFormulaire_Load(System::Object^ sender, System::EventArgs^ e);
+		System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void button3_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void button4_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void button5_Click(System::Object^ sender, System::EventArgs^ e);
 
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->richTextBox1->Text = " " + this->button1->Text;
-		this->button2->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
-		this->button3->ForeColor = System::Drawing::Color::FromArgb(244, 184, 228);
-		this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
-		this->button1->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
-		this->button1->BackColor = System::Drawing::Color::FromArgb(192, 188, 251);
-		this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-		this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-		this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-		this->choixFonction = 'C';
-	}
-	private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void textBox2_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-	}
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->richTextBox1->Text = " " + this->button2->Text;
-		this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
-		this->button3->ForeColor = System::Drawing::Color::FromArgb(244, 184, 228);
-		this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
-		this->button2->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
-		this->button2->BackColor = System::Drawing::Color::FromArgb(153, 209, 219);
-		this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-		this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-		this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-		this->choixFonction = 'M';
-	}
-	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
-		this->button2->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
-		this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
-		this->button3->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
-		this->richTextBox1->Text = " " + this->button3->Text;
-		this->button3->BackColor = System::Drawing::Color::FromArgb(244, 184, 228);
-		this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-		this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-		this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-		this->choixFonction = 'S';
-	}
-	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->richTextBox1->Text = " " + this->button4->Text;
-		this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
-		this->button3->ForeColor = System::Drawing::Color::FromArgb(244, 184, 228);
-		this->button2->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
-		this->button4->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
-		this->button4->BackColor = System::Drawing::Color::FromArgb(239, 159, 118);
-		this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-		this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-		this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-	}
-	private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
-		Int64 resultID;
-		switch (this->choixFonction) {
-		case 'N':
-			MessageBox::Show("Veuillez sélectionner une action");
-			break;
-		case 'C':
-			resultID = this->gestionDesArticles->ajouterArticle(
-				this->nomTextBox->Text,
-				this->prixTextBox->Text,
-				this->DicoTVA[this->tvaComboBox->Text],
-				this->seuilTextBox->Text,
-				this->coutTextBox->Text,
-				this->stockTextBox->Text
-			);
-			if (resultID == -1) {
-				MessageBox::Show("Impossible d'ajotuer l'article");
-			}
-			else {
-				this->idTextBox->Text = resultID.ToString();
-			}
-			break;
-		case 'S':
-			if (this->gestionDesArticles->supprimerArticle(this->idTextBox->Text))
-				MessageBox::Show("L'article a bien été supprimé");
-			else 
-				MessageBox::Show("Echec de la suppression");
-		case 'M' :
-			if (this->gestionDesArticles->modifierArticle(
-				this->idTextBox->Text,
-				this->nomTextBox->Text,
-				this->prixTextBox->Text,
-				this->DicoTVA[this->tvaComboBox->Text],
-				this->seuilTextBox->Text,
-				this->coutTextBox->Text,
-				"0"
-			))
-				MessageBox::Show("Modification réussie");
-			else
-				MessageBox::Show("Echec de la modification");
-			
-		}
-	}
-	private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Close();
-	}
 };
 }

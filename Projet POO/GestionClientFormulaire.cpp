@@ -40,11 +40,23 @@ Void GestionClientFormulaire::button5_Click(Object^ sender, EventArgs^ e) {
 }
 
 Void GestionClientFormulaire::button_valider_Click(Object^ sender, EventArgs^ e) {
+    if (verifySqlInjection(this->nRueTextBox->Text + this->rueTextBox->Text + this->nomTextBox->Text + this->prenomTextBox->Text)) {
+        MessageBox::Show("Veuillez ne pas entrer de caractères spéciaux");
+        return;
+    }
     DateTime selectedDate = this->naissanceDatePicker->Value;
     if (this->fonctionChoisie == 'N') {
         MessageBox::Show("Veuillez faire un choix");
     }
     else if (this->fonctionChoisie == 'C') {
+        if (!(DicoVilles->ContainsKey(this->villeComboBox->Text))) {
+            MessageBox::Show("Impossible de trouver la ville demandée");
+            return;
+        }
+        if (!(this->DicoVilles->ContainsKey(this->villeComboBox->Text))) {
+            MessageBox::Show("Ville introuvable");
+            return;
+        }
         Int64 resultID = this->gestionDesClients->createClient(
             this->nomTextBox->Text,
             this->prenomTextBox->Text,

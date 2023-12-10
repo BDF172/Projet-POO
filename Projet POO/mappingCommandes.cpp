@@ -27,14 +27,14 @@ System::Void mappingCommandes::ajouterArticlesCommande(String^ idCommande, artic
 	Console::WriteLine(this->request);
 }
 
-Void mappingCommandes::payerCommande(String^ idCommande, String^ montant, String^ moyen) {
-	this->request = "EXEC PayerCommande @IdCommande = " + idCommande
+Void mappingCommandes::payerCommande(String^ reference, String^ montant, String^ moyen) {
+	this->request = "EXEC PayerCommande @ReferenceCommande = " + reference
 		+ ", @Montant = " + montant + ", @IdMoyen = " + moyen;
 	Console::WriteLine(this->request);
 }
 
-Void mappingCommandes::montantRestant(String^ idCommande) {
-	this->request = "EXEC ObtenirMontantRestant @IdCommande = " + idCommande;
+Void mappingCommandes::montantRestant(String^ reference) {
+	this->request = "EXEC ObtenirMontantRestant @Reference = " + reference;
 }
 
 Void mappingCommandes::obtenirCommande(String^ reference) {

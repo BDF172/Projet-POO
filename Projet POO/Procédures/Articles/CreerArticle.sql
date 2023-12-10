@@ -29,8 +29,8 @@ BEGIN
 		INSERT INTO prix (prix, dateAjout, prixHT, cout, id_article, id_TVA)
 		VALUES (@PrixArticle, GETDATE(), @PrixArticle, @Cout, @NouvelArticle, @IdTva);
 
-		INSERT INTO stock (seuil_reappro, quantiteVendue, Id_Entrepot, id_article, quantite_stock)
-		VALUES (@SeuilReappro, 0, 1, @NouvelArticle, @Stock);
+		INSERT INTO stock (seuil_reappro, Id_Entrepot, id_article, quantite_stock)
+		VALUES (@SeuilReappro, 1, @NouvelArticle, @Stock);
 
         -- Valider la transaction
         COMMIT;

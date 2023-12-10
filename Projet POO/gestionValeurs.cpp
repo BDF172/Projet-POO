@@ -61,3 +61,20 @@ Dictionary<String^, String^>^ gestionValeurs::obtenirTVA(Void) {
 		return nullptr;
 	}
 }
+
+System::Collections::Generic::Dictionary<System::String^, System::String^>^ NS_services::gestionValeurs::obtenirMoyensPaiemment(System::Void){
+	try {
+		this->valeursTableAccess->obtenirMoyensPaiement();
+		DataSet^ result = this->valeursTableAccess->executeRequest();
+		if (!this->verifyErrorCode(result)) return nullptr;
+		Dictionary<String^, String^>^ toReturn = gcnew Dictionary<String^, String^>;
+		for each (DataRow ^ i in result->Tables[1]->Rows) {
+			toReturn->Add(i[1]->ToString(), i[0]->ToString());
+		}
+		return toReturn;
+	}
+	catch (Exception^ e) {
+		Console::WriteLine("Erreur : " + e->Data);
+		return nullptr;
+	}
+}

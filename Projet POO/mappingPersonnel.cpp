@@ -15,12 +15,14 @@ Void mappingPersonnel::creerPersonnel(String^ nom, String^ prenom, String^ numRu
 Void mappingPersonnel::modifierPersonnel(String^ idPersonnel, String^ nom, String^ prenom, String^ idSuperieur, String^ dateEmbauche) {
 	this->request = "EXEC ModifierPersonnel @IdPersonnel = " + idPersonnel
 		+ ", @Nom = '" + nom + "', @Prenom = '" + prenom + "', @IdSuperieur = " + idSuperieur + ";";
+	Console::WriteLine(this->request);
 }
 
 System::Void NS_composants::mappingPersonnel::modifierAdresse(System::String^ idPersonnel, System::String^ numRue,
 	System::String^ nomRue, System::String^ idVille) {
 	this->request = "EXEC ModifierAdressePersonnel @IdPersonnel = " + idPersonnel + ", @NumeroRue = " + numRue 
 		+ ", @nomRue = '" + nomRue + "', @IdVille = " + idVille + ";";
+	Console::WriteLine(this->request);
 }
 
 System::Void NS_composants::mappingPersonnel::supprimerPersonnel(System::String^ idPersonnel) {

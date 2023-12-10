@@ -6,12 +6,10 @@ namespace NS_composants {
 	ref class mappingStats : public	CL_Com_mapping {
 	public:
 		System::Void panierMoyen();
-		System::Void chiffreAffaireMois(int mois);
+		System::Void chiffreAffaireMois(System::String^ mois);
 		System::Void sousSeuilReapprovisionnement();
-		System::Void totalAchatClient(int idCLient);
+		System::Void totalAchatClient(System::String^ idCLient);
 		System::Void moinsVendue();
 		System::Void plusVendue();
-		System::Void valeurCommercialeStock(int idStock);
-		System::Void valeurAchatStock(int idStock);
 	};
 }

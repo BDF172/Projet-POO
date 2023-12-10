@@ -34,7 +34,7 @@ BEGIN
                 UPDATE stock
                 SET quantite_stock = quantite_stock + @quantite
                 WHERE id_article = @articleId;
-
+				UPDATE Articles SET quantite_vendue = quantite_vendue - @quantite;
                 FETCH NEXT FROM articlesCursor INTO @articleId, @quantite;
             END;
 

@@ -40,6 +40,10 @@ Void mappingClient::rechercherClients(String^ nom, String^ prenom) {
 	this->request = "EXEC RechercherClient @Nom = '" + nom + "', @Prenom = '" + prenom + "';";
 }
 
+System::Void NS_composants::mappingClient::clientsAnniv(System::Void){
+	this->request = "EXEC ClientsMailAnniversaire;";
+}
+
 Void mappingClient::supprimerClient(String^ idClient) {
 	this->request = "EXEC SupprimerClient @IdClient = " + idClient;
 }

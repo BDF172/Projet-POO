@@ -188,8 +188,8 @@ namespace ProjetPOO {
 		}
 #pragma endregion
 	public:
-		property NS_composants::articles^ articlesChoisis;
-		property System::String^ toDelete;
+		NS_composants::articles^ articlesChoisis;
+		System::String^ toDelete;
 
 	private:
 		System::Collections::Generic::Dictionary<String^, String^>^ DicoArticles;

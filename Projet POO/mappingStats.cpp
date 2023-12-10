@@ -5,40 +5,30 @@ using namespace System;
 
 System::Void NS_composants::mappingStats::panierMoyen()
 {
-	this->request = "EXEC panierMoyen;";
+	this->request = "EXEC CalculerPanierMoyen;";
 }
 
-System::Void NS_composants::mappingStats::chiffreAffaireMois(int mois)
+System::Void NS_composants::mappingStats::chiffreAffaireMois(System::String^ mois)
 {
-	this->request = "EXEC ChiffreAffaireMois @mois = " + mois + ";";
+	this->request = "EXEC ChiffreAffaireMois @date = " + mois + ";";
 }
 
 System::Void NS_composants::mappingStats::sousSeuilReapprovisionnement()
 {
-	this->request = "EXEC sousSeuilReapprovisionnement;";
+	this->request = "EXEC SousSeuilReappro;";
 }
 
-System::Void NS_composants::mappingStats::totalAchatClient(int idCLient)
+System::Void NS_composants::mappingStats::totalAchatClient(String^ idCLient)
 {
 	this->request = "EXECT totalAchatCLient @client = " + idCLient + ";";
 }
 
 System::Void NS_composants::mappingStats::moinsVendue()
 {
-	this->request = "EXEC moinsVendue;";
+	this->request = "EXEC TopMoinsVendu;";
 }
 
 System::Void NS_composants::mappingStats::plusVendue()
 {
-	this->request = "EXEC plusVendue;";
-}
-
-System::Void NS_composants::mappingStats::valeurCommercialeStock(int idStock)
-{
-	this->request = "EXEC valeurCommercialeStock @stock =" + idStock + ";";
-}
-
-System::Void NS_composants::mappingStats::valeurAchatStock(int idStock)
-{
-	this->request = "EXEC valeurAchatStock @stock =" + idStock + ";";
+	this->request = "EXEC TopPlusVendu;";
 }

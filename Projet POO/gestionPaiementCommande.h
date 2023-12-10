@@ -1,5 +1,9 @@
 #pragma once
 
+#include "gestionCommandes.h"
+#include "gestionValeurs.h"
+#include "fonctions.h"
+
 namespace ProjetPOO {
 
 	using namespace System;
@@ -22,7 +26,7 @@ namespace ProjetPOO {
 			//TODO: ajoutez ici le code du constructeur
 			//
 			label1->Visible = false;
-			textBox1->Visible = false;
+			montantTextBox->Visible = false;
 		}
 
 	protected:
@@ -39,13 +43,20 @@ namespace ProjetPOO {
 
 	private: System::Windows::Forms::TextBox^ reference;
 	private: System::Windows::Forms::Label^ label14;
-	private: System::Windows::Forms::RadioButton^ fRadioBouton;
-	private: System::Windows::Forms::RadioButton^ lRadioBouton;
+	private: System::Windows::Forms::RadioButton^ entierRadioBouton;
+	private: System::Windows::Forms::RadioButton^ partielRadioBouton;
+
+
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Button^ button_valider;
-	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ montantTextBox;
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Button^ button5;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ montantLabel;
+	private: System::Windows::Forms::ComboBox^ comboBox1;
+
 	protected:
 
 	private:
@@ -63,13 +74,16 @@ namespace ProjetPOO {
 		{
 			this->reference = (gcnew System::Windows::Forms::TextBox());
 			this->label14 = (gcnew System::Windows::Forms::Label());
-			this->fRadioBouton = (gcnew System::Windows::Forms::RadioButton());
-			this->lRadioBouton = (gcnew System::Windows::Forms::RadioButton());
+			this->entierRadioBouton = (gcnew System::Windows::Forms::RadioButton());
+			this->partielRadioBouton = (gcnew System::Windows::Forms::RadioButton());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->button_valider = (gcnew System::Windows::Forms::Button());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->montantTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->montantLabel = (gcnew System::Windows::Forms::Label());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->SuspendLayout();
 			// 
 			// reference
@@ -79,11 +93,12 @@ namespace ProjetPOO {
 			this->reference->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->reference->ForeColor = System::Drawing::Color::White;
-			this->reference->Location = System::Drawing::Point(23, 68);
-			this->reference->Margin = System::Windows::Forms::Padding(2);
+			this->reference->Location = System::Drawing::Point(42, 126);
+			this->reference->Margin = System::Windows::Forms::Padding(4);
 			this->reference->Name = L"reference";
-			this->reference->Size = System::Drawing::Size(308, 26);
+			this->reference->Size = System::Drawing::Size(561, 26);
 			this->reference->TabIndex = 141;
+			this->reference->TextChanged += gcnew System::EventHandler(this, &gestionPaiementCommande::reference_TextChanged);
 			// 
 			// label14
 			// 
@@ -92,47 +107,46 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label14->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label14->Location = System::Drawing::Point(21, 40);
-			this->label14->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label14->Location = System::Drawing::Point(39, 74);
+			this->label14->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label14->Name = L"label14";
 			this->label14->Size = System::Drawing::Size(190, 22);
 			this->label14->TabIndex = 140;
 			this->label14->Text = L"Référence commande";
-			this->label14->Click += gcnew System::EventHandler(this, &gestionPaiementCommande::label14_Click);
 			// 
-			// fRadioBouton
+			// entierRadioBouton
 			// 
-			this->fRadioBouton->AutoSize = true;
-			this->fRadioBouton->Cursor = System::Windows::Forms::Cursors::WaitCursor;
-			this->fRadioBouton->Font = (gcnew System::Drawing::Font(L"Consolas", 12, System::Drawing::FontStyle::Bold));
-			this->fRadioBouton->ForeColor = System::Drawing::Color::White;
-			this->fRadioBouton->Location = System::Drawing::Point(28, 172);
-			this->fRadioBouton->Margin = System::Windows::Forms::Padding(2);
-			this->fRadioBouton->Name = L"fRadioBouton";
-			this->fRadioBouton->Size = System::Drawing::Size(153, 23);
-			this->fRadioBouton->TabIndex = 143;
-			this->fRadioBouton->TabStop = true;
-			this->fRadioBouton->Text = L"Payer le reste";
-			this->fRadioBouton->UseVisualStyleBackColor = true;
-			this->fRadioBouton->UseWaitCursor = true;
-			this->fRadioBouton->CheckedChanged += gcnew System::EventHandler(this, &gestionPaiementCommande::fRadioBouton_CheckedChanged);
+			this->entierRadioBouton->AutoSize = true;
+			this->entierRadioBouton->Cursor = System::Windows::Forms::Cursors::WaitCursor;
+			this->entierRadioBouton->Font = (gcnew System::Drawing::Font(L"Consolas", 12, System::Drawing::FontStyle::Bold));
+			this->entierRadioBouton->ForeColor = System::Drawing::Color::White;
+			this->entierRadioBouton->Location = System::Drawing::Point(42, 295);
+			this->entierRadioBouton->Margin = System::Windows::Forms::Padding(4);
+			this->entierRadioBouton->Name = L"entierRadioBouton";
+			this->entierRadioBouton->Size = System::Drawing::Size(153, 23);
+			this->entierRadioBouton->TabIndex = 143;
+			this->entierRadioBouton->TabStop = true;
+			this->entierRadioBouton->Text = L"Payer le reste";
+			this->entierRadioBouton->UseVisualStyleBackColor = true;
+			this->entierRadioBouton->UseWaitCursor = true;
+			this->entierRadioBouton->CheckedChanged += gcnew System::EventHandler(this, &gestionPaiementCommande::fRadioBouton_CheckedChanged);
 			// 
-			// lRadioBouton
+			// partielRadioBouton
 			// 
-			this->lRadioBouton->AutoSize = true;
-			this->lRadioBouton->Cursor = System::Windows::Forms::Cursors::WaitCursor;
-			this->lRadioBouton->Font = (gcnew System::Drawing::Font(L"Consolas", 12, System::Drawing::FontStyle::Bold));
-			this->lRadioBouton->ForeColor = System::Drawing::Color::White;
-			this->lRadioBouton->Location = System::Drawing::Point(199, 172);
-			this->lRadioBouton->Margin = System::Windows::Forms::Padding(2);
-			this->lRadioBouton->Name = L"lRadioBouton";
-			this->lRadioBouton->Size = System::Drawing::Size(234, 23);
-			this->lRadioBouton->TabIndex = 144;
-			this->lRadioBouton->TabStop = true;
-			this->lRadioBouton->Text = L"Payer un montant choisi";
-			this->lRadioBouton->UseVisualStyleBackColor = true;
-			this->lRadioBouton->UseWaitCursor = true;
-			this->lRadioBouton->CheckedChanged += gcnew System::EventHandler(this, &gestionPaiementCommande::lRadioBouton_CheckedChanged);
+			this->partielRadioBouton->AutoSize = true;
+			this->partielRadioBouton->Cursor = System::Windows::Forms::Cursors::WaitCursor;
+			this->partielRadioBouton->Font = (gcnew System::Drawing::Font(L"Consolas", 12, System::Drawing::FontStyle::Bold));
+			this->partielRadioBouton->ForeColor = System::Drawing::Color::White;
+			this->partielRadioBouton->Location = System::Drawing::Point(42, 336);
+			this->partielRadioBouton->Margin = System::Windows::Forms::Padding(4);
+			this->partielRadioBouton->Name = L"partielRadioBouton";
+			this->partielRadioBouton->Size = System::Drawing::Size(234, 23);
+			this->partielRadioBouton->TabIndex = 144;
+			this->partielRadioBouton->TabStop = true;
+			this->partielRadioBouton->Text = L"Payer un montant choisi";
+			this->partielRadioBouton->UseVisualStyleBackColor = true;
+			this->partielRadioBouton->UseWaitCursor = true;
+			this->partielRadioBouton->CheckedChanged += gcnew System::EventHandler(this, &gestionPaiementCommande::lRadioBouton_CheckedChanged);
 			// 
 			// label2
 			// 
@@ -140,13 +154,12 @@ namespace ProjetPOO {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Consolas", 16, System::Drawing::FontStyle::Bold));
 			this->label2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label2->Location = System::Drawing::Point(20, 123);
-			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label2->Location = System::Drawing::Point(37, 227);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(108, 26);
 			this->label2->TabIndex = 142;
 			this->label2->Text = L"Paiement";
-			this->label2->Click += gcnew System::EventHandler(this, &gestionPaiementCommande::label2_Click);
 			// 
 			// button_valider
 			// 
@@ -160,26 +173,27 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->button_valider->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->button_valider->Location = System::Drawing::Point(123, 313);
-			this->button_valider->Margin = System::Windows::Forms::Padding(2);
+			this->button_valider->Location = System::Drawing::Point(388, 571);
+			this->button_valider->Margin = System::Windows::Forms::Padding(4);
 			this->button_valider->Name = L"button_valider";
-			this->button_valider->Size = System::Drawing::Size(310, 52);
+			this->button_valider->Size = System::Drawing::Size(568, 96);
 			this->button_valider->TabIndex = 145;
 			this->button_valider->Text = L"Valider";
 			this->button_valider->UseVisualStyleBackColor = false;
+			this->button_valider->Click += gcnew System::EventHandler(this, &gestionPaiementCommande::button_valider_Click);
 			// 
-			// textBox1
+			// montantTextBox
 			// 
-			this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
+			this->montantTextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
 				static_cast<System::Int32>(static_cast<System::Byte>(41)));
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->montantTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox1->ForeColor = System::Drawing::Color::White;
-			this->textBox1->Location = System::Drawing::Point(26, 248);
-			this->textBox1->Margin = System::Windows::Forms::Padding(2);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(308, 26);
-			this->textBox1->TabIndex = 147;
+			this->montantTextBox->ForeColor = System::Drawing::Color::White;
+			this->montantTextBox->Location = System::Drawing::Point(48, 458);
+			this->montantTextBox->Margin = System::Windows::Forms::Padding(4);
+			this->montantTextBox->Name = L"montantTextBox";
+			this->montantTextBox->Size = System::Drawing::Size(561, 26);
+			this->montantTextBox->TabIndex = 147;
 			// 
 			// label1
 			// 
@@ -188,13 +202,12 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->label1->Location = System::Drawing::Point(24, 220);
-			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label1->Location = System::Drawing::Point(44, 406);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(180, 22);
 			this->label1->TabIndex = 146;
 			this->label1->Text = L"Montant à rentrer";
-			this->label1->Click += gcnew System::EventHandler(this, &gestionPaiementCommande::label1_Click);
 			// 
 			// button5
 			// 
@@ -208,30 +221,70 @@ namespace ProjetPOO {
 			this->button5->Font = (gcnew System::Drawing::Font(L"Consolas", 15, System::Drawing::FontStyle::Bold));
 			this->button5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->button5->Location = System::Drawing::Point(442, 21);
+			this->button5->Location = System::Drawing::Point(983, 39);
 			this->button5->Margin = System::Windows::Forms::Padding(0);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(128, 37);
+			this->button5->Size = System::Drawing::Size(311, 68);
 			this->button5->TabIndex = 148;
 			this->button5->Text = L"Retour";
 			this->button5->UseVisualStyleBackColor = false;
 			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
+				static_cast<System::Int32>(static_cast<System::Byte>(251)));
+			this->label3->Location = System::Drawing::Point(653, 420);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(180, 22);
+			this->label3->TabIndex = 149;
+			this->label3->Text = L"Montant à payer :";
+			// 
+			// montantLabel
+			// 
+			this->montantLabel->AutoSize = true;
+			this->montantLabel->Font = (gcnew System::Drawing::Font(L"Consolas", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->montantLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
+				static_cast<System::Int32>(static_cast<System::Byte>(251)));
+			this->montantLabel->Location = System::Drawing::Point(653, 461);
+			this->montantLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->montantLabel->Name = L"montantLabel";
+			this->montantLabel->Size = System::Drawing::Size(320, 22);
+			this->montantLabel->TabIndex = 150;
+			this->montantLabel->Text = L"*Veuillez entrer une référence*";
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Location = System::Drawing::Point(657, 286);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(399, 32);
+			this->comboBox1->TabIndex = 151;
+			// 
 			// gestionPaiementCommande
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(11, 24);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
 				static_cast<System::Int32>(static_cast<System::Byte>(41)));
-			this->ClientSize = System::Drawing::Size(593, 398);
+			this->ClientSize = System::Drawing::Size(1336, 735);
+			this->Controls->Add(this->comboBox1);
+			this->Controls->Add(this->montantLabel);
+			this->Controls->Add(this->label3);
 			this->Controls->Add(this->button5);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->montantTextBox);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button_valider);
-			this->Controls->Add(this->fRadioBouton);
-			this->Controls->Add(this->lRadioBouton);
+			this->Controls->Add(this->entierRadioBouton);
+			this->Controls->Add(this->partielRadioBouton);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->reference);
 			this->Controls->Add(this->label14);
+			this->Margin = System::Windows::Forms::Padding(6);
 			this->Name = L"gestionPaiementCommande";
 			this->Text = L"gestionPaiementCommande";
 			this->Load += gcnew System::EventHandler(this, &gestionPaiementCommande::gestionPaiementCommande_Load);
@@ -240,24 +293,61 @@ namespace ProjetPOO {
 
 		}
 #pragma endregion
+	private:
+		NS_services::gestionCommandes^ gestionDesCommandes;
+		NS_services::gestionValeurs^ gestionDesValeurs;
+		System::Collections::Generic::Dictionary<String^, String^>^ DicoMoyens;
+
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
 	private: System::Void lRadioBouton_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 		label1->Visible = true;
-		textBox1->Visible = true;
+		montantTextBox->Visible = true;
 	}
 private: System::Void gestionPaiementCommande_Load(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label14_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->gestionDesValeurs = gcnew NS_services::gestionValeurs;
+	this->gestionDesCommandes = gcnew NS_services::gestionCommandes;
+	DicoMoyens = this->gestionDesValeurs->obtenirMoyensPaiemment();
+	for each (String ^ i in DicoMoyens->Keys) {
+		this->comboBox1->Items->Add(i);
+	}
 }
 private: System::Void fRadioBouton_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 	label1->Visible = false;
-	textBox1->Visible = false;
+	montantTextBox->Visible = false;
+}
+private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (verifySqlInjection(this->reference->Text + this->montantTextBox->Text + this->comboBox1->Text)) {
+		MessageBox::Show("Veuillez ne pas entrer de caractères spéciaux");
+		return;
+	}
+	if (reference->Text == "" || (!(this->entierRadioBouton->Checked) && !(this->partielRadioBouton->Checked))) {
+		MessageBox::Show("Veuillez choisir une commande et un montant");
+		return;
+	}
+	if (this->entierRadioBouton->Checked) {
+		if (gestionDesCommandes->payerMontantRestant(this->reference->Text, "1"))
+			MessageBox::Show("Le paiement est bien effectué");
+		else
+			MessageBox::Show("Impossible d'effectuer le paiement");
+	}
+	else if (this->partielRadioBouton->Checked) {
+		if (!(this->DicoMoyens->ContainsKey(this->comboBox1->Text))) {
+			MessageBox::Show("Impossible de valider le moyen de paiement");
+		}
+		if (gestionDesCommandes->payerCommande(this->reference->Text, this->montantTextBox->Text, this->DicoMoyens[this->comboBox1->Text]))
+			MessageBox::Show("Le paiement est bien effectué");
+		else
+			MessageBox::Show("Impossible d'effectuer le paiement, vérifiez qu'il ne dépasse pas le montant demandé");
+	}
+	this->montantLabel->Text = this->gestionDesCommandes->montantRestant(this->reference->Text).ToString();
+}
+private: System::Void reference_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	if (verifySqlInjection(this->reference->Text)) return;
+	if (this->gestionDesCommandes->montantRestant(this->reference->Text) != -1) {
+		this->montantLabel->Text = this->gestionDesCommandes->montantRestant(this->reference->Text).ToString();
+	}
 }
 };
 }

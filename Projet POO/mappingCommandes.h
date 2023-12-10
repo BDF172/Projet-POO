@@ -16,7 +16,7 @@ namespace NS_composants {
 		System::Void obtenirCommande(System::String^ reference);
 		System::Void supprimerCommande(System::String^ referenceCommande);
 		System::Void ajouterArticlesCommande(System::String^ idCommande, articles^ articlesToAdd);
-		System::Void payerCommande(System::String^ idCommande, System::String^ montant, System::String^ moyen);
-		System::Void montantRestant(System::String^ idCommande);
+		System::Void payerCommande(System::String^ reference, System::String^ montant, System::String^ moyen);
+		System::Void montantRestant(System::String^ reference);
 	};
 }

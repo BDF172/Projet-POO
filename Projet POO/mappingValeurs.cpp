@@ -14,3 +14,7 @@ Void mappingValeurs::obtenirVilles(String^ idPays) {
 Void mappingValeurs::obtenirTVA(Void) {
 	this->request = "EXEC ObtenirTVA;";
 }
+
+System::Void NS_composants::mappingValeurs::obtenirMoyensPaiement(System::Void){
+	this->request = "EXEC ObtenirMoyensPaiement;";
+}

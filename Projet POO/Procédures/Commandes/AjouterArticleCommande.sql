@@ -30,6 +30,7 @@ BEGIN
 				UPDATE stock SET quantite_stock = quantite_stock - @Quantite
 					WHERE id_article = @IdArticle
 					AND Id_Entrepot = @IdEntrepot;
+				UPDATE Articles SET quantite_vendue = quantite_vendue + @Quantite;
 			END
 			ELSE
 			BEGIN

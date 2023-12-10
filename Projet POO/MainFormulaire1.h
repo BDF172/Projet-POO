@@ -5,6 +5,8 @@
 #include "gestionClientFormulaire.h"
 #include "GestionCommandeFormulaire.h"
 #include "GestionStatFormulaire.h"
+#include "gestionClient.h"
+#include "Client.h"
 
 namespace ProjetPOO {
 
@@ -80,9 +82,10 @@ namespace ProjetPOO {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Consolas", 16, System::Drawing::FontStyle::Bold));
 			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
 				static_cast<System::Int32>(static_cast<System::Byte>(251)));
-			this->button1->Location = System::Drawing::Point(127, 36);
+			this->button1->Location = System::Drawing::Point(155, 43);
+			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(1125, 156);
+			this->button1->Size = System::Drawing::Size(1375, 187);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Gestion Personnels";
 			this->button1->UseVisualStyleBackColor = true;
@@ -97,9 +100,10 @@ namespace ProjetPOO {
 			this->button2->Font = (gcnew System::Drawing::Font(L"Consolas", 16, System::Drawing::FontStyle::Bold));
 			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(153)), static_cast<System::Int32>(static_cast<System::Byte>(209)),
 				static_cast<System::Int32>(static_cast<System::Byte>(219)));
-			this->button2->Location = System::Drawing::Point(127, 232);
+			this->button2->Location = System::Drawing::Point(155, 278);
+			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(1125, 156);
+			this->button2->Size = System::Drawing::Size(1375, 187);
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"Gestion Clients";
 			this->button2->UseVisualStyleBackColor = true;
@@ -114,9 +118,10 @@ namespace ProjetPOO {
 			this->button3->Font = (gcnew System::Drawing::Font(L"Consolas", 16, System::Drawing::FontStyle::Bold));
 			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(184)),
 				static_cast<System::Int32>(static_cast<System::Byte>(228)));
-			this->button3->Location = System::Drawing::Point(127, 433);
+			this->button3->Location = System::Drawing::Point(155, 520);
+			this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(1125, 156);
+			this->button3->Size = System::Drawing::Size(1375, 187);
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Gestion Articles";
 			this->button3->UseVisualStyleBackColor = true;
@@ -131,9 +136,10 @@ namespace ProjetPOO {
 			this->button4->Font = (gcnew System::Drawing::Font(L"Consolas", 16, System::Drawing::FontStyle::Bold));
 			this->button4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(159)),
 				static_cast<System::Int32>(static_cast<System::Byte>(118)));
-			this->button4->Location = System::Drawing::Point(123, 623);
+			this->button4->Location = System::Drawing::Point(150, 748);
+			this->button4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(1129, 156);
+			this->button4->Size = System::Drawing::Size(1380, 187);
 			this->button4->TabIndex = 3;
 			this->button4->Text = L"Gestion Commandes";
 			this->button4->UseVisualStyleBackColor = true;
@@ -148,9 +154,10 @@ namespace ProjetPOO {
 			this->button5->Font = (gcnew System::Drawing::Font(L"Consolas", 16, System::Drawing::FontStyle::Bold));
 			this->button5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(227)),
 				static_cast<System::Int32>(static_cast<System::Byte>(161)));
-			this->button5->Location = System::Drawing::Point(123, 825);
+			this->button5->Location = System::Drawing::Point(150, 990);
+			this->button5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(1129, 156);
+			this->button5->Size = System::Drawing::Size(1380, 187);
 			this->button5->TabIndex = 4;
 			this->button5->Text = L"Gestion Statistiques";
 			this->button5->UseVisualStyleBackColor = true;
@@ -158,22 +165,27 @@ namespace ProjetPOO {
 			// 
 			// MainFormulaire
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(11, 24);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
 				static_cast<System::Int32>(static_cast<System::Byte>(41)));
-			this->ClientSize = System::Drawing::Size(1356, 1022);
+			this->ClientSize = System::Drawing::Size(1657, 1226);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"MainFormulaire";
 			this->Text = L"MainFormulaire";
+			this->Load += gcnew System::EventHandler(this, &MainFormulaire::MainFormulaire_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+	private:
+		NS_services::gestionClient^ gestionDesClients;
+
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
 		ProjetPOO::FormulaireGestionPersonnel toOpenClient;
@@ -205,6 +217,17 @@ namespace ProjetPOO {
 		toOpenStat.ShowDialog();
 		this->Show();
 	}
-	};
+	private: System::Void MainFormulaire_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->gestionDesClients = gcnew NS_services::gestionClient;
+		System::Collections::Generic::List<NS_composants::Client^>^ clients = this->gestionDesClients->clientsAnniv();
+		System::String^ toShow;
+		if (clients->Count == 0) toShow = "Aucun client n'a reçu de mail d'anniversaire";
+		else toShow = "Aujourd'hui, les clients suivants ont reçu un mail pour leur anniversaire :";
+		for each (NS_composants::Client^ i in clients) {
+			toShow += "\n\t" + i->getNom() + " " + i->getPrenom();
+		}
+		MessageBox::Show(toShow);
+	}
+};
 }
 

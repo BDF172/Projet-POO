@@ -29,6 +29,7 @@ CREATE TABLE Articles(
    id_article INT IDENTITY(1,1) NOT NULL,
    nom_articles VARCHAR(50),
    reference_article VARCHAR(50),
+   quantite_vendue INT DEFAULT 0,
    PRIMARY KEY(id_article)
 );
 
@@ -76,7 +77,6 @@ CREATE TABLE AdressesP(
 CREATE TABLE stock(
    id_stock INT IDENTITY(1,1) NOT NULL,
    seuil_reappro INT,
-   quantiteVendue INT,
    quantite_stock INT,
    Id_Entrepot INT NOT NULL,
    id_article INT NOT NULL,

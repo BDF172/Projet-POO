@@ -73,7 +73,7 @@ namespace ProjetPOO {
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -358,8 +358,8 @@ namespace ProjetPOO {
 		}
 #pragma endregion
 	public:
-		property NS_composants::Client^ clientToModify;
-		property NS_composants::adresseC^ adressToDelete;
+		NS_composants::Client^ clientToModify;
+		NS_composants::adresseC^ adressToDelete;
 
 	private:
 		System::Collections::Generic::Dictionary<String^, String^>^ adressesF;
@@ -370,94 +370,13 @@ namespace ProjetPOO {
 		NS_services::gestionClient^ gestionDesClients;
 		NS_services::gestionValeurs^ gestionDesValeurs;
 
-	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Close();
-	}
-private: System::Void gestionAdressesClients_Load(System::Object^ sender, System::EventArgs^ e) {
-	this->adressesL = gcnew System::Collections::Generic::Dictionary<String^, String^>;
-	this->adressesF = gcnew System::Collections::Generic::Dictionary<String^, String^>;
-	this->gestionDesClients = gcnew NS_services::gestionClient;
-	this->gestionDesValeurs = gcnew NS_services::gestionValeurs;
-	this->paysComboBox->Items->Clear();
-	DicoPays = this->gestionDesValeurs->obtenirPays();
-	if (this->DicoPays == nullptr) return;
-	for each (String ^ i in DicoPays->Keys) {
-		this->paysComboBox->Items->Add(i);
-	}
-	NS_composants::adresseClient^ adresses = this->clientToModify->getAdresse();
-	while (adresses != nullptr) {
-		System::String^ adresseFormatted = adresses->numeroRue + " " + adresses->nomRue
-			+ ", " + adresses->nomVille + ", " + adresses->nomPays;
-		if (adresses->f_ou_l) {
-			if (!adressesL->ContainsKey(adresseFormatted))
-				this->adressesL->Add(adresseFormatted, adresses->idAdresse);
-		}
-		else if (!adressesF->ContainsKey(adresseFormatted))
-			this->adressesF->Add(adresseFormatted, adresses->idAdresse);
-		adresses = adresses->suivant;
-	}
-}
-
-
-
-private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	if (this->fRadioBouton->Checked) {
-		this->adressComboBox->Items->Clear();
-		for each (String ^ i in adressesF->Keys) {
-			this->adressComboBox->Items->Add(i);
-		}
-	}
-}
-private: System::Void lRadioBouton_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	if (this->lRadioBouton->Checked) {
-		this->adressComboBox->Items->Clear();
-		for each (String ^ i in adressesL->Keys) {
-			this->adressComboBox->Items->Add(i);
-		}
-	}
-}
-private: System::Void adressComboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-	System::Collections::Generic::Dictionary<String^, String^>^ toVerify = this->lRadioBouton->Checked ? adressesL : adressesF;
-	this->tempAddress = this->clientToModify->getAdresse();
-	while (tempAddress->idAdresse != toVerify[this->adressComboBox->Text] && tempAddress != nullptr) tempAddress = tempAddress->suivant;
-	this->nRueTextBox->Text = this->tempAddress->numeroRue;
-	this->rueTextBox->Text = this->tempAddress->nomRue;
-	this->villeComboBox->Text = this->tempAddress->nomVille;
-	this->paysComboBox->Text = this->tempAddress->nomPays;
-}
-private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
-	System::Collections::Generic::Dictionary<String^, String^>^ toVerify = this->lRadioBouton->Checked ? adressesL : adressesF;
-	this->tempAddress = this->clientToModify->getAdresse();
-	while (tempAddress != nullptr) {
-		if (tempAddress->idAdresse == toVerify[this->adressComboBox->Text]) {
-			if (!(toVerify->ContainsKey(this->adressComboBox->Text))) {
-				MessageBox::Show("L'adresse à modifier est introuvable");
-				return;
-			}
-			if (!DicoVilles->ContainsKey(this->villeComboBox->Text)) {
-				MessageBox::Show("La ville choisie n'est pas valide");
-				return;
-			}
-			if(!(this->gestionDesClients->modifierAdresse(tempAddress->idAdresse, this->nRueTextBox->Text, this->rueTextBox->Text, DicoVilles[this->villeComboBox->Text])))
-				MessageBox::Show("Erreur lors de la modification de l'adresse");
-			else
-				this->Close();
-		}
-		this->tempAddress = this->tempAddress->suivant;
-	}
-}
-private: System::Void paysComboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-	this->villeComboBox->Items->Clear();
-	try {
-		String^ idChoisi = this->DicoPays[this->paysComboBox->Text];
-		DicoVilles = this->gestionDesValeurs->obtenirVilles(idChoisi);
-		for each (String ^ i in DicoVilles->Keys) {
-			this->villeComboBox->Items->Add(i);
-		}
-	}
-	catch (Exception^ e) {
-		MessageBox::Show("Erreur :" + e->Data);
-	}
-}
-};
+	private:
+		System::Void button5_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void gestionAdressesClients_Load(System::Object^ sender, System::EventArgs^ e);
+		System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+		System::Void lRadioBouton_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+		System::Void adressComboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e);
+		System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void paysComboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e);
+	};
 }
