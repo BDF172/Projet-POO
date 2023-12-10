@@ -197,6 +197,7 @@
     <ClInclude Include="headerLink.h" />
     <ClInclude Include="mappingCommandes.h" />
     <ClInclude Include="mappingPersonnel.h" />
+    <ClInclude Include="mappingStats.h" />
     <ClInclude Include="mappingValeurs.h" />
     <ClInclude Include="Personnel.h" />
     <ClInclude Include="statsMapping.h" />

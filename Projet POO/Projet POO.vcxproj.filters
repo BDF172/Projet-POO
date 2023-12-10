@@ -235,5 +235,8 @@
     <ClInclude Include="gestionPaiementCommande.h">
       <Filter>Fichiers d%27en-tête\Forms</Filter>
     </ClInclude>
+    <ClInclude Include="mappingStats.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage mapping</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
