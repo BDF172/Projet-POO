@@ -136,7 +136,10 @@
       <Filter>Fichiers sources\Services</Filter>
     </ClCompile>
     <ClCompile Include="gestionAdressesClients.cpp">
-      <Filter>Fichiers sources\Composants\Forms</Filter>
+      <Filter>Fichiers d%27en-tête\Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="gestionPaiementCommande.cpp">
+      <Filter>Fichiers d%27en-tête\Forms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +230,9 @@
       <Filter>Fichiers d%27en-tête\Services</Filter>
     </ClInclude>
     <ClInclude Include="gestionAdressesClients.h">
+      <Filter>Fichiers d%27en-tête\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="gestionPaiementCommande.h">
       <Filter>Fichiers d%27en-tête\Forms</Filter>
     </ClInclude>
   </ItemGroup>
