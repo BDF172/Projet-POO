@@ -15,6 +15,7 @@
 #include "gestionArticles.h"
 #include "mappingCommandes.h"
 #include "gestionCommandes.h"
+#include "mappingStats.h"
 #include "gestionPersonnelFormulaire1.h"
 #include "GestionClientFormulaire.h"
 #include "gestionCommandeFormulaire.h"

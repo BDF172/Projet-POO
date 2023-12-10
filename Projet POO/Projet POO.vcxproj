@@ -137,6 +137,7 @@
     <ClCompile Include="gestionClientFormulaire.cpp" />
     <ClCompile Include="gestionCommandeFormulaire.cpp" />
     <ClCompile Include="gestionCommandes.cpp" />
+    <ClCompile Include="gestionPaiementCommande.cpp" />
     <ClCompile Include="gestionPersonnel.cpp" />
     <ClCompile Include="gestionPersonnelFormulaire1.cpp" />
     <ClCompile Include="gestionStatFormulaire.cpp" />
@@ -146,6 +147,7 @@
     <ClCompile Include="mappingClient.cpp" />
     <ClCompile Include="mappingCommandes.cpp" />
     <ClCompile Include="mappingPersonnel.cpp" />
+    <ClCompile Include="mappingStats.cpp" />
     <ClCompile Include="mappingValeurs.cpp" />
     <ClCompile Include="Personnel.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -177,6 +179,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="gestionCommandes.h" />
+    <ClInclude Include="gestionPaiementCommande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="gestionPersonnel.h" />
     <ClInclude Include="gestionPersonnelFormulaire1.h">
       <FileType>CppForm</FileType>
@@ -193,6 +198,7 @@
     <ClInclude Include="headerLink.h" />
     <ClInclude Include="mappingCommandes.h" />
     <ClInclude Include="mappingPersonnel.h" />
+    <ClInclude Include="mappingStats.h" />
     <ClInclude Include="mappingValeurs.h" />
     <ClInclude Include="Personnel.h" />
     <ClInclude Include="statsMapping.h" />
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionCommandeFormulaire.resx">
       <DependentUpon>gestionCommandeFormulaire.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gestionPaiementCommande.resx">
+      <DependentUpon>gestionPaiementCommande.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionStatFormulaire.resx">
       <DependentUpon>gestionStatFormulaire.h</DependentUpon>

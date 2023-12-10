@@ -136,7 +136,13 @@
       <Filter>Fichiers sources\Services</Filter>
     </ClCompile>
     <ClCompile Include="gestionAdressesClients.cpp">
-      <Filter>Fichiers sources\Composants\Forms</Filter>
+      <Filter>Fichiers d%27en-tête\Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="gestionPaiementCommande.cpp">
+      <Filter>Fichiers d%27en-tête\Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="mappingStats.cpp">
+      <Filter>Fichiers sources\Composants\héritage mapping</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -228,6 +234,12 @@
     </ClInclude>
     <ClInclude Include="gestionAdressesClients.h">
       <Filter>Fichiers d%27en-tête\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="gestionPaiementCommande.h">
+      <Filter>Fichiers d%27en-tête\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="mappingStats.h">
+      <Filter>Fichiers d%27en-tête\Composants\heritage mapping</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
