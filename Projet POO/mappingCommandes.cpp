@@ -10,6 +10,10 @@ System::Void mappingCommandes::creerCommande(String^ idClient, String^ idAdresse
 	Console::WriteLine(this->request);
 }
 
+System::Void NS_composants::mappingCommandes::supprimerCommande(System::String^ referenceCommande){
+	this->request = "EXEC SupprimerCommande @Reference = '" + referenceCommande + "';";
+}
+
 System::Void mappingCommandes::ajouterArticlesCommande(String^ idCommande, articles^ articlesToAdd) {
 	this->request = "";
 	while (articlesToAdd != nullptr) {
@@ -31,4 +35,9 @@ Void mappingCommandes::payerCommande(String^ idCommande, String^ montant, String
 
 Void mappingCommandes::montantRestant(String^ idCommande) {
 	this->request = "EXEC ObtenirMontantRestant @IdCommande = " + idCommande;
+}
+
+Void mappingCommandes::obtenirCommande(String^ reference) {
+	this->request = "EXEC ObtenirFacture @Reference = '" + reference + "';";
+	Console::WriteLine(this->request);
 }

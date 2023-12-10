@@ -14,6 +14,8 @@ namespace NS_services {
 
 		System::Collections::Generic::List<NS_composants::articles^>^ rechercherArticle(System::String^ nom);
 
+		System::Boolean verifierStock(System::String^ idArticle, System::String^ quantite);
+
 		System::Int64 ajouterArticle(System::String^ nom, System::String^ prix, System::String^ prctTVA,
 			System::String^ seuilReappro, System::String^ cout, System::String^ stock);
 

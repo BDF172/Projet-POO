@@ -279,6 +279,10 @@ private: System::Void button_valider_Click(System::Object^ sender, System::Event
 		MessageBox::Show("Veuillez remplir les champs nécessaires");
 		return;
 	}
+	if (!(this->gestionDesArticles->verifierStock(this->idTextBox->Text, this->quantiteTextBox->Text))) {
+		MessageBox::Show("Erreur d'entrée dans l'article ou stock épuisées");
+		return;
+	}
 	NS_composants::Articles^ articleChoisi = this->gestionDesArticles->obtenirArticle(this->idTextBox->Text);
 	if (articleChoisi == nullptr) {
 		MessageBox::Show("Article non trouvé");

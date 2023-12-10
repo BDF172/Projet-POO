@@ -11,8 +11,8 @@ gestionClient::gestionClient(Void){
 	this->clientTableMap = gcnew mappingClient;
 }
 
-Int64 gestionClient::createClient(String^ nom, String^ prenom, String^ naissance, String^ nRue, String^ nomRue, String^ idVille) {
-	this->clientTableMap->creerClient(nom, prenom, naissance, nRue, nomRue, idVille);
+Int64 gestionClient::createClient(String^ nom, String^ prenom, String^ naissance, String^ nRue, String^ nomRue, String^ idVille, Boolean f_ou_l) {
+	this->clientTableMap->creerClient(nom, prenom, naissance, nRue, nomRue, idVille, f_ou_l);
 	DataSet^ result = this->clientTableMap->executeRequest();
 	if (!this->verifyErrorCode(result)) {
 		return -1;
@@ -30,6 +30,7 @@ Client^ NS_services::gestionClient::obtenirClient(String^ idClient) {
 	toReturn->setNom(Convert::ToString(result->Tables[1]->Rows[0][0]));
 	toReturn->setPrenom(Convert::ToString(result->Tables[1]->Rows[0][1]));
 	toReturn->setNaissance(Convert::ToString(result->Tables[1]->Rows[0][2]));
+	toReturn->setID(idClient);
 	if(result->Tables[2]->Rows->Count != 0){
 		adresseClient^ premiereAdresse = gcnew adresseClient;
 		adresseClient^ adresseTemp = premiereAdresse;
@@ -79,5 +80,15 @@ Boolean gestionClient::supprimerClient(String^ idClient) {
 
 Boolean gestionClient::modifierClient(String^ idclient, String^ nom, String^ prenom, String^ dateNaissance) {
 	this->clientTableMap->modifierClient(idclient, nom, prenom, dateNaissance);
+	return this->verifyErrorCode(this->clientTableMap->executeRequest());
+}
+
+Boolean gestionClient::ajouterAdresse(String^ idClient, String^ nRue, String^ nomRue, String^ idVille, Boolean f_ou_l) {
+	this->clientTableMap->ajouterAdresse(idClient, nRue, nomRue, idVille, f_ou_l ? "1" : "0");
+	return verifyErrorCode(this->clientTableMap->executeRequest());
+}
+
+Boolean gestionClient::modifierAdresse(String^ idAdresse, String^ nRue, String^ nomRue, String^ idVille) {
+	this->clientTableMap->modifierAdresse(idAdresse, nRue, nomRue, idVille);
 	return this->verifyErrorCode(this->clientTableMap->executeRequest());
 }

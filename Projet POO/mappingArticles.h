@@ -9,6 +9,8 @@ namespace NS_composants{
 
 		System::Void chercherArticle(System::String^ nomArticle);
 
+		System::Void verifierStock(System::String^ idArticle, System::String^ quantite);
+
 		System::Void ajouterArticle(System::String^ nom, System::String^ prix, System::String^ prctTVA,
 			System::String^ seuilReappro, System::String^ cout, System::String^ stock);
 

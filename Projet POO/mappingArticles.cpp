@@ -11,6 +11,11 @@ System::Void NS_composants::mappingArticles::chercherArticle(System::String^ nom
 	this->request = "EXEC RechercherArticle @NomArticle = '" + nomArticle + "';";
 }
 
+System::Void NS_composants::mappingArticles::verifierStock(System::String^ idArticle, System::String^ quantite){
+	this->request = "EXEC VerifierStock @IdArticle = " + idArticle + ", @Quantite = " + quantite + ";";
+	Console::WriteLine(this->request);
+}
+
 Void mappingArticles::ajouterArticle(String^ nom, String^ prix, String^ IdTVA, String^ seuilReappro, 
 	String^ cout, String^ stock) {
 	this->request = "EXEC CreerArticle @NomArticle = '" + nom

@@ -9,8 +9,10 @@ namespace NS_services {
 	public:
 		gestionCommandes(System::Void);
 		System::String^ creerCommande(System::String^ idClient, NS_composants::articles^ articlesChoisis, System::String^ idAdresseL, System::String^ idAdresseF);
-		System::Boolean payerCommande(System::String^ idCommande, System::String^ montant, System::String^ moyen);
-		System::Double montantRestant(System::String^ idCommande);
+		System::String^ obtenirCommande(System::String^ reference);
+		System::Boolean payerCommande(System::String^ referenceCommande, System::String^ montant, System::String^ moyen);
+		System::Double supprimerCommande(System::String^ reference);
+		System::Double montantRestant(System::String^ referenceCommande);
 		System::Boolean payerMontantRestant(System::String^ idCommande, String^ moyen);
 	
 	private:

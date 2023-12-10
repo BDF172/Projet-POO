@@ -71,8 +71,9 @@ namespace ProjetPOO {
 
     private: System::Windows::Forms::Button^ button1;
     private: System::Windows::Forms::Button^ button4;
-    private: System::Windows::Forms::Button^ button2;
-    private: System::Windows::Forms::Button^ button3;
+    private: System::Windows::Forms::Button^ supprimerBouton;
+
+
     private: System::Windows::Forms::Panel^ panel1;
 
 
@@ -115,8 +116,7 @@ namespace ProjetPOO {
             this->mainTextBox = (gcnew System::Windows::Forms::RichTextBox());
             this->button1 = (gcnew System::Windows::Forms::Button());
             this->button4 = (gcnew System::Windows::Forms::Button());
-            this->button2 = (gcnew System::Windows::Forms::Button());
-            this->button3 = (gcnew System::Windows::Forms::Button());
+            this->supprimerBouton = (gcnew System::Windows::Forms::Button());
             this->panel1 = (gcnew System::Windows::Forms::Panel());
             this->fComboBox = (gcnew System::Windows::Forms::ComboBox());
             this->lComboBox = (gcnew System::Windows::Forms::ComboBox());
@@ -137,9 +137,9 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->reference->ForeColor = System::Drawing::Color::White;
             this->reference->Location = System::Drawing::Point(27, 148);
-            this->reference->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->reference->Margin = System::Windows::Forms::Padding(4);
             this->reference->Name = L"reference";
-            this->reference->Size = System::Drawing::Size(561, 39);
+            this->reference->Size = System::Drawing::Size(561, 26);
             this->reference->TabIndex = 100;
             this->reference->TextChanged += gcnew System::EventHandler(this, &GestionCommandeFormulaire::reference_TextChanged);
             // 
@@ -177,7 +177,7 @@ namespace ProjetPOO {
             this->button_valider->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
                 static_cast<System::Int32>(static_cast<System::Byte>(251)));
             this->button_valider->Location = System::Drawing::Point(27, 888);
-            this->button_valider->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->button_valider->Margin = System::Windows::Forms::Padding(4);
             this->button_valider->Name = L"button_valider";
             this->button_valider->Size = System::Drawing::Size(568, 96);
             this->button_valider->TabIndex = 62;
@@ -195,7 +195,7 @@ namespace ProjetPOO {
             this->label14->Location = System::Drawing::Point(23, 96);
             this->label14->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label14->Name = L"label14";
-            this->label14->Size = System::Drawing::Size(341, 38);
+            this->label14->Size = System::Drawing::Size(190, 22);
             this->label14->TabIndex = 47;
             this->label14->Text = L"Référence commande";
             // 
@@ -208,7 +208,7 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->mainTextBox->ForeColor = System::Drawing::Color::White;
             this->mainTextBox->Location = System::Drawing::Point(370, 47);
-            this->mainTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->mainTextBox->Margin = System::Windows::Forms::Padding(4);
             this->mainTextBox->Name = L"mainTextBox";
             this->mainTextBox->Size = System::Drawing::Size(926, 1118);
             this->mainTextBox->TabIndex = 111;
@@ -224,7 +224,7 @@ namespace ProjetPOO {
             this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
                 static_cast<System::Int32>(static_cast<System::Byte>(251)));
             this->button1->Location = System::Drawing::Point(23, 49);
-            this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->button1->Margin = System::Windows::Forms::Padding(4);
             this->button1->Name = L"button1";
             this->button1->Size = System::Drawing::Size(279, 245);
             this->button1->TabIndex = 106;
@@ -243,8 +243,8 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->button4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(159)),
                 static_cast<System::Int32>(static_cast<System::Byte>(118)));
-            this->button4->Location = System::Drawing::Point(23, 912);
-            this->button4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->button4->Location = System::Drawing::Point(23, 798);
+            this->button4->Margin = System::Windows::Forms::Padding(4);
             this->button4->Name = L"button4";
             this->button4->Size = System::Drawing::Size(279, 270);
             this->button4->TabIndex = 110;
@@ -252,46 +252,26 @@ namespace ProjetPOO {
             this->button4->UseVisualStyleBackColor = false;
             this->button4->Click += gcnew System::EventHandler(this, &GestionCommandeFormulaire::button4_Click);
             // 
-            // button2
+            // supprimerBouton
             // 
-            this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
+            this->supprimerBouton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(18)), static_cast<System::Int32>(static_cast<System::Byte>(17)),
                 static_cast<System::Int32>(static_cast<System::Byte>(41)));
-            this->button2->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(153)),
+            this->supprimerBouton->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(153)),
                 static_cast<System::Int32>(static_cast<System::Byte>(209)), static_cast<System::Int32>(static_cast<System::Byte>(219)));
-            this->button2->FlatAppearance->BorderSize = 2;
-            this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->button2->Font = (gcnew System::Drawing::Font(L"Consolas", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->supprimerBouton->FlatAppearance->BorderSize = 2;
+            this->supprimerBouton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->supprimerBouton->Font = (gcnew System::Drawing::Font(L"Consolas", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(153)), static_cast<System::Int32>(static_cast<System::Byte>(209)),
+            this->supprimerBouton->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(153)), static_cast<System::Int32>(static_cast<System::Byte>(209)),
                 static_cast<System::Int32>(static_cast<System::Byte>(219)));
-            this->button2->Location = System::Drawing::Point(23, 325);
-            this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-            this->button2->Name = L"button2";
-            this->button2->Size = System::Drawing::Size(279, 260);
-            this->button2->TabIndex = 107;
-            this->button2->Text = L"Modifier Commande";
-            this->button2->UseVisualStyleBackColor = false;
-            this->button2->Click += gcnew System::EventHandler(this, &GestionCommandeFormulaire::button2_Click);
-            // 
-            // button3
-            // 
-            this->button3->BackColor = System::Drawing::Color::Transparent;
-            this->button3->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)),
-                static_cast<System::Int32>(static_cast<System::Byte>(184)), static_cast<System::Int32>(static_cast<System::Byte>(228)));
-            this->button3->FlatAppearance->BorderSize = 2;
-            this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->button3->Font = (gcnew System::Drawing::Font(L"Consolas", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(184)),
-                static_cast<System::Int32>(static_cast<System::Byte>(228)));
-            this->button3->Location = System::Drawing::Point(23, 622);
-            this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-            this->button3->Name = L"button3";
-            this->button3->Size = System::Drawing::Size(279, 262);
-            this->button3->TabIndex = 109;
-            this->button3->Text = L"Supprimer Commande";
-            this->button3->UseVisualStyleBackColor = false;
-            this->button3->Click += gcnew System::EventHandler(this, &GestionCommandeFormulaire::button3_Click);
+            this->supprimerBouton->Location = System::Drawing::Point(23, 414);
+            this->supprimerBouton->Margin = System::Windows::Forms::Padding(4);
+            this->supprimerBouton->Name = L"supprimerBouton";
+            this->supprimerBouton->Size = System::Drawing::Size(279, 260);
+            this->supprimerBouton->TabIndex = 107;
+            this->supprimerBouton->Text = L"Supprimer Commande";
+            this->supprimerBouton->UseVisualStyleBackColor = false;
+            this->supprimerBouton->Click += gcnew System::EventHandler(this, &GestionCommandeFormulaire::button2_Click);
             // 
             // panel1
             // 
@@ -308,7 +288,7 @@ namespace ProjetPOO {
             this->panel1->Controls->Add(this->button_valider);
             this->panel1->Controls->Add(this->label14);
             this->panel1->Location = System::Drawing::Point(1362, 47);
-            this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->panel1->Margin = System::Windows::Forms::Padding(4);
             this->panel1->Name = L"panel1";
             this->panel1->Size = System::Drawing::Size(614, 1118);
             this->panel1->TabIndex = 108;
@@ -343,7 +323,7 @@ namespace ProjetPOO {
             this->button8->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(243)), static_cast<System::Int32>(static_cast<System::Byte>(139)),
                 static_cast<System::Int32>(static_cast<System::Byte>(168)));
             this->button8->Location = System::Drawing::Point(319, 710);
-            this->button8->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->button8->Margin = System::Windows::Forms::Padding(4);
             this->button8->Name = L"button8";
             this->button8->Size = System::Drawing::Size(276, 126);
             this->button8->TabIndex = 113;
@@ -363,7 +343,7 @@ namespace ProjetPOO {
             this->button7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(227)),
                 static_cast<System::Int32>(static_cast<System::Byte>(161)));
             this->button7->Location = System::Drawing::Point(27, 710);
-            this->button7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->button7->Margin = System::Windows::Forms::Padding(4);
             this->button7->Name = L"button7";
             this->button7->Size = System::Drawing::Size(276, 126);
             this->button7->TabIndex = 112;
@@ -381,7 +361,7 @@ namespace ProjetPOO {
             this->label2->Location = System::Drawing::Point(23, 488);
             this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label2->Name = L"label2";
-            this->label2->Size = System::Drawing::Size(377, 38);
+            this->label2->Size = System::Drawing::Size(210, 22);
             this->label2->TabIndex = 113;
             this->label2->Text = L"Adresse de livraison";
             // 
@@ -395,7 +375,7 @@ namespace ProjetPOO {
             this->label3->Location = System::Drawing::Point(23, 358);
             this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label3->Name = L"label3";
-            this->label3->Size = System::Drawing::Size(413, 38);
+            this->label3->Size = System::Drawing::Size(230, 22);
             this->label3->TabIndex = 111;
             this->label3->Text = L"Adresse de facturation";
             // 
@@ -407,9 +387,9 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->idClientTextBox->ForeColor = System::Drawing::Color::White;
             this->idClientTextBox->Location = System::Drawing::Point(27, 278);
-            this->idClientTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->idClientTextBox->Margin = System::Windows::Forms::Padding(4);
             this->idClientTextBox->Name = L"idClientTextBox";
-            this->idClientTextBox->Size = System::Drawing::Size(561, 39);
+            this->idClientTextBox->Size = System::Drawing::Size(561, 26);
             this->idClientTextBox->TabIndex = 110;
             this->idClientTextBox->TextChanged += gcnew System::EventHandler(this, &GestionCommandeFormulaire::idClientTextBox_TextChanged);
             // 
@@ -423,7 +403,7 @@ namespace ProjetPOO {
             this->label1->Location = System::Drawing::Point(23, 227);
             this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label1->Name = L"label1";
-            this->label1->Size = System::Drawing::Size(179, 38);
+            this->label1->Size = System::Drawing::Size(100, 22);
             this->label1->TabIndex = 109;
             this->label1->Text = L"ID client";
             // 
@@ -437,10 +417,9 @@ namespace ProjetPOO {
             this->Controls->Add(this->mainTextBox);
             this->Controls->Add(this->button1);
             this->Controls->Add(this->button4);
-            this->Controls->Add(this->button2);
-            this->Controls->Add(this->button3);
+            this->Controls->Add(this->supprimerBouton);
             this->Controls->Add(this->panel1);
-            this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->Margin = System::Windows::Forms::Padding(4);
             this->Name = L"GestionCommandeFormulaire";
             this->Text = L"GestionCommandeFormulaire";
             this->Load += gcnew System::EventHandler(this, &GestionCommandeFormulaire::GestionCommandeFormulaire_Load);
@@ -457,26 +436,26 @@ namespace ProjetPOO {
         System::Collections::Generic::Dictionary<String^, String^>^ adressesF;
         System::Collections::Generic::Dictionary<String^, String^>^ adressesL;
         NS_composants::articles^ articlesChoisis;
+        System::Char fonctionChoisie;
 
     private: System::Void GestionCommandeFormulaire_Load(System::Object^ sender, System::EventArgs^ e) {
         this->gestionDeCommande = gcnew NS_services::gestionCommandes;
         this->gestionDuClient = gcnew NS_services::gestionClient;
         this->clientCommande = gcnew NS_composants::Client;
         this->articlesChoisis = nullptr;
+        this->fonctionChoisie = 'N';
         adressesF = gcnew System::Collections::Generic::Dictionary<String^, String^>;
         adressesL = gcnew System::Collections::Generic::Dictionary<String^, String^>;
     }
 
     private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-        this->mainTextBox->Text = " " + this->button4->Text;
-        this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
-        this->button3->ForeColor = System::Drawing::Color::FromArgb(244, 184, 228);
-        this->button2->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
-        this->button4->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
-        this->button4->BackColor = System::Drawing::Color::FromArgb(239, 159, 118);
-        this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-        this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-        this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+        if (this->reference->Text == "") {
+            MessageBox::Show("Veuillez entrer une référence de commande à rechercher.");
+            return;
+        }
+        else {
+            this->mainTextBox->Text = this->gestionDeCommande->obtenirCommande(this->reference->Text);
+        }
     }
     private: System::Void label13_Click(System::Object^ sender, System::EventArgs^ e) {
     }
@@ -490,61 +469,60 @@ namespace ProjetPOO {
     }
     private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
         this->mainTextBox->Text = " " + this->button1->Text;
-        this->button2->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
-        this->button3->ForeColor = System::Drawing::Color::FromArgb(244, 184, 228);
+        this->supprimerBouton->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
         this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
         this->button1->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
         this->button1->BackColor = System::Drawing::Color::FromArgb(192, 188, 251);
-        this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-        this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+        this->supprimerBouton->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
         this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+        this->fonctionChoisie = 'C';
     }
     private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-        this->mainTextBox->Text = " " + this->button2->Text;
+        this->mainTextBox->Text = " " + this->supprimerBouton->Text;
         this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
-        this->button3->ForeColor = System::Drawing::Color::FromArgb(244, 184, 228);
+        this->supprimerBouton->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
         this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
-        this->button2->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
-        this->button2->BackColor = System::Drawing::Color::FromArgb(153, 209, 219);
         this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-        this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+        this->supprimerBouton->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
         this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-    }
-    private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-        this->mainTextBox->Text = " " + this->button3->Text;
-        this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
-        this->button2->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
-        this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
-        this->button3->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
-        this->button3->BackColor = System::Drawing::Color::FromArgb(244, 184, 228);
-        this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-        this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-        this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
+        this->fonctionChoisie = 'S';
     }
     private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
         this->Close();
     }
     private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
-        if (this->articlesChoisis == nullptr || this->idClientTextBox->Text == "") {
-            MessageBox::Show("Veuillez sélectionner au moins un article et un client");
+        if (this->fonctionChoisie == 'N') {
+            MessageBox::Show("Veuillez sélectionner une action à effectuer");
             return;
         }
-        if (!adressesF->ContainsKey(this->fComboBox->Text) || !adressesL->ContainsKey(this->lComboBox->Text)) {
-            MessageBox::Show("Veuillez sélectionner les adresses correspondant au client");
-            return;
+        if (this->fonctionChoisie == 'C') {
+            if (this->articlesChoisis == nullptr || this->idClientTextBox->Text == "") {
+                MessageBox::Show("Veuillez sélectionner au moins un article et un client");
+                return;
+            }
+            if (!adressesF->ContainsKey(this->fComboBox->Text) || !adressesL->ContainsKey(this->lComboBox->Text)) {
+                MessageBox::Show("Veuillez sélectionner les adresses correspondant au client");
+                return;
+            }
+            System::String^ referenceResult = this->gestionDeCommande->creerCommande(
+                this->idClientTextBox->Text,
+                this->articlesChoisis,
+                this->adressesL[this->lComboBox->Text],
+                this->adressesF[this->fComboBox->Text]
+            );
+            if (referenceResult == nullptr) {
+                MessageBox::Show("Erreur lors de la création de commande");
+                return;
+            }
+            else
+                this->reference->Text = referenceResult;
         }
-        System::String^ referenceResult = this->gestionDeCommande->creerCommande(
-            this->idClientTextBox->Text,
-            this->articlesChoisis,
-            this->adressesL[this->lComboBox->Text],
-            this->adressesF[this->fComboBox->Text]
-        );
-        if (referenceResult == nullptr) {
-            MessageBox::Show("Erreur lors de la création de commande");
-            return;
+        else if (this->fonctionChoisie == 'S') {
+            Double result = this->gestionDeCommande->supprimerCommande(this->reference->Text);
+            if (result == -1) MessageBox::Show("Erreur lors de la suppression de la commande");
+            else MessageBox::Show("Commande supprimée avec succés, " + result.ToString() + "€ viennent d'être remboursés");
         }
-        else
-            this->reference->Text = referenceResult;
+        
     }
     private: System::Void dateEmission_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
     }
@@ -605,7 +583,7 @@ private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e
         }
         if (tempPtr->idArticle == toOpenAjouterArticles.choixUtilisateur->idArticle) {
             tempPtr->quantite = (Convert::ToInt64(tempPtr->quantite) + Convert::ToInt64(toOpenAjouterArticles.choixUtilisateur->quantite)).ToString();
-            tempPtr->prix = (Convert::ToInt64(tempPtr->prix) + Convert::ToInt64(toOpenAjouterArticles.choixUtilisateur->prix)).ToString();
+            tempPtr->prix = (Convert::ToDouble(tempPtr->prix) + Convert::ToDouble(toOpenAjouterArticles.choixUtilisateur->prix)).ToString();
         }
         else
             tempPtr->suivant = toOpenAjouterArticles.choixUtilisateur;

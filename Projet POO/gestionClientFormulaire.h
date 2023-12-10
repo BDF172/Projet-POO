@@ -82,9 +82,12 @@ namespace ProjetPOO {
     private: System::Windows::Forms::TextBox^ rueTextBox;
     private: System::Windows::Forms::ComboBox^ villeComboBox;
     private: System::Windows::Forms::Label^ label2;
-    private: System::Windows::Forms::RadioButton^ radioButton3;
-    private: System::Windows::Forms::RadioButton^ radioButton2;
-    private: System::Windows::Forms::RadioButton^ radioButton1;
+    private: System::Windows::Forms::RadioButton^ bothTypesBouton;
+
+    private: System::Windows::Forms::RadioButton^ livraisonBouton;
+
+    private: System::Windows::Forms::RadioButton^ facturationBouton;
+
     private: System::Windows::Forms::Button^ button6;
 
 
@@ -132,9 +135,9 @@ namespace ProjetPOO {
             this->label14 = (gcnew System::Windows::Forms::Label());
             this->label8 = (gcnew System::Windows::Forms::Label());
             this->panel1 = (gcnew System::Windows::Forms::Panel());
-            this->radioButton3 = (gcnew System::Windows::Forms::RadioButton());
-            this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
-            this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
+            this->bothTypesBouton = (gcnew System::Windows::Forms::RadioButton());
+            this->livraisonBouton = (gcnew System::Windows::Forms::RadioButton());
+            this->facturationBouton = (gcnew System::Windows::Forms::RadioButton());
             this->label2 = (gcnew System::Windows::Forms::Label());
             this->villeComboBox = (gcnew System::Windows::Forms::ComboBox());
             this->label1 = (gcnew System::Windows::Forms::Label());
@@ -186,7 +189,7 @@ namespace ProjetPOO {
             this->button_valider->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
                 static_cast<System::Int32>(static_cast<System::Byte>(251)));
             this->button_valider->Location = System::Drawing::Point(18, 1022);
-            this->button_valider->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->button_valider->Margin = System::Windows::Forms::Padding(4);
             this->button_valider->Name = L"button_valider";
             this->button_valider->Size = System::Drawing::Size(568, 96);
             this->button_valider->TabIndex = 62;
@@ -224,9 +227,9 @@ namespace ProjetPOO {
             // 
             // panel1
             // 
-            this->panel1->Controls->Add(this->radioButton3);
-            this->panel1->Controls->Add(this->radioButton2);
-            this->panel1->Controls->Add(this->radioButton1);
+            this->panel1->Controls->Add(this->bothTypesBouton);
+            this->panel1->Controls->Add(this->livraisonBouton);
+            this->panel1->Controls->Add(this->facturationBouton);
             this->panel1->Controls->Add(this->label2);
             this->panel1->Controls->Add(this->villeComboBox);
             this->panel1->Controls->Add(this->label1);
@@ -247,56 +250,55 @@ namespace ProjetPOO {
             this->panel1->Controls->Add(this->label6);
             this->panel1->Controls->Add(this->naissanceDatePicker);
             this->panel1->Location = System::Drawing::Point(1369, 49);
-            this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->panel1->Margin = System::Windows::Forms::Padding(4);
             this->panel1->Name = L"panel1";
             this->panel1->Size = System::Drawing::Size(598, 1133);
             this->panel1->TabIndex = 101;
-            this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &GestionClientFormulaire::panel1_Paint);
             // 
-            // radioButton3
+            // bothTypesBouton
             // 
-            this->radioButton3->AutoSize = true;
-            this->radioButton3->Font = (gcnew System::Drawing::Font(L"Consolas", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->bothTypesBouton->AutoSize = true;
+            this->bothTypesBouton->Font = (gcnew System::Drawing::Font(L"Consolas", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->radioButton3->ForeColor = System::Drawing::Color::White;
-            this->radioButton3->Location = System::Drawing::Point(390, 962);
-            this->radioButton3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-            this->radioButton3->Name = L"radioButton3";
-            this->radioButton3->Size = System::Drawing::Size(73, 17);
-            this->radioButton3->TabIndex = 119;
-            this->radioButton3->TabStop = true;
-            this->radioButton3->Text = L"Les deux";
-            this->radioButton3->UseVisualStyleBackColor = true;
+            this->bothTypesBouton->ForeColor = System::Drawing::Color::White;
+            this->bothTypesBouton->Location = System::Drawing::Point(390, 962);
+            this->bothTypesBouton->Margin = System::Windows::Forms::Padding(4);
+            this->bothTypesBouton->Name = L"bothTypesBouton";
+            this->bothTypesBouton->Size = System::Drawing::Size(73, 17);
+            this->bothTypesBouton->TabIndex = 119;
+            this->bothTypesBouton->TabStop = true;
+            this->bothTypesBouton->Text = L"Les deux";
+            this->bothTypesBouton->UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // livraisonBouton
             // 
-            this->radioButton2->AutoSize = true;
-            this->radioButton2->Font = (gcnew System::Drawing::Font(L"Consolas", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->livraisonBouton->AutoSize = true;
+            this->livraisonBouton->Font = (gcnew System::Drawing::Font(L"Consolas", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->radioButton2->ForeColor = System::Drawing::Color::White;
-            this->radioButton2->Location = System::Drawing::Point(222, 962);
-            this->radioButton2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-            this->radioButton2->Name = L"radioButton2";
-            this->radioButton2->Size = System::Drawing::Size(79, 17);
-            this->radioButton2->TabIndex = 118;
-            this->radioButton2->TabStop = true;
-            this->radioButton2->Text = L"Livraison";
-            this->radioButton2->UseVisualStyleBackColor = true;
+            this->livraisonBouton->ForeColor = System::Drawing::Color::White;
+            this->livraisonBouton->Location = System::Drawing::Point(222, 962);
+            this->livraisonBouton->Margin = System::Windows::Forms::Padding(4);
+            this->livraisonBouton->Name = L"livraisonBouton";
+            this->livraisonBouton->Size = System::Drawing::Size(79, 17);
+            this->livraisonBouton->TabIndex = 118;
+            this->livraisonBouton->TabStop = true;
+            this->livraisonBouton->Text = L"Livraison";
+            this->livraisonBouton->UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // facturationBouton
             // 
-            this->radioButton1->AutoSize = true;
-            this->radioButton1->Font = (gcnew System::Drawing::Font(L"Consolas", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->facturationBouton->AutoSize = true;
+            this->facturationBouton->Font = (gcnew System::Drawing::Font(L"Consolas", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->radioButton1->ForeColor = System::Drawing::Color::White;
-            this->radioButton1->Location = System::Drawing::Point(33, 962);
-            this->radioButton1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-            this->radioButton1->Name = L"radioButton1";
-            this->radioButton1->Size = System::Drawing::Size(91, 17);
-            this->radioButton1->TabIndex = 117;
-            this->radioButton1->TabStop = true;
-            this->radioButton1->Text = L"Facturation";
-            this->radioButton1->UseVisualStyleBackColor = true;
+            this->facturationBouton->ForeColor = System::Drawing::Color::White;
+            this->facturationBouton->Location = System::Drawing::Point(33, 962);
+            this->facturationBouton->Margin = System::Windows::Forms::Padding(4);
+            this->facturationBouton->Name = L"facturationBouton";
+            this->facturationBouton->Size = System::Drawing::Size(91, 17);
+            this->facturationBouton->TabIndex = 117;
+            this->facturationBouton->TabStop = true;
+            this->facturationBouton->Text = L"Facturation";
+            this->facturationBouton->UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -322,7 +324,7 @@ namespace ProjetPOO {
             this->villeComboBox->FormattingEnabled = true;
             this->villeComboBox->IntegralHeight = false;
             this->villeComboBox->Location = System::Drawing::Point(21, 842);
-            this->villeComboBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->villeComboBox->Margin = System::Windows::Forms::Padding(4);
             this->villeComboBox->Name = L"villeComboBox";
             this->villeComboBox->Size = System::Drawing::Size(558, 28);
             this->villeComboBox->TabIndex = 115;
@@ -349,7 +351,7 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->rueTextBox->ForeColor = System::Drawing::Color::White;
             this->rueTextBox->Location = System::Drawing::Point(20, 632);
-            this->rueTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->rueTextBox->Margin = System::Windows::Forms::Padding(4);
             this->rueTextBox->Name = L"rueTextBox";
             this->rueTextBox->Size = System::Drawing::Size(561, 26);
             this->rueTextBox->TabIndex = 113;
@@ -386,7 +388,7 @@ namespace ProjetPOO {
             this->paysComboBox->IntegralHeight = false;
             this->paysComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1", L"Belgique", L"Canada" });
             this->paysComboBox->Location = System::Drawing::Point(21, 732);
-            this->paysComboBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->paysComboBox->Margin = System::Windows::Forms::Padding(4);
             this->paysComboBox->Name = L"paysComboBox";
             this->paysComboBox->Size = System::Drawing::Size(558, 28);
             this->paysComboBox->TabIndex = 111;
@@ -400,11 +402,10 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->prenomTextBox->ForeColor = System::Drawing::Color::White;
             this->prenomTextBox->Location = System::Drawing::Point(18, 319);
-            this->prenomTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->prenomTextBox->Margin = System::Windows::Forms::Padding(4);
             this->prenomTextBox->Name = L"prenomTextBox";
             this->prenomTextBox->Size = System::Drawing::Size(561, 26);
             this->prenomTextBox->TabIndex = 109;
-            this->prenomTextBox->TextChanged += gcnew System::EventHandler(this, &GestionClientFormulaire::textBox3_TextChanged);
             // 
             // nRueTextBox
             // 
@@ -414,11 +415,10 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->nRueTextBox->ForeColor = System::Drawing::Color::White;
             this->nRueTextBox->Location = System::Drawing::Point(18, 539);
-            this->nRueTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->nRueTextBox->Margin = System::Windows::Forms::Padding(4);
             this->nRueTextBox->Name = L"nRueTextBox";
             this->nRueTextBox->Size = System::Drawing::Size(561, 26);
             this->nRueTextBox->TabIndex = 108;
-            this->nRueTextBox->TextChanged += gcnew System::EventHandler(this, &GestionClientFormulaire::textBox2_TextChanged);
             // 
             // label7
             // 
@@ -433,7 +433,6 @@ namespace ProjetPOO {
             this->label7->Size = System::Drawing::Size(60, 22);
             this->label7->TabIndex = 59;
             this->label7->Text = L"Ville";
-            this->label7->Click += gcnew System::EventHandler(this, &GestionClientFormulaire::label7_Click);
             // 
             // idTextBox
             // 
@@ -444,11 +443,10 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->idTextBox->ForeColor = System::Drawing::Color::White;
             this->idTextBox->Location = System::Drawing::Point(18, 106);
-            this->idTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->idTextBox->Margin = System::Windows::Forms::Padding(4);
             this->idTextBox->Name = L"idTextBox";
             this->idTextBox->Size = System::Drawing::Size(561, 26);
             this->idTextBox->TabIndex = 107;
-            this->idTextBox->TextChanged += gcnew System::EventHandler(this, &GestionClientFormulaire::textBox7_TextChanged_1);
             // 
             // nomTextBox
             // 
@@ -458,11 +456,10 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->nomTextBox->ForeColor = System::Drawing::Color::White;
             this->nomTextBox->Location = System::Drawing::Point(20, 216);
-            this->nomTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->nomTextBox->Margin = System::Windows::Forms::Padding(4);
             this->nomTextBox->Name = L"nomTextBox";
             this->nomTextBox->Size = System::Drawing::Size(561, 26);
             this->nomTextBox->TabIndex = 106;
-            this->nomTextBox->TextChanged += gcnew System::EventHandler(this, &GestionClientFormulaire::textBox1_TextChanged);
             // 
             // label13
             // 
@@ -514,7 +511,7 @@ namespace ProjetPOO {
             this->naissanceDatePicker->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
             this->naissanceDatePicker->ImeMode = System::Windows::Forms::ImeMode::NoControl;
             this->naissanceDatePicker->Location = System::Drawing::Point(21, 432);
-            this->naissanceDatePicker->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->naissanceDatePicker->Margin = System::Windows::Forms::Padding(4);
             this->naissanceDatePicker->Name = L"naissanceDatePicker";
             this->naissanceDatePicker->Size = System::Drawing::Size(561, 26);
             this->naissanceDatePicker->TabIndex = 51;
@@ -531,7 +528,7 @@ namespace ProjetPOO {
             this->button4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(159)),
                 static_cast<System::Int32>(static_cast<System::Byte>(118)));
             this->button4->Location = System::Drawing::Point(31, 912);
-            this->button4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->button4->Margin = System::Windows::Forms::Padding(4);
             this->button4->Name = L"button4";
             this->button4->Size = System::Drawing::Size(279, 270);
             this->button4->TabIndex = 103;
@@ -552,7 +549,7 @@ namespace ProjetPOO {
             this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(153)), static_cast<System::Int32>(static_cast<System::Byte>(209)),
                 static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->button2->Location = System::Drawing::Point(31, 325);
-            this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->button2->Margin = System::Windows::Forms::Padding(4);
             this->button2->Name = L"button2";
             this->button2->Size = System::Drawing::Size(279, 260);
             this->button2->TabIndex = 99;
@@ -572,7 +569,7 @@ namespace ProjetPOO {
             this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(184)),
                 static_cast<System::Int32>(static_cast<System::Byte>(228)));
             this->button3->Location = System::Drawing::Point(31, 622);
-            this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->button3->Margin = System::Windows::Forms::Padding(4);
             this->button3->Name = L"button3";
             this->button3->Size = System::Drawing::Size(279, 262);
             this->button3->TabIndex = 102;
@@ -590,7 +587,7 @@ namespace ProjetPOO {
             this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
                 static_cast<System::Int32>(static_cast<System::Byte>(251)));
             this->button1->Location = System::Drawing::Point(31, 49);
-            this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->button1->Margin = System::Windows::Forms::Padding(4);
             this->button1->Name = L"button1";
             this->button1->Size = System::Drawing::Size(279, 245);
             this->button1->TabIndex = 98;
@@ -607,7 +604,7 @@ namespace ProjetPOO {
                 static_cast<System::Byte>(0)));
             this->richTextBox1->ForeColor = System::Drawing::Color::White;
             this->richTextBox1->Location = System::Drawing::Point(380, 49);
-            this->richTextBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->richTextBox1->Margin = System::Windows::Forms::Padding(4);
             this->richTextBox1->Name = L"richTextBox1";
             this->richTextBox1->Size = System::Drawing::Size(926, 990);
             this->richTextBox1->TabIndex = 104;
@@ -626,7 +623,7 @@ namespace ProjetPOO {
             this->button6->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(226)),
                 static_cast<System::Int32>(static_cast<System::Byte>(175)));
             this->button6->Location = System::Drawing::Point(380, 1072);
-            this->button6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->button6->Margin = System::Windows::Forms::Padding(4);
             this->button6->Name = L"button6";
             this->button6->Size = System::Drawing::Size(926, 96);
             this->button6->TabIndex = 120;
@@ -648,7 +645,7 @@ namespace ProjetPOO {
             this->Controls->Add(this->button2);
             this->Controls->Add(this->button3);
             this->Controls->Add(this->button1);
-            this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+            this->Margin = System::Windows::Forms::Padding(4);
             this->Name = L"GestionClientFormulaire";
             this->Text = L"GestionClientFormulaire";
             this->Load += gcnew System::EventHandler(this, &GestionClientFormulaire::GestionClientFormulaire_Load);
@@ -658,170 +655,23 @@ namespace ProjetPOO {
 
         }
 #pragma endregion
-    private: System::Void GestionClientFormulaire_Load(System::Object^ sender, System::EventArgs^ e) {
-        this->fonctionChoisie = 'N';
-        this->gestionDesClients = gcnew NS_services::gestionClient;
-        this->gestionDesValeurs = gcnew NS_services::gestionValeurs;
-        this->paysComboBox->Items->Clear();
-        this->paysComboBox->Text = "Veuillez choisir un pays";
-        DicoPays = this->gestionDesValeurs->obtenirPays();
-        if (this->DicoPays == nullptr) return;
-        for each (System::String^ i in DicoPays->Keys) {
-            this->paysComboBox->Items->Add(i);
-        }
-    }
-    private: System::Void paysComboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-        this->villeComboBox->Items->Clear();
-        this->villeComboBox->Text = "Veuillez choisir une ville";
-        try {
-            String^ idChoisi = this->DicoPays[this->paysComboBox->Text];
-            DicoVilles = this->gestionDesValeurs->obtenirVilles(idChoisi);
-            for each (System::String^ i in DicoVilles->Keys) {
-                this->villeComboBox->Items->Add(i);
-            }
-        }
-        catch (Exception^ e) {
-            MessageBox::Show("Erreur :" + e->Data);
-        }
-}
-private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-    }
-private: System::Void textBox7_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->Close();
+    private:
+        System::Char fonctionChoisie;
+        NS_services::gestionClient^ gestionDesClients;
+        NS_services::gestionValeurs^ gestionDesValeurs;
+        NS_composants::Client^ monClient;
+        System::Collections::Generic::Dictionary<System::String^, System::String^>^ DicoPays;
+        System::Collections::Generic::Dictionary<System::String^, System::String^>^ DicoVilles;
 
-}
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->richTextBox1->Text = " " + this->button1->Text;
-    this->button2->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
-    this->button3->ForeColor = System::Drawing::Color::FromArgb(244, 184, 228);
-    this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
-    this->button1->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
-    this->button1->BackColor = System::Drawing::Color::FromArgb(192, 188, 251);
-    this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-    this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-    this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-    this->fonctionChoisie = 'C';
-    this->label12->Show();
-    this->naissanceDatePicker->Show();
-}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->richTextBox1->Text = " " + this->button2->Text;
-    this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
-    this->button3->ForeColor = System::Drawing::Color::FromArgb(244, 184, 228);
-    this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
-    this->button2->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
-    this->button2->BackColor = System::Drawing::Color::FromArgb(153, 209, 219);
-    this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-    this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-    this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-    this->fonctionChoisie = 'M';
-    this->label12->Show();
-    this->naissanceDatePicker->Show();
-}
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->richTextBox1->Text = " " + this->button3->Text;
-    this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
-    this->button2->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
-    this->button4->ForeColor = System::Drawing::Color::FromArgb(239, 159, 118);
-    this->button3->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
-    this->button3->BackColor = System::Drawing::Color::FromArgb(244, 184, 228);
-    this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-    this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-    this->button4->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-    this->fonctionChoisie = 'S';
-    this->label12->Show();
-    this->naissanceDatePicker->Show();
-}
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->richTextBox1->Text = " " + this->button4->Text;
-    this->button1->ForeColor = System::Drawing::Color::FromArgb(192, 188, 251);
-    this->button3->ForeColor = System::Drawing::Color::FromArgb(244, 184, 228);
-    this->button2->ForeColor = System::Drawing::Color::FromArgb(153, 209, 219);
-    this->button4->ForeColor = System::Drawing::Color::FromArgb(255, 255, 255);
-    this->button4->BackColor = System::Drawing::Color::FromArgb(239, 159, 118);
-    this->button1->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-    this->button3->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-    this->button2->BackColor = System::Drawing::Color::FromArgb(18, 17, 41);
-    this->fonctionChoisie = 'A';
-    this->label12->Show();
-    this->naissanceDatePicker->Show();
-}
-private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e) {
-    DateTime selectedDate = this->naissanceDatePicker->Value;
-    if (this->fonctionChoisie == 'N') {
-        MessageBox::Show("Veuillez faire un choix");
-    }
-    else if (this->fonctionChoisie == 'C') {
-        Int64 resultID = this->gestionDesClients->createClient(
-            this->nomTextBox->Text,
-            this->prenomTextBox->Text,
-            selectedDate.ToString(L"yyyy-MM-dd"),
-            this->nRueTextBox->Text,
-            this->rueTextBox->Text,
-            this->DicoVilles[this->villeComboBox->Text]
-        );
-        if (resultID == -1) this->idTextBox->Text = "Erreur lors de la création du client";
-        else this->idTextBox->Text = resultID.ToString();
-    }
-    else if (this->fonctionChoisie == 'S') {
-        if (this->gestionDesClients->supprimerClient(this->idTextBox->Text))
-            MessageBox::Show("Client supprimé");
-        else
-            MessageBox::Show("Echec de la suppression du client");
-    }
-    else if (this->fonctionChoisie == 'M') {
-        if (this->gestionDesClients->modifierClient(
-            this->idTextBox->Text,
-            this->nomTextBox->Text,
-            this->prenomTextBox->Text,
-            this->naissanceDatePicker->Value.ToString(L"yyyy-MM-dd")
-        ))
-            MessageBox::Show("Client modifié avec succés");
-        else
-            MessageBox::Show("Echec de la modification du client");
-    }
-    this->fonctionChoisie = 'N';
-}
-private: 
-    System::Char fonctionChoisie;
-    NS_services::gestionClient^ gestionDesClients;
-    NS_services::gestionValeurs^ gestionDesValeurs;
-    NS_composants::Client^ monClient;
-    System::Collections::Generic::Dictionary<System::String^, System::String^>^ DicoPays;
-    System::Collections::Generic::Dictionary<System::String^, System::String^>^ DicoVilles;
+    private: System::Void GestionClientFormulaire_Load(System::Object^ sender, System::EventArgs^ e);
+    private: System::Void paysComboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e);
+    private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e);
+    private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
+    private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
+    private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e);
+    private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e);
+    private: System::Void button_valider_Click(System::Object^ sender, System::EventArgs^ e);
+    private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e);
 
-private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-    if (!verifyEntryUint(this->idTextBox->Text) || this->idTextBox->Text == "") {
-        MessageBox::Show("Veuillez entrer un identifiant valide");
-        return;
-    }
-
-    if ((monClient = this->gestionDesClients->obtenirClient(this->idTextBox->Text)) == nullptr) {
-        MessageBox::Show("Le client n'est pas trouvé");
-        return;
-    }
-    
-    gestionAdressesClients^ windowToShow = gcnew gestionAdressesClients;
-    windowToShow->clientToModify = this->monClient;
-    this->Hide();
-    windowToShow->ShowDialog();
-    this->Show();
-}
 };
 }

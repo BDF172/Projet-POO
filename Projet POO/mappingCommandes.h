@@ -13,6 +13,8 @@ namespace NS_composants {
 	ref class mappingCommandes : public CL_Com_mapping {
 	public:
 		System::Void creerCommande(System::String^ idClient, System::String^ adresseL, System::String^ adresseF);
+		System::Void obtenirCommande(System::String^ reference);
+		System::Void supprimerCommande(System::String^ referenceCommande);
 		System::Void ajouterArticlesCommande(System::String^ idCommande, articles^ articlesToAdd);
 		System::Void payerCommande(System::String^ idCommande, System::String^ montant, System::String^ moyen);
 		System::Void montantRestant(System::String^ idCommande);

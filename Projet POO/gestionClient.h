@@ -10,7 +10,12 @@ namespace NS_services {
 		gestionClient(System::Void);
 
 		System::Int64 createClient(System::String^ nom, System::String^ prenom, System::String^ naissance,
-			System::String^ nRue, System::String^ nomRue, System::String^ idVille);
+			System::String^ nRue, System::String^ nomRue, System::String^ idVille, System::Boolean f_ou_l);
+
+		System::Boolean ajouterAdresse(System::String^ idClient, System::String^ nRue, System::String^ nomRue,
+			System::String^ idVille, System::Boolean f_ou_l);
+
+		System::Boolean modifierAdresse(System::String^ idAdresse, System::String^ nRue, System::String^ nomRue, System::String^ IdVille);
 
 		NS_composants::Client^ obtenirClient(System::String^ idClient);
 

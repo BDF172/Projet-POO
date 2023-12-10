@@ -15,16 +15,19 @@ namespace NS_composants {
 
 	ref class Client {
 	private:
+		String^ id;
 		String^ nom;
 		String^ prenom;
 		adresseC^ adresse;
 		String^ naissance;
 	public:
 		Client();
+		void setID(String^ id);
 		void setNom(String^ nom);
 		void setPrenom(String^ prenom);
 		void setNaissance(String^ naissance);
 		void setAdresse(adresseClient^ adresse);
+		String^ getID();
 		String^ getNom();
 		String^ getPrenom();
 		String^ getNaissance();

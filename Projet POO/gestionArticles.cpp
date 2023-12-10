@@ -45,6 +45,14 @@ List<NS_composants::articles^>^ NS_services::gestionArticles::rechercherArticle(
 	return toReturn;
 }
 
+System::Boolean NS_services::gestionArticles::verifierStock(System::String^ idArticle, System::String^ quantite){
+	if (verifyEntryUint(idArticle) && verifyEntryUint(quantite)) {
+		this->articlesMap->verifierStock(idArticle, quantite);
+		return this->verifyErrorCode(this->articlesMap->executeRequest());
+	}
+	return false;
+}
+
 Int64 gestionArticles::ajouterArticle(String^ nom, String^ prix, String^ prctTVA,String^ seuilReappro, String^ cout, String^ stock) {
 	this->articlesMap->ajouterArticle(nom, prix, prctTVA, seuilReappro, cout, stock);
 	DataSet^ result = this->articlesMap->executeRequest();

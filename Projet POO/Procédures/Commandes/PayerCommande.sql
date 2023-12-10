@@ -1,5 +1,5 @@
 CREATE PROCEDURE PayerCommande
-@IdCommande INT,
+@ReferenceCommande VARCHAR(20),
 @Montant MONEY,
 @IdMoyen INT
 
@@ -9,6 +9,8 @@ BEGIN
     SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
     BEGIN TRANSACTION;
 	BEGIN TRY
+		DECLARE @IdCommande INT;
+		SET @IdCommande = (SELECT id_commandes FROM Commandes WHERE reference_commande = @ReferenceCommande);
 		IF NOT EXISTS (
 			SELECT 1
 			FROM Commandes
