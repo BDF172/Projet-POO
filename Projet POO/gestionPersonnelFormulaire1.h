@@ -548,10 +548,10 @@ namespace ProjetPOO {
             this->button5->Font = (gcnew System::Drawing::Font(L"Consolas", 15, System::Drawing::FontStyle::Bold));
             this->button5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(188)),
                 static_cast<System::Int32>(static_cast<System::Byte>(251)));
-            this->button5->Location = System::Drawing::Point(34, 37);
+            this->button5->Location = System::Drawing::Point(331, 37);
             this->button5->Margin = System::Windows::Forms::Padding(0);
             this->button5->Name = L"button5";
-            this->button5->Size = System::Drawing::Size(482, 54);
+            this->button5->Size = System::Drawing::Size(185, 54);
             this->button5->TabIndex = 99;
             this->button5->Text = L"Retour";
             this->button5->UseVisualStyleBackColor = false;
