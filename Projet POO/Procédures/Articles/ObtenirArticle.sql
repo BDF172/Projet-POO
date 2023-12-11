@@ -6,7 +6,7 @@ CREATE PROCEDURE ObtenirArticle
 
 AS 
 BEGIN
-	IF EXISTS(SELECT 1 FROM Articles WHERE id_article = @IdArticle)
+	IF EXISTS(SELECT 1 FROM Articles WHERE id_article = @IdArticle AND @IdArticle != 1)
 	BEGIN
 		SELECT 0;
 		SELECT TOP(1) Articles.id_article, nom_articles, ISNULL((prix * prctTVA) , 0) AS prix

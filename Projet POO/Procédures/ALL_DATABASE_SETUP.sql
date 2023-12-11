@@ -217,7 +217,7 @@ BEGIN
 
     BEGIN TRY
         IF NOT EXISTS 
-		(SELECT 1 FROM Articles WHERE id_article = @IdArticle)
+		(SELECT 1 FROM Articles WHERE id_article = @IdArticle AND @IdArticle != 1)
 			BEGIN
 				SELECT 1;
 			END;
@@ -248,7 +248,7 @@ CREATE PROCEDURE ObtenirArticle
 
 AS 
 BEGIN
-	IF EXISTS(SELECT 1 FROM Articles WHERE id_article = @IdArticle)
+	IF EXISTS(SELECT 1 FROM Articles WHERE id_article = @IdArticle AND @IdArticle != 1)
 	BEGIN
 		SELECT 0;
 		SELECT TOP(1) Articles.id_article, nom_articles, ISNULL((prix * prctTVA) , 0) AS prix
@@ -281,6 +281,7 @@ BEGIN
         LEFT JOIN TVA ON Prix.id_TVA = TVA.id_TVA
         LEFT JOIN Stock ON Articles.id_article = Stock.id_article
         WHERE Articles.nom_articles LIKE '%' + @NomArticle + '%'
+		AND Articles.id_article != 1
     )
     SELECT 
         id_article,
@@ -303,7 +304,7 @@ BEGIN
 
     BEGIN TRY
         IF NOT EXISTS 
-		(SELECT 1 FROM Articles WHERE id_article = @IdArticle)
+		(SELECT 1 FROM Articles WHERE id_article = @IdArticle AND @IdArticle != 1)
 			BEGIN
 				SELECT 1;
 			END;
@@ -333,7 +334,7 @@ CREATE PROCEDURE VerifierStock
 
 AS
 BEGIN
-	SELECT ISNULL((SELECT 0 FROM Stock WHERE quantite_stock >= @Quantite AND id_article = @IdArticle), 1);
+	SELECT ISNULL((SELECT 0 FROM Stock WHERE quantite_stock >= @Quantite AND id_article = @IdArticle AND @IdArticle != 1), 1);
 END
 GO
 CREATE PROCEDURE AjouterAdresseClient
@@ -431,11 +432,18 @@ BEGIN
 
     BEGIN TRY
         -- Insérez le nouveau client dans la table Clients
-        UPDATE POO.dbo.AdressesC 
-		SET nom_rue_C = @NomRue, numero_adresse_C = @NumeroRue, id_ville = @IdVille
-		WHERE id_adresseC = @IdAdresse;
-        COMMIT;
-		SELECT 0;
+		IF @IdAdresse = 1 OR @IdAdresse = 2
+		BEGIN
+			SELECT 1;
+		END
+		ELSE
+		BEGIN
+			UPDATE POO.dbo.AdressesC 
+			SET nom_rue_C = @NomRue, numero_adresse_C = @NumeroRue, id_ville = @IdVille
+			WHERE id_adresseC = @IdAdresse;
+			COMMIT;
+			SELECT 0;
+		END
     END TRY
     BEGIN CATCH
         -- En cas d'erreur, annuler la transaction
@@ -459,23 +467,30 @@ BEGIN
     BEGIN TRANSACTION;
 
     BEGIN TRY
-        -- Insérez le nouveau client dans la table Clients
-        IF @Nom != ''
+		IF @IdClient = 1
 		BEGIN
-		UPDATE Clients
-        SET nom_client = @Nom WHERE id_client = @IdClient;;
+			SELECT 1;
 		END
-		
-		IF @Prenom != ''
+		ELSE
 		BEGIN
-		UPDATE POO.dbo.Clients 
-        SET prenom_client = @Prenom WHERE id_client = @IdClient;
-		END
+			-- Insérez le nouveau client dans la table Clients
+			IF @Nom != ''
+			BEGIN
+			UPDATE Clients
+			SET nom_client = @Nom WHERE id_client = @IdClient;;
+			END
 		
-		IF @DateNaissance != ''
-		BEGIN
-		UPDATE POO.dbo.Clients 
-        SET date_naissance = @DateNaissance WHERE id_client = @IdClient;
+			IF @Prenom != ''
+			BEGIN
+			UPDATE POO.dbo.Clients 
+			SET prenom_client = @Prenom WHERE id_client = @IdClient;
+			END
+		
+			IF @DateNaissance != ''
+			BEGIN
+			UPDATE POO.dbo.Clients 
+			SET date_naissance = @DateNaissance WHERE id_client = @IdClient;
+			END
 		END
         -- Valider la transaction
         COMMIT;
@@ -485,7 +500,6 @@ BEGIN
         -- En cas d'erreur, annuler la transaction
         ROLLBACK;
 		SELECT 1;
-        -- Vous pouvez gérer l'erreur ici selon vos besoins
     END CATCH;
 
 END;
@@ -495,7 +509,7 @@ CREATE PROCEDURE ObtenirClient
 	@IdClient INT
 AS
 BEGIN
-	IF NOT EXISTS(SELECT 1 FROM Clients WHERE id_client = @IdClient)
+	IF NOT EXISTS(SELECT 1 FROM Clients WHERE id_client = @IdClient AND @IdClient != 1)
 		BEGIN
 			SELECT 1;
 		END
@@ -524,7 +538,7 @@ BEGIN
 
 	SELECT id_client
 	FROM Clients
-	WHERE nom_client LIKE '%' + @Nom + '%' AND prenom_client LIKE '%' + @Prenom + '%';
+	WHERE nom_client LIKE '%' + @Nom + '%' AND prenom_client LIKE '%' + @Prenom + '%' AND id_client != 1;
 END
 GO
 CREATE PROCEDURE SupprimerAdresseClient
@@ -537,7 +551,7 @@ BEGIN
 
     BEGIN TRY
         -- Insérez le nouveau client dans la table Clients
-		IF NOT EXISTS (SELECT 1 FROM AdressesC WHERE id_adresseC = @IdAdresse)
+		IF NOT EXISTS (SELECT 1 FROM AdressesC WHERE id_adresseC = @IdAdresse OR @IdAdresse = 1 OR @IdAdresse = 2)
 		BEGIN
 			SELECT 1;
 		END
@@ -566,7 +580,7 @@ BEGIN
 
     BEGIN TRY
         -- Insérez le nouveau client dans la table Clients
-		IF EXISTS(SELECT 1 FROM Clients WHERE id_client = @IdClient)
+		IF EXISTS(SELECT 1 FROM Clients WHERE id_client = @IdClient AND @IdClient != 1)
 		BEGIN
         UPDATE AdressesC SET id_client = 1 WHERE id_client = @IdClient;
 		UPDATE Commandes SET id_client = 1 WHERE id_client = @IdClient;
@@ -598,11 +612,12 @@ BEGIN
 	SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 	DECLARE @RefCom VARCHAR(20);
     BEGIN TRANSACTION;
-		--BEGIN TRY
+		BEGIN TRY
 			IF EXISTS (SELECT 1 FROM Stock 
 				WHERE id_article = @IdArticle 
 				AND Id_Entrepot = @IdEntrepot 
-				AND quantite_stock >= @Quantite)
+				AND quantite_stock >= @Quantite
+				AND id_article != 1)
 			BEGIN
 				INSERT INTO fait_reference(id_article, id_commandes, id_entrepot, quantite)
 				VALUES (@IdArticle, @IdCommande, @IdEntrepot, @Quantite);
@@ -624,13 +639,13 @@ BEGIN
 				EXEC SupprimerCommande @reference = @RefCom;
 			END
 			COMMIT;
-		--END TRY
-		--BEGIN CATCH
-		--	ROLLBACK;
-		--	SET @RefCom = (SELECT reference_commande FROM Commandes WHERE id_commandes = @IdCommande);
-		--	SELECT 1;
-		--	EXEC SupprimerCommande @reference = @RefCom;
-		--END CATCH
+		END TRY
+		BEGIN CATCH
+			ROLLBACK;
+			SET @RefCom = (SELECT reference_commande FROM Commandes WHERE id_commandes = @IdCommande);
+			SELECT 1;
+			EXEC SupprimerCommande @reference = @RefCom;
+		END CATCH
 	SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 END
 GO
@@ -648,7 +663,7 @@ BEGIN
     BEGIN TRANSACTION;
 
     BEGIN TRY
-	IF NOT EXISTS (SELECT 1 FROM AdressesC WHERE id_adresseC = @IdAdresseF AND f_ou_l = 0)
+	IF NOT EXISTS (SELECT 1 FROM AdressesC WHERE id_adresseC = @IdAdresseF AND f_ou_l = 0 OR @IdClientToDeliver = 1)
 	BEGIN
 		SELECT 1;
 	END
@@ -847,7 +862,7 @@ BEGIN
 				FROM Paiements
 				WHERE Paiements.id_commandes = @IdCommande
 			) <= Commandes.montant_commande
-		)
+		) OR @Montant = 0
 		BEGIN
 			SELECT 1;
 		END
@@ -1005,8 +1020,6 @@ BEGIN
     SET @CodeConcatene = @CodeConcatene;
 END;
 GO
-USE POO;
-GO
 
 CREATE PROCEDURE ModifierPersonnel
 	@IdPersonnel int,
@@ -1112,7 +1125,7 @@ BEGIN
 
     BEGIN TRY
         -- Insérez le nouveau client dans la table Clients
-		IF EXISTS (SELECT 1 FROM AdressesP WHERE id_personnel = @IdPersonnel)
+		IF EXISTS (SELECT 1 FROM AdressesP WHERE id_personnel = @IdPersonnel AND @IdPersonnel != 1)
 		BEGIN
         UPDATE AdressesP 
 		SET numero_adresse_P = @NumeroRue,
@@ -1140,7 +1153,7 @@ CREATE PROCEDURE ObtenirPersonnel
 	@IdPersonnel INT
 AS
 BEGIN
-	IF NOT EXISTS(SELECT 1 FROM Personnel WHERE id_personnel = @IdPersonnel)
+	IF NOT EXISTS(SELECT 1 FROM Personnel WHERE id_personnel = @IdPersonnel AND @IdPersonnel != 1)
 	BEGIN
 		SELECT 1;
 	END
@@ -1166,7 +1179,8 @@ BEGIN
 	SELECT 0;
 	SELECT id_personnel FROM Personnel
 	WHERE nom_personnel LIKE '%' + @Nom + '%' 
-	AND prenom_personnel LIKE '%' + @Prenom + '%';
+	AND prenom_personnel LIKE '%' + @Prenom + '%'
+	AND id_personnel != 1
 END
 GO
 CREATE PROCEDURE supprimerPersonnel
@@ -1177,18 +1191,25 @@ BEGIN
     -- Début de la transaction
     BEGIN TRANSACTION;
 
-    --BEGIN TRY
-        -- Insérez le nouveau client dans la table Clients
-        DELETE FROM AdressesP WHERE id_personnel = @IdPersonnel;
-		DELETE FROM Personnel WHERE id_personnel = @IdPersonnel;
-        COMMIT;
-		SELECT 0;
-    --END TRY
-    --BEGIN CATCH
-    --    -- En cas d'erreur, annuler la transaction
-    --    ROLLBACK;
-	--	SELECT 1;
-    --END CATCH;
+    BEGIN TRY
+		IF @IdPersonnel = 1
+		BEGIN
+			SELECT 1;
+		END
+		ELSE
+		BEGIN
+			-- Insérez le nouveau client dans la table Clients
+			DELETE FROM AdressesP WHERE id_personnel = @IdPersonnel;
+			DELETE FROM Personnel WHERE id_personnel = @IdPersonnel;
+			COMMIT;
+			SELECT 0;
+		END
+    END TRY
+    BEGIN CATCH
+        -- En cas d'erreur, annuler la transaction
+        ROLLBACK;
+		SELECT 1;
+    END CATCH;
 
 END;
 GO
@@ -1214,7 +1235,7 @@ AS
 BEGIN
 	SELECT 0;
     SELECT 
-        SUM(p.prix)
+        ISNULL(SUM(p.prix),0)
     FROM 
         Articles a
     LEFT JOIN 
@@ -1232,7 +1253,7 @@ AS
 BEGIN
 	SELECT 0;
     SELECT Articles.id_article FROM Articles LEFT JOIN stock ON Articles.id_article = stock.id_article
-    WHERE quantite_stock <= seuil_reappro;
+    WHERE quantite_stock <= seuil_reappro AND Articles.id_article != 1;
 END
 GO
 CREATE PROCEDURE TopMoinsVendu
@@ -1240,6 +1261,7 @@ AS
 BEGIN
 	SELECT 0;
     SELECT TOP(10) id_article FROM Articles
+	WHERE id_article != 1
     ORDER BY quantite_vendue ASC
 END;
 GO
@@ -1248,6 +1270,7 @@ AS
 BEGIN
 	SELECT 0;
     SELECT TOP(10) id_article FROM Articles
+	WHERE id_article != 1
     ORDER BY quantite_vendue DESC
 END;
 GO

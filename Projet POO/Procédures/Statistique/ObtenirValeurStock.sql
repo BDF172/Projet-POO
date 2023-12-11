@@ -1,12 +1,12 @@
 USE POO;
 GO
 
-CREATE PROCEDURE ObtenirValeurStock
+ALTER PROCEDURE ObtenirValeurStock
 AS
 BEGIN
 	SELECT 0;
     SELECT 
-        SUM(p.prix)
+        ISNULL(SUM(p.prix),0)
     FROM 
         Articles a
     LEFT JOIN 

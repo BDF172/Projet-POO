@@ -1,7 +1,7 @@
 USE POO;
 GO
 
-CREATE PROCEDURE SupprimerArticle
+ALTER PROCEDURE SupprimerArticle
     @IdArticle INT
 
 AS
@@ -13,7 +13,7 @@ BEGIN
 
     BEGIN TRY
         IF NOT EXISTS 
-		(SELECT 1 FROM Articles WHERE id_article = @IdArticle)
+		(SELECT 1 FROM Articles WHERE id_article = @IdArticle AND @IdArticle != 1)
 			BEGIN
 				SELECT 1;
 			END;

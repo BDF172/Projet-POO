@@ -1,7 +1,7 @@
 USE POO;
 GO
 
-CREATE PROCEDURE RechercherArticle
+ALTER PROCEDURE RechercherArticle
     @NomArticle VARCHAR(100)
 AS 
 BEGIN
@@ -18,6 +18,7 @@ BEGIN
         LEFT JOIN TVA ON Prix.id_TVA = TVA.id_TVA
         LEFT JOIN Stock ON Articles.id_article = Stock.id_article
         WHERE Articles.nom_articles LIKE '%' + @NomArticle + '%'
+		AND Articles.id_article != 1
     )
     SELECT 
         id_article,
