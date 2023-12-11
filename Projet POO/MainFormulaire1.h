@@ -186,48 +186,12 @@ namespace ProjetPOO {
 	private:
 		NS_services::gestionClient^ gestionDesClients;
 
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Hide();
-		ProjetPOO::FormulaireGestionPersonnel toOpenClient;
-		toOpenClient.ShowDialog();
-		this->Show();
-	}
-	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Hide();
-		GestionArticlesFormulaire toOpenArticle;
-		toOpenArticle.ShowDialog();
-		this->Show();
-	}
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Hide();
-		GestionClientFormulaire toOpenClient;
-		toOpenClient.ShowDialog();
-		this->Show();
-	}
-
-	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Hide();
-		GestionCommandeFormulaire toOpenCommande;
-		toOpenCommande.ShowDialog();
-		this->Show();
-	}
-	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Hide();
-		GestionStatFormulaire toOpenStat;
-		toOpenStat.ShowDialog();
-		this->Show();
-	}
-	private: System::Void MainFormulaire_Load(System::Object^ sender, System::EventArgs^ e) {
-		this->gestionDesClients = gcnew NS_services::gestionClient;
-		System::Collections::Generic::List<NS_composants::Client^>^ clients = this->gestionDesClients->clientsAnniv();
-		System::String^ toShow;
-		if (clients->Count == 0) toShow = "Aucun client n'a reçu de mail d'anniversaire";
-		else toShow = "Aujourd'hui, les clients suivants ont reçu un mail pour leur anniversaire :";
-		for each (NS_composants:: Client^ i in clients) {
-			toShow += "\n\t" + i->getNom() + " " + i->getPrenom();
-		}
-		MessageBox::Show(toShow);
-	}
+	private: System::Void MainFormulaire_Load(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }
 

@@ -10,7 +10,7 @@ Boolean verifyEntryUint(String^ entry) {
 }
 
 Boolean verifySqlInjection(String^ entry) {
-	String^ forbidden = ";/_@:!§*%";
+	String^ forbidden = ";/_:!§*%";
 	for each (Char i in entry) {
 		if (forbidden->Contains(i.ToString())) return true;
 	}
