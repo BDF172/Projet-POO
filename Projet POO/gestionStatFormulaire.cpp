@@ -10,12 +10,15 @@ using namespace Collections::Generic;
 
 Void GestionStatFormulaire::button5_Click(Object^ sender, EventArgs^ e) {
 		this->richTextBox1->Text = " " + this->button5->Text;
+		
 }
 	Void GestionStatFormulaire::button4_Click_1(Object^ sender, EventArgs^ e) {
 		this->richTextBox1->Text = " " + this->button4->Text;
+		
 	}
 	Void GestionStatFormulaire::button3_Click_1(Object^ sender, EventArgs^ e) {
 		this->richTextBox1->Text = " " + this->button3->Text;
+		
 	}
 
 Void GestionStatFormulaire::button2_Click_1(Object^ sender, EventArgs^ e) {
@@ -38,6 +41,15 @@ Void GestionStatFormulaire::button2_Click_1(Object^ sender, EventArgs^ e) {
 	this->button8->BackColor = Color::FromArgb(18, 17, 41);
 	this->button9->BackColor = Color::FromArgb(18, 17, 41);
 	this->button10->BackColor = Color::FromArgb(18, 17, 41);
+	this->label38->Visible = false;
+	this->label39->Visible = false;
+	this->label40->Visible = false;
+	this->label41->Visible = false;
+	this->tvaComboBox->Visible = false;
+	this->demarqueComboBox->Visible = false;
+	this->margeComboBox->Visible = false;
+	this->remiseComboBox->Visible = false;
+	this->button_valider->Visible = false;
 }
 Void GestionStatFormulaire::button11_Click(Object^ sender, EventArgs^ e) {
 	this->richTextBox1->Text = " " + this->button11->Text;
@@ -62,6 +74,15 @@ Void GestionStatFormulaire::button11_Click(Object^ sender, EventArgs^ e) {
 	this->richTextBox1->Text = "Valeur d'achat du stock : \n" +
 		(this->valeurCommerciale == -1 ? "Erreur de calcul" : this->valeurCommerciale.ToString());
 	this->choixFonction = 'V';
+	this->label38->Visible = true;
+	this->label39->Visible = true;
+	this->label40->Visible = true;
+	this->label41->Visible = true;
+	this->tvaComboBox->Visible = true;
+	this->demarqueComboBox->Visible = true;
+	this->margeComboBox->Visible = true;
+	this->remiseComboBox->Visible = true;
+	this->button_valider->Visible = true;
 }
 Void GestionStatFormulaire::button1_Click_1(Object^ sender, EventArgs^ e) {
 	this->richTextBox1->Text = " " + this->button1->Text;
@@ -83,6 +104,15 @@ Void GestionStatFormulaire::button1_Click_1(Object^ sender, EventArgs^ e) {
 	this->button8->BackColor = Color::FromArgb(18, 17, 41);
 	this->button9->BackColor = Color::FromArgb(18, 17, 41);
 	this->button10->BackColor = Color::FromArgb(18, 17, 41);
+	this->label38->Visible = false;
+	this->label39->Visible = false;
+	this->label40->Visible = false;
+	this->label41->Visible = false;
+	this->tvaComboBox->Visible = false;
+	this->demarqueComboBox->Visible = false;
+	this->margeComboBox->Visible = false;
+	this->remiseComboBox->Visible = false;
+	this->button_valider->Visible = false;
 	Double result = this->gestionDesStats->CalculerPanierMoyen();
 	if (result == -1) this->richTextBox1->Text = "Erreur lors de la récupération";
 	else this->richTextBox1->Text = result.ToString();
@@ -107,6 +137,15 @@ Void GestionStatFormulaire::button3_Click(Object^ sender, EventArgs^ e) {
 	this->button8->BackColor = Color::FromArgb(18, 17, 41);
 	this->button9->BackColor = Color::FromArgb(18, 17, 41);
 	this->button10->BackColor = Color::FromArgb(18, 17, 41);
+	this->label38->Visible = false;
+	this->label39->Visible = false;
+	this->label40->Visible = false;
+	this->label41->Visible = false;
+	this->tvaComboBox->Visible = false;
+	this->demarqueComboBox->Visible = false;
+	this->margeComboBox->Visible = false;
+	this->remiseComboBox->Visible = false;
+	this->button_valider->Visible = false;
 	List<NS_composants::Articles^>^ articlesReappro = this->gestionDesStats->sousSeuilReappro();
 	if (articlesReappro == nullptr) {
 		this->richTextBox1->Text = "Erreur lors de la récupération des données";
@@ -141,6 +180,15 @@ Void GestionStatFormulaire::button4_Click(Object^ sender, EventArgs^ e) {
 	this->button8->BackColor = Color::FromArgb(18, 17, 41);
 	this->button9->BackColor = Color::FromArgb(18, 17, 41);
 	this->button10->BackColor = Color::FromArgb(18, 17, 41);
+	this->label38->Visible = false;
+	this->label39->Visible = false;
+	this->label40->Visible = false;
+	this->label41->Visible = false;
+	this->tvaComboBox->Visible = false;
+	this->demarqueComboBox->Visible = false;
+	this->margeComboBox->Visible = false;
+	this->remiseComboBox->Visible = false;
+	this->button_valider->Visible = false;
 }
 Void GestionStatFormulaire::button7_Click(Object^ sender, EventArgs^ e) {
 	this->richTextBox1->Text = " " + this->button7->Text;
@@ -162,6 +210,15 @@ Void GestionStatFormulaire::button7_Click(Object^ sender, EventArgs^ e) {
 	this->button8->BackColor = Color::FromArgb(18, 17, 41);
 	this->button9->BackColor = Color::FromArgb(18, 17, 41);
 	this->button10->BackColor = Color::FromArgb(18, 17, 41);
+	this->label38->Visible = false;
+	this->label39->Visible = false;
+	this->label40->Visible = false;
+	this->label41->Visible = false;
+	this->tvaComboBox->Visible = false;
+	this->demarqueComboBox->Visible = false;
+	this->margeComboBox->Visible = false;
+	this->remiseComboBox->Visible = false;
+	this->button_valider->Visible = false;
 	List<NS_composants::Articles^>^ articlesReappro = this->gestionDesStats->TopPlusVendus();
 	if (articlesReappro == nullptr) {
 		this->richTextBox1->Text = "Erreur lors de la récupération des données";
@@ -197,6 +254,15 @@ Void GestionStatFormulaire::button8_Click(Object^ sender, EventArgs^ e) {
 	this->button7->BackColor = Color::FromArgb(18, 17, 41);
 	this->button9->BackColor = Color::FromArgb(18, 17, 41);
 	this->button10->BackColor = Color::FromArgb(18, 17, 41);
+	this->label38->Visible = false;
+	this->label39->Visible = false;
+	this->label40->Visible = false;
+	this->label41->Visible = false;
+	this->tvaComboBox->Visible = false;
+	this->demarqueComboBox->Visible = false;
+	this->margeComboBox->Visible = false;
+	this->remiseComboBox->Visible = false;
+	this->button_valider->Visible = false;
 	List<NS_composants::Articles^>^ articlesReappro = this->gestionDesStats->TopMoinsVendus();
 	if (articlesReappro == nullptr) {
 		this->richTextBox1->Text = "Erreur lors de la récupération des données";
@@ -232,6 +298,15 @@ Void GestionStatFormulaire::button9_Click_1(Object^ sender, EventArgs^ e) {
 	this->button7->BackColor = Color::FromArgb(18, 17, 41);
 	this->button8->BackColor = Color::FromArgb(18, 17, 41);
 	this->button10->BackColor = Color::FromArgb(18, 17, 41);
+	this->label38->Visible = false;
+	this->label39->Visible = false;
+	this->label40->Visible = false;
+	this->label41->Visible = false;
+	this->tvaComboBox->Visible = false;
+	this->demarqueComboBox->Visible = false;
+	this->margeComboBox->Visible = false;
+	this->remiseComboBox->Visible = false;
+	this->button_valider->Visible = false;
 }
 Void GestionStatFormulaire::button10_Click(Object^ sender, EventArgs^ e) {
 	this->button1->ForeColor = Color::FromArgb(192, 188, 251);
@@ -252,7 +327,15 @@ Void GestionStatFormulaire::button10_Click(Object^ sender, EventArgs^ e) {
 	this->button7->BackColor = Color::FromArgb(18, 17, 41);
 	this->button8->BackColor = Color::FromArgb(18, 17, 41);
 	this->button9->BackColor = Color::FromArgb(18, 17, 41);
-
+	this->label38->Visible = false;
+	this->label39->Visible = false;
+	this->label40->Visible = false;
+	this->label41->Visible = false;
+	this->tvaComboBox->Visible = false;
+	this->demarqueComboBox->Visible = false;
+	this->margeComboBox->Visible = false;
+	this->remiseComboBox->Visible = false;
+	this->button_valider->Visible = false;
 	this->richTextBox1->Text = "Valeur d'achat du stock : \n" +
 		(this->valeurCommerciale == -1 ? "Erreur de calcul" : this->valeurCommerciale.ToString());
 }
@@ -314,4 +397,14 @@ Void GestionStatFormulaire::GestionStatFormulaire_Load(Object^ sender, EventArgs
 	this->remiseComboBox->Items->Clear();
 	this->remiseComboBox->Items->Add("5%");
 	this->remiseComboBox->Items->Add("6%");
+
+	this->label38->Visible = false;
+	this->label39->Visible = false;
+	this->label40->Visible = false;
+	this->label41->Visible = false;
+	this->tvaComboBox->Visible = false;
+	this->demarqueComboBox->Visible = false;
+	this->margeComboBox->Visible = false;
+	this->remiseComboBox->Visible = false;
+	this->button_valider->Visible = false;
 }
