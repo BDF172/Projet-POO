@@ -11,5 +11,6 @@ namespace NS_composants {
 		System::Void totalAchatClient(System::String^ idCLient);
 		System::Void moinsVendue();
 		System::Void plusVendue();
+		System::Void obtenirValeurStock(System::Void);
 	};
 }

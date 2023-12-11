@@ -1,4 +1,5 @@
 #include "GestionStatFormulaire.h"
+#include "gestionValeurs.h"
 
 using namespace System;
 using namespace ProjetPOO;
@@ -58,6 +59,9 @@ Void GestionStatFormulaire::button11_Click(Object^ sender, EventArgs^ e) {
 	this->button7->BackColor = Color::FromArgb(18, 17, 41);
 	this->button8->BackColor = Color::FromArgb(18, 17, 41);
 	this->button9->BackColor = Color::FromArgb(18, 17, 41);
+	this->richTextBox1->Text = "Valeur d'achat du stock : \n" +
+		(this->valeurCommerciale == -1 ? "Erreur de calcul" : this->valeurCommerciale.ToString());
+	this->choixFonction = 'V';
 }
 Void GestionStatFormulaire::button1_Click_1(Object^ sender, EventArgs^ e) {
 	this->richTextBox1->Text = " " + this->button1->Text;
@@ -230,7 +234,6 @@ Void GestionStatFormulaire::button9_Click_1(Object^ sender, EventArgs^ e) {
 	this->button10->BackColor = Color::FromArgb(18, 17, 41);
 }
 Void GestionStatFormulaire::button10_Click(Object^ sender, EventArgs^ e) {
-	this->richTextBox1->Text = " " + this->button10->Text;
 	this->button1->ForeColor = Color::FromArgb(192, 188, 251);
 	this->button2->ForeColor = Color::FromArgb(153, 209, 219);
 	this->button4->ForeColor = Color::FromArgb(239, 159, 118);
@@ -249,12 +252,66 @@ Void GestionStatFormulaire::button10_Click(Object^ sender, EventArgs^ e) {
 	this->button7->BackColor = Color::FromArgb(18, 17, 41);
 	this->button8->BackColor = Color::FromArgb(18, 17, 41);
 	this->button9->BackColor = Color::FromArgb(18, 17, 41);
+
+	this->richTextBox1->Text = "Valeur d'achat du stock : \n" +
+		(this->valeurCommerciale == -1 ? "Erreur de calcul" : this->valeurCommerciale.ToString());
 }
 Void GestionStatFormulaire::button5_Click_1(Object^ sender, EventArgs^ e) {
 	this->Close();
 }
 Void GestionStatFormulaire::button_valider_Click_1(Object^ sender, EventArgs^ e) {
+	if (this->choixFonction == 'N') {
+		MessageBox::Show("Veuillez choisir une action");
+		return;
+	}
+	if (this->choixFonction == 'V') {
+		if (!(this->DicoRemise->ContainsKey(this->remiseComboBox->Text))
+			|| !(this->DicoDemarque->ContainsKey(this->demarqueComboBox->Text))
+			|| !(this->DicoTva->ContainsKey(this->tvaComboBox->Text))
+			|| !(this->DicoMarge->ContainsKey(this->margeComboBox->Text)))
+			MessageBox::Show("Impossible de valider les options sélectionnées");
+		else
+			this->richTextBox1->Text = "Valeur du stock calculée : \n" +
+				this->valeurCommerciale * DicoDemarque[this->demarqueComboBox->Text] *
+				DicoMarge[this->margeComboBox->Text] *
+				DicoRemise[this->remiseComboBox->Text] *
+				DicoTva[this->tvaComboBox->Text];
+	}		
 }
 Void GestionStatFormulaire::GestionStatFormulaire_Load(Object^ sender, EventArgs^ e) {
-	this->gestionDesStats = gcnew NS_services::gestionStats;
+	this->gestionDesStats = gcnew gestionStats;
+	this->DicoTva = gcnew Dictionary<String^, Double>;
+	this->DicoDemarque = gcnew Dictionary<String^, Double>;
+	this->DicoMarge = gcnew Dictionary<String^, Double>;
+	this->DicoRemise = gcnew Dictionary<String^, Double>;
+	this->valeurCommerciale = this->gestionDesStats->ObtenirValeurStock();
+	this->choixFonction = 'N';
+
+	this->DicoTva->Add("5%", 1.05);
+	this->DicoTva->Add("10%", 1.1);
+	this->DicoTva->Add("20%", 1.2);
+	this->tvaComboBox->Items->Clear();
+	this->tvaComboBox->Items->Add("5%");
+	this->tvaComboBox->Items->Add("10%");
+	this->tvaComboBox->Items->Add("20%");
+
+	this->DicoDemarque->Add("2%", 0.98);
+	this->DicoDemarque->Add("5%", 0.95);
+	this->DicoDemarque->Add("6%", 0.94);
+	this->demarqueComboBox->Items->Clear();
+	this->demarqueComboBox->Items->Add("2%");
+	this->demarqueComboBox->Items->Add("5%");
+	this->demarqueComboBox->Items->Add("6%");
+
+	this->DicoMarge->Add("10%", 1.05);
+	this->DicoMarge->Add("15%", 1.1);
+	this->margeComboBox->Items->Clear();
+	this->margeComboBox->Items->Add("10%");
+	this->margeComboBox->Items->Add("15%");
+
+	this->DicoRemise->Add("5%", 0.95);
+	this->DicoRemise->Add("6%", 0.94);
+	this->remiseComboBox->Items->Clear();
+	this->remiseComboBox->Items->Add("5%");
+	this->remiseComboBox->Items->Add("6%");
 }

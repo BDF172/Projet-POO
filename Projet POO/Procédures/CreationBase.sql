@@ -45,15 +45,6 @@ CREATE TABLE Entrepot(
    PRIMARY KEY(Id_Entrepot)
 );
 
-CREATE TABLE historique_tva(
-   id_historique_tva INT IDENTITY(1,1) NOT NULL,
-   prct DECIMAL(15,2) NOT NULL,
-   date_changement DATE,
-   id_TVA INT NOT NULL,
-   PRIMARY KEY(id_historique_tva),
-   FOREIGN KEY(id_TVA) REFERENCES TVA(id_TVA)
-);
-
 CREATE TABLE Ville(
    id_ville INT IDENTITY(1,1) NOT NULL,
    nom_ville VARCHAR(50),

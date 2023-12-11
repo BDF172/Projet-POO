@@ -23,6 +23,19 @@ Double gestionStats::CalculerPanierMoyen(Void) {
 	}
 }
 
+System::Double NS_services::gestionStats::ObtenirValeurStock(System::Void){
+	this->mapStats->obtenirValeurStock();
+	DataSet^ result = this->mapStats->executeRequest();
+	if (!verifyErrorCode(result)) return -1;
+	try {
+		return Convert::ToDouble(result->Tables[1]->Rows[0][0]);
+	}
+	catch (Exception^ e) {
+		System::Windows::Forms::MessageBox::Show("Erreur : " + e->Data);
+		return -1;
+	}
+}
+
 List<Articles^>^ gestionStats::sousSeuilReappro(Void) {
 	this->mapStats->sousSeuilReapprovisionnement();
 	DataSet^ result = this->mapStats->executeRequest();

@@ -47,6 +47,7 @@ Personnel^ gestionPersonnel::obtenirPersonnel(String^ idPersonnel) {
 	DataSet^ result = this->personnelTableMap->executeRequest();
 	if (!this->verifyErrorCode(result))return nullptr;
 	Personnel^ toReturn = gcnew Personnel;
+	toReturn->setId(Convert::ToInt64(idPersonnel));
 	toReturn->setNom(Convert::ToString(result->Tables[1]->Rows[0][0]));
 	toReturn->setPrenom(Convert::ToString(result->Tables[1]->Rows[0][1]));
 	toReturn->setDateEmbauche(Convert::ToString(result->Tables[1]->Rows[0][2]));

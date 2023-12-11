@@ -32,3 +32,7 @@ System::Void NS_composants::mappingStats::plusVendue()
 {
 	this->request = "EXEC TopPlusVendu;";
 }
+
+System::Void NS_composants::mappingStats::obtenirValeurStock(System::Void){
+	this->request = "EXEC ObtenirValeurStock;";
+}

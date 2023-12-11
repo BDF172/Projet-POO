@@ -11,6 +11,7 @@ namespace NS_services {
 		gestionStats(System::Void);
 
 		System::Double CalculerPanierMoyen(System::Void);
+		System::Double ObtenirValeurStock(System::Void);
 		//System::Double ChiffreAffaireMois(System::String^ mois);
 		System::Collections::Generic::List<NS_composants::Articles^>^ sousSeuilReappro(System::Void);
 		System::Collections::Generic::List<NS_composants::Articles^>^ TopPlusVendus(System::Void);

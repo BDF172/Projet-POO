@@ -223,7 +223,7 @@ namespace ProjetPOO {
 		System::String^ toShow;
 		if (clients->Count == 0) toShow = "Aucun client n'a reçu de mail d'anniversaire";
 		else toShow = "Aujourd'hui, les clients suivants ont reçu un mail pour leur anniversaire :";
-		for each (NS_composants::Client^ i in clients) {
+		for each (NS_composants:: Client^ i in clients) {
 			toShow += "\n\t" + i->getNom() + " " + i->getPrenom();
 		}
 		MessageBox::Show(toShow);
