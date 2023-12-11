@@ -19,14 +19,14 @@ namespace TestProject1
         }
 
         [Test]
-        public void test1()
+        public void testCreation()
         {
             idPersonnelObtenu = gestionDuPersonnel.createPersonnel("nom correct", "prenom correct", "30", "nom de rue correct", "1", "1", "2023-12-12");
             Assert.That(idPersonnelObtenu, Is.Positive);
         }
 
         [Test]
-        public void test2()
+        public void testModification()
         {
             var mustBeTrue1 = gestionDuPersonnel.modifierAdressePersonnel(idPersonnelObtenu.ToString(), "1", "nom de rue modifie", "1");
             var mustBeTrue2 = gestionDuPersonnel.modifyPersonnel(idPersonnelObtenu.ToString(), "nom modifie", "prenom modifie", "1", "2023-12-12");
@@ -34,14 +34,14 @@ namespace TestProject1
         }
 
         [Test]
-        public void test3()
+        public void testObtention()
         {
             monPersonnel = gestionDuPersonnel.obtenirPersonnel(idPersonnelObtenu.ToString());
             Assert.That(monPersonnel != null, Is.True);
         }
 
         [Test]
-        public void test4()
+        public void testSuppression()
         {
             var mustBeTrue = gestionDuPersonnel.supprimerPersonnel(idPersonnelObtenu.ToString());
             mustBeTrue = gestionDuPersonnel.supprimerPersonnel(idPersonnelObtenu.ToString());
