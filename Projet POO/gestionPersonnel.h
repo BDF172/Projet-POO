@@ -4,7 +4,7 @@
 #include "CL_Svc_gestion.h"
 
 namespace NS_services {
-	ref class gestionPersonnel : public CL_Svc_gestion {
+	public ref class gestionPersonnel : public CL_Svc_gestion {
 	public:
 		gestionPersonnel(System::Void);
 
@@ -19,7 +19,7 @@ namespace NS_services {
 		System::Boolean supprimerPersonnel(System::String^ idPersonnel);
 
 		NS_composants::Personnel^ obtenirPersonnel(System::String^ idPersonnel);
-		System::Collections::Generic::List<NS_composants::Personnel^>^ rechercherPersonnel(System::String^ nom, System::String^ prenom);
+			System::Collections::Generic::List<NS_composants::Personnel^>^ rechercherPersonnel(System::String^ nom, System::String^ prenom);
 
 	private:
 		NS_composants::mappingPersonnel^ personnelTableMap;

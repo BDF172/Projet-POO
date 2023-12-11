@@ -27,6 +27,7 @@ System::Void NS_composants::mappingPersonnel::modifierAdresse(System::String^ id
 
 System::Void NS_composants::mappingPersonnel::supprimerPersonnel(System::String^ idPersonnel) {
 	this->request = "EXEC SupprimerPersonnel @IdPersonnel = " + idPersonnel + ";";
+	Console::WriteLine(this->request);
 }
 
 System::Void mappingPersonnel::obtenirPersonnel(String^ idPersonnel) {

@@ -1,7 +1,7 @@
 #pragma once
 
 namespace NS_composants {
-	ref class Personnel {
+	public ref class Personnel {
 	private:
 		int id;
 		System::String^ nom;

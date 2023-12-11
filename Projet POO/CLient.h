@@ -13,7 +13,7 @@ namespace NS_composants {
 		adresseC^ suivant;
 	} adresseClient;
 
-	ref class Client {
+	public ref class Client {
 	private:
 		String^ id;
 		String^ nom;

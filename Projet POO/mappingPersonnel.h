@@ -3,7 +3,7 @@
 #include "CL_Com_mapping.h"
 
 namespace NS_composants {
-	ref class mappingPersonnel : public CL_Com_mapping{
+	public ref class mappingPersonnel : public CL_Com_mapping{
 	public:
 		System::Void creerPersonnel(System::String^ nom, System::String^ prenom, System::String^ numRue, 
 			System::String^ nomRue, System::String^ idVille, System::String^ idSuperieur, System::String^ dateEmbauche);
